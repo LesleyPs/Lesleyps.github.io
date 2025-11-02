@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html manifest="works.hyperesources/cache.manifest">
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+	<title>Works</title>
+	<style>
+		html {
+			height:100%;
+		}
+		body {
+			background-color:#FFF;
+			margin:0;
+			height:100%;
+		}
+	</style>
+	<!-- copy these lines to your document head: -->
+
+	<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=device-width" />
+	<link href='https://fonts.googleapis.com/css?family=Krona+One&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Nunito:500&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Nunito:700&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Nunito&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Dekko&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Material+Icons+Round&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Nunito:700italic&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Nunito+Sans:900&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Nunito:900&subset=latin' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="works.hyperesources/smoothscroll.min.js"></script>
+<link href="works.hyperesources/favicon_16x16.ico" rel="shortcut icon" type="image/x-icon"/>
+	<link rel="icon" type="image/png" href="works.hyperesources/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="works.hyperesources/favicon.svg" />
+<link rel="shortcut icon" href="works.hyperesources/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="works.hyperesources/apple-touch-icon.png" />
+<link rel="manifest" href="works.hyperesources/site.webmanifest" />
+</style>
+	<link href="works.hyperesources/favicon_16x16.ico" rel="shortcut icon" type="image/x-icon"/>
+	<link rel="icon" type="image/png" href="works.hyperesources/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="works.hyperesources/favicon.svg" />
+<link rel="shortcut icon" href="works.hyperesources/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="works.hyperesources/apple-touch-icon.png" />
+<link rel="manifest" href="works.hyperesources/site.webmanifest" />
+
+
+
+<style>        
+	.sticky{
+		position: -webkit-sticky !important; /* Safari */
+		position: fixed !important;
+		top: 0 !important;
+	}
+	</style>
+
+<script>
+
+	function extendHype(hypeDocument, element, event) {
+		/**
+		* hypeDocument.scrollToSelector 1.0
+		* @param {String} selector
+		* @param {Number} duration in seconds
+		* @param {Function} callback function when done
+		* @param {HTMLElement} scroll context
+		* @requires window.smoothScroll
+		*/
+		hypeDocument.scrollToSelector = function(selector, duration, callback, context) {
+			var target = document.querySelector(selector);
+			if (target instanceof HTMLElement){
+				window.smoothScroll(target, duration*1000, callback, context);
+			}
+		}
+		
+		return true;
+	}
+
+	if("HYPE_eventListeners" in window === false) {
+		window.HYPE_eventListeners = Array();
+	}
+	
+	window.HYPE_eventListeners.push({"type":"HypeDocumentLoad", "callback":extendHype});
+	
+	</script>
+
+
+	<script>
+
+  function setLayoutHeight(hypeDocument, element, event) {
+  
+  if(!hypeDocument.storedLayoutHeights){
+  hypeDocument.storedLayoutHeights = {};
+  };
+
+  const hypeDoc = hypeDocument.getElementById(hypeDocument.documentId());
+  const layouId = hypeDocument.currentSceneId();
+  const layoutEl = hypeDocument.getElementById(layouId); 
+  const containerEl = layoutEl.querySelector('.scaled');
+
+  
+  
+    if(!hypeDocument.storedLayoutHeights.layoutId){
+  hypeDocument.storedLayoutHeights.layoutId = layoutEl.getBoundingClientRect().height;
+  }else{
+  layoutEl.style.height = hypeDocument.storedLayoutHeights.layoutId + 'px';
+  hypeDocument.relayoutIfNecessary();
+  }
+  
+  
+setTimeout(
+function(){
+getElementHeight(containerEl);
+},
+1
+)
+
+function getElementHeight(containerEl) {
+
+  const rect = containerEl.getBoundingClientRect();
+ var newHeight = rect.height;
+
+  if(newHeight && newHeight !== 0){
+  layoutEl.style.height = newHeight + "px";
+    hypeDoc.style.height = newHeight + "px";
+
+  }
+  console.log(hypeDocument.storedLayoutHeights)
+}
+  }
+  
+    
+
+
+
+  if("HYPE_eventListeners" in window === false) {
+    window.HYPE_eventListeners = Array();
+  }
+  window.HYPE_eventListeners.push({"type":"HypeLayoutRequest", "callback":setLayoutHeight})
+
+ </script>	
+
+	<!-- end copy -->
+  </head>
+  <body>
+	<!-- copy these lines to your document: -->
+
+	<div id="works_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;height:6625px;overflow:hidden;">
+		<script type="text/javascript" charset="utf-8" src="works.hyperesources/works_hype_generated_script.js?59498"></script>
+	</div>
+
+	<!-- end copy -->
+	
+
+
+	<!-- text content for search engines: -->
+
+	<div style="display:none" aria-hidden=true>
+
+		<div></div>
+		<div></div>
+		<div>lpiercefield@gmail.com</div>
+		<div>CONTACT
+</div>
+		<div>updated 2025</div>
+		<div>A seasoned eye, grounded in long-term positions and a deep commitment to design.
+</div>
+		<div>WORKS
+</div>
+		<div>UX DESIGN</div>
+		<div>San Juan, Porto Rico
+</div>
+		<div>Me
+</div>
+		<div>USER RESEARCH
+</div>
+		<div>SYSTEMS THINKING
+</div>
+		<div>Lemon — Chillin
+</div>
+		<div>From New Orleans' vibrant streets to the heart of Los Angeles, my journey as a designer is anything but typical. I started in Fashion Marketing, learning how to capture attention, and now, as a Product Designer, I use that knowledge to build engaging digital products. </div>
+		<div>Strat Trainer
+</div>
+		<div>Lesley Piercefield
+</div>
+		<div>New Orleans — Family
+</div>
+		<div>See Her Soon
+</div>
+		<div>Design Process
+</div>
+		<div>My goal is simple: to bring intentionality, empathy, and a little bit of LA sunshine to every design challenge. When I'm not working, I'm usually traveling or making memories with my mom and her dog, Lemon.</div>
+		<div>Product Designer
+</div>
+		<div>COMING SOON
+</div>
+		<div>An AI-powered, gamified education platform for traders to rapidly master the Strat Method.
+</div>
+		<div>San José del Cabo</div>
+		<div>Where Empathy Meets the Evergreen Scroll.
+</div>
+		<div>BRANDING
+</div>
+		<div>Media Units</div>
+		<div>UI DESIGN
+</div>
+		<div>I'm accelerating the design of my Strat learning app using AI tools:
+Strategy: Used Gemini to define the curriculum and adaptive learning logic.
+Prototyping: Employed UX Pilot and Lovable to quickly generate and build high-fidelity simulator UI.
+In-Progress: Currently testing and refining the user experience for maximum learning effectiveness.
+</div>
+		<div>EMAIL DESIGN
+</div>
+		<div>Control Tower
+</div>
+		<div>Sony Crackle</div>
+		<div>Kohala Coast — Hawaii</div>
+		<div>STORY
+</div>
+		<div>Multi-Platform Streaming
+UX and Account Flow Redesign</div>
+		<div>Let’s Go!!
+</div>
+		<div>DATA LITERACY
+</div>
+		<div>Conversational AI Marketing Unit (High-Engagement CRO)</div>
+		<div>Envoy
+</div>
+		<div>Partner Management System and Analytics Dashboard</div>
+		<div>Back Home
+</div>
+		<div>Coming Soon
+</div>
+		<div>IOS APP DESIGN
+</div>
+		<div>High-Impact Media Unit
+and A/B Testing Refinement</div>
+		<div>MyLife.com
+</div>
+		<div>Multi-Platform UX & Conversion Optimization
+</div>
+		<div>MyLife.com</div>
+		<div>Multi-Platform UX & Conversion Optimization</div>
+		<div>Multi-Platform UX & Conversion Optimization
+</div>
+
+	</div>
+
+	<!-- end text content: -->
+
+  </body>
+</html>
