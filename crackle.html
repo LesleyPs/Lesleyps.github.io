@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html manifest="crackle.hyperesources/cache.manifest">
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+	<title>crackle</title>
+	<style>
+		html {
+			height:100%;
+		}
+		body {
+			background-color:#FFF;
+			margin:0;
+			height:100%;
+		}
+	</style>
+	<!-- copy these lines to your document head: -->
+
+	<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=device-width" />
+	<link href='https://fonts.googleapis.com/css?family=Nunito&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Nunito:700&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Nunito:600&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Nunito:900&subset=latin' rel='stylesheet' type='text/css'>
+<style>
+    .alignContentVertical {
+		display: flex !important;
+		flex-direction: column;
+        justify-content: center;
+        }
+        
+	.sticky{
+		position: -webkit-sticky !important; /* Safari */
+		position: fixed !important;
+		top: 0 !important;
+		}
+		
+	.outlined-text {
+        color: transparent; -webkit-text-stroke: 2px #D0E2EC; /* Adjust width and color as needed */
+  	
+	}
+	</style>
+	<link href="crackle.hyperesources/favicon_16x16.ico" rel="shortcut icon" type="image/x-icon"/>
+	<link rel="icon" type="image/png" href="crackle.hyperesources/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="crackle.hyperesources/favicon.svg" />
+<link rel="shortcut icon" href="crackle.hyperesources/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="crackle.hyperesources/apple-touch-icon.png" />
+<link rel="manifest" href="crackle.hyperesources/site.webmanifest" />
+</style>
+	<link href="crackle.hyperesources/favicon_16x16.ico" rel="shortcut icon" type="image/x-icon"/>
+	<link rel="icon" type="image/png" href="crackle.hyperesources/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="crackle.hyperesources/favicon.svg" />
+<link rel="shortcut icon" href="crackle.hyperesources/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="crackle.hyperesources/apple-touch-icon.png" />
+<link rel="manifest" href="crackle.hyperesources/site.webmanifest" />
+<script>
+
+  function setLayoutHeight(hypeDocument, element, event) {
+  
+  if(!hypeDocument.storedLayoutHeights){
+  hypeDocument.storedLayoutHeights = {};
+  };
+
+  const hypeDoc = hypeDocument.getElementById(hypeDocument.documentId());
+  const layouId = hypeDocument.currentSceneId();
+  const layoutEl = hypeDocument.getElementById(layouId); 
+  const containerEl = layoutEl.querySelector('.scaled');
+
+  
+  
+    if(!hypeDocument.storedLayoutHeights.layoutId){
+  hypeDocument.storedLayoutHeights.layoutId = layoutEl.getBoundingClientRect().height;
+  }else{
+  layoutEl.style.height = hypeDocument.storedLayoutHeights.layoutId + 'px';
+  hypeDocument.relayoutIfNecessary();
+  }
+  
+  
+setTimeout(
+function(){
+getElementHeight(containerEl);
+},
+1
+)
+
+function getElementHeight(containerEl) {
+
+  const rect = containerEl.getBoundingClientRect();
+ var newHeight = rect.height;
+
+  if(newHeight && newHeight !== 0){
+  layoutEl.style.height = newHeight + "px";
+    hypeDoc.style.height = newHeight + "px";
+
+  }
+  console.log(hypeDocument.storedLayoutHeights)
+}
+  }
+  
+    
+
+
+
+  if("HYPE_eventListeners" in window === false) {
+    window.HYPE_eventListeners = Array();
+  }
+  window.HYPE_eventListeners.push({"type":"HypeLayoutRequest", "callback":setLayoutHeight})
+
+ </script>	
+
+	<!-- end copy -->
+  </head>
+  <body>
+	<!-- copy these lines to your document: -->
+
+	<div id="crackle_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;height:2800px;overflow:hidden;">
+		<script type="text/javascript" charset="utf-8" src="crackle.hyperesources/crackle_hype_generated_script.js?17959"></script>
+	</div>
+
+	<!-- end copy -->
+	
+
+
+	<!-- text content for search engines: -->
+
+	<div style="display:none" aria-hidden=true>
+
+		<div></div>
+		<div>Features
+</div>
+		<div>Framework
+</div>
+		<div>Crackle</div>
+		<div>Tone</div>
+		<div>APIs
+</div>
+		<div>Unify the streaming experience across multiple devices (Roku, Apple TV, etc.) to drive account creation and establish a cohesive visual identity.</div>
+		<div>Motion
+</div>
+		<div>Product strategy
+</div>
+		<div>Multi-Platform Streaming UX and Account Flow Redesign
+</div>
+		<div>IA / Structure
+</div>
+		<div>CONTACT
+</div>
+		<div>The Challenge
+</div>
+		<div>Product UXD Foundation</div>
+		<div>UI Patterns
+</div>
+		<div>WORKS
+</div>
+		<div>I owned the multi-platform UX strategy, redefining the IA and design system for all living room devices.</div>
+		<div>Architecture
+</div>
+		<div>Global Experience Principles
+</div>
+		<div>My Role
+</div>
+		<div>Core Visual Element
+</div>
+		<div>Sony brand values
+</div>
+		<div>Case Study
+</div>
+		<div>Multi-Platform Streaming UX and Account Flow Redesign</div>
+		<div>Crackle
+</div>
+		<div>Unify the streaming experience across multiple devices (Roku, Apple TV, etc.) to drive account creation and establish a cohesive visual identity.
+</div>
+		<div>B
+</div>
+		<div>My Role & Solution
+</div>
+		<div>A
+</div>
+		<div>My process was grounded in collaborative and data-driven methodologies, always focusing on the user. As a UX/UI designer, I was a key contributor to the design team responsible for the core streaming experience. My work focused on improving key areas like Information Architecture and flow, while also helping to create a cohesive visual identity across all platforms. A key part of this process included brainstorming with the team, card sorting, and in-person user testing.
+
+A prime example was redesigning the sign-up flows. I recommended an out-of-the-box approach: instead of listing features, I proposed a simple call to action to "unlock more for free." I validated this design through A/B testing, which proved this approach was more effective. I designed user flows that worked with the native experience of each platform, from Roku and Sony PlayStation to Xbox, Apple TV, and iOS.
+
+</div>
+		<div>EXTRAS
+</div>
+		<div>WATCH S1 E1
+</div>
+		<div>UNLOCK MORE FOR FREE
+</div>
+		<div>EPISODES
+</div>
+
+	</div>
+
+	<!-- end text content: -->
+
+  </body>
+</html>
