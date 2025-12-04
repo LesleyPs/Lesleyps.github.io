@@ -3,43 +3,31 @@
   <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
-	<title>control-tower</title>
+	<title>Works</title>
 	<style>
 		html {
 			height:100%;
 		}
 		body {
-			background-color:#FFF;
+			background-color:#333;
 			margin:0;
 			height:100%;
 		}
 	</style>
 	<!-- copy these lines to your document head: -->
 
-	<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=device-width" />
+	<meta name="viewport" content="user-scalable=yes, width=device-width" />
+	<link href='https://fonts.googleapis.com/css?family=Krona+One&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Nunito:500&subset=latin' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Nunito:700&subset=latin' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Nunito&subset=latin' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Krona+One&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Dekko&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Material+Icons+Round&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Nunito:700italic&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Nunito+Sans:900&subset=latin' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Nunito:900&subset=latin' rel='stylesheet' type='text/css'>
-<style>
-    .alignContentVertical {
-		display: flex !important;
-		flex-direction: column;
-        justify-content: center;
-        }
-        
-	.sticky{
-		position: -webkit-sticky !important; /* Safari */
-		position: fixed !important;
-		top: 0 !important;
-		}
-		
-	.outlined-text {
-        color: transparent; -webkit-text-stroke: 2px #D0E2EC; /* Adjust width and color as needed */
-  	
-	}
-	</style>
-	<link href="control-tower.hyperesources/favicon_16x16.ico" rel="shortcut icon" type="image/x-icon"/>
+	<script type="text/javascript" src="control-tower.hyperesources/smoothscroll.min.js"></script>
+<link href="control-tower.hyperesources/favicon_16x16.ico" rel="shortcut icon" type="image/x-icon"/>
 	<link rel="icon" type="image/png" href="control-tower.hyperesources/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="control-tower.hyperesources/favicon.svg" />
 <link rel="shortcut icon" href="control-tower.hyperesources/favicon.ico" />
@@ -52,7 +40,48 @@
 <link rel="shortcut icon" href="control-tower.hyperesources/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="control-tower.hyperesources/apple-touch-icon.png" />
 <link rel="manifest" href="control-tower.hyperesources/site.webmanifest" />
+
+
+
+<style>        
+	.sticky{
+		position: -webkit-sticky !important; /* Safari */
+		position: fixed !important;
+		top: 0 !important;
+	}
+	</style>
+
 <script>
+
+	function extendHype(hypeDocument, element, event) {
+		/**
+		* hypeDocument.scrollToSelector 1.0
+		* @param {String} selector
+		* @param {Number} duration in seconds
+		* @param {Function} callback function when done
+		* @param {HTMLElement} scroll context
+		* @requires window.smoothScroll
+		*/
+		hypeDocument.scrollToSelector = function(selector, duration, callback, context) {
+			var target = document.querySelector(selector);
+			if (target instanceof HTMLElement){
+				window.smoothScroll(target, duration*1000, callback, context);
+			}
+		}
+		
+		return true;
+	}
+
+	if("HYPE_eventListeners" in window === false) {
+		window.HYPE_eventListeners = Array();
+	}
+	
+	window.HYPE_eventListeners.push({"type":"HypeDocumentLoad", "callback":extendHype});
+	
+	</script>
+
+
+	<script>
 
   function setLayoutHeight(hypeDocument, element, event) {
   
@@ -112,8 +141,8 @@ function getElementHeight(containerEl) {
   <body>
 	<!-- copy these lines to your document: -->
 
-	<div id="controltower_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;height:7530px;overflow:hidden;">
-		<script type="text/javascript" charset="utf-8" src="control-tower.hyperesources/controltower_hype_generated_script.js?65696"></script>
+	<div id="controltower_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;height:1080px;overflow:hidden;">
+		<script type="text/javascript" charset="utf-8" src="control-tower.hyperesources/controltower_hype_generated_script.js?93442"></script>
 	</div>
 
 	<!-- end copy -->
@@ -124,43 +153,86 @@ function getElementHeight(containerEl) {
 
 	<div style="display:none" aria-hidden=true>
 
+		<div></div>
+		<div></div>
+		<div>lpiercefield@gmail.com</div>
 		<div>CONTACT
 </div>
 		<div>updated 2025</div>
-		<div>lpiercefield@gmail.com</div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div>Quantitative research
+		<div>We needed to replace complex, manual B2B operations with a scalable self-serve platform. The goal was to provide partners with intuitive controls while delivering internal teams vital analytics.
+</div>
+		<div>Control Tower
 </div>
 		<div>Partner Management and Analytics Platform</div>
-		<div></div>
-		<div>Case Study
-</div>
-		<div>Defined visual brand standards</div>
-		<div>Product Design Process</div>
-		<div>Tiki Ad Tech & Analytics Platform.</div>
 		<div>The Challenge
 </div>
-		<div>WORKS
+		<div>Process
 </div>
-		<div>Managed the UI Design System</div>
-		<div>Cross-functional calibration</div>
+		<div>I led the User Experience (UX) for this B2B platform. My work involved driving Service Design to optimize partner workflows, defining the Information Architecture, and managing stakeholder collaboration.</div>
+		<div>My Role
+</div>
+		<div>Case Study
+</div>
+		<div>UI
+</div>
+		<div>Improvements
+</div>
+		<div>Impact
+</div>
 		<div>Control Tower.io
 </div>
-		<div>Evolving Design
+		<div></div>
+		<div></div>
+		<div>Process
 </div>
-		<div>Built mockups (Figma)— data prototypes</div>
+		<div>Control Tower
+</div>
+		<div>Product Design Process</div>
+		<div>Created and managed the UI Design System</div>
+		<div>Defined visual brand standards for the platform</div>
+		<div>Architected complex information hierarchy</div>
+		<div>Built Hi-Fi mockups (Figma) data visualization</div>
+		<div>Quantitative Research</div>
+		<div>UI
+</div>
 		<div>Control Tower
 Tiki Management Platform
 </div>
+		<div>A seasoned eye, grounded in long-term positions and a deep commitment to design.
+</div>
+		<div>Improvements
+</div>
+		<div>Evolving Design
+</div>
 		<div>Bring information and options forward</div>
-		<div>I led the User Experience (UX) for this B2B platform. My work involved driving Service Design to optimize partner workflows, defining the Information Architecture, and managing stakeholder collaboration.</div>
-		<div>We needed to replace complex, manual B2B operations with a scalable self-serve platform. The goal was to provide partners with intuitive controls while delivering internal teams vital analytics.
+		<div></div>
+		<div></div>
+		<div>MyLife.com
 </div>
-		<div>My Role
+		<div></div>
+		<div></div>
+		<div>Case Studies
 </div>
-		<div>We needed to replace complex, manual B2B operations with a scalable self-serve platform. The goal was to provide partners with intuitive controls while delivering internal teams vital analytics.
+		<div>Envoy — AI
+</div>
+		<div>Control tower — CRM  
+</div>
+		<div>Media Units
+</div>
+		<div>Crackle
+</div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div>Envoy — AI</div>
+		<div>Media Units</div>
+		<div>MyLife.com</div>
+		<div>Crackle</div>
+		<div>Control tower — CRM</div>
+		<div>Impact
+</div>
+		<div></div>
+		<div>The resulting platform modernized B2B operations, enabled faster partner configuration, and provided actionable internal insights through a clear, scalable interface.
 </div>
 
 	</div>
