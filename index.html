@@ -164,6 +164,8 @@
             min-height: 540px;
             cursor: pointer;
             box-shadow: 0 4px 20px rgba(163, 128, 114, 0.03);
+            text-decoration: none;
+            color: inherit;
         }
 
         .project-card:hover {
@@ -182,6 +184,17 @@
             justify-content: center;
             overflow: hidden;
             position: relative;
+        }
+
+        .card-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .project-card:hover .card-visual img {
+            transform: scale(1.05);
         }
 
         .badge {
@@ -221,25 +234,21 @@
         .link-hover:hover::after {
             transform: scaleX(1);
         }
+
+        /* Hype Container Styles */
+        .hype-container {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
     </style>
 </head>
 <body>
 
-    <!-- HERO SLOT -->
-    <section id="hype-hero-slot" class="w-full h-[60vh] bg-white border-b border-[#E8E4E1] flex items-center justify-center relative overflow-hidden">
-        <div class="absolute inset-0 bg-[#FBF9F7] flex items-center justify-center">
-            <div class="text-center">
-                <p class="text-[10px] font-bold uppercase tracking-[0.8em] text-[#A38072] mb-12">Portfolio / 2026 Edition</p>
-                <div class="relative inline-block px-12 py-8">
-                  <div class="absolute inset-0 border border-[#E8E4E1] opacity-50"></div>
-                  <h2 class="bricolage-font text-3xl font-black opacity-30 uppercase tracking-[0.5em] text-[#E89E78]">
-                    [ SUNSET HERO ANIMATION ]
-                  </h2>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <!-- HERO SLOT: Hype Animation Integration -->
+    <div id="intro_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;height:880px;overflow:hidden;">
+		<script type="text/javascript" charset="utf-8" src="Intro.hyperesources/intro_hype_generated_script.js?12067"></script>
+	</div>
     <!-- MAIN CONTENT -->
     <main class="max-w-[1440px] mx-auto px-10 md:px-20 py-32">
         
@@ -268,7 +277,7 @@
                         </div>
                         
                         <div class="pt-8 border-t border-[#E8E4E1] flex items-center gap-10">
-                            <a href="#" class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#1A1918] link-hover">Resume</a>
+                            <a href="assets/lesley-piercefield-resume.pdf" class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#1A1918] link-hover">Resume</a>
                             <a href="mailto:lpiercefield@icloud.com" class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#1A1918] link-hover">Contact</a>
                             <span class="badge badge-available ml-auto">Available Q1 2026</span>
                         </div>
@@ -281,7 +290,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
             
             <!-- 1. Magnitude Pro -->
-            <div class="project-card md:col-span-2 group">
+            <a href="case-studies/magnitude-pro.html" class="project-card md:col-span-2 group">
                 <div class="card-visual magnitude-terminal-bg" style="height: 520px;">
                     <div class="grid-lines"></div>
                     <div class="scan-line"></div>
@@ -323,12 +332,6 @@
                         <div class="mt-2 text-[#E89E78] opacity-100 font-bold">BUILD_STATE: ACTIVE</div>
                     </div>
 
-                    <div class="absolute top-8 left-8 flex gap-3">
-                        <div class="w-2 h-2 rounded-full bg-white/10"></div>
-                        <div class="w-2 h-2 rounded-full bg-white/10"></div>
-                        <div class="w-2 h-2 rounded-full bg-white/10"></div>
-                    </div>
-
                     <div class="absolute bottom-12 left-12 text-left">
                         <span class="bricolage-font text-[12px] font-extrabold text-white uppercase tracking-[1.2em] block mb-2">SIMPLIFIED_TRADING</span>
                         <span class="text-[9px] font-bold text-white/30 uppercase tracking-[0.4em]">Stocks, Options, and Futures Trading Analytics</span>
@@ -348,15 +351,16 @@
                         </p>
                     </div>
                     <div class="shrink-0">
-                        <a href="mailto:lpiercefield@icloud.com" class="px-12 py-6 bg-[#1A1918] text-white text-[11px] font-bold uppercase tracking-[0.4em] hover:bg-[#E89E78] transition-all rounded-sm inline-block shadow-lg">Request Access</a>
+                        <div class="px-12 py-6 bg-[#1A1918] text-white text-[11px] font-bold uppercase tracking-[0.4em] group-hover:bg-[#E89E78] transition-all rounded-sm inline-block shadow-lg">Request Access</div>
                     </div>
                 </div>
-            </div>
+            </a>
 
             <!-- Envoy -->
-            <div class="project-card">
+            <a href="case-studies/envoy.html" class="project-card">
                 <div class="card-visual">
-                    <span class="bricolage-font text-[11px] font-bold opacity-10 uppercase tracking-[0.8em]">ENVOY_PLATFORM</span>
+                    <img src="https://raw.githubusercontent.com/lpiercefield/portfolio/main/assets/thumbnails/envoy-thumb.jpg" alt="Envoy Platform" onerror="this.style.display='none'">
+                    <span class="absolute bricolage-font text-[11px] font-bold opacity-10 uppercase tracking-[0.8em]">ENVOY_PLATFORM</span>
                 </div>
                 <div class="flex-grow flex flex-col justify-between">
                     <div>
@@ -366,12 +370,13 @@
                     </div>
                     <p class="text-[10px] font-bold uppercase tracking-[0.3em] mt-10 border-t border-[#E8E4E1] pt-8">Product Lead</p>
                 </div>
-            </div>
+            </a>
 
             <!-- Control Tower -->
-            <div class="project-card">
+            <a href="case-studies/control-tower.html" class="project-card">
                 <div class="card-visual">
-                    <span class="bricolage-font text-[11px] font-bold opacity-10 uppercase tracking-[0.8em]">COMMAND_CENTER</span>
+                    <img src="https://raw.githubusercontent.com/lpiercefield/portfolio/main/assets/thumbnails/controltower-thumb.jpg" alt="Control Tower" onerror="this.style.display='none'">
+                    <span class="absolute bricolage-font text-[11px] font-bold opacity-10 uppercase tracking-[0.8em]">COMMAND_CENTER</span>
                 </div>
                 <div class="flex-grow flex flex-col justify-between">
                     <div>
@@ -381,12 +386,13 @@
                     </div>
                     <p class="text-[10px] font-bold uppercase tracking-[0.3em] mt-10 border-t border-[#E8E4E1] pt-8">Lead Experience Designer</p>
                 </div>
-            </div>
+            </a>
 
             <!-- Media Units -->
-            <div class="project-card">
+            <a href="case-studies/media-units.html" class="project-card">
                 <div class="card-visual">
-                    <span class="bricolage-font text-[11px] font-bold opacity-10 uppercase tracking-[0.8em]">RETENTION_UX</span>
+                    <img src="https://raw.githubusercontent.com/lpiercefield/portfolio/main/assets/thumbnails/media-thumb.jpg" alt="Media Units" onerror="this.style.display='none'">
+                    <span class="absolute bricolage-font text-[11px] font-bold opacity-10 uppercase tracking-[0.8em]">RETENTION_UX</span>
                 </div>
                 <div class="flex-grow flex flex-col justify-between">
                     <div>
@@ -396,12 +402,13 @@
                     </div>
                     <p class="text-[10px] font-bold uppercase tracking-[0.3em] mt-10 border-t border-[#E8E4E1] pt-8">Growth Design</p>
                 </div>
-            </div>
+            </a>
 
             <!-- MyLife.com -->
-            <div class="project-card">
+            <a href="case-studies/mylife.html" class="project-card">
                 <div class="card-visual">
-                    <span class="bricolage-font text-[11px] font-bold opacity-10 uppercase tracking-[0.8em]">IDENTITY_UX</span>
+                    <img src="https://raw.githubusercontent.com/lpiercefield/portfolio/main/assets/thumbnails/mylife-thumb.jpg" alt="MyLife" onerror="this.style.display='none'">
+                    <span class="absolute bricolage-font text-[11px] font-bold opacity-10 uppercase tracking-[0.8em]">IDENTITY_UX</span>
                 </div>
                 <div class="flex-grow flex flex-col justify-between">
                     <div>
@@ -411,12 +418,13 @@
                     </div>
                     <p class="text-[10px] font-bold uppercase tracking-[0.3em] mt-10 border-t border-[#E8E4E1] pt-8">UX/UI Designer</p>
                 </div>
-            </div>
+            </a>
 
             <!-- Crackle -->
-            <div class="project-card">
+            <a href="case-studies/crackle.html" class="project-card">
                 <div class="card-visual">
-                    <span class="bricolage-font text-[11px] font-bold opacity-10 uppercase tracking-[0.8em]">OTT_INTERFACE</span>
+                    <img src="https://raw.githubusercontent.com/lpiercefield/portfolio/main/assets/thumbnails/crackle-thumb.jpg" alt="Crackle" onerror="this.style.display='none'">
+                    <span class="absolute bricolage-font text-[11px] font-bold opacity-10 uppercase tracking-[0.8em]">OTT_INTERFACE</span>
                 </div>
                 <div class="flex-grow flex flex-col justify-between">
                     <div>
@@ -426,23 +434,14 @@
                     </div>
                     <p class="text-[10px] font-bold uppercase tracking-[0.3em] mt-10 border-t border-[#E8E4E1] pt-8">UX/UI Designer</p>
                 </div>
-            </div>
+            </a>
         </div>
     </main>
 
     <!-- HYPE FOOTER SLOT -->
-    <section id="hype-footer-slot" class="w-full h-[60vh] bg-white border-t border-[#E8E4E1] flex items-center justify-center relative overflow-hidden">
-        <div class="absolute inset-0 bg-[#FBF9F7] flex items-center justify-center">
-            <div class="text-center">
-                <p class="text-[10px] font-bold uppercase tracking-[0.8em] text-[#A38072] mb-12">Architecture / Systems / Scale</p>
-                <div class="relative inline-block px-12 py-8">
-                  <div class="absolute inset-0 border border-[#E8E4E1] opacity-50"></div>
-                  <h2 class="bricolage-font text-3xl font-black opacity-30 uppercase tracking-[0.5em] text-[#E89E78]">
-                    [ SUNSET FOOTER ANIMATION ]
-                  </h2>
-                </div>
-            </div>
-        </div>
+    <section id="hype-footer-slot" class="w-full h-[60vh] bg-white border-t border-[#E8E4E1] relative overflow-hidden">
+        <!-- Replace 'footer_animation.html' with your actual Hype exported HTML filename -->
+        <iframe src="animations/footer_animation/footer_animation.html" class="hype-container" scrolling="no" allowtransparency="true"></iframe>
     </section>
 
     <!-- FOOTER -->
@@ -459,8 +458,8 @@
                 <div class="lg:col-span-3">
                     <h5 class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/10 mb-10">Connectivity</h5>
                     <ul class="space-y-6 text-sm font-bold text-white/60">
-                        <li><a href="#" class="hover:text-[#E89E78] transition-colors">LinkedIn</a></li>
-                        <li><a href="#" class="hover:text-[#E89E78] transition-colors">Resume</a></li>
+                        <li><a href="https://linkedin.com/in/lesleypiercefield" class="hover:text-[#E89E78] transition-colors">LinkedIn</a></li>
+                        <li><a href="assets/lesley-piercefield-resume.pdf" class="hover:text-[#E89E78] transition-colors">Resume</a></li>
                         <li><a href="mailto:lpiercefield@icloud.com" class="hover:text-[#E89E78] transition-colors">Email</a></li>
                     </ul>
                 </div>
