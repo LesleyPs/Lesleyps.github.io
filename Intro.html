@@ -9,7 +9,7 @@
 			height:100%;
 		}
 		body {
-			background-color:#FFF;
+			background-color:#343434;
 			margin:0;
 			height:100%;
 		}
@@ -21,92 +21,66 @@
 	<link href='https://fonts.googleapis.com/css?family=Nunito:500&subset=latin' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Nunito:700&subset=latin' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Nunito&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Bricolage+Grotesque:800&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Schibsted+Grotesk:500&subset=latin' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="Intro.hyperesources/smoothscroll.min.js"></script>
 <style>
-    .alignContentVertical {
-		display: flex !important;
-		flex-direction: column;
-        justify-content: center;
-        }
+    /* HYPE HERO: STRAT SUNSET 5.0 (Video Match)
+       Focus: Using #97AAB1 to provide high-contrast for white graphics.
+    */
+
+    .hype-sunset-bg {
+        /* Base color from your video reference */
+        background-color: #97AAB1 !important; 
         
-	.sticky{
-		position: -webkit-sticky !important; /* Safari */
-		position: fixed !important;
-		top: 0 !important;
-		}
-		
-	.outlined-text {
-        color: transparent; -webkit-text-stroke: 2px #D0E2EC; /* Adjust width and color as needed */
-  	
-	}
-	</style>
-	<link href="Intro.hyperesources/favicon_16x16.ico" rel="shortcut icon" type="image/x-icon"/>
-	<link rel="icon" type="image/png" href="Intro.hyperesources/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="Intro.hyperesources/favicon.svg" />
-<link rel="shortcut icon" href="Intro.hyperesources/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="Intro.hyperesources/apple-touch-icon.png" />
-<link rel="manifest" href="Intro.hyperesources/site.webmanifest" />
+        /* LAYER 1: Soft radial glow centered behind your white graphic.
+           LAYER 2: Multi-stop linear gradient using your specific blue.
+        */
+        background-image: 
+            radial-gradient(circle at 50% 12%, rgba(255, 255, 255, 0.25) 0%, transparent 40%),
+            linear-gradient(
+                180deg, 
+                #97AAB1 0%,    /* Your Video Blue: Perfect for White Graphics */
+                #A5CDE1 20%,   /* Mid Sky Transition */
+                #FBF9F7 40%,   /* Horizon 'Paper' Transition */
+                #FFD8B1 60%,   /* Golden Hour Peach */
+                #F2994A 85%,   /* Strat Horizon Orange */
+                #8E6554 100%   /* Deep Earthy Anchor */
+            ) !important;
+            
+        background-size: 100% 100% !important;
+        border: none !important;
+        position: relative;
+        overflow: hidden;
+        
+        /* Subtle atmospheric shift */
+        animation: sunset-atmosphere 15s ease-in-out infinite alternate;
+    }
+
+    /* Top-down overlay to deepen the blue at the very edges */
+    .hype-sunset-bg::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 30%;
+        background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, transparent 100%);
+        pointer-events: none;
+    }
+
+    /* Paper Texture for the Strat Analytic look */
+    .hype-sunset-bg::after {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        opacity: 0.05;
+        pointer-events: none;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+
+    @keyframes sunset-atmosphere {
+        0% { filter: saturate(100%) brightness(100%); }
+        100% { filter: saturate(112%) brightness(102%); }
+    }
 </style>
-	<link href="Intro.hyperesources/favicon_16x16.ico" rel="shortcut icon" type="image/x-icon"/>
-	<link rel="icon" type="image/png" href="Intro.hyperesources/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="Intro.hyperesources/favicon.svg" />
-<link rel="shortcut icon" href="Intro.hyperesources/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="Intro.hyperesources/apple-touch-icon.png" />
-<link rel="manifest" href="Intro.hyperesources/site.webmanifest" />
-<script>
-
-  function setLayoutHeight(hypeDocument, element, event) {
-  
-  if(!hypeDocument.storedLayoutHeights){
-  hypeDocument.storedLayoutHeights = {};
-  };
-
-  const hypeDoc = hypeDocument.getElementById(hypeDocument.documentId());
-  const layouId = hypeDocument.currentSceneId();
-  const layoutEl = hypeDocument.getElementById(layouId); 
-  const containerEl = layoutEl.querySelector('.scaled');
-
-  
-  
-    if(!hypeDocument.storedLayoutHeights.layoutId){
-  hypeDocument.storedLayoutHeights.layoutId = layoutEl.getBoundingClientRect().height;
-  }else{
-  layoutEl.style.height = hypeDocument.storedLayoutHeights.layoutId + 'px';
-  hypeDocument.relayoutIfNecessary();
-  }
-  
-  
-setTimeout(
-function(){
-getElementHeight(containerEl);
-},
-1
-)
-
-function getElementHeight(containerEl) {
-
-  const rect = containerEl.getBoundingClientRect();
- var newHeight = rect.height;
-
-  if(newHeight && newHeight !== 0){
-  layoutEl.style.height = newHeight + "px";
-    hypeDoc.style.height = newHeight + "px";
-
-  }
-  console.log(hypeDocument.storedLayoutHeights)
-}
-  }
-  
-    
-
-
-
-  if("HYPE_eventListeners" in window === false) {
-    window.HYPE_eventListeners = Array();
-  }
-  window.HYPE_eventListeners.push({"type":"HypeLayoutRequest", "callback":setLayoutHeight})
-
- </script>	
 
 	<!-- end copy -->
   </head>
@@ -114,7 +88,7 @@ function getElementHeight(containerEl) {
 	<!-- copy these lines to your document: -->
 
 	<div id="intro_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;height:880px;overflow:hidden;">
-		<script type="text/javascript" charset="utf-8" src="Intro.hyperesources/intro_hype_generated_script.js?64197"></script>
+		<script type="text/javascript" charset="utf-8" src="Intro.hyperesources/intro_hype_generated_script.js?12067"></script>
 	</div>
 
 	<!-- end copy -->
@@ -127,12 +101,11 @@ function getElementHeight(containerEl) {
 
 		<div></div>
 		<div></div>
-		<div>Hi, I’m Lesley a...</div>
+		<div>NER
+</div>
 		<div>DESI
 </div>
 		<div>G</div>
-		<div>NER
-</div>
 		<div>Hi, I’m Lesley a...
 </div>
 		<div>Me

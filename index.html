@@ -1,233 +1,480 @@
 <!DOCTYPE html>
-<html>
-  <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
-	<title>Lesley Piercefield</title>
-	<style>
-		html {
-			height:100%;
-		}
-		body {
-			background-color:#FFF;
-			margin:0;
-			height:100%;
-		}
-	</style>
-	<!-- copy these lines to your document head: -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesley Piercefield | Product Design & Strategy</title>
+    <!-- Bricolage Grotesque for all Headers, Schibsted Grotesk for Body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Schibsted+Grotesk:wght@400;700&family=JetBrains+Mono:wght@500;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --sunset-peach: #E89E78;
+            --sunset-clay: #A38072;
+            --paper-warm: #FBF9F7;
+            --text-main: #2D2C2A;
+            
+            /* Tag Palette */
+            --tag-ai-bg: #FEE9D7;
+            --tag-ai-text: #B45309;
+            --tag-ent-bg: #E0E7FF;
+            --tag-ent-text: #4338CA;
+            --tag-growth-bg: #DCFCE7;
+            --tag-growth-text: #166534;
+            --tag-retention-bg: #F1F5F9; 
+            --tag-retention-text: #475559;
+            --tag-media-bg: #FAE8FF;
+            --tag-media-text: #A21CAF;
 
-	<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=device-width" />
-	<link href='https://fonts.googleapis.com/css?family=Krona+One&subset=latin' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Nunito:500&subset=latin' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Nunito:700&subset=latin' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Nunito&subset=latin' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Dekko&subset=latin' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Material+Icons+Round&subset=latin' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Nunito:700italic&subset=latin' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Nunito+Sans:900&subset=latin' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Nunito:900&subset=latin' rel='stylesheet' type='text/css'>
-	<script type="text/javascript" src="index.hyperesources/smoothscroll.min.js"></script>
-<style>
-    .alignContentVertical {
-		display: flex !important;
-		flex-direction: column;
-        justify-content: center;
+            /* Strat Colors - Muted for Terminal Feel */
+            --strat-green: #4ADE80;
+            --strat-red: #F87171;
+            --strat-purple: #C084FC;
+        }
+
+        body {
+            font-family: 'Schibsted Grotesk', sans-serif;
+            background: radial-gradient(circle at top right, #FFF5EE 0%, var(--paper-warm) 100%);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, .bricolage-font { 
+            font-family: 'Bricolage Grotesque', sans-serif; 
+            font-style: normal; 
         }
         
-	.sticky{
-		position: -webkit-sticky !important; /* Safari */
-		position: fixed !important;
-		top: 0 !important;
-		}
-		
-	.outlined-text {
-        color: transparent; -webkit-text-stroke: 2px #D0E2EC; /* Adjust width and color as needed */
-  	
-	}
-	</style>
-	<link href="index.hyperesources/favicon_16x16.ico" rel="shortcut icon" type="image/x-icon"/>
-	<link rel="icon" type="image/png" href="index.hyperesources/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="index.hyperesources/favicon.svg" />
-<link rel="shortcut icon" href="index.hyperesources/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="index.hyperesources/apple-touch-icon.png" />
-<link rel="manifest" href="index.hyperesources/site.webmanifest" />
-</style>
-	<link href="index.hyperesources/favicon_16x16.ico" rel="shortcut icon" type="image/x-icon"/>
-	<link rel="icon" type="image/png" href="index.hyperesources/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="index.hyperesources/favicon.svg" />
-<link rel="shortcut icon" href="index.hyperesources/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="index.hyperesources/apple-touch-icon.png" />
-<link rel="manifest" href="index.hyperesources/site.webmanifest" />
-<script>
+        .header-logic {
+            font-size: clamp(44px, 8.5vw, 92px);
+            font-weight: 800;
+            line-height: 0.85;
+            text-transform: uppercase;
+            letter-spacing: -0.05em;
+            color: #1A1918;
+            display: inline-block;
+        }
 
-  function setLayoutHeight(hypeDocument, element, event) {
-  
-  if(!hypeDocument.storedLayoutHeights){
-  hypeDocument.storedLayoutHeights = {};
-  };
+        .header-logic span {
+            font-weight: 200;
+            display: block;
+            letter-spacing: -0.01em;
+            margin-top: 0.05em;
+            background: linear-gradient(90deg, #1A1918 0%, var(--sunset-peach) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-  const hypeDoc = hypeDocument.getElementById(hypeDocument.documentId());
-  const layouId = hypeDocument.currentSceneId();
-  const layoutEl = hypeDocument.getElementById(layouId); 
-  const containerEl = layoutEl.querySelector('.scaled');
+        .header-30px {
+            font-size: 30px;
+            font-weight: 800;
+            line-height: 0.95;
+            text-transform: uppercase;
+            letter-spacing: -0.01em;
+            color: #1A1918;
+        }
 
-  
-  
-    if(!hypeDocument.storedLayoutHeights.layoutId){
-  hypeDocument.storedLayoutHeights.layoutId = layoutEl.getBoundingClientRect().height;
-  }else{
-  layoutEl.style.height = hypeDocument.storedLayoutHeights.layoutId + 'px';
-  hypeDocument.relayoutIfNecessary();
-  }
-  
-  
-setTimeout(
-function(){
-getElementHeight(containerEl);
-},
-1
-)
+        /* Magnitude Pro Terminal Style */
+        .magnitude-terminal-bg {
+            background: #0F1113 !important;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
 
-function getElementHeight(containerEl) {
+        .grid-lines {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
 
-  const rect = containerEl.getBoundingClientRect();
- var newHeight = rect.height;
+        /* Blueprint Build Animations */
+        .scan-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--sunset-peach), transparent);
+            box-shadow: 0 0 15px var(--sunset-peach);
+            animation: scan 4s linear infinite;
+            z-index: 10;
+        }
 
-  if(newHeight && newHeight !== 0){
-  layoutEl.style.height = newHeight + "px";
-    hypeDoc.style.height = newHeight + "px";
+        @keyframes scan {
+            0% { top: 0%; opacity: 0; }
+            5% { opacity: 1; }
+            95% { opacity: 1; }
+            100% { top: 100%; opacity: 0; }
+        }
 
-  }
-  console.log(hypeDocument.storedLayoutHeights)
-}
-  }
-  
-    
+        .build-block {
+            position: absolute;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            animation: flicker 3s infinite alternate;
+        }
 
+        @keyframes flicker {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 0.5; border-color: var(--sunset-peach); }
+        }
 
+        /* Strat Candles Build State */
+        .strat-candle-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: candleBuild 5s infinite ease-in-out;
+            position: relative;
+            z-index: 20;
+        }
 
-  if("HYPE_eventListeners" in window === false) {
-    window.HYPE_eventListeners = Array();
-  }
-  window.HYPE_eventListeners.push({"type":"HypeLayoutRequest", "callback":setLayoutHeight})
+        @keyframes candleBuild {
+            0%, 5% { transform: translateY(10px); opacity: 0; }
+            20%, 80% { transform: translateY(0); opacity: 0.8; }
+            95%, 100% { transform: translateY(-10px); opacity: 0; }
+        }
 
- </script>	
+        .broadening-line-terminal {
+            position: absolute;
+            background: rgba(232, 158, 120, 0.2);
+            height: 1px;
+            width: 150%;
+            left: -25%;
+            filter: blur(1px);
+        }
 
-	<!-- end copy -->
-  </head>
-  <body>
-	<!-- copy these lines to your document: -->
+        .project-card {
+            background: white;
+            border-radius: 4px;
+            padding: 2.5rem;
+            border: 1px solid #F0EBE7;
+            transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+            display: flex;
+            flex-direction: column;
+            min-height: 540px;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(163, 128, 114, 0.03);
+        }
 
-	<div id="index_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;height:880px;overflow:hidden;">
-		<script type="text/javascript" charset="utf-8" src="index.hyperesources/index_hype_generated_script.js?68013"></script>
-	</div>
+        .project-card:hover {
+            border-color: var(--sunset-peach);
+            transform: translateY(-8px);
+            box-shadow: 0 40px 60px -20px rgba(232, 158, 120, 0.12);
+        }
 
-	<!-- end copy -->
-	
+        .card-visual {
+            width: 100%;
+            height: 320px;
+            background: #F8F5F2;
+            margin-bottom: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
 
+        .badge {
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            padding: 7px 16px;
+            border-radius: 100px;
+            display: inline-block;
+        }
+        
+        .badge-ai { background: var(--tag-ai-bg); color: var(--tag-ai-text); border: 1px solid rgba(180, 83, 9, 0.1); }
+        .badge-enterprise { background: var(--tag-ent-bg); color: var(--tag-ent-text); border: 1px solid rgba(67, 56, 202, 0.1); }
+        .badge-growth { background: var(--tag-growth-bg); color: var(--tag-growth-text); border: 1px solid rgba(22, 101, 52, 0.1); }
+        .badge-retention { background: var(--tag-retention-bg); color: var(--tag-retention-text); border: 1px solid rgba(71, 85, 105, 0.1); }
+        .badge-media { background: var(--tag-media-bg); color: var(--tag-media-text); border: 1px solid rgba(162, 28, 175, 0.1); }
+        .badge-special { background: #1A1918; color: #E89E78; border: 1px solid #1A1918; }
+        .badge-available { background: #DCFCE7; color: #166534; border: 1px solid rgba(22, 101, 52, 0.2); }
 
-	<!-- text content for search engines: -->
+        .link-hover {
+            position: relative;
+            display: inline-block;
+        }
+        .link-hover::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: -4px;
+            left: 0;
+            background: var(--sunset-peach);
+            transform: scaleX(0.1);
+            transform-origin: bottom left;
+            transition: transform 0.4s ease;
+        }
+        .link-hover:hover::after {
+            transform: scaleX(1);
+        }
+    </style>
+</head>
+<body>
 
-	<div style="display:none" aria-hidden=true>
+    <!-- HERO SLOT -->
+    <section id="hype-hero-slot" class="w-full h-[60vh] bg-white border-b border-[#E8E4E1] flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-[#FBF9F7] flex items-center justify-center">
+            <div class="text-center">
+                <p class="text-[10px] font-bold uppercase tracking-[0.8em] text-[#A38072] mb-12">Portfolio / 2026 Edition</p>
+                <div class="relative inline-block px-12 py-8">
+                  <div class="absolute inset-0 border border-[#E8E4E1] opacity-50"></div>
+                  <h2 class="bricolage-font text-3xl font-black opacity-30 uppercase tracking-[0.5em] text-[#E89E78]">
+                    [ SUNSET HERO ANIMATION ]
+                  </h2>
+                </div>
+            </div>
+        </div>
+    </section>
 
-		<div></div>
-		<div></div>
-		<div>Hi, I’m Lesley a...</div>
-		<div>DESI
-</div>
-		<div>G</div>
-		<div>NER
-</div>
-		<div>lpiercefield@gmail.com</div>
-		<div>CONTACT
-</div>
-		<div>updated 2026</div>
-		<div>Hi, I’m Lesley a...
-</div>
-		<div>COMING SOON
-</div>
-		<div>STORY
-</div>
-		<div>UX DESIGN</div>
-		<div>UI DESIGN
-</div>
-		<div>From New Orleans' vibrant streets to the heart of Los Angeles, my journey as a designer is anything but typical. I started in Fashion Marketing, learning how to capture attention, and now, as a Product Designer, I use that knowledge to build engaging digital products. </div>
-		<div>WORK
-</div>
-		<div>I'm accelerating the design of my Strat learning app using AI tools:
-Strategy: Used Gemini to define the curriculum and adaptive learning logic.
-Prototyping: Employed UX Pilot and Lovable to quickly generate and build high-fidelity simulator UI.
-In-Progress: Currently testing and refining the user experience for maximum learning effectiveness.
-</div>
-		<div>Media Units</div>
-		<div>Control Tower
-</div>
-		<div>LESLEY PIERCEFIELD
-</div>
-		<div>My goal is simple: to bring intentionality, empathy, and a little bit of LA sunshine to every design challenge. When I'm not working, I'm usually traveling or making memories with my mom and her dog, Lemon.</div>
-		<div>Featured Work
-</div>
-		<div>Strat Trainer
-</div>
-		<div>
-</div>
-		<div>Envoy
-</div>
-		<div>USER RESEARCH
-</div>
-		<div>SYSTEMS THINKING
-</div>
-		<div>Multi-Platform UX & Conversion Optimization
-</div>
-		<div>IOS APP DESIGN
-</div>
-		<div>EMAIL DESIGN
-</div>
-		<div>Partner Management System and Analytics Dashboard</div>
-		<div>Design Process
-</div>
-		<div>An AI-powered, gamified education platform for traders to rapidly master the Strat Method.
-</div>
-		<div>MyLife.com
-</div>
-		<div>Where Empathy Meets the Evergreen Scroll.
-</div>
-		<div>Conversational AI Marketing Unit </div>
-		<div>High-Impact Media Unit
-and A/B Testing Refinement</div>
-		<div>Coming Soon
-</div>
-		<div>DATA LITERACY
-</div>
-		<div>A seasoned eye, grounded in long-term positions and a deep commitment to design.
-</div>
-		<div>BRANDING
-</div>
-		<div>Sony Crackle</div>
-		<div>Multi-Platform Streaming
-UX and Account Flow Redesign</div>
-		<div>Me
-</div>
-		<div>San José del Cabo</div>
-		<div>New Orleans — Family
-</div>
-		<div>Let’s Go!!
-</div>
-		<div>San Juan, Porto Rico
-</div>
-		<div>Kohala Coast — Hawaii</div>
-		<div>See Her Soon
-</div>
-		<div>Back Home
-</div>
-		<div>Lemon — Chillin
-</div>
-		<div>Featured Work</div>
-		<div>Conversational AI Marketing Unit (High-Engagement CRO)</div>
+    <!-- MAIN CONTENT -->
+    <main class="max-w-[1440px] mx-auto px-10 md:px-20 py-32">
+        
+        <!-- HEADER -->
+        <header class="mb-56">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                <!-- Headline Column -->
+                <div class="lg:col-span-8">
+                    <h2 class="text-[11px] font-bold uppercase tracking-[0.6em] text-[#E89E78] mb-10">Product Design Lead</h2>
+                    <h3 class="header-logic">
+                        Strategy. Systems.<br/>Clarity.
+                        <span>Design Direction.</span>
+                    </h3>
+                </div>
+                
+                <!-- Info Column -->
+                <div class="lg:col-span-4 pt-4">
+                    <div class="space-y-12">
+                        <div class="space-y-6">
+                            <p class="text-lg font-normal leading-snug text-[#4A4947]">
+                                I bridge the gap between high-fidelity product strategy and scalable multi-device ecosystems—transforming complex enterprise logic into clear, human-centered narratives for global streaming platforms, AI-driven tools, and identity systems.
+                            </p>
+                            <div class="pt-2">
+                                <p class="bricolage-font text-[13px] font-extrabold uppercase tracking-[0.2em] text-[#1A1918]">Lesley Piercefield</p>
+                            </div>
+                        </div>
+                        
+                        <div class="pt-8 border-t border-[#E8E4E1] flex items-center gap-10">
+                            <a href="#" class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#1A1918] link-hover">Resume</a>
+                            <a href="mailto:lpiercefield@icloud.com" class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#1A1918] link-hover">Contact</a>
+                            <span class="badge badge-available ml-auto">Available Q1 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
 
-	</div>
+        <!-- PROJECT GRID -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+            
+            <!-- 1. Magnitude Pro -->
+            <div class="project-card md:col-span-2 group">
+                <div class="card-visual magnitude-terminal-bg" style="height: 520px;">
+                    <div class="grid-lines"></div>
+                    <div class="scan-line"></div>
+                    
+                    <!-- Decorative Build Elements -->
+                    <div class="build-block w-40 h-24 top-20 left-20"></div>
+                    <div class="build-block w-64 h-32 bottom-20 right-40" style="animation-delay: 1.5s;"></div>
+                    <div class="build-block w-12 h-12 top-40 right-20" style="animation-delay: 0.5s;"></div>
 
-	<!-- end text content: -->
+                    <div class="broadening-line-terminal top-[40%] rotate-[-2deg]"></div>
+                    <div class="broadening-line-terminal top-[60%] rotate-[3deg]"></div>
+                    
+                    <!-- Integrated 1-2-3 Candles into the Build -->
+                    <div class="flex items-center gap-10 relative z-20">
+                        <div class="strat-candle-container" style="animation-delay: 0s;">
+                            <span class="font-mono text-[9px] font-bold mb-3 text-white/40">2</span>
+                            <div class="w-[12px] h-28 bg-[#F87171] rounded-sm relative shadow-[0_0_15px_rgba(248,113,113,0.3)]">
+                                <div class="absolute left-1/2 -translate-x-1/2 w-[1px] h-[150%] top-[-25%] bg-[#F87171] opacity-40"></div>
+                            </div>
+                        </div>
+                        <div class="strat-candle-container" style="animation-delay: 0.2s;">
+                            <span class="font-mono text-[9px] font-bold mb-3 text-white/40">1</span>
+                            <div class="w-[12px] h-16 bg-[#C084FC] rounded-sm relative shadow-[0_0_15px_rgba(192,132,252,0.3)]">
+                                <div class="absolute left-1/2 -translate-x-1/2 w-[1px] h-[150%] top-[-25%] bg-[#C084FC] opacity-40"></div>
+                            </div>
+                        </div>
+                        <div class="strat-candle-container" style="animation-delay: 0.4s;">
+                            <span class="font-mono text-[9px] font-bold mb-3 text-white/40">3</span>
+                            <div class="w-[12px] h-48 bg-[#4ADE80] rounded-sm relative shadow-[0_0_15px_rgba(74,222,128,0.3)]">
+                                <div class="absolute left-1/2 -translate-x-1/2 w-[1px] h-[150%] top-[-25%] bg-[#4ADE80] opacity-40"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Build Progress Coordinates -->
+                    <div class="absolute top-8 right-8 font-mono text-[9px] text-white/20 text-right">
+                        <div>LAT: 34.0522 N</div>
+                        <div>LNG: 118.2437 W</div>
+                        <div class="mt-2 text-[#E89E78] opacity-100 font-bold">BUILD_STATE: ACTIVE</div>
+                    </div>
 
-  </body>
+                    <div class="absolute top-8 left-8 flex gap-3">
+                        <div class="w-2 h-2 rounded-full bg-white/10"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/10"></div>
+                        <div class="w-2 h-2 rounded-full bg-white/10"></div>
+                    </div>
+
+                    <div class="absolute bottom-12 left-12 text-left">
+                        <span class="bricolage-font text-[12px] font-extrabold text-white uppercase tracking-[1.2em] block mb-2">SIMPLIFIED_TRADING</span>
+                        <span class="text-[9px] font-bold text-white/30 uppercase tracking-[0.4em]">Stocks, Options, and Futures Trading Analytics</span>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-10">
+                    <div>
+                        <div class="flex items-center gap-4 mb-8">
+                            <span class="badge badge-special">Lead Product Architect</span>
+                            <span class="badge badge-enterprise">Fintech System</span>
+                        </div>
+                        <h4 class="bricolage-font text-6xl font-black uppercase tracking-tight text-[#1A1918]">Magnitude Pro</h4>
+                        <p class="text-[11px] font-bold text-[#A38072] mt-6 uppercase tracking-[0.4em]">A Unified Interface for Multi-Timeframe Price Action Concepts</p>
+                        <p class="text-[10px] font-bold text-[#1A1918] mt-4 uppercase tracking-[0.1em] flex items-center gap-2">
+                            <span class="w-2 h-2 bg-[#E89E78] rounded-full animate-pulse"></span>
+                            Currently building and designing using a vibe coding AI workflow
+                        </p>
+                    </div>
+                    <div class="shrink-0">
+                        <a href="mailto:lpiercefield@icloud.com" class="px-12 py-6 bg-[#1A1918] text-white text-[11px] font-bold uppercase tracking-[0.4em] hover:bg-[#E89E78] transition-all rounded-sm inline-block shadow-lg">Request Access</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Envoy -->
+            <div class="project-card">
+                <div class="card-visual">
+                    <span class="bricolage-font text-[11px] font-bold opacity-10 uppercase tracking-[0.8em]">ENVOY_PLATFORM</span>
+                </div>
+                <div class="flex-grow flex flex-col justify-between">
+                    <div>
+                        <div class="mb-8"><span class="badge badge-ai">Conversational AI</span></div>
+                        <h4 class="header-30px">Envoy</h4>
+                        <p class="text-sm text-[#4A4947] mt-4">Scalable design systems for global conversational intelligence and automated workflows.</p>
+                    </div>
+                    <p class="text-[10px] font-bold uppercase tracking-[0.3em] mt-10 border-t border-[#E8E4E1] pt-8">Product Lead</p>
+                </div>
+            </div>
+
+            <!-- Control Tower -->
+            <div class="project-card">
+                <div class="card-visual">
+                    <span class="bricolage-font text-[11px] font-bold opacity-10 uppercase tracking-[0.8em]">COMMAND_CENTER</span>
+                </div>
+                <div class="flex-grow flex flex-col justify-between">
+                    <div>
+                        <div class="mb-8"><span class="badge badge-enterprise">Enterprise UX</span></div>
+                        <h4 class="header-30px">Control Tower</h4>
+                        <p class="text-sm text-[#4A4947] mt-4">Defining the end-to-end journey for complex relationship management and data tools.</p>
+                    </div>
+                    <p class="text-[10px] font-bold uppercase tracking-[0.3em] mt-10 border-t border-[#E8E4E1] pt-8">Lead Experience Designer</p>
+                </div>
+            </div>
+
+            <!-- Media Units -->
+            <div class="project-card">
+                <div class="card-visual">
+                    <span class="bricolage-font text-[11px] font-bold opacity-10 uppercase tracking-[0.8em]">RETENTION_UX</span>
+                </div>
+                <div class="flex-grow flex flex-col justify-between">
+                    <div>
+                        <div class="mb-8"><span class="badge badge-retention">Retention Strategy</span></div>
+                        <h4 class="header-30px">Media Units</h4>
+                        <p class="text-sm text-[#4A4947] mt-4">High-velocity components optimized for engagement and conversion narratives.</p>
+                    </div>
+                    <p class="text-[10px] font-bold uppercase tracking-[0.3em] mt-10 border-t border-[#E8E4E1] pt-8">Growth Design</p>
+                </div>
+            </div>
+
+            <!-- MyLife.com -->
+            <div class="project-card">
+                <div class="card-visual">
+                    <span class="bricolage-font text-[11px] font-bold opacity-10 uppercase tracking-[0.8em]">IDENTITY_UX</span>
+                </div>
+                <div class="flex-grow flex flex-col justify-between">
+                    <div>
+                        <div class="mb-8"><span class="badge badge-growth">Growth Product</span></div>
+                        <h4 class="header-30px">MyLife.com</h4>
+                        <p class="text-sm text-[#4A4947] mt-4">Identity systems and acquisition funnel optimization for mass-scale user bases.</p>
+                    </div>
+                    <p class="text-[10px] font-bold uppercase tracking-[0.3em] mt-10 border-t border-[#E8E4E1] pt-8">UX/UI Designer</p>
+                </div>
+            </div>
+
+            <!-- Crackle -->
+            <div class="project-card">
+                <div class="card-visual">
+                    <span class="bricolage-font text-[11px] font-bold opacity-10 uppercase tracking-[0.8em]">OTT_INTERFACE</span>
+                </div>
+                <div class="flex-grow flex flex-col justify-between">
+                    <div>
+                        <div class="mb-8"><span class="badge badge-media">Streaming UX</span></div>
+                        <h4 class="header-30px">Crackle</h4>
+                        <p class="text-sm text-[#4A4947] mt-4">Modernizing Sony's ad-supported streaming interface across cross-device ecosystems.</p>
+                    </div>
+                    <p class="text-[10px] font-bold uppercase tracking-[0.3em] mt-10 border-t border-[#E8E4E1] pt-8">UX/UI Designer</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- HYPE FOOTER SLOT -->
+    <section id="hype-footer-slot" class="w-full h-[60vh] bg-white border-t border-[#E8E4E1] flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-[#FBF9F7] flex items-center justify-center">
+            <div class="text-center">
+                <p class="text-[10px] font-bold uppercase tracking-[0.8em] text-[#A38072] mb-12">Architecture / Systems / Scale</p>
+                <div class="relative inline-block px-12 py-8">
+                  <div class="absolute inset-0 border border-[#E8E4E1] opacity-50"></div>
+                  <h2 class="bricolage-font text-3xl font-black opacity-30 uppercase tracking-[0.5em] text-[#E89E78]">
+                    [ SUNSET FOOTER ANIMATION ]
+                  </h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="w-full bg-[#1A1918] pt-32 pb-16 px-10 md:px-20 text-[#A38072] relative">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-20 border-b border-white/5 pb-32 mb-16">
+                <div class="lg:col-span-7">
+                    <h4 class="bricolage-font text-5xl font-black text-white mb-10 tracking-tighter">LP</h4>
+                    <p class="text-xl font-normal text-white/30 max-w-md leading-relaxed">
+                        Designing clarity for complex product ecosystems. 
+                        Los Angeles / 2026.
+                    </p>
+                </div>
+                <div class="lg:col-span-3">
+                    <h5 class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/10 mb-10">Connectivity</h5>
+                    <ul class="space-y-6 text-sm font-bold text-white/60">
+                        <li><a href="#" class="hover:text-[#E89E78] transition-colors">LinkedIn</a></li>
+                        <li><a href="#" class="hover:text-[#E89E78] transition-colors">Resume</a></li>
+                        <li><a href="mailto:lpiercefield@icloud.com" class="hover:text-[#E89E78] transition-colors">Email</a></li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-2">
+                    <h5 class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/10 mb-10">Status</h5>
+                    <p class="text-sm font-bold text-white/60">Available Q1 2026</p>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 opacity-30">
+                <p class="text-[9px] font-bold uppercase tracking-[0.4em]">
+                    &copy; 2026 Lesley Piercefield | Product Design Lead
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>
