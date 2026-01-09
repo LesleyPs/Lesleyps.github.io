@@ -35,6 +35,42 @@
             --strat-purple: #C084FC;
         }
 
+        /* STRAT SUNSET GRADIENT LOGIC */
+        .hype-sunset-bg {
+            background-color: #97AAB1 !important; 
+            background-image: 
+                radial-gradient(circle at 50% 12%, rgba(255, 255, 255, 0.25) 0%, transparent 40%),
+                linear-gradient(
+                    180deg, 
+                    #97AAB1 0%,    /* Top: Slate Blue */
+                    #A5CDE1 20%,   /* Transition to Sky */
+                    #FBF9F7 40%,   /* Mid: Paper Warm */
+                    #FFD8B1 60%,   /* Golden Peach */
+                    #F2994A 82%,   /* Horizon Orange */
+                    #8E6554 100%   /* Bottom: Deep Earthy Anchor */
+                ) !important;
+            background-size: 100% 100% !important;
+            border: none !important;
+            position: relative;
+            overflow: hidden;
+            animation: sunset-atmosphere 15s ease-in-out infinite alternate;
+        }
+
+        @keyframes sunset-atmosphere {
+            0% { filter: saturate(100%) brightness(100%); }
+            100% { filter: saturate(112%) brightness(102%); }
+        }
+
+        /* Tactile Paper Texture overlay for the Hero */
+        .hype-sunset-bg::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            opacity: 0.05;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
         body {
             font-family: 'Schibsted Grotesk', sans-serif;
             background: radial-gradient(circle at top right, #FFF5EE 0%, var(--paper-warm) 100%);
@@ -235,7 +271,6 @@
             transform: scaleX(1);
         }
 
-        /* Hype Container Styles */
         .hype-container {
             width: 100%;
             height: 100%;
@@ -245,26 +280,25 @@
 </head>
 <body>
 
-    <!-- HERO SLOT: Hype Animation Integration -->
+    <!-- HERO SLOT: Fixed with .hype-sunset-bg class and correct ID -->
     <div id="intro_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;height:880px;overflow:hidden;">
-		<script type="text/javascript" charset="utf-8" src="Intro.hyperesources/intro_hype_generated_script.js?12067"></script>
+		<script type="text/javascript" charset="utf-8" src="Intro.hyperesources/intro_hype_generated_script.js?87395"></script>
 	</div>
+
     <!-- MAIN CONTENT -->
     <main class="max-w-[1440px] mx-auto px-10 md:px-20 py-32">
         
         <!-- HEADER -->
         <header class="mb-56">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-                <!-- Headline Column -->
                 <div class="lg:col-span-8">
                     <h2 class="text-[11px] font-bold uppercase tracking-[0.6em] text-[#E89E78] mb-10">Product Design Lead</h2>
                     <h3 class="header-logic">
-                        Strategy. Systems.<br/>Clarity.
+                        Strategy. Systems.
                         <span>Design Direction.</span>
                     </h3>
                 </div>
                 
-                <!-- Info Column -->
                 <div class="lg:col-span-4 pt-4">
                     <div class="space-y-12">
                         <div class="space-y-6">
@@ -295,7 +329,6 @@
                     <div class="grid-lines"></div>
                     <div class="scan-line"></div>
                     
-                    <!-- Decorative Build Elements -->
                     <div class="build-block w-40 h-24 top-20 left-20"></div>
                     <div class="build-block w-64 h-32 bottom-20 right-40" style="animation-delay: 1.5s;"></div>
                     <div class="build-block w-12 h-12 top-40 right-20" style="animation-delay: 0.5s;"></div>
@@ -303,7 +336,6 @@
                     <div class="broadening-line-terminal top-[40%] rotate-[-2deg]"></div>
                     <div class="broadening-line-terminal top-[60%] rotate-[3deg]"></div>
                     
-                    <!-- Integrated 1-2-3 Candles into the Build -->
                     <div class="flex items-center gap-10 relative z-20">
                         <div class="strat-candle-container" style="animation-delay: 0s;">
                             <span class="font-mono text-[9px] font-bold mb-3 text-white/40">2</span>
@@ -325,7 +357,6 @@
                         </div>
                     </div>
                     
-                    <!-- Build Progress Coordinates -->
                     <div class="absolute top-8 right-8 font-mono text-[9px] text-white/20 text-right">
                         <div>LAT: 34.0522 N</div>
                         <div>LNG: 118.2437 W</div>
@@ -439,11 +470,9 @@
     </main>
 
     <!-- HYPE FOOTER SLOT -->
-    <section id="hype-footer-slot" class="w-full h-[60vh] bg-white border-t border-[#E8E4E1] relative overflow-hidden">
-        <!-- Replace 'footer_animation.html' with your actual Hype exported HTML filename -->
-        <iframe src="animations/footer_animation/footer_animation.html" class="hype-container" scrolling="no" allowtransparency="true"></iframe>
-    </section>
-
+    <div id="footer_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;height:880px;overflow:hidden;">
+		<script type="text/javascript" charset="utf-8" src="footer.hyperesources/footer_hype_generated_script.js?51294"></script>
+	</div>
     <!-- FOOTER -->
     <footer class="w-full bg-[#1A1918] pt-32 pb-16 px-10 md:px-20 text-[#A38072] relative">
         <div class="max-w-[1440px] mx-auto">
