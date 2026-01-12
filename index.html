@@ -8,6 +8,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Schibsted+Grotesk:wght@400;700&family=JetBrains+Mono:wght@500;800&display=swap" rel="stylesheet">
+	    <link href="${resourcesFolderName}/favicon_16x16.ico" rel="shortcut icon" type="image/x-icon"/>
+	<link rel="icon" type="image/png" href="${resourcesFolderName}/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="${resourcesFolderName}/favicon.svg" />
+<link rel="shortcut icon" href="${resourcesFolderName}/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="${resourcesFolderName}/apple-touch-icon.png" />
+<link rel="manifest" href="${resourcesFolderName}/site.webmanifest" />
+</style>
+	<link href="${resourcesFolderName}/favicon_16x16.ico" rel="shortcut icon" type="image/x-icon"/>
+	<link rel="icon" type="image/png" href="${resourcesFolderName}/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="${resourcesFolderName}/favicon.svg" />
+<link rel="shortcut icon" href="${resourcesFolderName}/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="${resourcesFolderName}/apple-touch-icon.png" />
+<link rel="manifest" href="${resourcesFolderName}/site.webmanifest" />
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -33,42 +46,6 @@
             --strat-green: #4ADE80;
             --strat-red: #F87171;
             --strat-purple: #C084FC;
-        }
-
-        /* STRAT SUNSET GRADIENT LOGIC */
-        .hype-sunset-bg {
-            background-color: #97AAB1 !important; 
-            background-image: 
-                radial-gradient(circle at 50% 12%, rgba(255, 255, 255, 0.25) 0%, transparent 40%),
-                linear-gradient(
-                    180deg, 
-                    #97AAB1 0%,    /* Top: Slate Blue */
-                    #A5CDE1 20%,   /* Transition to Sky */
-                    #FBF9F7 40%,   /* Mid: Paper Warm */
-                    #FFD8B1 60%,   /* Golden Peach */
-                    #F2994A 82%,   /* Horizon Orange */
-                    #8E6554 100%   /* Bottom: Deep Earthy Anchor */
-                ) !important;
-            background-size: 100% 100% !important;
-            border: none !important;
-            position: relative;
-            overflow: hidden;
-            animation: sunset-atmosphere 15s ease-in-out infinite alternate;
-        }
-
-        @keyframes sunset-atmosphere {
-            0% { filter: saturate(100%) brightness(100%); }
-            100% { filter: saturate(112%) brightness(102%); }
-        }
-
-        /* Tactile Paper Texture overlay for the Hero */
-        .hype-sunset-bg::after {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            opacity: 0.05;
-            pointer-events: none;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
         }
 
         body {
@@ -271,6 +248,7 @@
             transform: scaleX(1);
         }
 
+        /* Hype Container Styles */
         .hype-container {
             width: 100%;
             height: 100%;
@@ -280,25 +258,26 @@
 </head>
 <body>
 
-    <!-- HERO SLOT: Fixed with .hype-sunset-bg class and correct ID -->
+    <!-- HERO SLOT: Hype Animation Integration -->
     <div id="intro_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;height:880px;overflow:hidden;">
-		<script type="text/javascript" charset="utf-8" src="Intro.hyperesources/intro_hype_generated_script.js?87395"></script>
+		<script type="text/javascript" charset="utf-8" src="Intro.hyperesources/intro_hype_generated_script.js?62577"></script>
 	</div>
-
     <!-- MAIN CONTENT -->
     <main class="max-w-[1440px] mx-auto px-10 md:px-20 py-32">
         
         <!-- HEADER -->
         <header class="mb-56">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                <!-- Headline Column -->
                 <div class="lg:col-span-8">
                     <h2 class="text-[11px] font-bold uppercase tracking-[0.6em] text-[#E89E78] mb-10">Product Design Lead</h2>
                     <h3 class="header-logic">
-                        Strategy. Systems.
+                        Strategy. Systems.<br/>Clarity.
                         <span>Design Direction.</span>
                     </h3>
                 </div>
                 
+                <!-- Info Column -->
                 <div class="lg:col-span-4 pt-4">
                     <div class="space-y-12">
                         <div class="space-y-6">
@@ -329,6 +308,7 @@
                     <div class="grid-lines"></div>
                     <div class="scan-line"></div>
                     
+                    <!-- Decorative Build Elements -->
                     <div class="build-block w-40 h-24 top-20 left-20"></div>
                     <div class="build-block w-64 h-32 bottom-20 right-40" style="animation-delay: 1.5s;"></div>
                     <div class="build-block w-12 h-12 top-40 right-20" style="animation-delay: 0.5s;"></div>
@@ -336,6 +316,7 @@
                     <div class="broadening-line-terminal top-[40%] rotate-[-2deg]"></div>
                     <div class="broadening-line-terminal top-[60%] rotate-[3deg]"></div>
                     
+                    <!-- Integrated 1-2-3 Candles into the Build -->
                     <div class="flex items-center gap-10 relative z-20">
                         <div class="strat-candle-container" style="animation-delay: 0s;">
                             <span class="font-mono text-[9px] font-bold mb-3 text-white/40">2</span>
@@ -357,6 +338,7 @@
                         </div>
                     </div>
                     
+                    <!-- Build Progress Coordinates -->
                     <div class="absolute top-8 right-8 font-mono text-[9px] text-white/20 text-right">
                         <div>LAT: 34.0522 N</div>
                         <div>LNG: 118.2437 W</div>
@@ -390,7 +372,7 @@
             <!-- Envoy -->
             <a href="case-studies/envoy.html" class="project-card">
                 <div class="card-visual">
-                    <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/index_images/Tiki-Envoy-product-image.webp?raw=true" alt="Envoy Platform" onerror="this.style.display='none'">
+                    <img src="https://raw.githubusercontent.com/lpiercefield/portfolio/main/assets/thumbnails/envoy-thumb.jpg" alt="Envoy Platform" onerror="this.style.display='none'">
                     <span class="absolute bricolage-font text-[11px] font-bold opacity-10 uppercase tracking-[0.8em]">ENVOY_PLATFORM</span>
                 </div>
                 <div class="flex-grow flex flex-col justify-between">
@@ -406,7 +388,7 @@
             <!-- Control Tower -->
             <a href="case-studies/control-tower.html" class="project-card">
                 <div class="card-visual">
-                    <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/index_images/Tiki-control-tower-product.webp?raw=true" alt="Control Tower" onerror="this.style.display='none'">
+                    <img src="https://raw.githubusercontent.com/lpiercefield/portfolio/main/assets/thumbnails/controltower-thumb.jpg" alt="Control Tower" onerror="this.style.display='none'">
                     <span class="absolute bricolage-font text-[11px] font-bold opacity-10 uppercase tracking-[0.8em]">COMMAND_CENTER</span>
                 </div>
                 <div class="flex-grow flex flex-col justify-between">
@@ -422,7 +404,7 @@
             <!-- Media Units -->
             <a href="case-studies/media-units.html" class="project-card">
                 <div class="card-visual">
-                    <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/index_images/Tiki-media-units-product-image.webp?raw=true" alt="Media Units" onerror="this.style.display='none'">
+                    <img src="https://raw.githubusercontent.com/lpiercefield/portfolio/main/assets/thumbnails/media-thumb.jpg" alt="Media Units" onerror="this.style.display='none'">
                     <span class="absolute bricolage-font text-[11px] font-bold opacity-10 uppercase tracking-[0.8em]">RETENTION_UX</span>
                 </div>
                 <div class="flex-grow flex flex-col justify-between">
@@ -438,7 +420,7 @@
             <!-- MyLife.com -->
             <a href="case-studies/mylife.html" class="project-card">
                 <div class="card-visual">
-                    <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/index.hyperesources/Mylife-WSFY_2x.webp?raw=true" alt="MyLife" onerror="this.style.display='none'">
+                    <img src="https://raw.githubusercontent.com/lpiercefield/portfolio/main/assets/thumbnails/mylife-thumb.jpg" alt="MyLife" onerror="this.style.display='none'">
                     <span class="absolute bricolage-font text-[11px] font-bold opacity-10 uppercase tracking-[0.8em]">IDENTITY_UX</span>
                 </div>
                 <div class="flex-grow flex flex-col justify-between">
@@ -454,7 +436,7 @@
             <!-- Crackle -->
             <a href="case-studies/crackle.html" class="project-card">
                 <div class="card-visual">
-                    <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/index_images/Crackle-product-image.webp?raw=true" alt="Crackle" onerror="this.style.display='none'">
+                    <img src="https://raw.githubusercontent.com/lpiercefield/portfolio/main/assets/thumbnails/crackle-thumb.jpg" alt="Crackle" onerror="this.style.display='none'">
                     <span class="absolute bricolage-font text-[11px] font-bold opacity-10 uppercase tracking-[0.8em]">OTT_INTERFACE</span>
                 </div>
                 <div class="flex-grow flex flex-col justify-between">
@@ -470,9 +452,11 @@
     </main>
 
     <!-- HYPE FOOTER SLOT -->
-    <div id="footer_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;height:880px;overflow:hidden;">
-		<script type="text/javascript" charset="utf-8" src="footer.hyperesources/footer_hype_generated_script.js?51294"></script>
-	</div>
+    <section id="hype-footer-slot" class="w-full h-[60vh] bg-white border-t border-[#E8E4E1] relative overflow-hidden">
+        <!-- Replace 'footer_animation.html' with your actual Hype exported HTML filename -->
+        <iframe src="animations/footer_animation/footer_animation.html" class="hype-container" scrolling="no" allowtransparency="true"></iframe>
+    </section>
+
     <!-- FOOTER -->
     <footer class="w-full bg-[#1A1918] pt-32 pb-16 px-10 md:px-20 text-[#A38072] relative">
         <div class="max-w-[1440px] mx-auto">
