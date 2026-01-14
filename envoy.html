@@ -1,203 +1,319 @@
 <!DOCTYPE html>
-<html manifest="envoy.hyperesources/cache.manifest">
-  <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
-	<title>Envoy</title>
-	<style>
-		html {
-			height:100%;
-		}
-		body {
-			background-color:#F8F5EF;
-			margin:0;
-			height:100%;
-		}
-	</style>
-	<!-- copy these lines to your document head: -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envoy | Lesley Piercefield</title>
 
-	<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=device-width" />
-	<link href='https://fonts.googleapis.com/css?family=Nunito:700&subset=latin' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Nunito&subset=latin' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Nunito:900&subset=latin' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Reddit+Sans:800&subset=latin' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Nunito+Sans:500&subset=latin' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Nunito:500&subset=latin' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Krona+One&subset=latin' rel='stylesheet' type='text/css'>
-<style>
-    .alignContentVertical {
-		display: flex !important;
-		flex-direction: column;
-        justify-content: center;
+    <link rel="shortcut icon" href="assets/favicons/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/png" href="assets/favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Schibsted+Grotesk:wght@400;700&family=JetBrains+Mono:wght@500;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --sunset-peach: #E89E78;
+            --sunset-clay: #A38072;
+            --paper-warm: #FBF9F7;
+            --text-main: #2D2C2A;
+            --tag-ai-bg: #FEE9D7;
+            --tag-ai-text: #B45309;
+            --tag-retention-bg: #F1F5F9;
+            --tag-retention-text: #475569;
+        }
+
+        body {
+            font-family: 'Schibsted Grotesk', sans-serif;
+            background: radial-gradient(circle at top right, #FFF5EE 0%, var(--paper-warm) 100%);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, .bricolage-font { 
+            font-family: 'Bricolage Grotesque', sans-serif; 
+            font-style: normal; 
         }
         
-	.sticky{
-		position: -webkit-sticky !important; /* Safari */
-		position: fixed !important;
-		top: 0 !important;
-		}
-		
-	.outlined-text {
-        color: transparent; -webkit-text-stroke: 2px #D0E2EC; /* Adjust width and color as needed */
-  	
-	}
-	</style>
-	<link href="envoy.hyperesources/favicon_16x16.ico" rel="shortcut icon" type="image/x-icon"/>
-	<link rel="icon" type="image/png" href="envoy.hyperesources/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="envoy.hyperesources/favicon.svg" />
-<link rel="shortcut icon" href="envoy.hyperesources/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="envoy.hyperesources/apple-touch-icon.png" />
-<link rel="manifest" href="envoy.hyperesources/site.webmanifest" />
-</style>
-	<link href="envoy.hyperesources/favicon_16x16.ico" rel="shortcut icon" type="image/x-icon"/>
-	<link rel="icon" type="image/png" href="envoy.hyperesources/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="envoy.hyperesources/favicon.svg" />
-<link rel="shortcut icon" href="envoy.hyperesources/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="envoy.hyperesources/apple-touch-icon.png" />
-<link rel="manifest" href="envoy.hyperesources/site.webmanifest" />
-<script>
+        .header-logic {
+            font-size: clamp(44px, 8.5vw, 92px);
+            font-weight: 800;
+            line-height: 0.85;
+            text-transform: uppercase;
+            letter-spacing: -0.05em;
+            color: #1A1918;
+            display: inline-block;
+        }
 
-  function setLayoutHeight(hypeDocument, element, event) {
-  
-  if(!hypeDocument.storedLayoutHeights){
-  hypeDocument.storedLayoutHeights = {};
-  };
+        .header-logic span {
+            font-weight: 200;
+            display: block;
+            letter-spacing: -0.01em;
+            margin-top: 0.05em;
+            background: linear-gradient(90deg, #1A1918 0%, var(--sunset-peach) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-  const hypeDoc = hypeDocument.getElementById(hypeDocument.documentId());
-  const layouId = hypeDocument.currentSceneId();
-  const layoutEl = hypeDocument.getElementById(layouId); 
-  const containerEl = layoutEl.querySelector('.scaled');
+        .badge {
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            padding: 7px 16px;
+            border-radius: 100px;
+            display: inline-block;
+        }
 
-  
-  
-    if(!hypeDocument.storedLayoutHeights.layoutId){
-  hypeDocument.storedLayoutHeights.layoutId = layoutEl.getBoundingClientRect().height;
-  }else{
-  layoutEl.style.height = hypeDocument.storedLayoutHeights.layoutId + 'px';
-  hypeDocument.relayoutIfNecessary();
-  }
-  
-  
-setTimeout(
-function(){
-getElementHeight(containerEl);
-},
-1
-)
+        .badge-ai { background: var(--tag-ai-bg); color: var(--tag-ai-text); border: 1px solid rgba(180, 83, 9, 0.1); }
+        .badge-retention { background: var(--tag-retention-bg); color: var(--tag-retention-text); border: 1px solid rgba(71, 85, 105, 0.1); }
 
-function getElementHeight(containerEl) {
+        .image-container {
+            background: #F8F5F2;
+            border: 1px solid #F0EBE7;
+            border-radius: 4px;
+            overflow: hidden;
+            width: 100%;
+            margin: 4rem 0;
+        }
 
-  const rect = containerEl.getBoundingClientRect();
- var newHeight = rect.height;
+        .comparison-card {
+            background: white;
+            border: 1px solid #F0EBE7;
+            border-radius: 12px;
+            padding: 2.5rem;
+        }
 
-  if(newHeight && newHeight !== 0){
-  layoutEl.style.height = newHeight + "px";
-    hypeDoc.style.height = newHeight + "px";
+        .process-shot {
+            width: 100%;
+            border: 1px solid #F0EBE7;
+            border-radius: 4px;
+            margin-bottom: 2rem;
+        }
 
-  }
-  console.log(hypeDocument.storedLayoutHeights)
-}
-  }
-  
-    
+        .next-project-card {
+            border: 1px solid #F0EBE7;
+            background: white;
+            transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+            text-decoration: none;
+            color: inherit;
+        }
+        .next-project-card:hover {
+            border-color: var(--sunset-peach);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+        }
+    </style>
+</head>
+<body>
 
+    <!-- NAV -->
+    <nav class="fixed top-0 w-full z-50 px-10 md:px-20 py-8 flex justify-between items-center bg-white/30 backdrop-blur-md border-b border-black/5">
+        <a href="index.html" class="bricolage-font font-black text-2xl tracking-tighter">LP</a>
+        <div class="flex items-center gap-12">
+            <a href="index.html" class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#1A1918]">Work</a>
+            <a href="mailto:lpiercefield@icloud.com" class="px-6 py-3 bg-[#1A1918] text-white text-[10px] font-bold uppercase tracking-[0.2em] rounded-sm hover:bg-[#E89E78] transition-all">Contact</a>
+        </div>
+    </nav>
 
+    <!-- HERO -->
+    <header class="max-w-[1440px] mx-auto px-10 md:px-20 pt-56 pb-32">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <div class="lg:col-span-8">
+                <h2 class="text-[11px] font-bold uppercase tracking-[0.6em] text-[#E89E78] mb-10">Case Study 02</h2>
+                <h1 class="header-logic">
+                    Envoy<br/>
+                    <span>Conversational UX.</span>
+                </h1>
+            </div>
+            <div class="lg:col-span-4 pt-4">
+                <div class="space-y-8">
+                    <p class="text-lg font-normal leading-snug text-[#4A4947]">
+                        A flagship AI product establishing a new revenue stream by scaling complex conversational functionality across global Destination Marketing Organizations (DMOs).
+                    </p>
+                    <div class="pt-8 border-t border-[#E8E4E1]">
+                        <span class="badge badge-ai mb-4">AI Product Design</span>
+                        <p class="bricolage-font text-[13px] font-extrabold uppercase tracking-[0.2em] text-[#1A1918]">Lead Product Designer @ Tiki</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-  if("HYPE_eventListeners" in window === false) {
-    window.HYPE_eventListeners = Array();
-  }
-  window.HYPE_eventListeners.push({"type":"HypeLayoutRequest", "callback":setLayoutHeight})
+        <!-- PRODUCT VIDEO CONTAINER -->
+        <div class="image-container aspect-video bg-black shadow-2xl mb-8">
+            <video class="w-full h-full object-cover" controls poster="assets/envoy-poster.webp">
+                <source src="assets/envoy-demo.mp4" type="video/mp4">
+            </video>
+        </div>
 
- </script>	
+        <!-- FALLBACK STATIC PRODUCT IMAGE -->
+        <div class="image-container aspect-video shadow-lg">
+            <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/envoy-product-shot.webp?raw=true" alt="Envoy Conversational UI Detail" class="w-full h-full object-cover">
+        </div>
+    </header>
 
-	<!-- end copy -->
-  </head>
-  <body>
-	<!-- copy these lines to your document: -->
+    <!-- CONTENT -->
+    <main class="max-w-[1440px] mx-auto px-10 md:px-20 py-32 border-t border-[#E8E4E1]">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-20">
+            
+            <aside class="hidden lg:block lg:col-span-3">
+                <div class="sticky top-32 space-y-8">
+                    <ul class="space-y-6 text-[10px] font-bold uppercase tracking-[0.4em] text-black/30">
+                        <li class="text-[#E89E78]">01. The Challenge</li>
+                        <li>02. AI Intelligence</li>
+                        <li>03. Design Process</li>
+                        <li>04. Impact & Outcome</li>
+                    </ul>
+                </div>
+            </aside>
 
-	<div id="envoy_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;height:7580px;overflow:hidden;">
-		<script type="text/javascript" charset="utf-8" src="envoy.hyperesources/envoy_hype_generated_script.js?10436"></script>
-	</div>
+            <div class="lg:col-span-9 space-y-40">
+                
+                <section>
+                    <h4 class="bricolage-font text-3xl font-black uppercase tracking-tight mb-8">The Challenge</h4>
+                    <p class="text-xl font-normal leading-relaxed text-[#4A4947] max-w-3xl">
+                        Translating complex engagement goals into a scalable, multi-device UX that accommodated localization and unique branding for each destination.
+                    </p>
+                </section>
 
-	<!-- end copy -->
-	
+                <!-- AI COMPARISON MODULE -->
+                <section>
+                    <h4 class="bricolage-font text-3xl font-black uppercase tracking-tight mb-12">Contextual Intelligence</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="comparison-card">
+                            <h5 class="text-[10px] font-bold uppercase tracking-widest text-black/30 mb-6">Standard Chat AI</h5>
+                            <p class="text-xs italic mb-4">"Is Traverse City Boring?"</p>
+                            <div class="p-6 bg-gray-50 rounded text-sm text-[#4A4947]">
+                                "Traverse City, Michigan, isn't a big city, so if you're looking for nightlife it might feel quiet..."
+                            </div>
+                        </div>
+                        <div class="comparison-card border-[#E89E78]">
+                            <h5 class="text-[10px] font-bold uppercase tracking-widest text-[#E89E78] mb-6">Envoy AI</h5>
+                            <p class="text-xs italic mb-4">"Is Traverse City Boring?"</p>
+                            <div class="p-6 bg-[#FFF9F6] border border-[#FEE9D7] rounded text-sm text-[#1A1918]">
+                                "Not at all! Traverse City is filled with exciting activities and beautiful scenery, known for its award-winning vineyards..."
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
+                <!-- 4 PROCESS IMAGES -->
+                <section>
+                    <h4 class="bricolage-font text-3xl font-black uppercase tracking-tight mb-12">Design Process</h4>
+                    <div class="space-y-24">
+                        <div class="space-y-4">
+                            <img src="assets/envoy-process-1.webp" class="process-shot" alt="Stage 1">
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-black/40">01. Concept Visualization & Logic Mapping</p>
+                        </div>
+                        <div class="space-y-4">
+                            <img src="assets/envoy-process-2.webp" class="process-shot" alt="Stage 2">
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-black/40">02. High-Fidelity UI Prototyping</p>
+                        </div>
+                        <div class="space-y-4">
+                            <img src="assets/envoy-process-3.webp" class="process-shot" alt="Stage 3">
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-black/40">03. Component Library for Global Scaling</p>
+                        </div>
+                        <div class="space-y-4">
+                            <img src="assets/envoy-process-4.webp" class="process-shot" alt="Stage 4">
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-black/40">04. Multi-Region Localization Framework</p>
+                        </div>
+                    </div>
+                </section>
 
-	<!-- text content for search engines: -->
+                <section class="pb-32">
+                    <h4 class="bricolage-font text-3xl font-black uppercase tracking-tight mb-8">Impact & Outcome</h4>
+                    <div class="space-y-16 max-w-4xl">
+                        <p class="text-xl font-normal leading-relaxed text-[#4A4947]">
+                            By aligning the conversational UX with destination-specific brand voices, Envoy transformed how DMOs interact with travelers.
+                        </p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-[#E8E4E1] pt-16">
+                            <div class="space-y-4">
+                                <h5 class="bricolage-font font-black text-xs uppercase tracking-[0.2em] text-[#E89E78]">/ 01 Revenue</h5>
+                                <p class="text-sm text-[#4A4947] leading-relaxed">Established a new recurring revenue stream by productizing AI engagement for tourism boards.</p>
+                            </div>
+                            <div class="space-y-4">
+                                <h5 class="bricolage-font font-black text-xs uppercase tracking-[0.2em] text-[#E89E78]">/ 02 Scale</h5>
+                                <p class="text-sm text-[#4A4947] leading-relaxed">Successfully scaled to multiple international regions with zero compromise on brand integrity.</p>
+                            </div>
+                            <div class="space-y-4">
+                                <h5 class="bricolage-font font-black text-xs uppercase tracking-[0.2em] text-[#E89E78]">/ 03 Conversion</h5>
+                                <p class="text-sm text-[#4A4947] leading-relaxed">Significantly improved traveler intent conversion through refined conversational logic and brand-specific training.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-	<div style="display:none" aria-hidden=true>
+            </div>
+        </div>
+    </main>
 
-		<div>CONTACT
-</div>
-		<div>updated 2025</div>
-		<div>lpiercefield@gmail.com</div>
-		<div></div>
-		<div>Delivered a flagship conversational AI product, establishing a new revenue stream and successfully scaling to multiple international regions with complex localization requirements.</div>
-		<div>Not at all! Traverse City is filled with exciting activities and beautiful scenery. It's known for its stunning vineyards and wineries, which have received numerous awards. Whether you're exploring the trails, enjoying the waterfront, or discovering local treats, there's always something happening in Traverse City. </div>
-		<div>Envoy: From Core Concept to Scalable, Multi-Region Conversational UX
-</div>
-		<div>Envoy ansewer
-</div>
-		<div>V-3</div>
-		<div>Is Traverse City Boring?</div>
-		<div>Chat GTP ansewer
-</div>
-		<div></div>
-		<div>Features numerous DMOs worldwide
-</div>
-		<div>
-</div>
-		<div>Partner Management System and Analytics Dashboard</div>
-		<div>User Data
-</div>
-		<div>New Text</div>
-		<div>LESLEY PIERCEFIELD
-</div>
-		<div>High-Impact Media Unit
-and A/B Testing Refinement</div>
-		<div>Used AI tools for rapid concept visualization
-</div>
-		<div>Control Tower
-</div>
-		<div></div>
-		<div>←WORK
-</div>
-		<div>Defined core AI-UX interaction models
-</div>
-		<div>CONVERSATIONAL AI
-</div>
-		<div>V-1
-</div>
-		<div>Product designer ~ Clicktripz now Tiki
-</div>
-		<div>CONTACT
-</div>
-		<div>I translated AI engagement goals into a scalable, multi-device UX that accommodated localization and unique branding/tone of voice for each destination.</div>
-		<div>V-2</div>
-		<div>Media Units
-</div>
-		<div>Launching a brand-new AI-powered conversational marketing product that required continuous, data-driven iteration and research to successfully scale its complex functionality across numerous global Destination Marketing Organizations (DMOs).</div>
-		<div>Product Design Process</div>
-		<div>Custom Voice for Every DMO</div>
-		<div>My Role
-</div>
-		<div>Additional Case Studies
-</div>
-		<div>That depends on what kind of pace and activities you enjoy! Traverse City, Michigan, isn’t a big city, so if you’re looking for nightlife, constant crowds, or a fast-paced environment, it might feel a bit quiet or “boring.”</div>
-		<div>Iterative Design</div>
-		<div>Impact Summary:</div>
-		<div>Challenge
-</div>
-		<div>Aligned conversational tone with DMO
-</div>
-		<div>Built Hi-Fi mockups (Figma) and prototypes
-</div>
-		<div></div>
-		<div>Design Process</div>
+    <!-- ADDITIONAL CASE STUDIES SECTION -->
+    <section class="w-full bg-[#F3F0ED] py-32 border-t border-black/5">
+        <div class="max-w-[1440px] mx-auto px-10 md:px-20">
+            <h4 class="text-[10px] font-bold uppercase tracking-[0.5em] text-[#E89E78] mb-16 text-center">View More Case Studies</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <a href="control-tower.html" class="next-project-card p-12 flex flex-col justify-between min-h-[340px]">
+                    <div>
+                        <div class="mb-8"><span class="badge" style="background: #E0E7FF; color: #4338CA;">Enterprise UX</span></div>
+                        <h4 class="bricolage-font text-4xl font-black uppercase tracking-tight">Control Tower</h4>
+                        <p class="text-sm text-[#4A4947] mt-4 max-w-xs">Real-time operational visibility systems and command center design.</p>
+                    </div>
+                    <p class="text-[10px] font-bold uppercase tracking-[0.3em] pt-8 border-t border-black/5">Next Project &rarr;</p>
+                </a>
 
-	</div>
+                <a href="media-units.html" class="next-project-card p-12 flex flex-col justify-between min-h-[340px]">
+                    <div>
+                        <div class="mb-8"><span class="badge badge-retention">Retention Strategy</span></div>
+                        <h4 class="bricolage-font text-4xl font-black uppercase tracking-tight">Media Units</h4>
+                        <p class="text-sm text-[#4A4947] mt-4 max-w-xs">High-velocity components optimized for engagement and advertising.</p>
+                    </div>
+                    <p class="text-[10px] font-bold uppercase tracking-[0.3em] pt-8 border-t border-black/5">Next Project &rarr;</p>
+                </a>
 
-	<!-- end text content: -->
+            </div>
+        </div>
+    </section>
 
-  </body>
+    <!-- UNIVERSAL FOOTER -->
+    <footer class="w-full bg-[#1A1918] pt-32 pb-16 px-10 md:px-20 text-[#A38072] relative">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-20 border-b border-white/5 pb-32 mb-16">
+                <div class="lg:col-span-7">
+                    <h4 class="bricolage-font text-5xl font-black text-white mb-10 tracking-tighter">LP</h4>
+                    <p class="text-xl font-normal text-white/30 max-w-md leading-relaxed">
+                        Designing clarity for complex product ecosystems. 
+                        Los Angeles / 2026.
+                    </p>
+                </div>
+                <div class="lg:col-span-3">
+                    <h5 class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/10 mb-10">Connectivity</h5>
+                    <ul class="space-y-6 text-sm font-bold text-white/60">
+                        <li><a href="https://www.linkedin.com/in/lesley-piercefield-08a90314" class="hover:text-[#E89E78] transition-colors">LinkedIn</a></li>
+                        <li><a href="assets/lesley-piercefield-resume.pdf" class="hover:text-[#E89E78] transition-colors">Resume</a></li>
+                        <li><a href="mailto:lpiercefield@icloud.com" class="hover:text-[#E89E78] transition-colors">Email</a></li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-2">
+                    <h5 class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/10 mb-10">Status</h5>
+                    <p class="text-sm font-bold text-white/60">Available Q1 2026</p>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 opacity-30">
+                <p class="text-[9px] font-bold uppercase tracking-[0.4em]">
+                    &copy; 2026 Lesley Piercefield | Product Design Lead
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
 </html>

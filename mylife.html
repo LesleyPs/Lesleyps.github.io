@@ -1,180 +1,208 @@
 <!DOCTYPE html>
-<html manifest="mylife.hyperesources/cache.manifest">
-  <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
-	<title>Mylife</title>
-	<style>
-		html {
-			height:100%;
-		}
-		body {
-			background-color:#F8F5EF;
-			margin:0;
-			height:100%;
-		}
-	</style>
-	<!-- copy these lines to your document head: -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyLife: Identity & Reputation | Lesley Piercefield</title>
 
-	<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=device-width" />
-	<link href='https://fonts.googleapis.com/css?family=Nunito:700&subset=latin' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Nunito&subset=latin' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Krona+One&subset=latin' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Nunito:900&subset=latin' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Reddit+Sans:800&subset=latin' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Nunito+Sans:500&subset=latin' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Nunito:500&subset=latin' rel='stylesheet' type='text/css'>
-<style>
-    .alignContentVertical {
-		display: flex !important;
-		flex-direction: column;
-        justify-content: center;
+    <link rel="shortcut icon" href="assets/favicons/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Schibsted+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --sunset-peach: #E89E78;
+            --paper-warm: #FBF9F7;
+            --text-main: #2D2C2A;
+            --tag-id-bg: #E0F2FE;
+            --tag-id-text: #0369A1;
         }
+
+        body {
+            font-family: 'Schibsted Grotesk', sans-serif;
+            /* Matched to Control Tower Template */
+            background: radial-gradient(circle at top right, #FFF5EE 0%, var(--paper-warm) 100%);
+            color: var(--text-main);
+            margin: 0;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, .bricolage-font { font-family: 'Bricolage Grotesque', sans-serif; }
         
-	.sticky{
-		position: -webkit-sticky !important; /* Safari */
-		position: fixed !important;
-		top: 0 !important;
-		}
-		
-	.outlined-text {
-        color: transparent; -webkit-text-stroke: 2px #D0E2EC; /* Adjust width and color as needed */
-  	
-	}
-	</style>
-	<link href="mylife.hyperesources/favicon_16x16.ico" rel="shortcut icon" type="image/x-icon"/>
-	<link rel="icon" type="image/png" href="mylife.hyperesources/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="mylife.hyperesources/favicon.svg" />
-<link rel="shortcut icon" href="mylife.hyperesources/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="mylife.hyperesources/apple-touch-icon.png" />
-<link rel="manifest" href="mylife.hyperesources/site.webmanifest" />
-</style>
-	<link href="mylife.hyperesources/favicon_16x16.ico" rel="shortcut icon" type="image/x-icon"/>
-	<link rel="icon" type="image/png" href="mylife.hyperesources/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="mylife.hyperesources/favicon.svg" />
-<link rel="shortcut icon" href="mylife.hyperesources/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="mylife.hyperesources/apple-touch-icon.png" />
-<link rel="manifest" href="mylife.hyperesources/site.webmanifest" />
-<script>
+        .header-logic {
+            font-size: clamp(44px, 8.5vw, 92px);
+            font-weight: 800;
+            line-height: 0.85;
+            text-transform: uppercase;
+            letter-spacing: -0.05em;
+            color: #1A1918;
+        }
 
-  function setLayoutHeight(hypeDocument, element, event) {
-  
-  if(!hypeDocument.storedLayoutHeights){
-  hypeDocument.storedLayoutHeights = {};
-  };
+        .header-logic span {
+            font-weight: 200;
+            display: block;
+            background: linear-gradient(90deg, #1A1918 0%, var(--sunset-peach) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-  const hypeDoc = hypeDocument.getElementById(hypeDocument.documentId());
-  const layouId = hypeDocument.currentSceneId();
-  const layoutEl = hypeDocument.getElementById(layouId); 
-  const containerEl = layoutEl.querySelector('.scaled');
+        .header-30px {
+            font-size: 30px;
+            font-weight: 800;
+            line-height: 0.95;
+            text-transform: uppercase;
+            color: #1A1918;
+        }
 
-  
-  
-    if(!hypeDocument.storedLayoutHeights.layoutId){
-  hypeDocument.storedLayoutHeights.layoutId = layoutEl.getBoundingClientRect().height;
-  }else{
-  layoutEl.style.height = hypeDocument.storedLayoutHeights.layoutId + 'px';
-  hypeDocument.relayoutIfNecessary();
-  }
-  
-  
-setTimeout(
-function(){
-getElementHeight(containerEl);
-},
-1
-)
+        .badge {
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            padding: 7px 16px;
+            border-radius: 100px;
+            display: inline-block;
+        }
+        .badge-id { background: var(--tag-id-bg); color: var(--tag-id-text); border: 1px solid rgba(3, 105, 161, 0.1); }
 
-function getElementHeight(containerEl) {
+        .product-shot-container {
+            background: #F8F5F2;
+            border: 1px solid #F0EBE7;
+            border-radius: 4px;
+            overflow: hidden;
+            width: 100%;
+            margin: 3rem 0;
+            position: relative;
+        }
 
-  const rect = containerEl.getBoundingClientRect();
- var newHeight = rect.height;
+        .sticky-nav { position: sticky; top: 120px; }
 
-  if(newHeight && newHeight !== 0){
-  layoutEl.style.height = newHeight + "px";
-    hypeDoc.style.height = newHeight + "px";
+        .next-project-card {
+            border: 1px solid #F0EBE7;
+            background: white;
+            transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+            text-decoration: none;
+            color: inherit;
+        }
+        .next-project-card:hover { border-color: var(--sunset-peach); transform: translateY(-4px); }
+    </style>
+</head>
+<body>
 
-  }
-  console.log(hypeDocument.storedLayoutHeights)
-}
-  }
-  
-    
+    <nav class="fixed top-0 w-full z-50 px-10 md:px-20 py-8 flex justify-between items-center bg-white/30 backdrop-blur-md border-b border-black/5">
+        <a href="index.html" class="bricolage-font font-black text-2xl tracking-tighter">LP</a>
+        <div class="flex items-center gap-12">
+            <a href="index.html" class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#1A1918]">Portfolio</a>
+            <a href="mailto:lpiercefield@icloud.com" class="px-6 py-3 bg-[#1A1918] text-white text-[10px] font-bold uppercase tracking-[0.2em] rounded-sm hover:bg-[#E89E78] transition-all">Contact</a>
+        </div>
+    </nav>
 
+    <header class="max-w-[1440px] mx-auto px-10 md:px-20 pt-56 pb-32">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <div class="lg:col-span-8">
+                <h2 class="text-[11px] font-bold uppercase tracking-[0.6em] text-[#E89E78] mb-10">Case Study 04</h2>
+                <h1 class="header-logic">
+                    MyLife.com<br/>
+                    <span>Identity.</span>
+                </h1>
+            </div>
+            <div class="lg:col-span-4 pt-4">
+                <div class="space-y-8">
+                    <p class="text-lg font-normal leading-snug text-[#4A4947]">
+                        Helping millions of people monitor, manage, and protect their public identity and online reputation through data-driven transparency.
+                    </p>
+                    <div class="pt-8 border-t border-[#E8E4E1] flex flex-col gap-6">
+                        <div class="flex items-center gap-4">
+                            <span class="badge badge-id">Public Records</span>
+                            <span class="badge badge-id">Consumer Tech</span>
+                        </div>
+                        <p class="bricolage-font text-[13px] font-extrabold uppercase tracking-[0.2em] text-[#1A1918]">Sr. Product Designer ~ MyLife</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- HERO IMAGE SLOT -->
+        <div class="product-shot-container mt-24 aspect-[16/9]">
+             <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/mylife-identity-hero.webp?raw=true" alt="MyLife Reputation Dashboard" class="w-full h-full object-cover">
+        </div>
+    </header>
 
-  if("HYPE_eventListeners" in window === false) {
-    window.HYPE_eventListeners = Array();
-  }
-  window.HYPE_eventListeners.push({"type":"HypeLayoutRequest", "callback":setLayoutHeight})
+    <main class="max-w-[1440px] mx-auto px-10 md:px-20 py-32 border-t border-[#E8E4E1]">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-20">
+            <aside class="hidden lg:block lg:col-span-3">
+                <div class="sticky-nav">
+                    <ul class="space-y-8 text-[10px] font-bold uppercase tracking-[0.4em] text-black/30">
+                        <li><a href="#discovery" class="hover:text-[#E89E78]">01. Discovery</a></li>
+                        <li><a href="#who" class="hover:text-[#E89E78]">02. Who's Searching</a></li>
+                        <li><a href="#reputation" class="hover:text-[#E89E78]">03. Reputation</a></li>
+                    </ul>
+                </div>
+            </aside>
 
- </script>	
+            <div class="lg:col-span-9 space-y-32">
+                <section id="discovery">
+                    <h4 class="header-30px mb-10">Data as a Narrative</h4>
+                    <p class="text-xl font-normal leading-relaxed text-[#4A4947] max-w-3xl">
+                        Public records are often cold and fragmented. I focused on synthesizing thousands of data points—from criminal records to social profiles—into a cohesive "Reputation Profile" that users can verify and control.
+                    </p>
+                </section>
 
-	<!-- end copy -->
-  </head>
-  <body>
-	<!-- copy these lines to your document: -->
+                <section id="who">
+                    <h4 class="header-30px mb-10">"Who's Searching For You"</h4>
+                    <p class="text-xl font-normal leading-relaxed text-[#4A4947] max-w-3xl mb-12">
+                        One of the most high-engagement features on the platform. I redesigned the dashboard that alerts users to search activity, providing clarity on who is viewing their information while maintaining privacy standards.
+                    </p>
+                    <!-- LARGE IMAGE SLOT: Who's Searching Interface -->
+                    <div class="product-shot-container aspect-[16/10]">
+                         <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/mylife-search-dashboard.webp?raw=true" alt="Who's Searching For You UI" class="w-full h-full object-cover">
+                    </div>
+                </section>
 
-	<div id="mylife_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;height:5774px;overflow:hidden;">
-		<script type="text/javascript" charset="utf-8" src="mylife.hyperesources/mylife_hype_generated_script.js?56949"></script>
-	</div>
+                <section id="reputation">
+                    <h4 class="header-30px mb-10">Quantifying Reputation</h4>
+                    <p class="text-xl font-normal leading-relaxed text-[#4A4947] max-w-3xl mb-12">
+                        We developed the "Reputation Score"—a proprietary metric that gauges a user's public standing. The design challenge was making this score feel fair, transparent, and actionable.
+                    </p>
+                    <!-- HYPE ANIMATION SLOT: Reputation Score UI -->
+                    <div class="product-shot-container aspect-[16/10]">
+                         <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                            <source src="assets/mylife-score-interaction.mp4" type="video/mp4">
+                         </video>
+                         <div class="p-6 bg-white/50 backdrop-blur absolute bottom-0 w-full border-t border-[#F0EBE7]">
+                             <p class="text-[10px] font-bold uppercase tracking-widest text-[#E89E78]">Interaction: Reputation score calculation and breakdown</p>
+                         </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
 
-	<!-- end copy -->
-	
-
-
-	<!-- text content for search engines: -->
-
-	<div style="display:none" aria-hidden=true>
-
-		<div>CONTACT
-</div>
-		<div>updated 2025</div>
-		<div>lpiercefield@gmail.com</div>
-		<div></div>
-		<div>CONTACT
-</div>
-		<div>Multi-Platform Streaming
-UX and Account Flow Redesign</div>
-		<div></div>
-		<div>Sony Crackle
-</div>
-		<div>Impact Summary:</div>
-		<div>Contributed core UX/UI designs for the team across key platforms, specializing in information architecture and data visualization.</div>
-		<div>Strategically optimized onboarding and P.O. funnels using iterative testing.</div>
-		<div>Product Design Process</div>
-		<div>Successfully boosted subscription conversion rates and reduced onboarding drop-off by implementing data-driven A/B testing on core funnels and enhancing Data Trust UX.</div>
-		<div>High-Impact Media Units 
-and A/B Testing Refinement</div>
-		<div>Design cohesive, privacy-compliant experiences across mobile web, iOS, search UX, and critical Purchase Option (P.O.) flows, while solving complex issues in data visualization.</div>
-		<div>Additional Case Studies
-</div>
-		<div>CONVERSION FUNNEL OPTIMIZATION
-</div>
-		<div>Architected cohesive cross-platform user flows (Mobile Web, iOS, and Desktop).</div>
-		<div>LESLEY PIERCEFIELD
-</div>
-		<div>←WORK
-</div>
-		<div>Developed scalable UI Patterns and complex data visualization for user reports.
-</div>
-		<div>Challenge
-</div>
-		<div>UX/UI Designer ~ Mylife
-</div>
-		<div>Defined IA for complex search UX and high-volume data navigation.</div>
-		<div>Media Units
-</div>
-		<div>MyLife.com: Multi-Platform UX & Information Architecture</div>
-		<div>My Role
-</div>
-		<div>MyLife.com: Multi-Platform UX/UI </div>
-		<div>Design Process</div>
-		<div></div>
-
-	</div>
-
-	<!-- end text content: -->
-
-  </body>
+    <!-- NAVIGATION FOOTER -->
+    <section class="w-full bg-[#F3F0ED] py-32 border-t border-black/5">
+        <div class="max-w-[1440px] mx-auto px-10 md:px-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <a href="crackle.html" class="next-project-card p-12 flex flex-col justify-between min-h-[340px]">
+                    <div>
+                        <div class="mb-8"><span class="badge badge-id">Media</span></div>
+                        <h4 class="bricolage-font text-4xl font-black uppercase tracking-tight">Crackle</h4>
+                        <p class="text-sm text-[#4A4947] mt-4 max-w-xs">Discovery and streaming for Sony's OTT platform.</p>
+                    </div>
+                    <p class="text-[10px] font-bold uppercase tracking-[0.3em] pt-8 border-t border-black/5">Next Project &rarr;</p>
+                </a>
+                <a href="control-tower.html" class="next-project-card p-12 flex flex-col justify-between min-h-[340px]">
+                    <div>
+                        <div class="mb-8"><span class="badge badge-id">Enterprise</span></div>
+                        <h4 class="bricolage-font text-4xl font-black uppercase tracking-tight">Control Tower</h4>
+                        <p class="text-sm text-[#4A4947] mt-4 max-w-xs">Unified operations for B2B travel ecosystems.</p>
+                    </div>
+                    <p class="text-[10px] font-bold uppercase tracking-[0.3em] pt-8 border-t border-black/5">Next Project &rarr;</p>
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
 </html>

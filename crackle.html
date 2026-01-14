@@ -1,218 +1,318 @@
 <!DOCTYPE html>
-<html manifest="crackle.hyperesources/cache.manifest">
-  <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
-	<title>Crackle</title>
-	<style>
-		html {
-			height:100%;
-		}
-		body {
-			background-color:#F8F5EF;
-			margin:0;
-			height:100%;
-		}
-	</style>
-	<!-- copy these lines to your document head: -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sony Crackle: Cross-Platform UX | Lesley Piercefield</title>
 
-	<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=device-width" />
-	<link href='https://fonts.googleapis.com/css?family=Nunito:700&subset=latin' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Nunito&subset=latin' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Krona+One&subset=latin' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Nunito:900&subset=latin' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Reddit+Sans:800&subset=latin' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Nunito+Sans:500&subset=latin' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Nunito:500&subset=latin' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Roboto:600&subset=latin' rel='stylesheet' type='text/css'>
-<style>
-    .alignContentVertical {
-		display: flex !important;
-		flex-direction: column;
-        justify-content: center;
+    <link rel="shortcut icon" href="assets/favicons/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Schibsted+Grotesk:wght@400;700&family=JetBrains+Mono:wght@500;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --sunset-peach: #E89E78;
+            --sunset-clay: #A38072;
+            --paper-warm: #FBF9F7;
+            --text-main: #2D2C2A;
+        }
+
+        body {
+            font-family: 'Schibsted Grotesk', sans-serif;
+            background: radial-gradient(circle at top right, #FFF5EE 0%, var(--paper-warm) 100%);
+            color: var(--text-main);
+            margin: 0;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, .bricolage-font { font-family: 'Bricolage Grotesque', sans-serif; }
+        
+        .header-logic {
+            font-size: clamp(44px, 8.5vw, 92px);
+            font-weight: 800;
+            line-height: 0.85;
+            text-transform: uppercase;
+            letter-spacing: -0.05em;
+            color: #1A1918;
+        }
+
+        .header-logic span {
+            font-weight: 200;
+            display: block;
+            background: linear-gradient(90deg, #1A1918 0%, var(--sunset-peach) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header-30px {
+            font-size: 30px;
+            font-weight: 800;
+            line-height: 0.95;
+            text-transform: uppercase;
+            color: #1A1918;
+        }
+
+        .badge {
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            padding: 7px 18px;
+            border-radius: 100px;
+            display: inline-block;
         }
         
-	.sticky{
-		position: -webkit-sticky !important; /* Safari */
-		position: fixed !important;
-		top: 0 !important;
-		}
-		
-	.outlined-text {
-        color: transparent; -webkit-text-stroke: 2px #D0E2EC; /* Adjust width and color as needed */
-  	
-	}
-	</style>
-	<link href="crackle.hyperesources/favicon_16x16.ico" rel="shortcut icon" type="image/x-icon"/>
-	<link rel="icon" type="image/png" href="crackle.hyperesources/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="crackle.hyperesources/favicon.svg" />
-<link rel="shortcut icon" href="crackle.hyperesources/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="crackle.hyperesources/apple-touch-icon.png" />
-<link rel="manifest" href="crackle.hyperesources/site.webmanifest" />
-</style>
-	<link href="crackle.hyperesources/favicon_16x16.ico" rel="shortcut icon" type="image/x-icon"/>
-	<link rel="icon" type="image/png" href="crackle.hyperesources/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="crackle.hyperesources/favicon.svg" />
-<link rel="shortcut icon" href="crackle.hyperesources/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="crackle.hyperesources/apple-touch-icon.png" />
-<link rel="manifest" href="crackle.hyperesources/site.webmanifest" />
-<script>
+        .badge-sony { background: #FFEDD5; color: #9A3412; border: 1px solid rgba(154, 52, 18, 0.2); }
+        .badge-ux { background: #E0F2FE; color: #0369A1; border: 1px solid rgba(3, 105, 161, 0.2); }
+        .badge-res { background: #F0FDF4; color: #15803D; border: 1px solid rgba(21, 128, 61, 0.2); }
 
-  function setLayoutHeight(hypeDocument, element, event) {
-  
-  if(!hypeDocument.storedLayoutHeights){
-  hypeDocument.storedLayoutHeights = {};
-  };
+        .product-shot-container {
+            background: #F8F5F2;
+            border: 1px solid #F0EBE7;
+            border-radius: 4px;
+            overflow: hidden;
+            width: 100%;
+            margin-top: 3rem;
+            position: relative;
+            box-shadow: 0 20px 40px -20px rgba(0,0,0,0.05);
+        }
 
-  const hypeDoc = hypeDocument.getElementById(hypeDocument.documentId());
-  const layouId = hypeDocument.currentSceneId();
-  const layoutEl = hypeDocument.getElementById(layouId); 
-  const containerEl = layoutEl.querySelector('.scaled');
+        .caption-text {
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #E89E78;
+            margin-top: 1.5rem;
+            display: block;
+        }
 
-  
-  
-    if(!hypeDocument.storedLayoutHeights.layoutId){
-  hypeDocument.storedLayoutHeights.layoutId = layoutEl.getBoundingClientRect().height;
-  }else{
-  layoutEl.style.height = hypeDocument.storedLayoutHeights.layoutId + 'px';
-  hypeDocument.relayoutIfNecessary();
-  }
-  
-  
-setTimeout(
-function(){
-getElementHeight(containerEl);
-},
-1
-)
+        .sticky-nav { position: sticky; top: 120px; }
 
-function getElementHeight(containerEl) {
+        .next-project-card {
+            border: 1px solid #F0EBE7;
+            transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+            text-decoration: none;
+            color: inherit;
+            border-radius: 2px;
+            background: white;
+        }
+        .next-project-card:hover { 
+            border-color: var(--sunset-peach); 
+            transform: translateY(-4px);
+            box-shadow: 0 30px 60px -20px rgba(232, 158, 120, 0.15);
+        }
 
-  const rect = containerEl.getBoundingClientRect();
- var newHeight = rect.height;
+        .link-hover {
+            position: relative;
+            display: inline-block;
+        }
+        .link-hover::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: -4px;
+            left: 0;
+            background: var(--sunset-peach);
+            transform: scaleX(0.1);
+            transform-origin: bottom left;
+            transition: transform 0.4s ease;
+        }
+        .link-hover:hover::after { transform: scaleX(1); }
+    </style>
+</head>
+<body>
 
-  if(newHeight && newHeight !== 0){
-  layoutEl.style.height = newHeight + "px";
-    hypeDoc.style.height = newHeight + "px";
+    <!-- NAV -->
+    <nav class="fixed top-0 w-full z-50 px-10 md:px-20 py-8 flex justify-between items-center bg-white/30 backdrop-blur-md border-b border-black/5">
+        <a href="index.html" class="bricolage-font font-black text-2xl tracking-tighter">LP</a>
+        <div class="flex items-center gap-12">
+            <a href="index.html" class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#1A1918] link-hover">Portfolio</a>
+            <a href="mailto:lpiercefield@icloud.com" class="px-6 py-3 bg-[#1A1918] text-white text-[10px] font-bold uppercase tracking-[0.2em] rounded-sm hover:bg-[#E89E78] transition-all">Contact</a>
+        </div>
+    </nav>
 
-  }
-  console.log(hypeDocument.storedLayoutHeights)
-}
-  }
-  
-    
+    <!-- HERO -->
+    <header class="max-w-[1440px] mx-auto px-10 md:px-20 pt-56 pb-32">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <div class="lg:col-span-8">
+                <h2 class="text-[11px] font-bold uppercase tracking-[0.6em] text-[#E89E78] mb-10">Case Study 05</h2>
+                <h1 class="header-logic">
+                    Sony Crackle<br/>
+                    <span>OTT Design.</span>
+                </h1>
+            </div>
+            <div class="lg:col-span-4 pt-4">
+                <div class="space-y-8">
+                    <p class="text-lg font-normal leading-snug text-[#4A4947]">
+                        Defining the next generation of entertainment discovery through immersive cross-platform interfaces and rigorous user testing.
+                    </p>
+                    <div class="pt-8 border-t border-[#E8E4E1] flex flex-col gap-6">
+                        <div class="flex flex-wrap gap-3">
+                            <span class="badge badge-sony">Entertainment</span>
+                            <span class="badge badge-ux">UX Design</span>
+                            <span class="badge badge-res">Testing</span>
+                        </div>
+                        <p class="bricolage-font text-[13px] font-extrabold uppercase tracking-[0.2em] text-[#1A1918]">UX/UI Designer ~ Sony Crackle</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="product-shot-container mt-24 aspect-[16/9]">
+             <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/crackle-hero-display.webp?raw=true" alt="Sony Crackle Interface across devices" class="w-full h-full object-cover">
+        </div>
+    </header>
 
+    <!-- CONTENT -->
+    <main class="max-w-[1440px] mx-auto px-10 md:px-20 py-32 border-t border-[#E8E4E1]">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-20">
+            <aside class="hidden lg:block lg:col-span-3">
+                <div class="sticky-nav">
+                    <ul class="space-y-8 text-[10px] font-bold uppercase tracking-[0.4em] text-black/30">
+                        <li><a href="#process" class="hover:text-[#E89E78] transition-colors">01. Design Process</a></li>
+                        <li><a href="#omnichannel" class="hover:text-[#E89E78] transition-colors">02. 10-Foot UI</a></li>
+                        <li><a href="#testing" class="hover:text-[#E89E78] transition-colors">03. User Testing</a></li>
+                        <li><a href="#solutions" class="hover:text-[#E89E78] transition-colors">04. Strategy</a></li>
+                    </ul>
+                </div>
+            </aside>
 
-  if("HYPE_eventListeners" in window === false) {
-    window.HYPE_eventListeners = Array();
-  }
-  window.HYPE_eventListeners.push({"type":"HypeLayoutRequest", "callback":setLayoutHeight})
+            <div class="lg:col-span-9 space-y-32">
+                <section id="process">
+                    <h4 class="header-30px mb-10">Product Design Process</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <div class="space-y-6">
+                            <p class="text-lg leading-relaxed text-[#4A4947]">
+                                Working across a diverse ecosystem (Roku, Xbox, Apple TV, iOS), I focused on defining a global IA and navigation system that unified content discovery.
+                            </p>
+                            <ul class="space-y-4 text-sm text-[#4A4947]/80">
+                                <li class="flex items-start gap-3"><span class="text-[#E89E78] font-black">•</span> Defined global IA for unified discovery.</li>
+                                <li class="flex items-start gap-3"><span class="text-[#E89E78] font-black">•</span> Specialized layouts for 10-foot interfaces.</li>
+                                <li class="flex items-start gap-3"><span class="text-[#E89E78] font-black">•</span> Created foundational component library concepts.</li>
+                            </ul>
+                        </div>
+                        <div class="product-shot-container aspect-square m-0">
+                             <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/crackle-process-shot.webp?raw=true" alt="IA and Component Mapping" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </section>
 
- </script>	
+                <section id="omnichannel">
+                    <h4 class="header-30px mb-10">The 10-Foot Experience</h4>
+                    <p class="text-xl font-normal leading-relaxed text-[#4A4947] max-w-3xl">
+                        Designing for the living room requires a different mental model. I designed user flows that respected the native experience of each platform.
+                    </p>
+                    
+                    <div class="mb-16">
+                        <div class="product-shot-container aspect-[16/9]">
+                            <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/crackle-ctv-large.webp?raw=true" alt="10-foot CTV Interface Design" class="w-full h-full object-cover">
+                        </div>
+                        <span class="caption-text">A: High-Fidelity CTV Layout Strategy</span>
+                    </div>
 
-	<!-- end copy -->
-  </head>
-  <body>
-	<!-- copy these lines to your document: -->
+                    <div>
+                        <div class="product-shot-container aspect-[16/9] bg-[#1A1918]">
+                            <video autoplay muted loop playsinline class="w-full h-full object-contain">
+                                <source src="assets/crackle-hype-animation.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <span class="caption-text">B: Hype Animation / Interaction Demo</span>
+                    </div>
+                </section>
 
-	<div id="crackle_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;height:9024px;overflow:hidden;">
-		<script type="text/javascript" charset="utf-8" src="crackle.hyperesources/crackle_hype_generated_script.js?67075"></script>
-	</div>
+                <section id="testing">
+                    <h4 class="header-30px mb-10">In-Person Validation</h4>
+                    <p class="text-xl font-normal leading-relaxed text-[#4A4947] max-w-3xl mb-12">
+                        I led in-person usability sessions, observing users in real-time as they navigated our Hi-Fi prototypes to provide qualitative pivots that informed final production.
+                    </p>
+                    <div class="product-shot-container aspect-[16/10]">
+                         <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/crackle-testing-lab.webp?raw=true" alt="User Testing Sessions" class="w-full h-full object-cover">
+                    </div>
+                </section>
 
-	<!-- end copy -->
-	
+                <section id="solutions" class="pb-32">
+                    <h4 class="header-30px mb-10">Strategic Conversion</h4>
+                    <div class="highlight-box bg-white p-10 border border-[#F0EBE7] rounded-3xl">
+                        <p class="text-xl font-normal leading-relaxed text-[#4A4947] mb-8">
+                            Instead of a traditional feature list, I proposed a radical shift for the sign-up flow: a simple call to action to <strong class="text-[#E89E78]">"unlock more for free."</strong>
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center border-t border-black/5 pt-8">
+                            <div class="space-y-4">
+                                <h5 class="text-[10px] font-bold uppercase tracking-widest text-black/40">The Outcome</h5>
+                                <p class="text-sm leading-relaxed">
+                                    Validated through usability and A/B testing, this approach focused on emphasizing immediate value and reducing cognitive friction.
+                                </p>
+                            </div>
+                            <div class="pl-8 flex flex-col items-center">
+                                <div class="text-[10px] font-bold uppercase tracking-widest text-[#E89E78] border border-[#E89E78]/30 px-4 py-2 rounded-full">Validated Design</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
 
+    <!-- CASE STUDY NAV -->
+    <section class="w-full bg-[#F3F0ED] py-32 border-t border-black/5">
+        <div class="max-w-[1440px] mx-auto px-10 md:px-20">
+             <h4 class="text-[10px] font-bold uppercase tracking-[0.5em] text-[#E89E78] mb-16 text-center">View More Case Studies</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <a href="envoy.html" class="next-project-card p-12 flex flex-col justify-between min-h-[340px]">
+                    <div>
+                        <div class="mb-8"><span class="badge badge-ux">AI Tech</span></div>
+                        <h4 class="bricolage-font text-4xl font-black uppercase tracking-tight">Envoy</h4>
+                        <p class="text-sm text-[#4A4947] mt-4 max-w-xs">Intent-driven travel intelligence.</p>
+                    </div>
+                    <p class="text-[10px] font-bold uppercase tracking-[0.3em] pt-8 border-t border-black/5">Next Project &rarr;</p>
+                </a>
+                <a href="control-tower.html" class="next-project-card p-12 flex flex-col justify-between min-h-[340px]">
+                    <div>
+                        <div class="mb-8"><span class="badge badge-sony">Operations</span></div>
+                        <h4 class="bricolage-font text-4xl font-black uppercase tracking-tight">Control Tower</h4>
+                        <p class="text-sm text-[#4A4947] mt-4 max-w-xs">Global supply chain visibility.</p>
+                    </div>
+                    <p class="text-[10px] font-bold uppercase tracking-[0.3em] pt-8 border-t border-black/5">Next Project &rarr;</p>
+                </a>
+            </div>
+        </div>
+    </section>
 
-	<!-- text content for search engines: -->
-
-	<div style="display:none" aria-hidden=true>
-
-		<div>CONTACT
-</div>
-		<div>updated 2025</div>
-		<div>lpiercefield@gmail.com</div>
-		<div></div>
-		<div>Features
-</div>
-		<div>Partner Management System and Analytics Dashboard</div>
-		<div>CONTACT
-</div>
-		<div></div>
-		<div>Motion
-</div>
-		<div>Impact Summary:</div>
-		<div>Architecture
-</div>
-		<div>Multi-platform UX strategy, redefining the IA and design system for all living room devices.</div>
-		<div>IA / Structure
-</div>
-		<div>Conducted targeted in-person user testing using Hi-Fi prototypes.</div>
-		<div>Product Design Process</div>
-		<div>Conversational AI Marketing Unit </div>
-		<div>A
-</div>
-		<div>Global Experience Principles
-</div>
-		<div>Led the successful multi-platform redesign, resulting in a cohesive streaming experience across living room devices and a measurable increase in new user accounts.</div>
-		<div>Control Tower
-</div>
-		<div>Unify the streaming experience across multiple devices (Roku, Apple TV, etc.) to drive account creation and establish a cohesive visual identity.</div>
-		<div>UI Patterns
-</div>
-		<div>Additional Case Studies
-</div>
-		<div>B
-</div>
-		<div>Product UXD Foundation</div>
-		<div>Envoy
-</div>
-		<div>10-FOOT INTERFACE STRATEGY
-</div>
-		<div>Sony brand values
-</div>
-		<div>Core Visual Element
-</div>
-		<div>LESLEY PIERCEFIELD
-</div>
-		<div>←WORK
-</div>
-		<div>Created foundational component library concepts for consistency.</div>
-		<div>Challenge
-</div>
-		<div>Designed specialized multi-platform layouts for 10-foot interfaces (Roku, Xbox, Apple TV).</div>
-		<div>Framework
-</div>
-		<div>UX/UI Designer ~ Sony Crackle
-</div>
-		<div>Defined global IA/navigation for unified content discovery.</div>
-		<div>APIs
-</div>
-		<div>A prime example was redesigning the sign-up flows. I recommended an out-of-the-box approach: instead of listing features, I proposed a simple call to action to "unlock more for free." I validated this design through A/B testing, which proved this approach was more effective. I designed user flows that worked with the native experience of each platform, from Roku and Sony PlayStation to Xbox, Apple TV, and iOS.
-
-</div>
-		<div>Tone</div>
-		<div>Product strategy
-</div>
-		<div>Sony Crackle: Multi-Platform Streaming UX and Account Flow Redesign</div>
-		<div>My Role
-</div>
-		<div>EPISODES
-</div>
-		<div>EXTRAS
-</div>
-		<div>UNLOCK MORE FOR FREE
-</div>
-		<div>WATCH S1 E1
-</div>
-		<div>Design Process</div>
-		<div>Case Studies
-</div>
-		<div></div>
-
-	</div>
-
-	<!-- end text content: -->
-
-  </body>
+    <!-- STANDARD DARK FOOTER -->
+    <footer class="w-full bg-[#1A1918] pt-32 pb-16 px-10 md:px-20 text-[#A38072] relative">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-20 border-b border-white/5 pb-32 mb-16">
+                <div class="lg:col-span-7">
+                    <h4 class="bricolage-font text-5xl font-black text-white mb-10 tracking-tighter">LP</h4>
+                    <p class="text-xl font-normal text-white/30 max-w-md leading-relaxed">
+                        Designing clarity for complex product ecosystems. 
+                        Los Angeles / 2026.
+                    </p>
+                </div>
+                <div class="lg:col-span-3">
+                    <h5 class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/10 mb-10">Connectivity</h5>
+                    <ul class="space-y-6 text-sm font-bold text-white/60">
+                        <li><a href="https://www.linkedin.com/in/lesley-piercefield-08a90314" class="hover:text-[#E89E78] transition-colors">LinkedIn</a></li>
+                        <li><a href="assets/lesley-piercefield-resume.pdf" class="hover:text-[#E89E78] transition-colors">Resume</a></li>
+                        <li><a href="mailto:lpiercefield@icloud.com" class="hover:text-[#E89E78] transition-colors">Email</a></li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-2">
+                    <h5 class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/10 mb-10">Status</h5>
+                    <p class="text-sm font-bold text-white/60">Available Q1 2026</p>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 opacity-30">
+                <p class="text-[9px] font-bold uppercase tracking-[0.4em]">
+                    &copy; 2026 Lesley Piercefield | Product Design Lead
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>

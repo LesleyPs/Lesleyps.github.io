@@ -1,188 +1,313 @@
 <!DOCTYPE html>
-<html manifest="control-tower.hyperesources/cache.manifest">
-  <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
-	<title>Control Tower</title>
-	<style>
-		html {
-			height:100%;
-		}
-		body {
-			background-color:#F8F5EF;
-			margin:0;
-			height:100%;
-		}
-	</style>
-	<!-- copy these lines to your document head: -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Tower | Lesley Piercefield</title>
 
-	<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=device-width" />
-	<link href='https://fonts.googleapis.com/css?family=Nunito:700&subset=latin' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Nunito&subset=latin' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Krona+One&subset=latin' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Nunito:900&subset=latin' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Nunito:500&subset=latin' rel='stylesheet' type='text/css'>
-<style>
-    .alignContentVertical {
-		display: flex !important;
-		flex-direction: column;
-        justify-content: center;
+    <link rel="shortcut icon" href="assets/favicons/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/png" href="assets/favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Schibsted+Grotesk:wght@400;700&family=JetBrains+Mono:wght@500;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --sunset-peach: #E89E78;
+            --sunset-clay: #A38072;
+            --paper-warm: #FBF9F7;
+            --text-main: #2D2C2A;
+            --tag-ent-bg: #E0E7FF;
+            --tag-ent-text: #4338CA;
+            --tag-available-bg: #DCFCE7;
+            --tag-available-text: #166534;
+        }
+
+        body {
+            font-family: 'Schibsted Grotesk', sans-serif;
+            background: radial-gradient(circle at top right, #FFF5EE 0%, var(--paper-warm) 100%);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, .bricolage-font { 
+            font-family: 'Bricolage Grotesque', sans-serif; 
+            font-style: normal; 
         }
         
-	.sticky{
-		position: -webkit-sticky !important; /* Safari */
-		position: fixed !important;
-		top: 0 !important;
-		}
-		
-	.outlined-text {
-        color: transparent; -webkit-text-stroke: 2px #D0E2EC; /* Adjust width and color as needed */
-  	
-	}
-	</style>
-	<link href="control-tower.hyperesources/favicon_16x16.ico" rel="shortcut icon" type="image/x-icon"/>
-	<link rel="icon" type="image/png" href="control-tower.hyperesources/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="control-tower.hyperesources/favicon.svg" />
-<link rel="shortcut icon" href="control-tower.hyperesources/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="control-tower.hyperesources/apple-touch-icon.png" />
-<link rel="manifest" href="control-tower.hyperesources/site.webmanifest" />
-</style>
-	<link href="control-tower.hyperesources/favicon_16x16.ico" rel="shortcut icon" type="image/x-icon"/>
-	<link rel="icon" type="image/png" href="control-tower.hyperesources/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="control-tower.hyperesources/favicon.svg" />
-<link rel="shortcut icon" href="control-tower.hyperesources/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="control-tower.hyperesources/apple-touch-icon.png" />
-<link rel="manifest" href="control-tower.hyperesources/site.webmanifest" />
-<script>
+        .header-logic {
+            font-size: clamp(44px, 8.5vw, 92px);
+            font-weight: 800;
+            line-height: 0.85;
+            text-transform: uppercase;
+            letter-spacing: -0.05em;
+            color: #1A1918;
+            display: inline-block;
+        }
 
-  function setLayoutHeight(hypeDocument, element, event) {
-  
-  if(!hypeDocument.storedLayoutHeights){
-  hypeDocument.storedLayoutHeights = {};
-  };
+        .header-logic span {
+            font-weight: 200;
+            display: block;
+            letter-spacing: -0.01em;
+            margin-top: 0.05em;
+            background: linear-gradient(90deg, #1A1918 0%, var(--sunset-peach) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-  const hypeDoc = hypeDocument.getElementById(hypeDocument.documentId());
-  const layouId = hypeDocument.currentSceneId();
-  const layoutEl = hypeDocument.getElementById(layouId); 
-  const containerEl = layoutEl.querySelector('.scaled');
+        .header-30px {
+            font-size: 30px;
+            font-weight: 800;
+            line-height: 0.95;
+            text-transform: uppercase;
+            letter-spacing: -0.01em;
+            color: #1A1918;
+        }
 
-  
-  
-    if(!hypeDocument.storedLayoutHeights.layoutId){
-  hypeDocument.storedLayoutHeights.layoutId = layoutEl.getBoundingClientRect().height;
-  }else{
-  layoutEl.style.height = hypeDocument.storedLayoutHeights.layoutId + 'px';
-  hypeDocument.relayoutIfNecessary();
-  }
-  
-  
-setTimeout(
-function(){
-getElementHeight(containerEl);
-},
-1
-)
+        .badge {
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            padding: 7px 16px;
+            border-radius: 100px;
+            display: inline-block;
+        }
+        .badge-enterprise { background: var(--tag-ent-bg); color: var(--tag-ent-text); border: 1px solid rgba(67, 56, 202, 0.1); }
+        .badge-available { background: var(--tag-available-bg); color: var(--tag-available-text); border: 1px solid rgba(22, 101, 52, 0.2); }
+        .badge-ai { background: #FEE9D7; color: #B45309; border: 1px solid rgba(180, 83, 9, 0.1); }
+        .badge-retention { background: #F1F5F9; color: #475559; border: 1px solid rgba(71, 85, 105, 0.1); }
 
-function getElementHeight(containerEl) {
+        .link-hover {
+            position: relative;
+            display: inline-block;
+        }
+        .link-hover::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: -4px;
+            left: 0;
+            background: var(--sunset-peach);
+            transform: scaleX(0.1);
+            transform-origin: bottom left;
+            transition: transform 0.4s ease;
+        }
+        .link-hover:hover::after { transform: scaleX(1); }
 
-  const rect = containerEl.getBoundingClientRect();
- var newHeight = rect.height;
+        .image-container {
+            background: #F8F5F2;
+            border: 1px solid #F0EBE7;
+            border-radius: 4px;
+            overflow: hidden;
+            width: 100%;
+            aspect-ratio: 16/9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 4rem 0;
+        }
 
-  if(newHeight && newHeight !== 0){
-  layoutEl.style.height = newHeight + "px";
-    hypeDoc.style.height = newHeight + "px";
+        .product-shot-container {
+            background: #F8F5F2;
+            border: 1px solid #F0EBE7;
+            border-radius: 4px;
+            overflow: hidden;
+            width: 100%;
+            margin: 3rem 0;
+            position: relative;
+        }
 
-  }
-  console.log(hypeDocument.storedLayoutHeights)
-}
-  }
-  
-    
+        .sticky-nav { position: sticky; top: 120px; }
 
+        .next-project-card {
+            border: 1px solid #F0EBE7;
+            background: white;
+            transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+            text-decoration: none;
+            color: inherit;
+        }
+        .next-project-card:hover {
+            border-color: var(--sunset-peach);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+        }
+    </style>
+</head>
+<body>
 
+    <!-- NAV -->
+    <nav class="fixed top-0 w-full z-50 px-10 md:px-20 py-8 flex justify-between items-center bg-white/30 backdrop-blur-md border-b border-black/5">
+        <a href="index.html" class="bricolage-font font-black text-2xl tracking-tighter">LP</a>
+        <div class="flex items-center gap-12">
+            <a href="index.html" class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#1A1918] link-hover">Portfolio</a>
+            <a href="mailto:lpiercefield@icloud.com" class="px-6 py-3 bg-[#1A1918] text-white text-[10px] font-bold uppercase tracking-[0.2em] rounded-sm hover:bg-[#E89E78] transition-all">Contact</a>
+        </div>
+    </nav>
 
-  if("HYPE_eventListeners" in window === false) {
-    window.HYPE_eventListeners = Array();
-  }
-  window.HYPE_eventListeners.push({"type":"HypeLayoutRequest", "callback":setLayoutHeight})
+    <!-- HERO SECTION -->
+    <header class="max-w-[1440px] mx-auto px-10 md:px-20 pt-56 pb-32">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <div class="lg:col-span-8">
+                <h2 class="text-[11px] font-bold uppercase tracking-[0.6em] text-[#E89E78] mb-10">Case Study 02</h2>
+                <h1 class="header-logic">
+                    Control Tower<br/>
+                    <span>Command Center.</span>
+                </h1>
+            </div>
+            <div class="lg:col-span-4 pt-4">
+                <div class="space-y-8">
+                    <p class="text-lg font-normal leading-snug text-[#4A4947]">
+                        A centralized product engine designed to transform fragmented B2B operations into a streamlined, high-fidelity configuration ecosystem.
+                    </p>
+                    <div class="pt-8 border-t border-[#E8E4E1] flex flex-col gap-6">
+                        <div class="flex items-center gap-4">
+                            <span class="badge badge-enterprise">Enterprise UX</span>
+                        </div>
+                        <p class="bricolage-font text-[13px] font-extrabold uppercase tracking-[0.2em] text-[#1A1918]">Lead Experience Designer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
- </script>	
+        <div class="image-container mt-24">
+             <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/Tiki-control-tower-product.webp?raw=true" alt="Control Tower Dashboard" class="w-full h-full object-cover">
+        </div>
+    </header>
 
-	<!-- end copy -->
-  </head>
-  <body>
-	<!-- copy these lines to your document: -->
+    <!-- CONTENT SECTION -->
+    <main class="max-w-[1440px] mx-auto px-10 md:px-20 py-32 border-t border-[#E8E4E1]">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-20">
+            
+            <aside class="hidden lg:block lg:col-span-3">
+                <div class="sticky-nav">
+                    <ul class="space-y-8 text-[10px] font-bold uppercase tracking-[0.4em] text-black/30">
+                        <li><a href="#challenge" class="hover:text-[#E89E78] transition-colors">01. Challenge</a></li>
+                        <li><a href="#strategy" class="hover:text-[#E89E78] transition-colors">02. Strategy</a></li>
+                        <li><a href="#impact" class="hover:text-[#E89E78] transition-colors">03. Impact</a></li>
+                    </ul>
+                </div>
+            </aside>
 
-	<div id="controltower_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;height:9024px;overflow:hidden;">
-		<script type="text/javascript" charset="utf-8" src="control-tower.hyperesources/controltower_hype_generated_script.js?22602"></script>
-	</div>
+            <div class="lg:col-span-9 space-y-32">
+                
+                <section id="challenge">
+                    <h4 class="header-30px mb-10">The Challenge</h4>
+                    <p class="text-xl font-normal leading-relaxed text-[#4A4947] max-w-3xl">
+                        Tiki’s legacy B2B workflow suffered from operational silos, where product configuration and partner data were managed through disconnected manual tools. The objective was to consolidate these touchpoints into a single, cohesive command center that scaled alongside global partner expansion.
+                    </p>
+                </section>
 
-	<!-- end copy -->
-	
+                <section id="strategy">
+                    <h4 class="header-30px mb-10">Design Strategy</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+                        <div class="space-y-4">
+                            <h5 class="bricolage-font font-black text-sm uppercase tracking-widest text-[#E89E78]">Operational Cohesion</h5>
+                            <p class="text-sm text-[#4A4947] leading-relaxed">Unified disparate data streams into a high-density dashboard, prioritizing actionable insights over raw data exposure.</p>
+                        </div>
+                        <div class="space-y-4">
+                            <h5 class="bricolage-font font-black text-sm uppercase tracking-widest text-[#E89E78]">Scalable Frameworks</h5>
+                            <p class="text-sm text-[#4A4947] leading-relaxed">Engineered a modular component library that allowed internal teams to roll out new product verticals without redesigning core layouts.</p>
+                        </div>
+                    </div>
 
+                    <div class="product-shot-container aspect-[16/10]">
+                         <div class="w-full h-full bg-[#F3F0ED] flex items-center justify-center text-[10px] font-bold uppercase tracking-[0.3em] text-black/20 italic">
+                             [ High-Fidelity Design System & Component Detail Image ]
+                         </div>
+                    </div>
+                </section>
 
-	<!-- text content for search engines: -->
+                <section id="impact" class="pb-32">
+                    <h4 class="header-30px mb-10">Strategic Outcomes</h4>
+                    <div class="space-y-16">
+                        <div class="max-w-3xl">
+                            <h5 class="bricolage-font font-extrabold text-sm uppercase tracking-widest text-[#1A1918] mb-4">Onboarding Transformation</h5>
+                            <p class="text-lg text-[#4A4947]">Migrated manual partner setup to a self-serve automated architecture, significantly reducing the engineering overhead required for new client launches.</p>
+                        </div>
 
-	<div style="display:none" aria-hidden=true>
+                        <div class="product-shot-container aspect-[16/9]">
+                             <div class="w-full h-full bg-[#F3F0ED] flex items-center justify-center text-[10px] font-bold uppercase tracking-[0.3em] text-black/20 italic">
+                                 [ Automated Workflow or Interface Outcome Detail ]
+                             </div>
+                        </div>
 
-		<div>lpiercefield@gmail.com</div>
-		<div></div>
-		<div>updated 2025</div>
-		<div>CONTACT
-</div>
-		<div></div>
-		<div>Challenge
-</div>
-		<div>I defined the core UX and Design System strategy for this platform, specializing in complex information hierarchy and B2B data visualization.</div>
-		<div>Control Tower: Client Management, Product, and Analytics Tool
-</div>
-		<div>Defined visual brand standards</div>
-		<div>CONTACT
-</div>
-		<div>Product designer ~ Clicktripz now Tiki
-</div>
-		<div>Control Tower Tiki Management Platform</div>
-		<div>Cross-functional calibration</div>
-		<div>Bring information and options forward</div>
-		<div>My Role
-</div>
-		<div>←WORK
-</div>
-		<div>MyLife.com
-</div>
-		<div></div>
-		<div>Built mockups (Figma)— data prototypes</div>
-		<div>LESLEY PIERCEFIELD
-</div>
-		<div>The resulting platform modernized B2B operations, enabled faster partner configuration, and provided actionable internal insights through a clear, scalable interface.</div>
-		<div>Tiki Ad Tech & Analytics Platform.</div>
-		<div>Managed the UI Design System</div>
-		<div>Multi-Platform Streaming
-UX and Account Flow Redesign</div>
-		<div>Additional Case Studies
-</div>
-		<div>Impact Summary:</div>
-		<div>Evolving Design</div>
-		<div>V-1
-</div>
-		<div>Multi-Platform UX & Conversion Optimization
-</div>
-		<div>Sony Crackle
-</div>
-		<div>Design System & IA Strategy
-</div>
-		<div>V-2
-</div>
-		<div>Product Design Process</div>
-		<div>Create a scalable self-serve platform built from the ground up to replace complex, manual B2B operations, simplifying client management, product configuration, and internal analytics visualization.</div>
-		<div>Design Process</div>
-		<div>Case Studies
-</div>
-		<div></div>
+                        <div class="max-w-3xl">
+                            <h5 class="bricolage-font font-extrabold text-sm uppercase tracking-widest text-[#1A1918] mb-4">Ecosystem Integrity</h5>
+                            <p class="text-lg text-[#4A4947]">Established a single source of truth for global product attributes, eliminating data drift across regional platforms and improving internal confidence in live system status.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
 
-	</div>
+    <!-- ADDITIONAL CASE STUDIES SECTION -->
+    <section class="w-full bg-[#F3F0ED] py-32 border-t border-black/5">
+        <div class="max-w-[1440px] mx-auto px-10 md:px-20">
+            <h4 class="text-[10px] font-bold uppercase tracking-[0.5em] text-[#E89E78] mb-16 text-center">View More Case Studies</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <a href="envoy.html" class="next-project-card p-12 flex flex-col justify-between min-h-[340px]">
+                    <div>
+                        <div class="mb-8"><span class="badge badge-ai">Conversational AI</span></div>
+                        <h4 class="bricolage-font text-4xl font-black uppercase tracking-tight">Envoy</h4>
+                        <p class="text-sm text-[#4A4947] mt-4 max-w-xs">Scalable design systems for global conversational intelligence.</p>
+                    </div>
+                    <p class="text-[10px] font-bold uppercase tracking-[0.3em] pt-8 border-t border-black/5">Next Project &rarr;</p>
+                </a>
 
-	<!-- end text content: -->
+                <a href="media-units.html" class="next-project-card p-12 flex flex-col justify-between min-h-[340px]">
+                    <div>
+                        <div class="mb-8"><span class="badge badge-retention">Retention Strategy</span></div>
+                        <h4 class="bricolage-font text-4xl font-black uppercase tracking-tight">Media Units</h4>
+                        <p class="text-sm text-[#4A4947] mt-4 max-w-xs">High-velocity components optimized for engagement.</p>
+                    </div>
+                    <p class="text-[10px] font-bold uppercase tracking-[0.3em] pt-8 border-t border-black/5">Next Project &rarr;</p>
+                </a>
 
-  </body>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="w-full bg-[#1A1918] pt-32 pb-16 px-10 md:px-20 text-[#A38072] relative">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-20 border-b border-white/5 pb-32 mb-16">
+                <div class="lg:col-span-7">
+                    <h4 class="bricolage-font text-5xl font-black text-white mb-10 tracking-tighter">LP</h4>
+                    <p class="text-xl font-normal text-white/30 max-w-md leading-relaxed">
+                        Designing clarity for complex product ecosystems. 
+                        Los Angeles / 2026.
+                    </p>
+                </div>
+                <div class="lg:col-span-3">
+                    <h5 class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/10 mb-10">Connectivity</h5>
+                    <ul class="space-y-6 text-sm font-bold text-white/60">
+                        <li><a href="https://www.linkedin.com/in/lesley-piercefield-08a90314" class="hover:text-[#E89E78] transition-colors">LinkedIn</a></li>
+                        <li><a href="assets/lesley-piercefield-resume.pdf" class="hover:text-[#E89E78] transition-colors">Resume</a></li>
+                        <li><a href="mailto:lpiercefield@icloud.com" class="hover:text-[#E89E78] transition-colors">Email</a></li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-2">
+                    <h5 class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/10 mb-10">Status</h5>
+                    <p class="text-sm font-bold text-white/60">Available Q1 2026</p>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 opacity-30">
+                <p class="text-[9px] font-bold uppercase tracking-[0.4em]">
+                    &copy; 2026 Lesley Piercefield | Product Design Lead
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Lesley Piercefield</title>
+
+    <link rel="shortcut icon" href="assets/favicons/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/png" href="assets/favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Schibsted+Grotesk:wght@400;700&family=JetBrains+Mono:wght@500;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --sunset-peach: #E89E78;
+            --sunset-clay: #A38072;
+            --paper-warm: #FBF9F7;
+            --text-main: #2D2C2A;
+            --tag-ent-bg: #E0E7FF;
+            --tag-ent-text: #4338CA;
+            --tag-available-bg: #DCFCE7;
+            --tag-available-text: #166534;
+            --tag-ai-bg: #FEE9D7;
+            --tag-ai-text: #B45309;
+            --tag-strat-bg: #F1F5F9;
+            --tag-strat-text: #475569;
+            --tag-mobile-bg: #FDF2F8;
+            --tag-mobile-text: #BE185D;
+        }
+
+        body {
+            font-family: 'Schibsted Grotesk', sans-serif;
+            background: radial-gradient(circle at top right, #FFF5EE 0%, var(--paper-warm) 100%);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, .bricolage-font { 
+            font-family: 'Bricolage Grotesque', sans-serif; 
+            font-style: normal; 
+        }
+        
+        .header-logic {
+            font-size: clamp(40px, 7vw, 84px);
+            font-weight: 800;
+            line-height: 0.9;
+            text-transform: uppercase;
+            letter-spacing: -0.05em;
+            color: #1A1918;
+            display: inline-block;
+        }
+
+        .header-logic span {
+            font-weight: 200;
+            letter-spacing: -0.01em;
+            background: linear-gradient(90deg, #1A1918 0%, var(--sunset-peach) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header-30px {
+            font-size: 30px;
+            font-weight: 800;
+            line-height: 0.95;
+            text-transform: uppercase;
+            letter-spacing: -0.01em;
+            color: #1A1918;
+        }
+
+        .badge {
+            font-size: 9px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            padding: 6px 14px;
+            border-radius: 100px;
+            display: inline-block;
+            white-space: nowrap;
+        }
+        .badge-enterprise { background: var(--tag-ent-bg); color: var(--tag-ent-text); border: 1px solid rgba(67, 56, 202, 0.1); }
+        .badge-ai { background: var(--tag-ai-bg); color: var(--tag-ai-text); border: 1px solid rgba(180, 83, 9, 0.1); }
+        .badge-strategy { background: var(--tag-strat-bg); color: var(--tag-strat-text); border: 1px solid rgba(71, 85, 105, 0.1); }
+        .badge-mobile { background: var(--tag-mobile-bg); color: var(--tag-mobile-text); border: 1px solid rgba(190, 24, 93, 0.1); }
+
+        .link-hover {
+            position: relative;
+            display: inline-block;
+        }
+        .link-hover::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: -4px;
+            left: 0;
+            background: var(--sunset-peach);
+            transform: scaleX(0.1);
+            transform-origin: bottom left;
+            transition: transform 0.4s ease;
+        }
+        .link-hover:hover::after { transform: scaleX(1); }
+
+        .exp-card {
+            border-top: 1px solid #E8E4E1;
+            padding-top: 3rem;
+            padding-bottom: 4rem;
+        }
+
+        .exp-detail {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+            line-height: 1.5;
+            color: #4A4947;
+            max-width: 720px;
+        }
+
+        .mono-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: #1A1918;
+            opacity: 0.4;
+        }
+
+        .sticky-nav { position: sticky; top: 120px; }
+
+        .skill-tag {
+            font-size: 12px;
+            font-weight: 700;
+            color: #1A1918;
+            border: 1px solid #E8E4E1;
+            padding: 8px 16px;
+            border-radius: 4px;
+            background: white;
+            transition: all 0.3s ease;
+        }
+        .skill-tag:hover {
+            border-color: var(--sunset-peach);
+            color: var(--sunset-peach);
+            transform: translateY(-2px);
+        }
+
+        .edu-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(232, 228, 225, 0.8);
+            border-radius: 12px;
+            padding: 2.5rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+        .edu-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.8);
+            border-color: var(--sunset-peach);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+        }
+        .edu-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 4px; height: 0;
+            background: var(--sunset-peach);
+            transition: height 0.4s ease;
+        }
+        .edu-card:hover::before { height: 100%; }
+
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="fixed top-0 w-full z-50 px-10 md:px-20 py-8 flex justify-between items-center bg-white/30 backdrop-blur-md border-b border-black/5">
+        <a href="index.html" class="bricolage-font font-black text-2xl tracking-tighter">LP</a>
+        <div class="flex items-center gap-12">
+            <a href="index.html" class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#1A1918] link-hover">Portfolio</a>
+            <a href="mailto:lpiercefield@icloud.com" class="px-6 py-3 bg-[#1A1918] text-white text-[10px] font-bold uppercase tracking-[0.2em] rounded-sm hover:bg-[#E89E78] transition-all">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="max-w-[1440px] mx-auto px-10 md:px-20 pt-56 pb-24">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <div class="lg:col-span-8">
+                <h2 class="text-[11px] font-bold uppercase tracking-[0.6em] text-[#E89E78] mb-10">Product Strategy & Design</h2>
+                <h1 class="header-logic">
+                    Lesley Piercefield<br/>
+                    <span>Experience Lead.</span>
+                </h1>
+            </div>
+            <div class="lg:col-span-4 pt-4">
+                <div class="space-y-8">
+                    <div class="space-y-4">
+                        <span class="mono-label">Objective</span>
+                        <p class="text-lg font-normal leading-snug text-[#4A4947]">
+                            Designing B2B ecosystems with a focus on traffic retention and conversion. I utilize AI-driven workflows to iterate rapidly, shipping functional prototypes and scalable interfaces for complex products.
+                        </p>
+                    </div>
+                    <div class="pt-8 border-t border-[#E8E4E1] flex flex-col gap-6">
+                        <button onclick="window.print()" class="flex items-center gap-4 group">
+                            <div class="w-10 h-10 rounded-full border border-black/10 flex items-center justify-center group-hover:border-[#E89E78] group-hover:bg-[#E89E78] transition-all">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="group-hover:text-white transition-colors"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                            </div>
+                            <span class="text-[10px] font-black uppercase tracking-[0.2em] text-[#1A1918]">Download PDF</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="max-w-[1440px] mx-auto px-10 md:px-20 py-32 border-t border-[#E8E4E1]">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-20">
+            
+            <aside class="hidden lg:block lg:col-span-3">
+                <div class="sticky-nav">
+                    <ul class="space-y-8 text-[10px] font-bold uppercase tracking-[0.4em] text-black/30">
+                        <li><a href="#experience" class="hover:text-[#E89E78] transition-colors">01. Experience</a></li>
+                        <li><a href="#skills" class="hover:text-[#E89E78] transition-colors">02. Expertise</a></li>
+                        <li><a href="#education" class="hover:text-[#E89E78] transition-colors">03. Education</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <div class="lg:col-span-9">
+                
+                <section id="experience" class="mb-32">
+                    <h4 class="header-30px mb-16">Work History</h4>
+
+                    <!-- Magnatiued Pro -->
+                    <div class="exp-card">
+                        <div class="flex flex-col md:flex-row justify-between mb-8 gap-4">
+                            <div>
+                                <div class="flex items-center gap-4 mb-2">
+                                    <h5 class="bricolage-font text-2xl font-black uppercase tracking-tight">Magnatiued Pro</h5>
+                                    <span class="badge badge-strategy">The Strat Method</span>
+                                </div>
+                                <p class="bricolage-font text-[13px] font-extrabold uppercase tracking-[0.2em] text-[#E89E78]">Founder & Product Architect</p>
+                            </div>
+                            <span class="mono-label">2025 — Present</span>
+                        </div>
+                        <div class="space-y-6">
+                            <p class="exp-detail">Designing a FinTech trade analysis platform focused on real-time data visualization and candle analysis for "The Strat" practitioners.</p>
+                            <p class="exp-detail">Developing a Learning Center and journaling workflow to support user education and improve long-term traffic retention within the ecosystem.</p>
+                            <div class="flex gap-2">
+                                <span class="badge badge-ai">Vibe Coding</span>
+                                <span class="badge badge-strategy">Financial UX</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Clicktripz -->
+                    <div class="exp-card">
+                        <div class="flex flex-col md:flex-row justify-between mb-8 gap-4">
+                            <div>
+                                <h5 class="bricolage-font text-2xl font-black uppercase tracking-tight">Clicktripz</h5>
+                                <p class="bricolage-font text-[13px] font-extrabold uppercase tracking-[0.2em] text-[#E89E78] mt-1">Lead Product Designer</p>
+                            </div>
+                            <span class="mono-label">2017 — 2025</span>
+                        </div>
+                        <div class="space-y-6">
+                            <p class="exp-detail">Expanded Envoy (AI Conversational UX) across global partner sites, improving user retention through personalized interaction flows.</p>
+                            <p class="exp-detail">Managed Design System standards for the Control Tower analytics suite, optimizing data density for enterprise B2B reporting.</p>
+                            <div class="flex gap-2">
+                                <span class="badge badge-enterprise">Enterprise SaaS</span>
+                                <span class="badge badge-ai">LLM Interfaces</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sony Crackle -->
+                    <div class="exp-card">
+                        <div class="flex flex-col md:flex-row justify-between mb-8 gap-4">
+                            <div>
+                                <h5 class="bricolage-font text-2xl font-black uppercase tracking-tight">Sony Crackle</h5>
+                                <p class="bricolage-font text-[13px] font-extrabold uppercase tracking-[0.2em] text-[#E89E78] mt-1">UX/UI Designer</p>
+                            </div>
+                            <span class="mono-label">2016 — 2017</span>
+                        </div>
+                        <div class="space-y-6">
+                            <p class="exp-detail">Standardized streaming experiences across 10-foot UI platforms including Roku and Xbox to improve content discovery and engagement.</p>
+                            <div class="flex gap-2">
+                                <span class="badge badge-strategy">OTT Design</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MyLife.com -->
+                    <div class="exp-card">
+                        <div class="flex flex-col md:flex-row justify-between mb-8 gap-4">
+                            <div>
+                                <h5 class="bricolage-font text-2xl font-black uppercase tracking-tight">MyLife.com</h5>
+                                <p class="bricolage-font text-[13px] font-extrabold uppercase tracking-[0.2em] text-[#E89E78] mt-1">Senior UX Designer</p>
+                            </div>
+                            <span class="mono-label">2012 — 2016</span>
+                        </div>
+                        <div class="space-y-6">
+                            <p class="exp-detail">Implemented conversion funnel optimizations through systematic A/B testing on registration and payment paths to drive subscriber growth.</p>
+                            <p class="exp-detail">Redesigned public record reporting interfaces to improve clarity and user trust in data-heavy environments.</p>
+                            <div class="flex gap-2">
+                                <span class="badge badge-strategy">Growth UX</span>
+                                <span class="badge badge-enterprise">A/B Testing</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SKILL TAG CLOUD -->
+                <section id="skills" class="mb-32">
+                    <h4 class="header-30px mb-12">Expertise & Stack</h4>
+                    
+                    <div class="mb-12">
+                        <span class="mono-label block mb-6">Strategic Focus</span>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="skill-tag">Traffic Retention</span>
+                            <span class="skill-tag">Conversion Funnels</span>
+                            <span class="skill-tag">Vibe Coding</span>
+                            <span class="skill-tag">A/B Testing</span>
+                            <span class="skill-tag">Growth Design</span>
+                            <span class="skill-tag">Data Visualization</span>
+                            <span class="skill-tag">User Research</span>
+                            <span class="skill-tag">Design Systems</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <span class="mono-label block mb-6">Technical Tools</span>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">Claude/AI Tools</span>
+                            <span class="skill-tag">HTML/CSS</span>
+                            <span class="skill-tag">Webflow</span>
+                            <span class="skill-tag">Adobe Creative Suite</span>
+                            <span class="skill-tag">Jira</span>
+                            <span class="skill-tag">Hotjar</span>
+                            <span class="skill-tag">Sketch</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- EDUCATION -->
+                <section id="education">
+                    <h4 class="header-30px mb-16">Academic Foundation</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="edu-card">
+                            <span class="mono-label mb-6 block">UCLA Extension</span>
+                            <h5 class="bricolage-font font-black text-2xl uppercase tracking-tight leading-none mb-2">Design Communication Arts</h5>
+                            <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-[#A38072]">Post-Graduate Studies</p>
+                        </div>
+                        <div class="edu-card">
+                            <span class="mono-label mb-6 block">American InterContinental</span>
+                            <h5 class="bricolage-font font-black text-2xl uppercase tracking-tight leading-none mb-2">Fashion Marketing (BFA)</h5>
+                            <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-[#A38072]">Bachelor of Fine Arts</p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="w-full bg-[#1A1918] pt-32 pb-16 px-10 md:px-20 text-[#A38072] relative">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-20 border-b border-white/5 pb-32 mb-16">
+                <div class="lg:col-span-7">
+                    <h4 class="bricolage-font text-5xl font-black text-white mb-10 tracking-tighter">LP</h4>
+                    <p class="text-xl font-normal text-white/30 max-w-md leading-relaxed">
+                        Designing for the intersection of data density and user intuition. 
+                        PST Timezone.
+                    </p>
+                </div>
+                <div class="lg:col-span-3">
+                    <h5 class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/10 mb-10">Connect</h5>
+                    <ul class="space-y-6 text-sm font-bold text-white/60">
+                        <li><a href="https://www.linkedin.com/in/lesley-piercefield-08a90314" class="hover:text-[#E89E78] transition-colors">LinkedIn</a></li>
+                        <li><a href="mailto:lpiercefield@icloud.com" class="hover:text-[#E89E78] transition-colors">Email</a></li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-2">
+                    <h5 class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/10 mb-10">Status</h5>
+                    <p class="text-sm font-bold text-white/60">Available 2026</p>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 opacity-30">
+                <p class="text-[9px] font-bold uppercase tracking-[0.4em]">
+                    &copy; 2026 Lesley Piercefield | Product Lead
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
