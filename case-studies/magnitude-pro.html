@@ -240,148 +240,18 @@
                     </p>
                     
                     <!-- HIGH FIDELITY MOCK APP -->
-                    <div class="product-shot-container overflow-hidden rounded-lg shadow-xl bg-[--terminal-dark] flex flex-col">
-                        <!-- Top Bar -->
-                        <div class="mock-ui-header flex items-center justify-between px-4 py-3">
-                            <div class="flex items-center gap-6">
-                                <span class="mono text-[10px] font-bold text-[--sunset-peach]">MAGNITUDE_PRO</span>
-                                <div class="flex items-center gap-3">
-                                    <span class="text-white font-bold text-xs">NVDA</span>
-                                    <span class="text-strat-green text-[10px] mono">$142.18 (+1.4%)</span>
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-4">
-                                <span class="mono text-[9px] text-white/40">10:42:15 PST</span>
-                                <div class="flex gap-1">
-                                    <div class="w-2 h-2 rounded-full bg-strat-green"></div>
-                                    <div class="w-2 h-2 rounded-full bg-strat-green"></div>
-                                    <div class="w-2 h-2 rounded-full bg-strat-green"></div>
-                                    <div class="w-2 h-2 rounded-full bg-white/10"></div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="flex flex-1 min-h-[500px]">
-                            <!-- Left Sidebar -->
-                            <div class="mock-ui-sidebar w-48 p-4 flex flex-col gap-8">
-                                <div>
-                                    <span class="text-[9px] uppercase tracking-widest text-white/20 block mb-4">Watchlist</span>
-                                    <div class="space-y-3">
-                                        <!-- NVDA Now selected to match header -->
-                                        <div class="flex justify-between items-center bg-white/10 p-2 rounded shadow-sm border border-white/5">
-                                            <span class="text-[10px] text-white font-bold">NVDA</span>
-                                            <span class="text-[9px] text-strat-green mono">3-1-2</span>
-                                        </div>
-                                        <div class="flex justify-between items-center p-2">
-                                            <span class="text-[10px] text-white/40">TSLA</span>
-                                            <span class="text-[9px] text-[--sunset-pink] mono">2-1-2</span>
-                                        </div>
-                                        <div class="flex justify-between items-center p-2">
-                                            <span class="text-[10px] text-white/40">AAPL</span>
-                                            <span class="text-[9px] text-white/20 mono">2-2</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <span class="text-[9px] uppercase tracking-widest text-white/20 block mb-4">Journal Log</span>
-                                    <div class="bg-white/5 p-3 rounded h-32">
-                                        <p class="text-[9px] text-white/40 italic leading-relaxed">
-                                            NVDA: Waiting for 60m candle to flip green for full timeframe continuity...
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Main Grid (6 TFs) -->
-                            <div class="flex-1 grid grid-cols-3 grid-rows-2 p-1 gap-1 bg-white/5">
-                                <!-- TF 1 -->
-                                <div class="tf-box relative flex items-center justify-center overflow-hidden">
-                                    <span class="absolute top-2 left-2 text-[8px] mono text-white/20">MONTHLY [3-1-2]</span>
-                                    <div class="flex items-end gap-1 scale-75">
-                                        <div class="flex flex-col items-center">
-                                            <div class="candle-wick h-4"></div>
-                                            <div class="candle-body h-12 bg-strat-red"></div>
-                                            <div class="candle-wick h-8"></div>
-                                            <span class="text-[8px] mt-1 text-white/20">2</span>
-                                        </div>
-                                        <div class="flex flex-col items-center">
-                                            <div class="candle-wick h-2"></div>
-                                            <div class="candle-body h-6 bg-[--sunset-blue]"></div>
-                                            <div class="candle-wick h-2"></div>
-                                            <span class="text-[8px] mt-1 text-white/20">1</span>
-                                        </div>
-                                        <div class="flex flex-col items-center">
-                                            <div class="candle-wick h-6"></div>
-                                            <div class="candle-body h-16 bg-strat-green"></div>
-                                            <div class="candle-wick h-4"></div>
-                                            <span class="text-[8px] mt-1 text-white/20">2</span>
-                                        </div>
-                                    </div>
-                                    <div class="absolute bottom-2 right-2 flex gap-1">
-                                        <div class="continuity-dot bg-strat-green"></div>
-                                    </div>
-                                </div>
-                                <!-- TF 2 -->
-                                <div class="tf-box relative flex items-center justify-center">
-                                    <span class="absolute top-2 left-2 text-[8px] mono text-white/20">WEEKLY [2-2]</span>
-                                    <div class="flex items-end gap-1 opacity-60">
-                                        <div class="candle-body h-8 bg-strat-green"></div>
-                                        <div class="candle-body h-12 bg-strat-green"></div>
-                                    </div>
-                                    <div class="absolute bottom-2 right-2 flex gap-1">
-                                        <div class="continuity-dot bg-strat-green"></div>
-                                    </div>
-                                </div>
-                                <!-- TF 3 -->
-                                <div class="tf-box relative flex items-center justify-center">
-                                    <span class="absolute top-2 left-2 text-[8px] mono text-white/20">DAILY [1-2]</span>
-                                    <div class="flex items-end gap-1 scale-110">
-                                        <div class="flex flex-col items-center"><div class="candle-body h-4 bg-[--sunset-blue]"></div><span class="text-[8px] mt-1 text-white/20">1</span></div>
-                                        <div class="flex flex-col items-center"><div class="candle-body h-14 bg-strat-green shadow-[0_0_10px_rgba(34,197,94,0.3)]"></div><span class="text-[8px] mt-1 text-white/20">2</span></div>
-                                    </div>
-                                    <div class="absolute bottom-2 right-2 flex gap-1">
-                                        <div class="continuity-dot bg-strat-green shadow-[0_0_8px_#22c55e]"></div>
-                                    </div>
-                                </div>
-                                <!-- TF 4 -->
-                                <div class="tf-box relative flex items-center justify-center">
-                                    <span class="absolute top-2 left-2 text-[8px] mono text-white/20">60M [2-1]</span>
-                                    <div class="flex items-end gap-1 opacity-40 scale-75">
-                                        <div class="candle-body h-16 bg-strat-red"></div>
-                                        <div class="candle-body h-4 bg-[--sunset-blue]"></div>
-                                    </div>
-                                    <div class="absolute bottom-2 right-2 flex gap-1">
-                                        <div class="continuity-dot bg-white/5"></div>
-                                    </div>
-                                </div>
-                                <!-- TF 5 -->
-                                <div class="tf-box relative flex items-center justify-center">
-                                    <span class="absolute top-2 left-2 text-[8px] mono text-white/20">15M [3]</span>
-                                    <div class="flex items-end gap-1">
-                                        <div class="candle-body h-20 bg-[--sunset-pink] opacity-50"></div>
-                                    </div>
-                                    <div class="absolute bottom-2 right-2 flex gap-1">
-                                        <div class="continuity-dot bg-strat-green"></div>
-                                    </div>
-                                </div>
-                                <!-- TF 6 -->
-                                <div class="tf-box relative flex items-center justify-center">
-                                    <span class="absolute top-2 left-2 text-[8px] mono text-white/20">5M [2-2]</span>
-                                    <div class="flex items-end gap-1 opacity-30">
-                                        <div class="candle-body h-6 bg-strat-green"></div>
-                                        <div class="candle-body h-8 bg-strat-green"></div>
-                                    </div>
-                                    <div class="absolute bottom-2 right-2 flex gap-1">
-                                        <div class="continuity-dot bg-strat-green"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="terminal" class="pb-32">
-                    <h4 class="header-30px mb-10">The Terminal Aesthetic</h4>
+                  <div class="product-shot-container rounded-lg shadow-2xl bg-[--terminal-dark] overflow-hidden">
+    <div class="mock-ui-header flex items-center justify-between px-4 py-3 border-b border-white/5">
+        <span class="mono text-[10px] font-bold text-[--sunset-peach]">MAGNITUDE_PRO_LIVE_PREVIEW</span>
+        <div class="flex gap-1">
+            <div class="w-2 h-2 rounded-full bg-strat-green"></div>
+            <div class="w-2 h-2 rounded-full bg-strat-green"></div>
+            <div class="w-2 h-2 rounded-full bg-strat-green"></div>
+        </div>
+    </div>
+    <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Magnitude-Pro@2x.webp?raw=true" alt="Magnitude Pro Multi-Timeframe Logic" class="w-full h-auto">
+</div>
+                                               <h4 class="header-30px mb-10">The Terminal Aesthetic</h4>
                     <p class="text-xl font-normal leading-relaxed text-[#4A4947] max-w-3xl">
                         Built for focus. The Midnight Slate terminal UI minimizes eye strain during long sessions while the sunset-peach accents highlight the most critical actionable data points. It is a tool for professional execution, currently being refined for live-data integration.
                     </p>
