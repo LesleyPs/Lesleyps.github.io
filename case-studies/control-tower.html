@@ -81,27 +81,9 @@
             display: inline-block;
         }
         .badge-enterprise { background: var(--tag-ent-bg); color: var(--tag-ent-text); border: 1px solid rgba(67, 56, 202, 0.1); }
-        .badge-available { background: var(--tag-available-bg); color: var(--tag-available-text); border: 1px solid rgba(22, 101, 52, 0.2); }
+        .badge-evolution { background: rgba(232, 158, 120, 0.1); color: #E89E78; border: 1px solid rgba(232, 158, 120, 0.2); }
         .badge-ai { background: #FEE9D7; color: #B45309; border: 1px solid rgba(180, 83, 9, 0.1); }
         .badge-retention { background: #F1F5F9; color: #475559; border: 1px solid rgba(71, 85, 105, 0.1); }
-
-        .link-hover {
-            position: relative;
-            display: inline-block;
-        }
-        .link-hover::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 1px;
-            bottom: -4px;
-            left: 0;
-            background: var(--sunset-peach);
-            transform: scaleX(0.1);
-            transform-origin: bottom left;
-            transition: transform 0.4s ease;
-        }
-        .link-hover:hover::after { transform: scaleX(1); }
 
         .image-container {
             background: #F8F5F2;
@@ -116,14 +98,48 @@
             margin: 4rem 0;
         }
 
-        .product-shot-container {
-            background: #F8F5F2;
-            border: 1px solid #F0EBE7;
-            border-radius: 4px;
-            overflow: hidden;
+        .large-impact-shot {
             width: 100%;
+            border: 1px solid #F0EBE7;
+            border-radius: 8px;
+            overflow: hidden;
             margin: 3rem 0;
-            position: relative;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+        }
+
+        .large-impact-shot img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        @media (min-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .comparison-card {
+            background: white;
+            border: 1px solid #F0EBE7;
+            border-radius: 12px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .comparison-card.highlight {
+            border-color: var(--sunset-peach);
+            background: #FFF9F6;
         }
 
         .sticky-nav { position: sticky; top: 120px; }
@@ -144,16 +160,14 @@
 </head>
 <body>
 
-    <!-- NAV -->
     <nav class="fixed top-0 w-full z-50 px-10 md:px-20 py-8 flex justify-between items-center bg-white/30 backdrop-blur-md border-b border-black/5">
         <a href="../index.html" class="bricolage-font font-black text-2xl tracking-tighter">LP</a>
         <div class="flex items-center gap-12">
-            <a href="../index.html" class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#1A1918] link-hover">Portfolio</a>
+            <a href="../index.html" class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#1A1918]">Portfolio</a>
             <a href="mailto:lpiercefield@icloud.com" class="px-6 py-3 bg-[#1A1918] text-white text-[10px] font-bold uppercase tracking-[0.2em] rounded-sm hover:bg-[#E89E78] transition-all">Contact</a>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
     <header class="max-w-[1440px] mx-auto px-10 md:px-20 pt-56 pb-32">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
             <div class="lg:col-span-8">
@@ -179,11 +193,10 @@
         </div>
 
         <div class="image-container mt-24">
-             <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/Tiki-control-tower-product.webp?raw=true" alt="Control Tower Dashboard" class="w-full h-full object-cover">
+             <img src=https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Tiki-Products_2x.png?raw=true alt="Control Tower Dashboard" class="w-full h-full object-cover">
         </div>
     </header>
 
-    <!-- CONTENT SECTION -->
     <main class="max-w-[1440px] mx-auto px-10 md:px-20 py-32 border-t border-[#E8E4E1]">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-20">
             
@@ -202,47 +215,62 @@
                 <section id="challenge">
                     <h4 class="header-30px mb-10">The Challenge</h4>
                     <p class="text-xl font-normal leading-relaxed text-[#4A4947] max-w-3xl">
-                        Tiki’s legacy B2B workflow suffered from operational silos, where product configuration and partner data were managed through disconnected manual tools. The objective was to consolidate these touchpoints into a single, cohesive command center that scaled alongside global partner expansion.
+                        Tiki’s legacy B2B workflow suffered from operational silos, where product configuration and partner data were managed through disconnected manual tools. The objective was to consolidate these touchpoints into a single, cohesive command center.
                     </p>
                 </section>
 
                 <section id="strategy">
-                    <h4 class="header-30px mb-10">Design Strategy</h4>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
-                        <div class="space-y-4">
-                            <h5 class="bricolage-font font-black text-sm uppercase tracking-widest text-[#E89E78]">Operational Cohesion</h5>
-                            <p class="text-sm text-[#4A4947] leading-relaxed">Unified disparate data streams into a high-density dashboard, prioritizing actionable insights over raw data exposure.</p>
-                        </div>
-                        <div class="space-y-4">
-                            <h5 class="bricolage-font font-black text-sm uppercase tracking-widest text-[#E89E78]">Scalable Frameworks</h5>
-                            <p class="text-sm text-[#4A4947] leading-relaxed">Engineered a modular component library that allowed internal teams to roll out new product verticals without redesigning core layouts.</p>
-                        </div>
+                    <div class="mb-12">
+                        <span class="badge badge-evolution mb-6">Process Architecture</span>
+                        <h4 class="header-30px mb-10">UX Evolution: Surfacing Utility</h4>
+                        <p class="text-lg text-[#4A4947] leading-relaxed max-w-2xl mb-8">
+                            We mapped the onboarding architecture to move from a navigational model to a contextual one—bringing deeply buried product settings forward to eliminate friction.
+                        </p>
                     </div>
 
-                    <div class="product-shot-container aspect-[16/10]">
-                         <div class="w-full h-full bg-[#F3F0ED] flex items-center justify-center text-[10px] font-bold uppercase tracking-[0.3em] text-black/20 italic">
-                             [ High-Fidelity Design System & Component Detail Image ]
-                         </div>
+                    <div class="large-impact-shot">
+                        <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Tiki-Organization_2x.png?raw=true" alt="Onboarding User Flow Chart">
+                    </div>
+
+                    <div class="comparison-grid mt-20">
+                        <div class="comparison-card">
+                            <h5 class="text-[10px] font-bold uppercase tracking-widest text-black/30 mb-2">V1: Hidden Settings</h5>
+                            <p class="text-sm text-[#4A4947] mb-4">Users were forced to navigate to secondary screens to view or modify Frequency Caps.</p>
+                            <div class="rounded border border-black/5 overflow-hidden">
+                                <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Tiki-overlay-media-setting@2x.png?raw=true" class="w-full h-auto grayscale opacity-60" alt="Legacy Interface">
+                            </div>
+                        </div>
+
+                        <div class="comparison-card highlight">
+                            <h5 class="text-[10px] font-bold uppercase tracking-widest text-[#E89E78] mb-2">V2: Contextual Control</h5>
+                            <p class="text-sm text-[#1A1918] mb-4">Frequency data is surfaced on-card, with changes managed via a quick-modal trigger.</p>
+                            <div class="rounded border border-black/5 overflow-hidden">
+                                <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Tiki-overlay-media-setting-v2@2x.png?raw=true" class="w-full h-auto" alt="Modern Interface">
+                            </div>
+                        </div>
                     </div>
                 </section>
 
                 <section id="impact" class="pb-32">
-                    <h4 class="header-30px mb-10">Strategic Outcomes</h4>
-                    <div class="space-y-16">
-                        <div class="max-w-3xl">
-                            <h5 class="bricolage-font font-extrabold text-sm uppercase tracking-widest text-[#1A1918] mb-4">Onboarding Transformation</h5>
-                            <p class="text-lg text-[#4A4947]">Migrated manual partner setup to a self-serve automated architecture, significantly reducing the engineering overhead required for new client launches.</p>
-                        </div>
+                    <div class="mb-12">
+                        <h4 class="header-30px mb-10">Strategic Outcomes</h4>
+                        <p class="text-lg text-[#4A4947] leading-relaxed max-w-2xl">
+                            The implementation established a single source of truth for global product attributes, improving operational velocity and ecosystem integrity.
+                        </p>
+                    </div>
 
-                        <div class="product-shot-container aspect-[16/9]">
-                             <div class="w-full h-full bg-[#F3F0ED] flex items-center justify-center text-[10px] font-bold uppercase tracking-[0.3em] text-black/20 italic">
-                                 [ Automated Workflow or Interface Outcome Detail ]
-                             </div>
-                        </div>
+                    <div class="large-impact-shot">
+                        <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/Tiki-control-tower-product.webp?raw=true" alt="Control Tower Final Dashboard">
+                    </div>
 
-                        <div class="max-w-3xl">
-                            <h5 class="bricolage-font font-extrabold text-sm uppercase tracking-widest text-[#1A1918] mb-4">Ecosystem Integrity</h5>
-                            <p class="text-lg text-[#4A4947]">Established a single source of truth for global product attributes, eliminating data drift across regional platforms and improving internal confidence in live system status.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-16 pt-12 border-t border-[#E8E4E1]">
+                        <div class="space-y-4">
+                            <h5 class="bricolage-font font-black text-sm uppercase tracking-widest text-[#E89E78]">Operational Integrity</h5>
+                            <p class="text-sm text-[#4A4947] leading-relaxed">Eliminated data drift by centralizing configuration logic, ensuring high-fidelity visibility across regional platforms.</p>
+                        </div>
+                        <div class="space-y-4">
+                            <h5 class="bricolage-font font-black text-sm uppercase tracking-widest text-[#E89E78]">Scalable Framework</h5>
+                            <p class="text-sm text-[#4A4947] leading-relaxed">The modular component system allowed for rapid rollout of new product verticals with zero engineering redesign.</p>
                         </div>
                     </div>
                 </section>
@@ -250,51 +278,21 @@
         </div>
     </main>
 
-    <!-- ADDITIONAL CASE STUDIES SECTION -->
-    <section class="w-full bg-[#F3F0ED] py-32 border-t border-black/5">
-        <div class="max-w-[1440px] mx-auto px-10 md:px-20">
-            <h4 class="text-[10px] font-bold uppercase tracking-[0.5em] text-[#E89E78] mb-16 text-center">View More Case Studies</h4>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                
-                <a href="envoy.html" class="next-project-card p-12 flex flex-col justify-between min-h-[340px]">
-                    <div>
-                        <div class="mb-8"><span class="badge badge-ai">Conversational AI</span></div>
-                        <h4 class="bricolage-font text-4xl font-black uppercase tracking-tight">Envoy</h4>
-                        <p class="text-sm text-[#4A4947] mt-4 max-w-xs">Scalable design systems for global conversational intelligence.</p>
-                    </div>
-                    <p class="text-[10px] font-bold uppercase tracking-[0.3em] pt-8 border-t border-black/5">Next Project &rarr;</p>
-                </a>
-
-                <a href="media-units.html" class="next-project-card p-12 flex flex-col justify-between min-h-[340px]">
-                    <div>
-                        <div class="mb-8"><span class="badge badge-retention">Retention Strategy</span></div>
-                        <h4 class="bricolage-font text-4xl font-black uppercase tracking-tight">Media Units</h4>
-                        <p class="text-sm text-[#4A4947] mt-4 max-w-xs">High-velocity components optimized for engagement.</p>
-                    </div>
-                    <p class="text-[10px] font-bold uppercase tracking-[0.3em] pt-8 border-t border-black/5">Next Project &rarr;</p>
-                </a>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
     <footer class="w-full bg-[#1A1918] pt-32 pb-16 px-10 md:px-20 text-[#A38072] relative">
         <div class="max-w-[1440px] mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-20 border-b border-white/5 pb-32 mb-16">
                 <div class="lg:col-span-7">
                     <h4 class="bricolage-font text-5xl font-black text-white mb-10 tracking-tighter">LP</h4>
                     <p class="text-xl font-normal text-white/30 max-w-md leading-relaxed">
-                        Designing clarity for complex product ecosystems. 
-                        Los Angeles / 2026.
+                        Designing clarity for complex product ecosystems. Los Angeles / 2026.
                     </p>
                 </div>
                 <div class="lg:col-span-3">
                     <h5 class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/10 mb-10">Connectivity</h5>
                     <ul class="space-y-6 text-sm font-bold text-white/60">
-                        <li><a href="https://www.linkedin.com/in/lesley-piercefield-08a90314" class="hover:text-[#E89E78] transition-colors">LinkedIn</a></li>
-                        <li><a href="assets/lesley-piercefield-resume.pdf" class="hover:text-[#E89E78] transition-colors">Resume</a></li>
-                        <li><a href="mailto:lpiercefield@icloud.com" class="hover:text-[#E89E78] transition-colors">Email</a></li>
+                        <li><a href="#" class="hover:text-[#E89E78]">LinkedIn</a></li>
+                        <li><a href="#" class="hover:text-[#E89E78]">Resume</a></li>
+                        <li><a href="#" class="hover:text-[#E89E78]">Email</a></li>
                     </ul>
                 </div>
                 <div class="lg:col-span-2">
@@ -302,11 +300,9 @@
                     <p class="text-sm font-bold text-white/60">Available Q1 2026</p>
                 </div>
             </div>
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6 opacity-30">
-                <p class="text-[9px] font-bold uppercase tracking-[0.4em]">
-                    &copy; 2026 Lesley Piercefield | Product Design Lead
-                </p>
-            </div>
+            <p class="text-[9px] font-bold uppercase tracking-[0.4em] opacity-30 mt-8 text-center md:text-left">
+                &copy; 2026 Lesley Piercefield | Product Design Lead
+            </p>
         </div>
     </footer>
 </body>
