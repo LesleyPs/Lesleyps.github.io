@@ -58,14 +58,34 @@
             color: #1A1918;
         }
 
+        /* SIMPLE CSS LOADER: Uses a background text/gif while video loads */
         .product-shot-container {
-            background: #F8F5F2;
+            background-color: #F8F5F2;
+            background-image: url('assets/images/loader.gif'); 
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 40px;
             border: 1px solid #F0EBE7;
             border-radius: 4px;
             overflow: hidden;
             width: 100%;
             margin: 3rem 0;
             position: relative;
+        }
+
+        /* Fallback text if GIF is missing */
+        .video-loading-text::before {
+            content: "Loading...";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--sunset-clay);
+            z-index: 0;
         }
 
         .badge {
@@ -79,18 +99,6 @@
             color: #475559;
             border: 1px solid rgba(71, 85, 105, 0.1);
         }
-
-        /* Video Loader Logic */
-        .video-wrapper { position: relative; width: 100%; height: 100%; background: #F8F5F2; }
-        .loader {
-            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-            width: 24px; height: 24px; border: 2px solid #E8E4E1; border-top: 2px solid var(--sunset-peach);
-            border-radius: 50%; animation: spin 1s linear infinite; z-index: 10;
-        }
-        @keyframes spin { 0% { transform: translate(-50%, -50%) rotate(0deg); } 100% { transform: translate(-50%, -50%) rotate(360deg); } }
-        .video-loaded .loader { display: none; }
-        #hero-video { opacity: 0; transition: opacity 0.8s ease; }
-        .video-loaded #hero-video { opacity: 1; }
 
         .next-project-card {
             border: 1px solid #F0EBE7;
@@ -129,13 +137,10 @@
             </div>
         </div>
 
-        <div class="product-shot-container mt-24 aspect-video" id="video-container">
-            <div class="video-wrapper">
-                <div class="loader"></div>
-                <video id="hero-video" autoplay muted loop playsinline class="w-full h-full object-cover">
-                    <source src="https://www.dropbox.com/scl/fi/55l3fbya7v7owwbt958vc/Tiki-Tab-Unit-example.mp4?rlkey=tndihx2wlatani8cded664jbw&st=3w66eiuc&raw=1" type="video/mp4">
-                </video>
-            </div>
+        <div class="product-shot-container video-loading-text mt-24 aspect-video">
+            <video autoplay muted loop playsinline class="w-full h-full object-cover relative z-10">
+                <source src="https://www.dropbox.com/scl/fi/55l3fbya7v7owwbt958vc/Tiki-Tab-Unit-example.mp4?rlkey=tndihx2wlatani8cded664jbw&st=3w66eiuc&raw=1" type="video/mp4">
+            </video>
         </div>
     </header>
 
@@ -154,98 +159,74 @@
                 <section id="challenge">
                     <h4 class="header-30px mb-10">The Challenge</h4>
                     <p class="text-xl font-normal leading-relaxed text-[#4A4947] max-w-3xl">
-                        The objective was to maximize portfolio revenue by establishing a repeatable, strategic design validation process. The primary friction point was the "Tab-unit"—a core product that was underperforming its potential.
+                        The objective was to maximize portfolio revenue by establishing a repeatable, strategic design validation process.
                     </p>
                 </section>
 
                 <section id="validation">
-    <div class="mb-12">
-        <span class="badge badge-evolution mb-6">Design Validation</span>
-        <h4 class="header-30px mb-10">From Proof-of-Concept to Performance</h4>
-        <p class="text-lg text-[#4A4947] leading-relaxed max-w-2xl mb-8">
-            Our initial version served as a successful technical proof-of-concept, but lacked the UX refinement needed to drive high-velocity engagement. By analyzing early click-through rates and user friction points, we evolved the design to prioritize clarity and conversion.
-        </p>
-    </div>
-</section>
-<section id="strategy">
-    <div class="product-shot-container aspect-[16/9] bg-white">
-        <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/old-tab-unit@2x.png?raw=true" alt="Strategic Design Evolution" class="w-full h-full object-cover">
-    </div>
-</section>
-                <section id="details">
-                    <h4 class="header-30px mb-10">Strategic Details</h4>
-                    <p class="text-xl font-normal leading-relaxed text-[#4A4947] max-w-3xl mb-12">
-                        A single, high-leverage design change—a subtle bounce animation on a directional arrow—successfully created the visual guidance needed to more than double the initial click-through rate.
-                    </p>
-                    <div class="product-shot-container">
-                        <div class="flex items-center justify-center p-4 md:p-12 bg-[#F8F5F2] min-h-[600px]">
-                            <div id="tabunit_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;max-width:800px;height:600px;overflow:hidden;">
-                                <script type="text/javascript" charset="utf-8" src="tab-unit.hyperesources/tabunit_hype_generated_script.js"></script>
-                            </div>
-                        </div>
+                    <div class="mb-12">
+                        <span class="badge badge-evolution mb-6">Design Validation</span>
+                        <h4 class="header-30px mb-10">From Proof-of-Concept to Performance</h4>
+                        <p class="text-lg text-[#4A4947] leading-relaxed max-w-2xl mb-8">
+                            Our initial version served as a successful technical proof-of-concept, but lacked the UX refinement needed to drive high-velocity engagement.
+                        </p>
                     </div>
                 </section>
 
+                <section id="strategy">
+                    <div class="product-shot-container bg-white">
+                        <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/old-tab-unit@2x.png?raw=true" 
+                             alt="Strategic Design Evolution" 
+                             class="w-full h-auto block">
+                    </div>
+                </section>
+
+                <section id="details">
+                    <h4 class="header-30px mb-10">Small Change Big Win</h4>
+                    <p class="text-xl font-normal leading-relaxed text-[#4A4947] max-w-3xl mb-12">
+                        A single, high-leverage design change—a subtle bounce animation on a directional arrow—successfully created the visual guidance needed to more than double the initial click-through rate.
+                    </p>
+                    <div id="clicktripztikitabunitexample_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;height:498px;overflow:hidden;">
+		<script type="text/javascript" charset="utf-8" src="clicktripz-tiki-tab-unit-example.hyperesources/clicktripztikitabunitexample_hype_generated_script.js?54559"></script>
+	</div>
+
+                </section>
+
                 <section id="expansion" class="space-y-24 pb-32">
-    <div>
-        <h4 class="header-30px mb-6">Portfolio Expansion</h4>
-        <p class="text-lg text-[#4A4947] leading-relaxed max-w-2xl">
-            Expanding the design system across diverse product verticals while maintaining a unified visual language and interaction model.
-        </p>
-    </div>
+                    <div>
+                        <h4 class="header-30px mb-6">Portfolio Expansion</h4>
+                        <p class="text-lg text-[#4A4947] leading-relaxed max-w-2xl">
+                            Expanding the design system across diverse product verticals while maintaining a unified visual language and interaction model.
+                        </p>
+                    </div>
 
-    <div class="space-y-12">
-        <div class="product-shot-container w-full bg-[#F3F0ED] border border-[#F0EBE7] rounded-sm overflow-hidden">
-            <img src="assets/images/unit-01-large.png" alt="Detailed Media Unit Variation 01" class="w-full h-auto object-cover">
-        </div>
-
-        <div class="product-shot-container w-full bg-[#F3F0ED] border border-[#F0EBE7] rounded-sm overflow-hidden">
-            <img src="assets/images/unit-02-large.png" alt="Detailed Media Unit Variation 02" class="w-full h-auto object-cover">
-        </div>
-
-        <div class="product-shot-container w-full bg-[#F3F0ED] border border-[#F0EBE7] rounded-sm overflow-hidden">
-            <img src="assets/images/unit-03-large.png" alt="Detailed Media Unit Variation 03" class="w-full h-auto object-cover">
-        </div>
-
-        <div class="product-shot-container w-full bg-[#F3F0ED] border border-[#F0EBE7] rounded-sm overflow-hidden">
-            <img src="assets/images/unit-04-large.png" alt="Detailed Media Unit Variation 04" class="w-full h-auto object-cover">
-        </div>
-    </div>
-</section>
+                    <div class="space-y-12">
+                        <div class="product-shot-container w-full bg-[#F3F0ED]">
+                            <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/Tiki_tab-unit-max@2x.webp?raw=true" alt="Media Unit 01" class="w-full h-auto object-cover">
+                        </div>
+                        <div class="product-shot-container w-full bg-[#F3F0ED]">
+                            <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/expedia-media-unit.webp?raw=true" alt="Media Unit 02" class="w-full h-auto object-cover">
+                        </div>
+                        <div class="product-shot-container w-full bg-[#F3F0ED]">
+                            <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/wetter-multi-destination-US-unit_2x.jpg?raw=true" alt="Media Unit 03" class="w-full h-auto object-cover">
+                        </div>
+                        <div class="product-shot-container w-full bg-[#F3F0ED]">
+                            <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/accuweather_2x.jpg?raw=true" alt="Media Unit 04" class="w-full h-auto object-cover">
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     </main>
-
-    <section class="w-full bg-[#F3F0ED] py-32 border-t border-black/5">
-        <div class="max-w-[1440px] mx-auto px-10 md:px-20">
-            <h4 class="text-[10px] font-bold uppercase tracking-[0.5em] text-[#E89E78] mb-16 text-center">View More Case Studies</h4>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <a href="envoy.html" class="next-project-card p-12 flex flex-col justify-between min-h-[340px]">
-                    <div>
-                        <div class="mb-8"><span class="badge badge-ai">Conversational AI</span></div>
-                        <h4 class="bricolage-font text-4xl font-black uppercase tracking-tight">Envoy</h4>
-                        <p class="text-sm text-[#4A4947] mt-4 max-w-xs">Scalable design systems for global conversational intelligence.</p>
-                    </div>
-                    <p class="text-[10px] font-bold uppercase tracking-[0.3em] pt-8 border-t border-black/5">Next Project &rarr;</p>
-                </a>
-                <a href="control-tower.html" class="next-project-card p-12 flex flex-col justify-between min-h-[340px]">
-                    <div>
-                        <div class="mb-8"><span class="badge badge-enterprise">Enterprise UX</span></div>
-                        <h4 class="bricolage-font text-4xl font-black uppercase tracking-tight">Control Tower</h4>
-                        <p class="text-sm text-[#4A4947] mt-4 max-w-xs">Centralized command centers for complex data.</p>
-                    </div>
-                    <p class="text-[10px] font-bold uppercase tracking-[0.3em] pt-8 border-t border-black/5">Next Project &rarr;</p>
-                </a>
-            </div>
-        </div>
-    </section>
 
     <footer class="w-full bg-[#1A1918] pt-32 pb-16 px-10 md:px-20 text-[#A38072] relative">
         <div class="max-w-[1440px] mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-20 border-b border-white/5 pb-32 mb-16">
                 <div class="lg:col-span-7">
                     <h4 class="bricolage-font text-5xl font-black text-white mb-10 tracking-tighter">LP</h4>
-                    <p class="text-xl font-normal text-white/30 max-w-md leading-relaxed">Designing clarity for complex product ecosystems. Los Angeles / 2026.</p>
+                    <p class="text-xl font-normal text-white/30 max-w-md leading-relaxed">
+                        Designing clarity for complex product ecosystems. Los Angeles / 2026.
+                    </p>
                 </div>
                 <div class="lg:col-span-3">
                     <h5 class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/10 mb-10">Connectivity</h5>
@@ -257,31 +238,13 @@
                 </div>
                 <div class="lg:col-span-2">
                     <h5 class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/10 mb-10">Status</h5>
-                    <p class="text-sm font-bold text-white/60">Available Q1 2026.</p>
+                    <p class="text-sm font-bold text-white/60">Available Q1 2026</p>
                 </div>
             </div>
-            <p class="text-[9px] font-bold uppercase tracking-[0.4em] opacity-30 mt-8 text-center md:text-left">
-                &copy; 2026 Lesley Piercefield | Product Design Lead
-            </p>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 opacity-30">
+                <p class="text-[9px] font-bold uppercase tracking-[0.4em]">&copy; 2026 Lesley Piercefield | Product Design Lead</p>
+            </div>
         </div>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const video = document.getElementById('hero-video');
-            const container = document.getElementById('video-container');
-
-            if (video) {
-                // If the video is already cached or loaded
-                if (video.readyState >= 3) {
-                    container.classList.add('video-loaded');
-                }
-
-                // Trigger when the video can play through
-                video.addEventListener('canplaythrough', function() {
-                    container.classList.add('video-loaded');
-                });
-            }
-        });
-    </script>
 </body>
 </html>
