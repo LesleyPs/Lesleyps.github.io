@@ -3,44 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Envoy | Lesley Piercefield</title>
-
-    <link rel="shortcut icon" href="assets/favicons/favicon.ico" type="image/x-icon" />
-    <link rel="icon" type="image/png" href="assets/favicons/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg" />
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png" />
+    <title>Sony Crackle | Lesley Piercefield</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Schibsted+Grotesk:wght@400;700&family=JetBrains+Mono:wght@500;800&display=swap" rel="stylesheet">
-
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <style>
         :root {
             --sunset-peach: #E89E78;
-            --sunset-clay: #A38072;
             --paper-warm: #FBF9F7;
             --text-main: #2D2C2A;
-            --tag-ai-bg: #FEE9D7;
-            --tag-ai-text: #B45309;
-            --tag-retention-bg: #F1F5F9;
-            --tag-retention-text: #475569;
         }
-
         body {
             font-family: 'Schibsted Grotesk', sans-serif;
-            background: radial-gradient(circle at top right, #FFF5EE 0%, var(--paper-warm) 100%);
+            background: var(--paper-warm);
             color: var(--text-main);
             margin: 0;
-            padding: 0;
-            overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
         }
-
-        h1, h2, h3, h4, .bricolage-font { 
-            font-family: 'Bricolage Grotesque', sans-serif; 
-            font-style: normal; 
-        }
+        h1, h2, h3, h4, .bricolage-font { font-family: 'Bricolage Grotesque', sans-serif; }
         
         .header-logic {
             font-size: clamp(44px, 8.5vw, 92px);
@@ -48,18 +31,54 @@
             line-height: 0.85;
             text-transform: uppercase;
             letter-spacing: -0.05em;
-            color: #1A1918;
-            display: inline-block;
         }
-
         .header-logic span {
             font-weight: 200;
             display: block;
-            letter-spacing: -0.01em;
-            margin-top: 0.05em;
             background: linear-gradient(90deg, #1A1918 0%, var(--sunset-peach) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        .hero-slot {
+            width: 100%;
+            aspect-ratio: 21/9;
+            background: #E8E4E1;
+            border-radius: 4px;
+            margin-bottom: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .process-shot-large {
+            width: 100%;
+            border: 1px solid #F0EBE7;
+            border-radius: 4px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+
+        /* FLEXIBLE FLOW LOCK: Prevents overlap and clipping */
+        .hype-flex-container {
+            display: block !important;
+            position: relative !important;
+            width: 100% !important;
+            aspect-ratio: 16 / 5.5; 
+            min-height: 220px !important; 
+            margin: 2rem 0 4rem 0 !important;
+            clear: both !important;
+            overflow: visible !important;
+        }
+
+        .hype-container {
+            width: 100% !important;
+            height: 100% !important;
+            background: transparent !important;
+            border: none !important;
+            display: block !important;
         }
 
         .badge {
@@ -70,233 +89,107 @@
             padding: 7px 16px;
             border-radius: 100px;
             display: inline-block;
-        }
-
-        .badge-ai { background: var(--tag-ai-bg); color: var(--tag-ai-text); border: 1px solid rgba(180, 83, 9, 0.1); }
-        .badge-retention { background: var(--tag-retention-bg); color: var(--tag-retention-text); border: 1px solid rgba(71, 85, 105, 0.1); }
-
-        .image-container {
-            background: #F8F5F2;
-            border: 1px solid #F0EBE7;
-            border-radius: 4px;
-            overflow: hidden;
-            width: 100%;
-            margin: 4rem 0;
-        }
-
-        .comparison-card {
-            background: white;
-            border: 1px solid #F0EBE7;
-            border-radius: 12px;
-            padding: 2.5rem;
-        }
-
-        .process-shot {
-            width: 100%;
-            border: 1px solid #F0EBE7;
-            border-radius: 4px;
-            margin-bottom: 2rem;
-        }
-
-        .next-project-card {
-            border: 1px solid #F0EBE7;
-            background: white;
-            transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-            text-decoration: none;
-            color: inherit;
-        }
-        .next-project-card:hover {
-            border-color: var(--sunset-peach);
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+            background: #F1F5F9;
+            color: #475569;
         }
     </style>
 </head>
 <body>
 
-    <!-- NAV -->
     <nav class="fixed top-0 w-full z-50 px-10 md:px-20 py-8 flex justify-between items-center bg-white/30 backdrop-blur-md border-b border-black/5">
         <a href="../index.html" class="bricolage-font font-black text-2xl tracking-tighter">LP</a>
-        <div class="flex items-center gap-12">
-            <a href="../index.html" class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#1A1918] link-hover">Portfolio</a>
-            <a href="mailto:lpiercefield@icloud.com" class="px-6 py-3 bg-[#1A1918] text-white text-[10px] font-bold uppercase tracking-[0.2em] rounded-sm hover:bg-[#E89E78] transition-all">Contact</a>
+        <div class="flex items-center gap-12 text-[10px] font-bold uppercase tracking-[0.3em]">
+            <a href="../index.html">Portfolio</a>
+            <a href="mailto:lpiercefield@icloud.com" class="px-6 py-3 bg-[#1A1918] text-white rounded-sm hover:bg-[#E89E78] transition-all">Contact</a>
         </div>
     </nav>
 
-    <!-- HERO -->
     <header class="max-w-[1440px] mx-auto px-10 md:px-20 pt-56 pb-32">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
             <div class="lg:col-span-8">
-                <h2 class="text-[11px] font-bold uppercase tracking-[0.6em] text-[#E89E78] mb-10">Case Study 2</h2>
-                <h1 class="header-logic">
-                    Envoy<br/>
-                    <span>Conversational UX.</span>
-                </h1>
+                <h2 class="text-[11px] font-bold uppercase tracking-[0.6em] text-[#E89E78] mb-10">Case Study 3</h2>
+                <h1 class="header-logic">Sony Crackle<br/><span>Ecosystem Strategy.</span></h1>
             </div>
             <div class="lg:col-span-4 pt-4">
                 <div class="space-y-8">
                     <p class="text-lg font-normal leading-snug text-[#4A4947]">
-                        A flagship AI product establishing a new revenue stream by scaling complex conversational functionality across global Destination Marketing Organizations (DMOs).
+                        Translating business objectives into a cohesive design system—engineering seamless registration touchpoints for the living room experience.
                     </p>
                     <div class="pt-8 border-t border-[#E8E4E1]">
-                        <span class="badge badge-ai mb-4">AI Product Design</span>
-                        <p class="bricolage-font text-[13px] font-extrabold uppercase tracking-[0.2em] text-[#1A1918]">Lead Product Designer @ Tiki</p>
+                        <span class="badge mb-4">OTT Architecture</span>
+                        <p class="bricolage-font text-[13px] font-extrabold uppercase tracking-[0.2em] text-[#1A1918]">UX/UI Designer @ Sony Crackle</p>
                     </div>
                 </div>
             </div>
         </div>
+    </header>
+
+    <main class="max-w-[1440px] mx-auto px-10 md:px-20 py-32 border-t border-[#E8E4E1]">
         
-        <!-- FALLBACK STATIC PRODUCT IMAGE -->
-        <div class="image-container aspect-video shadow-lg">
-            <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/tiki-envoy-product-image.webp?raw=true" alt="Envoy Conversational UI Detail" class="w-full h-full object-cover">
+        <div class="hero-slot">
+            <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Sony-Crackle-Banner@2x.jpg?raw=true" class="w-full h-full object-cover" alt="Sony Crackle Ecosystem Hero">
         </div>
 
-                </div>
-                
-                <!-- PRODUCT VIDEO CONTAINER -->
-        <div class="image-container aspect-video bg-black shadow-2xl mb-8">
-            <video autoplay loop muted playsinline class="w-full h-auto">
-    <source src="https://www.dropbox.com/scl/fi/k2qc37zvtnkhagn35vbjf/tiki-enovy-drp.mp4?rlkey=go6duodfyujwutb6ok0ksk28s&st=uw6nac4f&raw=1" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
-
-
-            </header>
-
-    <!-- CONTENT -->
-    <main class="max-w-[1440px] mx-auto px-10 md:px-20 py-32 border-t border-[#E8E4E1]">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-20">
             
             <aside class="hidden lg:block lg:col-span-3">
-                <div class="sticky top-32 space-y-8">
-                    <ul class="space-y-6 text-[10px] font-bold uppercase tracking-[0.4em] text-black/30">
-                        <li class="text-[#E89E78]">01. The Challenge</li>
-                        <li>02. AI Intelligence</li>
-                        <li>03. Design Process</li>
-                        <li>04. Impact & Outcome</li>
-                    </ul>
+                <div class="sticky top-32 space-y-6 text-[10px] font-bold uppercase tracking-[0.4em] text-black/30">
+                    <p class="text-[#E89E78]">01. Engagement Logic</p>
+                    <p>02. Platform Cohesion</p>
                 </div>
             </aside>
 
             <div class="lg:col-span-9 space-y-40">
                 
                 <section>
-                    <h4 class="bricolage-font text-3xl font-black uppercase tracking-tight mb-8">The Challenge</h4>
+                    <h4 class="bricolage-font text-4xl font-black uppercase tracking-tight mb-12">Engagement: Before & After</h4>
+                    
+                    <div class="space-y-32">
+                        <div>
+                            <p class="text-xl font-normal leading-relaxed text-[#4A4947] max-w-3xl mb-12">
+                                <strong>Before: Static Show Discovery</strong><br>
+                                In the baseline version of the Show Page, content discovery was passive. While this area received the highest volume of traffic, there was no native mechanism to convert users into registered members without interrupting their viewing flow.
+                            </p>
+                            <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Sony-Crackle-tough-point@2x.jpg?raw=true" class="process-shot-large" alt="Original Passive Show Page">
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-black/40">Baseline: High-traffic show page without registration touchpoint.</p>
+                        </div>
+
+                        <div>
+                            <p class="text-xl font-normal leading-relaxed text-[#4A4947] max-w-3xl mb-12">
+                                <strong>After: Contextual Implementation</strong><br>
+                                I implemented a dynamic registration touchpoint directly into the Show Page. This animated trigger captures users during their primary flow, providing a frictionless path to registration that upholds the "Hassle-Free" brand promise.
+                            </p>
+                            
+                            <div class="hype-flex-container">
+                                <div class="hype-container">
+                                    <div id="crackleversionb_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;height:100%;overflow:hidden;">
+                                        <script type="text/javascript" charset="utf-8" src="crackle-version-b.hyperesources/crackleversionb_hype_generated_script.js?49659"></script>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-black/40">Implementation: Contextual, animated touchpoint for universal interaction.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h4 class="bricolage-font text-4xl font-black uppercase tracking-tight mb-8">Ecosystem Cohesion</h4>
                     <p class="text-xl font-normal leading-relaxed text-[#4A4947] max-w-3xl">
-                        Translating complex engagement goals into a scalable, multi-device UX that accommodated localization and unique branding for each destination.
+                        To maintain "Studio-Quality" authority across mobile, web, and OTT, I focused on unifying the focus-routing logic and typographic hierarchy. By matching user intent to the specific platform hardware—whether it's a tactile mobile swipe or a 10-foot D-pad interaction—I ensured the "Hassle-Free" brand identity remained consistent across every touchpoint in the Sony Crackle ecosystem.
                     </p>
-                </section>
-
-                <!-- AI COMPARISON MODULE -->
-                <section>
-                    <h4 class="bricolage-font text-3xl font-black uppercase tracking-tight mb-12">Contextual Intelligence</h4>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="comparison-card">
-                            <h5 class="text-[10px] font-bold uppercase tracking-widest text-black/30 mb-6">Standard Chat AI</h5>
-                            <p class="text-xs italic mb-4">"Is Traverse City Boring?"</p>
-                            <div class="p-6 bg-gray-50 rounded text-sm text-[#4A4947]">
-                                "Traverse City, Michigan, isn't a big city, so if you're looking for nightlife it might feel quiet..."
-                            </div>
-                        </div>
-                        <div class="comparison-card border-[#E89E78]">
-                            <h5 class="text-[10px] font-bold uppercase tracking-widest text-[#E89E78] mb-6">Envoy AI</h5>
-                            <p class="text-xs italic mb-4">"Is Traverse City Boring?"</p>
-                            <div class="p-6 bg-[#FFF9F6] border border-[#FEE9D7] rounded text-sm text-[#1A1918]">
-                                "Not at all! Traverse City is filled with exciting activities and beautiful scenery, known for its award-winning vineyards..."
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- 4 PROCESS IMAGES -->
-                <section>
-                    <h4 class="bricolage-font text-3xl font-black uppercase tracking-tight mb-12">Design Process</h4>
-                    <div class="space-y-24">
-                        <div class="space-y-4">
-                            <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/version%20A-1_2x.png?raw=true" class="process-shot" alt="Stage 1">
-                            <p class="text-[10px] font-bold uppercase tracking-widest text-black/40">01. MVP Concept</p>
-                        </div>
-                        <div class="space-y-4">
-                            <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/version%20B-1_2x.png?raw=true" class="process-shot" alt="Stage 2">
-                            <p class="text-[10px] font-bold uppercase tracking-widest text-black/40">02. Topic Enhancement</p>
-                        </div>
-                        <div class="space-y-4">
-                            <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/tiki-envoy-heatmap@2x.webp?raw=true" class="process-shot" alt="Stage 3">
-                            <p class="text-[10px] font-bold uppercase tracking-widest text-black/40">03. Engagement Data</p>
-                        </div>
-                        <div class="space-y-4">
-                            <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/V3-%20C-1_2x.png?raw=true" class="process-shot" alt="Stage 4">
-                            <p class="text-[10px] font-bold uppercase tracking-widest text-black/40">04. Confirmation: Data-Driven Design Refinement</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="pb-32">
-                    <h4 class="bricolage-font text-3xl font-black uppercase tracking-tight mb-8">Impact & Outcome</h4>
-                    <div class="space-y-16 max-w-4xl">
-                        <p class="text-xl font-normal leading-relaxed text-[#4A4947]">
-                            By aligning the conversational UX with destination-specific brand voices, Envoy transformed how DMOs interact with travelers.
-                        </p>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-[#E8E4E1] pt-16">
-                            <div class="space-y-4">
-                                <h5 class="bricolage-font font-black text-xs uppercase tracking-[0.2em] text-[#E89E78]">/ 01 Revenue</h5>
-                                <p class="text-sm text-[#4A4947] leading-relaxed">Established a new recurring revenue stream by productizing AI engagement for tourism boards.</p>
-                            </div>
-                            <div class="space-y-4">
-                                <h5 class="bricolage-font font-black text-xs uppercase tracking-[0.2em] text-[#E89E78]">/ 02 Scale</h5>
-                                <p class="text-sm text-[#4A4947] leading-relaxed">Successfully scaled to multiple international regions with zero compromise on brand integrity.</p>
-                            </div>
-                            <div class="space-y-4">
-                                <h5 class="bricolage-font font-black text-xs uppercase tracking-[0.2em] text-[#E89E78]">/ 03 Conversion</h5>
-                                <p class="text-sm text-[#4A4947] leading-relaxed">Significantly improved traveler intent conversion through refined conversational logic and brand-specific training.</p>
-                            </div>
-                        </div>
-                    </div>
                 </section>
 
             </div>
         </div>
     </main>
 
-    <!-- ADDITIONAL CASE STUDIES SECTION -->
-    <section class="w-full bg-[#F3F0ED] py-32 border-t border-black/5">
-        <div class="max-w-[1440px] mx-auto px-10 md:px-20">
-            <h4 class="text-[10px] font-bold uppercase tracking-[0.5em] text-[#E89E78] mb-16 text-center">View More Case Studies</h4>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                
-                <a href="control-tower.html" class="next-project-card p-12 flex flex-col justify-between min-h-[340px]">
-                    <div>
-                        <div class="mb-8"><span class="badge" style="background: #E0E7FF; color: #4338CA;">Enterprise UX</span></div>
-                        <h4 class="bricolage-font text-4xl font-black uppercase tracking-tight">Control Tower</h4>
-                        <p class="text-sm text-[#4A4947] mt-4 max-w-xs">Real-time operational visibility systems and command center design.</p>
-                    </div>
-                    <p class="text-[10px] font-bold uppercase tracking-[0.3em] pt-8 border-t border-black/5">Next Project &rarr;</p>
-                </a>
-
-                <a href="media-units.html" class="next-project-card p-12 flex flex-col justify-between min-h-[340px]">
-                    <div>
-                        <div class="mb-8"><span class="badge badge-retention">Retention Strategy</span></div>
-                        <h4 class="bricolage-font text-4xl font-black uppercase tracking-tight">Media Units</h4>
-                        <p class="text-sm text-[#4A4947] mt-4 max-w-xs">High-velocity components optimized for engagement and advertising.</p>
-                    </div>
-                    <p class="text-[10px] font-bold uppercase tracking-[0.3em] pt-8 border-t border-black/5">Next Project &rarr;</p>
-                </a>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- UNIVERSAL FOOTER -->
-    <footer class="w-full bg-[#1A1918] pt-32 pb-16 px-10 md:px-20 text-[#A38072] relative">
+    <footer class="w-full bg-[#1A1918] pt-32 pb-16 px-10 md:px-20 text-[#A38072] mt-32">
         <div class="max-w-[1440px] mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-20 border-b border-white/5 pb-32 mb-16">
                 <div class="lg:col-span-7">
                     <h4 class="bricolage-font text-5xl font-black text-white mb-10 tracking-tighter">LP</h4>
-                    <p class="text-xl font-normal text-white/30 max-w-md leading-relaxed">
-                        Designing clarity for complex product ecosystems. 
-                        Los Angeles / 2026.
-                    </p>
+                    <p class="text-xl font-normal text-white/30 max-w-md leading-relaxed">Designing clarity for complex product ecosystems. Los Angeles / 2026.</p>
                 </div>
                 <div class="lg:col-span-3">
                     <h5 class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/10 mb-10">Connectivity</h5>
@@ -311,11 +204,7 @@
                     <p class="text-sm font-bold text-white/60">Available Q1 2026</p>
                 </div>
             </div>
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6 opacity-30">
-                <p class="text-[9px] font-bold uppercase tracking-[0.4em]">
-                    &copy; 2026 Lesley Piercefield | Product Design Lead
-                </p>
-            </div>
+            <p class="text-[9px] font-bold uppercase tracking-[0.4em] opacity-30">&copy; 2026 Lesley Piercefield | UX/UI Designer</p>
         </div>
     </footer>
 

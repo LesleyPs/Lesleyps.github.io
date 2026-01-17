@@ -3,68 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sony Crackle: Ecosystem Strategy | Lesley Piercefield</title>
+    <title>Sony Crackle | Lesley Piercefield</title>
 
-    <link rel="shortcut icon" href="assets/favicons/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Schibsted+Grotesk:wght@400;700&family=JetBrains+Mono:wght@500;800&display=swap" rel="stylesheet">
-
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <style>
-        :root { 
-            --crackle-orange: #FF6000; 
-            --paper-warm: #FBF9F7; 
-            --text-main: #2D2C2A; 
+        :root {
+            --sunset-peach: #E89E78;
+            --paper-warm: #FBF9F7;
+            --text-main: #2D2C2A;
         }
-
-        body { 
-            font-family: 'Schibsted Grotesk', sans-serif; 
-            background: radial-gradient(circle at top right, #FFF5EE 0%, var(--paper-warm) 100%); 
-            color: var(--text-main); 
-            margin: 0; 
-            -webkit-font-smoothing: antialiased; 
+        body {
+            font-family: 'Schibsted Grotesk', sans-serif;
+            background: var(--paper-warm);
+            color: var(--text-main);
+            margin: 0;
+            -webkit-font-smoothing: antialiased;
         }
-
-        h1, h4, .bricolage-font { font-family: 'Bricolage Grotesque', sans-serif; }
+        h1, h2, h3, h4, .bricolage-font { font-family: 'Bricolage Grotesque', sans-serif; }
         
-        .header-logic { 
-            font-size: clamp(44px, 8.5vw, 92px); 
-            font-weight: 800; 
-            line-height: 0.85; 
-            text-transform: uppercase; 
-            letter-spacing: -0.05em; 
-            color: #1A1918; 
+        .header-logic {
+            font-size: clamp(44px, 8.5vw, 92px);
+            font-weight: 800;
+            line-height: 0.85;
+            text-transform: uppercase;
+            letter-spacing: -0.05em;
+        }
+        .header-logic span {
+            font-weight: 200;
+            display: block;
+            background: linear-gradient(90deg, #1A1918 0%, var(--sunset-peach) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .header-logic span { 
-            font-weight: 200; 
-            display: block; 
-            background: linear-gradient(90deg, #1A1918 0%, var(--crackle-orange) 100%); 
-            -webkit-background-clip: text; 
-            -webkit-text-fill-color: transparent; 
-        }
-        
-        .product-shot-container { 
-            background-color: #F8F5F2; 
-            border: 1px solid #F0EBE7; 
-            border-radius: 4px; 
-            overflow: hidden; 
-            width: 100%; 
-            margin: 3rem 0; 
-            position: relative; 
+        /* HERO SLOT: Adjusted aspect-ratio to 16/9 to make it significantly taller */
+        .hero-slot {
+            width: 100%;
+            aspect-ratio: 16/9; 
+            background: #E8E4E1;
+            border-radius: 4px;
+            margin-bottom: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
         }
 
-        .badge { 
-            font-size: 10px; 
-            font-weight: 800; 
-            text-transform: uppercase; 
-            padding: 7px 16px; 
-            border-radius: 100px; 
-            display: inline-block; 
-            background: #F1F5F9; 
-            color: #475559; 
-            border: 1px solid rgba(71, 85, 105, 0.1); 
+        .process-shot-large {
+            width: 100%;
+            border: 1px solid #F0EBE7;
+            border-radius: 4px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+
+        /* ANIMATION CONTAINER: Kept separate to prevent overlapping the taller Hero */
+        .hype-sandbox {
+            width: 100%;
+            aspect-ratio: 16/7;
+            margin: 3rem 0;
+            position: relative;
+            z-index: 10;
+        }
+
+        .badge {
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            padding: 7px 16px;
+            border-radius: 100px;
+            display: inline-block;
+            background: #F1F5F9;
+            color: #475569;
         }
     </style>
 </head>
@@ -72,116 +88,14 @@
 
     <nav class="fixed top-0 w-full z-50 px-10 md:px-20 py-8 flex justify-between items-center bg-white/30 backdrop-blur-md border-b border-black/5">
         <a href="../index.html" class="bricolage-font font-black text-2xl tracking-tighter">LP</a>
-        <div class="flex items-center gap-12">
-            <a href="../index.html" class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#1A1918]">Portfolio</a>
-            <a href="mailto:lpiercefield@icloud.com" class="px-6 py-3 bg-[#1A1918] text-white text-[10px] font-bold uppercase tracking-[0.2em] rounded-sm hover:bg-[#FF6000] transition-all">Contact</a>
+        <div class="flex items-center gap-12 text-[10px] font-bold uppercase tracking-[0.3em]">
+            <a href="../index.html">Portfolio</a>
+            <a href="mailto:lpiercefield@icloud.com" class="px-6 py-3 bg-[#1A1918] text-white rounded-sm hover:bg-[#E89E78] transition-all">Contact</a>
         </div>
     </nav>
 
     <header class="max-w-[1440px] mx-auto px-10 md:px-20 pt-56 pb-32">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
             <div class="lg:col-span-8">
-                <h2 class="text-[11px] font-bold uppercase tracking-[0.6em] text-[#FF6000] mb-10">Case Study 03: 2017 Production Archive</h2>
-                <h1 class="header-logic">Sony Crackle<br/><span>Ecosystem.</span></h1>
-            </div>
-            <div class="lg:col-span-4 pt-4 border-t border-[#E8E4E1]">
-                <p class="text-lg font-normal leading-snug text-[#4A4947] mb-8">
-                    Scaling a multi-device AVOD streaming platform through optimized registration funnels and 10-foot UI spatial logic.
-                </p>
-                <div class="flex gap-4"><span class="badge">Growth UX</span><span class="badge">OTT Architecture</span></div>
-            </div>
-        </div>
-    </header>
-
-    <main class="max-w-[1440px] mx-auto px-10 md:px-20 py-32 border-t border-[#E8E4E1] space-y-48">
-
-        <section id="growth" class="space-y-16">
-            <h4 class="bricolage-font text-3xl font-black uppercase mb-8">01. Organic Conversion Optimization</h4>
-            <div class="space-y-12">
-                <div class="product-shot-container bg-[#0A0A0A]">
-                    <img src="assets/images/00001.jpg" class="w-full opacity-60 grayscale" alt="Baseline UI">
-                    <div class="p-6 bg-white/5 border-t border-white/10 text-[10px] uppercase tracking-widest text-white/40 font-mono">Input: Baseline Playback Experience (Passive Intent)</div>
-                </div>
-                <div class="product-shot-container border-[#FF6000]/30 shadow-2xl bg-[#0A0A0A]">
-                    <img src="assets/images/Screenshot 2026-01-16 at 11.53.41 PM.png" class="w-full" alt="Optimized UI">
-                    <div class="p-6 bg-white/5 border-t border-white/10 text-[10px] uppercase tracking-widest text-[#FF6000] font-bold font-mono">Outcome: "Unlock More" Mid-Flow Acquisition Trigger</div>
-                </div>
-            </div>
-        </section>
-
-        <section id="onboarding" class="space-y-16">
-            <h4 class="bricolage-font text-3xl font-black uppercase mb-8">02. Value-Centric Onboarding</h4>
-            <div class="product-shot-container shadow-2xl bg-[#0A0A0A]">
-                <img src="assets/images/Crackle-product-image (1).webp" class="w-full" alt="Welcome Screen">
-            </div>
-        </section>
-
-        <section id="navigation" class="space-y-16">
-            <h4 class="bricolage-font text-3xl font-black uppercase mb-8">03. Spatial Navigation & 10-Foot Focus</h4>
-            <p class="text-xl leading-relaxed text-[#4A4947] max-w-3xl">
-                The Connected TV experience is defined by 2-axis spatial logic. I mapped a focus-engine model to manage deep content catalogs, ensuring a seamless transition between content rails and global navigation.
-            </p>
-
-            
-
-            <div class="product-shot-container bg-[#0D0D0D] p-12 lg:p-24 flex flex-col items-center">
-                <div class="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-                    <div class="lg:col-span-5 space-y-10">
-                        <div class="space-y-4">
-                            <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#FF6000]">Focus Persistence Architecture</p>
-                            <ul class="text-[12px] text-white/60 space-y-4 font-mono leading-relaxed">
-                                <li class="border-l-2 border-[#FF6000] pl-4"><b class="text-white">Active Focus:</b> Primary D-Pad selector with 1.05x hover scaling.</li>
-                                <li class="border-l-2 border-white/10 pl-4"><b class="text-white">X-Axis Discovery:</b> Horizontal rail scrolling with index memory.</li>
-                                <li class="border-l-2 border-white/10 pl-4"><b class="text-white">Y-Axis Hierarchy:</b> Moving between Hero, Rails, and Navigation Drawer.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="lg:col-span-7 grid grid-cols-2 gap-6 opacity-90">
-                        <div class="aspect-video bg-[#1A1A1A] border-4 border-[#FF6000] rounded shadow-[0_0_40px_rgba(255,96,0,0.25)] relative">
-                             <div class="absolute bottom-2 left-2 w-1/4 h-1 bg-[#FF6000] rounded-full"></div>
-                        </div>
-                        <div class="aspect-video bg-[#1A1A1A] border border-white/10 rounded"></div>
-                        <div class="aspect-video bg-[#1A1A1A] border border-white/10 rounded"></div>
-                        <div class="aspect-video bg-[#1A1A1A] border border-white/10 rounded"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="tabunit_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;height:350px;overflow:hidden; border: 1px dashed rgba(0,0,0,0.05);">
-                <script type="text/javascript" charset="utf-8" src="tab-unit.hyperesources/tabunit_hype_generated_script.js?15001"></script>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="w-full bg-[#1A1918] pt-32 pb-16 px-10 md:px-20 text-[#A38072]">
-        <div class="max-w-[1440px] mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-12 mb-24">
-                <div class="space-y-4">
-                    <h3 class="bricolage-font text-white text-3xl font-black italic tracking-tighter">LP</h3>
-                    <p class="text-[10px] font-bold uppercase tracking-[0.4em] opacity-50 max-w-[200px] leading-relaxed">
-                        Design for the bottom line. Built for the human experience.
-                    </p>
-                </div>
-                <div class="flex gap-16 md:gap-32">
-                    <div class="flex flex-col gap-6">
-                        <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/20">Social</p>
-                        <a href="#" class="text-[10px] font-bold uppercase tracking-[0.3em] hover:text-white transition-colors">LinkedIn</a>
-                        <a href="#" class="text-[10px] font-bold uppercase tracking-[0.3em] hover:text-white transition-colors">Behance</a>
-                    </div>
-                    <div class="flex flex-col gap-6">
-                        <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/20">Connect</p>
-                        <a href="mailto:lpiercefield@icloud.com" class="text-[10px] font-bold uppercase tracking-[0.3em] hover:text-white transition-colors">Email</a>
-                    </div>
-                </div>
-            </div>
-            <div class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-                <p class="text-[9px] font-bold uppercase tracking-[0.4em] opacity-40">&copy; 2026 Lesley Piercefield</p>
-                <p class="text-[9px] font-bold uppercase tracking-[0.4em] opacity-40">Designed & Coded with Intent</p>
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html>
+                <h2 class="text-[11px] font-bold uppercase tracking-[0.6em] text-[#E89E78] mb-10">Case Study 3</h2>
+                <h1 class="header-logic">Sony Crackle<br/><span>Ecosystem Strategy

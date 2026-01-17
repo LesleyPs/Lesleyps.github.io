@@ -25,7 +25,6 @@
         }
         h1, h2, h3, h4, .bricolage-font { font-family: 'Bricolage Grotesque', sans-serif; }
         
-        /* HEADER LOGIC - ENVOY STANDARD */
         .header-logic {
             font-size: clamp(44px, 8.5vw, 92px);
             font-weight: 800;
@@ -41,6 +40,18 @@
             -webkit-text-fill-color: transparent;
         }
 
+        /* HERO: Taller & Responsive */
+        .hero-slot {
+            width: 100%;
+            min-height: 500px; /* Forces height for the image */
+            background: #E8E4E1;
+            border-radius: 4px;
+            margin-bottom: 4rem;
+            display: flex;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
         .process-shot-large {
             width: 100%;
             border: 1px solid #F0EBE7;
@@ -49,29 +60,21 @@
             margin-bottom: 2rem;
         }
 
-        .hype-container {
-            width: 100%;
-            aspect-ratio: 16/9;
-            background: #f8f8f8;
-            border: 1px solid #eee;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 4px;
-            margin-bottom: 2rem;
+        /* FLEXIBLE FLOW LOCK: This prevents the overlapping "circles" */
+        .hype-flow-wrapper {
+            display: block !important;
+            position: relative !important;
+            width: 100% !important;
+            /* Adjust this percentage to show more/less of the graphic's height */
+            padding-bottom: 35%; 
+            height: 0;
+            margin: 4rem 0 !important;
+            clear: both !important;
         }
 
-        /* PROJECT CARDS - ENVOY STANDARD */
-        .next-project-card {
-            border: 1px solid #F0EBE7;
-            background: white;
-            transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-            text-decoration: none;
-            color: inherit;
-        }
-        .next-project-card:hover {
-            border-color: var(--sunset-peach);
-            transform: translateY(-4px);
+        .hype-inner-container {
+            position: absolute !important;
+            top: 0; left: 0; width: 100%; height: 100%;
         }
 
         .badge {
@@ -118,6 +121,11 @@
     </header>
 
     <main class="max-w-[1440px] mx-auto px-10 md:px-20 py-32 border-t border-[#E8E4E1]">
+        
+        <div class="hero-slot">
+            <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Crackle%20(1)_2x.webp?raw=true" class="w-full h-full object-cover" alt="Sony Crackle Hero">
+        </div>
+
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-20">
             
             <aside class="hidden lg:block lg:col-span-3">
@@ -138,7 +146,7 @@
                                 <strong>Before: Static Show Discovery</strong><br>
                                 In the baseline version of the Show Page, content discovery was passive. While this area received the highest volume of traffic, there was no native mechanism to convert users into registered members without interrupting their viewing flow.
                             </p>
-                            <img src="assets/images/00001.jpg" class="process-shot-large" alt="Original Passive Show Page">
+                            <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Sony-Crackle-tough-point@2x.jpg?raw=true" class="process-shot-large" alt="Original Passive Show Page">
                             <p class="text-[10px] font-bold uppercase tracking-widest text-black/40">Baseline: High-traffic show page without registration touchpoint.</p>
                         </div>
 
@@ -148,8 +156,12 @@
                                 I implemented a dynamic registration touchpoint directly into the Show Page. This animated trigger captures users during their primary flow, providing a frictionless path to registration that upholds the "Hassle-Free" brand promise.
                             </p>
                             
-                            <div class="hype-container">
-                                <p class="text-[10px] font-mono uppercase text-black/20">[ Hype Animation Embed: Show Page Touchpoint ]</p>
+                            <div class="hype-flow-wrapper">
+                                <div class="hype-inner-container">
+                                    <div id="crackleversionb_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;height:100%;overflow:hidden;">
+                                        <script type="text/javascript" charset="utf-8" src="crackle-version-b.hyperesources/crackleversionb_hype_generated_script.js?49659"></script>
+                                    </div>
+                                </div>
                             </div>
                             
                             <p class="text-[10px] font-bold uppercase tracking-widest text-black/40">Implementation: Contextual, animated touchpoint for universal interaction.</p>
@@ -168,31 +180,7 @@
         </div>
     </main>
 
-    <section class="w-full bg-[#F3F0ED] py-32 border-t border-black/5">
-        <div class="max-w-[1440px] mx-auto px-10 md:px-20">
-            <h4 class="text-[10px] font-bold uppercase tracking-[0.5em] text-[#E89E78] mb-16 text-center">View More Case Studies</h4>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <a href="envoy.html" class="next-project-card p-12 flex flex-col justify-between min-h-[340px]">
-                    <div>
-                        <div class="mb-8"><span class="badge" style="background: #FEE9D7; color: #B45309;">AI Product Design</span></div>
-                        <h4 class="bricolage-font text-4xl font-black uppercase tracking-tight">Envoy</h4>
-                        <p class="text-sm text-[#4A4947] mt-4 max-w-xs">A flagship AI product establishing a new revenue stream for DMOs.</p>
-                    </div>
-                    <p class="text-[10px] font-bold uppercase tracking-[0.3em] pt-8 border-t border-black/5">Next Project &rarr;</p>
-                </a>
-                <a href="media-units.html" class="next-project-card p-12 flex flex-col justify-between min-h-[340px]">
-                    <div>
-                        <div class="mb-8"><span class="badge">Retention Strategy</span></div>
-                        <h4 class="bricolage-font text-4xl font-black uppercase tracking-tight">Media Units</h4>
-                        <p class="text-sm text-[#4A4947] mt-4 max-w-xs">High-velocity components optimized for engagement and advertising.</p>
-                    </div>
-                    <p class="text-[10px] font-bold uppercase tracking-[0.3em] pt-8 border-t border-black/5">Next Project &rarr;</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="w-full bg-[#1A1918] pt-32 pb-16 px-10 md:px-20 text-[#A38072]">
+    <footer class="w-full bg-[#1A1918] pt-32 pb-16 px-10 md:px-20 text-[#A38072] mt-32">
         <div class="max-w-[1440px] mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-20 border-b border-white/5 pb-32 mb-16">
                 <div class="lg:col-span-7">
