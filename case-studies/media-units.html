@@ -7,7 +7,6 @@
 
     <link rel="shortcut icon" href="assets/favicons/favicon.ico" type="image/x-icon" />
     <link rel="icon" type="image/png" href="assets/favicons/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,10 +20,6 @@
             --sunset-clay: #A38072;
             --paper-warm: #FBF9F7;
             --text-main: #2D2C2A;
-            --tag-ent-bg: #E0E7FF;
-            --tag-ent-text: #4338CA;
-            --tag-available-bg: #DCFCE7;
-            --tag-available-text: #166534;
         }
 
         body {
@@ -32,15 +27,11 @@
             background: radial-gradient(circle at top right, #FFF5EE 0%, var(--paper-warm) 100%);
             color: var(--text-main);
             margin: 0;
-            padding: 0;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
         }
 
-        h1, h2, h3, h4, .bricolage-font { 
-            font-family: 'Bricolage Grotesque', sans-serif; 
-            font-style: normal; 
-        }
+        h1, h2, h3, h4, .bricolage-font { font-family: 'Bricolage Grotesque', sans-serif; }
         
         .header-logic {
             font-size: clamp(44px, 8.5vw, 92px);
@@ -49,14 +40,11 @@
             text-transform: uppercase;
             letter-spacing: -0.05em;
             color: #1A1918;
-            display: inline-block;
         }
 
         .header-logic span {
             font-weight: 200;
             display: block;
-            letter-spacing: -0.01em;
-            margin-top: 0.05em;
             background: linear-gradient(90deg, #1A1918 0%, var(--sunset-peach) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -67,53 +55,7 @@
             font-weight: 800;
             line-height: 0.95;
             text-transform: uppercase;
-            letter-spacing: -0.01em;
             color: #1A1918;
-        }
-
-        .badge {
-            font-size: 10px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            padding: 7px 16px;
-            border-radius: 100px;
-            display: inline-block;
-        }
-        .badge-enterprise { background: var(--tag-ent-bg); color: var(--tag-ent-text); border: 1px solid rgba(67, 56, 202, 0.1); }
-        .badge-available { background: var(--tag-available-bg); color: var(--tag-available-text); border: 1px solid rgba(22, 101, 52, 0.2); }
-        .badge-ai { background: #FEE9D7; color: #B45309; border: 1px solid rgba(180, 83, 9, 0.1); }
-        .badge-retention { background: #F1F5F9; color: #475559; border: 1px solid rgba(71, 85, 105, 0.1); }
-
-        .link-hover {
-            position: relative;
-            display: inline-block;
-        }
-        .link-hover::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 1px;
-            bottom: -4px;
-            left: 0;
-            background: var(--sunset-peach);
-            transform: scaleX(0.1);
-            transform-origin: bottom left;
-            transition: transform 0.4s ease;
-        }
-        .link-hover:hover::after { transform: scaleX(1); }
-
-        .image-container {
-            background: #F8F5F2;
-            border: 1px solid #F0EBE7;
-            border-radius: 4px;
-            overflow: hidden;
-            width: 100%;
-            aspect-ratio: 16/9;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 4rem 0;
         }
 
         .product-shot-container {
@@ -126,7 +68,29 @@
             position: relative;
         }
 
-        .sticky-nav { position: sticky; top: 120px; }
+        .badge {
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            padding: 7px 16px;
+            border-radius: 100px;
+            display: inline-block;
+            background: #F1F5F9;
+            color: #475559;
+            border: 1px solid rgba(71, 85, 105, 0.1);
+        }
+
+        /* Video Loader Logic */
+        .video-wrapper { position: relative; width: 100%; height: 100%; background: #F8F5F2; }
+        .loader {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 24px; height: 24px; border: 2px solid #E8E4E1; border-top: 2px solid var(--sunset-peach);
+            border-radius: 50%; animation: spin 1s linear infinite; z-index: 10;
+        }
+        @keyframes spin { 0% { transform: translate(-50%, -50%) rotate(0deg); } 100% { transform: translate(-50%, -50%) rotate(360deg); } }
+        .video-loaded .loader { display: none; }
+        #hero-video { opacity: 0; transition: opacity 0.8s ease; }
+        .video-loaded #hero-video { opacity: 1; }
 
         .next-project-card {
             border: 1px solid #F0EBE7;
@@ -135,198 +99,127 @@
             text-decoration: none;
             color: inherit;
         }
-        .next-project-card:hover {
-            border-color: var(--sunset-peach);
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.03);
-        }
-        /* Video Loader Styles */
-        .video-wrapper {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            background: #F8F5F2; /* Matches your image-container */
-        }
-
-        .loader {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 24px;
-            height: 24px;
-            border: 2px solid #E8E4E1;
-            border-top: 2px solid var(--sunset-peach);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            z-index: 10;
-        }
-
-        @keyframes spin {
-            0% { transform: translate(-50%, -50%) rotate(0deg); }
-            100% { transform: translate(-50%, -50%) rotate(360deg); }
-        }
-
-        .video-loaded .loader {
-            display: none;
-        }
-
-        #hero-video {
-            opacity: 0;
-            transition: opacity 0.8s ease;
-        }
-
-        .video-loaded #hero-video {
-            opacity: 1;
-        }
+        .next-project-card:hover { border-color: var(--sunset-peach); transform: translateY(-4px); }
     </style>
 </head>
 <body>
 
-    <!-- NAV -->
     <nav class="fixed top-0 w-full z-50 px-10 md:px-20 py-8 flex justify-between items-center bg-white/30 backdrop-blur-md border-b border-black/5">
         <a href="../index.html" class="bricolage-font font-black text-2xl tracking-tighter">LP</a>
         <div class="flex items-center gap-12">
-            <a href="../index.html" class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#1A1918] link-hover">Portfolio</a>
+            <a href="../index.html" class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#1A1918]">Portfolio</a>
             <a href="mailto:lpiercefield@icloud.com" class="px-6 py-3 bg-[#1A1918] text-white text-[10px] font-bold uppercase tracking-[0.2em] rounded-sm hover:bg-[#E89E78] transition-all">Contact</a>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
     <header class="max-w-[1440px] mx-auto px-10 md:px-20 pt-56 pb-32">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
             <div class="lg:col-span-8">
                 <h2 class="text-[11px] font-bold uppercase tracking-[0.6em] text-[#E89E78] mb-10">Case Study 02</h2>
-                <h1 class="header-logic">
-                    Media Units<br/>
-                    <span>Optimization.</span>
-                </h1>
+                <h1 class="header-logic">Media Units<br/><span>Optimization.</span></h1>
             </div>
             <div class="lg:col-span-4 pt-4">
-                <div class="space-y-8">
-                    <p class="text-lg font-normal leading-snug text-[#4A4947]">
-                        A systematic A/B testing strategy focused on transforming the "Tab-unit" from an underperforming prototype into a high-revenue core asset.
-                    </p>
-                    <div class="pt-8 border-t border-[#E8E4E1] flex flex-col gap-6">
-                        <div class="flex items-center gap-4">
-                            <span class="badge badge-retention">A/B Testing</span>
-                            <span class="badge badge-retention">Retention</span>
-                        </div>
-                        <p class="bricolage-font text-[13px] font-extrabold uppercase tracking-[0.2em] text-[#1A1918]">Product Designer ~ Clicktripz now Tiki</p>
-                    </div>
+                <p class="text-lg font-normal leading-snug text-[#4A4947] mb-8">
+                    A systematic A/B testing strategy focused on transforming the "Tab-unit" from an underperforming prototype into a high-revenue core asset.
+                </p>
+                <div class="pt-8 border-t border-[#E8E4E1] flex flex-col gap-6">
+                    <div class="flex gap-4"><span class="badge">A/B Testing</span><span class="badge">Retention</span></div>
+                    <p class="bricolage-font text-[13px] font-extrabold uppercase tracking-[0.2em]">Product Designer ~ Clicktripz now Tiki</p>
                 </div>
             </div>
         </div>
 
-        <!-- HERO IMAGE SLOT: Tab-Unit Main Overview -->
-        <div class="image-container mt-24" id="video-container">
+        <div class="product-shot-container mt-24 aspect-video" id="video-container">
             <div class="video-wrapper">
                 <div class="loader"></div>
-                <video 
-                    id="hero-video"
-                    autoplay 
-                    muted 
-                    loop 
-                    playsinline
-                    class="w-full h-full object-cover">
-                    <source src="https://www.dropbox.com/scl/fi/55l3fbya7v7owwbt958vc/Tiki-Tab-Unit-example.mp4?rlkey=tndihx2wlatani8cded664jbw&st=3w66eiuc&draw=1" type="video/mp4">
-                    Your browser does not support the video tag.
+                <video id="hero-video" autoplay muted loop playsinline class="w-full h-full object-cover">
+                    <source src="https://www.dropbox.com/scl/fi/55l3fbya7v7owwbt958vc/Tiki-Tab-Unit-example.mp4?rlkey=tndihx2wlatani8cded664jbw&st=3w66eiuc&raw=1" type="video/mp4">
                 </video>
             </div>
         </div>
+    </header>
 
-    <!-- CONTENT SECTION -->
     <main class="max-w-[1440px] mx-auto px-10 md:px-20 py-32 border-t border-[#E8E4E1]">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-20">
-            
-            <aside class="hidden lg:block lg:col-span-3">
-                <div class="sticky-nav">
-                    <ul class="space-y-8 text-[10px] font-bold uppercase tracking-[0.4em] text-black/30">
-                        <li><a href="#challenge" class="hover:text-[#E89E78] transition-colors">01. Challenge</a></li>
-                        <li><a href="#validation" class="hover:text-[#E89E78] transition-colors">02. Validation</a></li>
-                        <li><a href="#details" class="hover:text-[#E89E78] transition-colors">03. Details</a></li>
-                        <li><a href="#expansion" class="hover:text-[#E89E78] transition-colors">04. Expansion</a></li>
-                    </ul>
-                </div>
+            <aside class="hidden lg:block lg:col-span-3 sticky top-32 h-fit">
+                <ul class="space-y-8 text-[10px] font-bold uppercase tracking-[0.4em] text-black/30">
+                    <li><a href="#challenge" class="hover:text-[#E89E78]">01. Challenge</a></li>
+                    <li><a href="#validation" class="hover:text-[#E89E78]">02. Validation</a></li>
+                    <li><a href="#details" class="hover:text-[#E89E78]">03. Details</a></li>
+                    <li><a href="#expansion" class="hover:text-[#E89E78]">04. Expansion</a></li>
+                </ul>
             </aside>
 
             <div class="lg:col-span-9 space-y-32">
-                
                 <section id="challenge">
                     <h4 class="header-30px mb-10">The Challenge</h4>
                     <p class="text-xl font-normal leading-relaxed text-[#4A4947] max-w-3xl">
-                        The objective was to maximize portfolio revenue by establishing a repeatable, strategic design validation process. The primary friction point was the "Tab-unit"—a core product that was underperforming its potential due to complex initial concepts and low visual guidance.
+                        The objective was to maximize portfolio revenue by establishing a repeatable, strategic design validation process. The primary friction point was the "Tab-unit"—a core product that was underperforming its potential.
                     </p>
                 </section>
 
                 <section id="validation">
-                    <h4 class="header-30px mb-10">Design Validation</h4>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
-                        <div class="space-y-4">
-                            <h5 class="bricolage-font font-black text-sm uppercase tracking-widest text-[#E89E78]">The Framework</h5>
-                            <p class="text-sm text-[#4A4947] leading-relaxed">I established the Design Validation Framework for the entire media portfolio, leading analytics-driven feature iteration to achieve measurable metric uplift.</p>
-                        </div>
-                        <div class="space-y-4">
-                            <h5 class="bricolage-font font-black text-sm uppercase tracking-widest text-[#E89E78]">Iterative Loops</h5>
-                            <p class="text-sm text-[#4A4947] leading-relaxed">By combining multivariate testing with usability prototypes, we bridged the gap between raw data and traveler intent.</p>
-                        </div>
-                    </div>
-
-                    <!-- IMAGE SLOT: V1 Initial Concept -->
-                    <div class="product-shot-container aspect-[16/10]">
-                         <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/media-unit-v1-concept.webp?raw=true" alt="Initial Concept V1" class="w-full h-full object-cover">
-                         <div class="p-6 bg-white/50 backdrop-blur absolute bottom-0 w-full border-t border-[#F0EBE7]">
-                             <p class="text-[10px] font-bold uppercase tracking-widest text-[#1A1918]">V1 Iteration: Optimized via user research for functionality</p>
-                         </div>
-                    </div>
-                </section>
-
+    <div class="mb-12">
+        <span class="badge badge-evolution mb-6">Design Validation</span>
+        <h4 class="header-30px mb-10">From Proof-of-Concept to Performance</h4>
+        <p class="text-lg text-[#4A4947] leading-relaxed max-w-2xl mb-8">
+            Our initial version served as a successful technical proof-of-concept, but lacked the UX refinement needed to drive high-velocity engagement. By analyzing early click-through rates and user friction points, we evolved the design to prioritize clarity and conversion.
+        </p>
+    </div>
+</section>
+<section id="strategy">
+    <div class="product-shot-container aspect-[16/9] bg-white">
+        <iframe src="tab-unit.html" class="w-full h-full border-none overflow-hidden" scrolling="no"></iframe>
+    </div>
+</section>
                 <section id="details">
                     <h4 class="header-30px mb-10">Strategic Details</h4>
                     <p class="text-xl font-normal leading-relaxed text-[#4A4947] max-w-3xl mb-12">
                         A single, high-leverage design change—a subtle bounce animation on a directional arrow—successfully created the visual guidance needed to more than double the initial click-through rate.
                     </p>
-
-                    <!-- HYPE ANIMATION SLOT -->
-                    <div class="product-shot-container aspect-[16/10]">
-                         <video autoplay muted loop playsinline class="w-full h-full object-cover">
-                            <source src="assets/v2-bounce-animation.mp4" type="video/mp4">
-                         </video>
-                         <div class="p-6 bg-white/50 backdrop-blur absolute bottom-0 w-full border-t border-[#F0EBE7]">
-                             <p class="text-[10px] font-bold uppercase tracking-widest text-[#E89E78]">Hype Animation: Demonstrating micro-interaction impact on conversion</p>
-                         </div>
-                    </div>
-                </section>
-
-                <section id="expansion" class="pb-32">
-                    <h4 class="header-30px mb-10">Portfolio Expansion</h4>
-                    <div class="space-y-16">
-                        <div class="max-w-3xl">
-                            <h5 class="bricolage-font font-extrabold text-sm uppercase tracking-widest text-[#1A1918] mb-4">Scalability across Partners</h5>
-                            <p class="text-lg text-[#4A4947]">Following the success of the Tab-unit, I designed a range of other products—from complex widgets to sleek Expedia-branded units and highly effective micro-units built on the same core principle of adding value.</p>
-                        </div>
-
-                        <!-- LARGE IMAGE SLOT: Expedia/Branded Units -->
-                        <div class="product-shot-container aspect-[16/9]">
-                             <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/media-units-branded-expedia.webp?raw=true" alt="Expedia Branded Media Units" class="w-full h-full object-cover">
-                        </div>
-
-                        <!-- LARGE IMAGE SLOT: Micro Units & Buttons -->
-                        <div class="product-shot-container aspect-[16/9]">
-                             <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/media-units-button-strategy.webp?raw=true" alt="Button and Micro Units" class="w-full h-full object-cover">
+                    <div class="product-shot-container">
+                        <div class="flex items-center justify-center p-4 md:p-12 bg-[#F8F5F2] min-h-[600px]">
+                            <div id="tabunit_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;max-width:800px;height:600px;overflow:hidden;">
+                                <script type="text/javascript" charset="utf-8" src="tab-unit.hyperesources/tabunit_hype_generated_script.js"></script>
+                            </div>
                         </div>
                     </div>
                 </section>
+
+                <section id="expansion" class="space-y-24 pb-32">
+    <div>
+        <h4 class="header-30px mb-6">Portfolio Expansion</h4>
+        <p class="text-lg text-[#4A4947] leading-relaxed max-w-2xl">
+            Expanding the design system across diverse product verticals while maintaining a unified visual language and interaction model.
+        </p>
+    </div>
+
+    <div class="space-y-12">
+        <div class="product-shot-container w-full bg-[#F3F0ED] border border-[#F0EBE7] rounded-sm overflow-hidden">
+            <img src="assets/images/unit-01-large.png" alt="Detailed Media Unit Variation 01" class="w-full h-auto object-cover">
+        </div>
+
+        <div class="product-shot-container w-full bg-[#F3F0ED] border border-[#F0EBE7] rounded-sm overflow-hidden">
+            <img src="assets/images/unit-02-large.png" alt="Detailed Media Unit Variation 02" class="w-full h-auto object-cover">
+        </div>
+
+        <div class="product-shot-container w-full bg-[#F3F0ED] border border-[#F0EBE7] rounded-sm overflow-hidden">
+            <img src="assets/images/unit-03-large.png" alt="Detailed Media Unit Variation 03" class="w-full h-auto object-cover">
+        </div>
+
+        <div class="product-shot-container w-full bg-[#F3F0ED] border border-[#F0EBE7] rounded-sm overflow-hidden">
+            <img src="assets/images/unit-04-large.png" alt="Detailed Media Unit Variation 04" class="w-full h-auto object-cover">
+        </div>
+    </div>
+</section>
             </div>
         </div>
     </main>
 
-    <!-- ADDITIONAL CASE STUDIES SECTION -->
     <section class="w-full bg-[#F3F0ED] py-32 border-t border-black/5">
         <div class="max-w-[1440px] mx-auto px-10 md:px-20">
             <h4 class="text-[10px] font-bold uppercase tracking-[0.5em] text-[#E89E78] mb-16 text-center">View More Case Studies</h4>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                
                 <a href="envoy.html" class="next-project-card p-12 flex flex-col justify-between min-h-[340px]">
                     <div>
                         <div class="mb-8"><span class="badge badge-ai">Conversational AI</span></div>
@@ -335,30 +228,24 @@
                     </div>
                     <p class="text-[10px] font-bold uppercase tracking-[0.3em] pt-8 border-t border-black/5">Next Project &rarr;</p>
                 </a>
-
                 <a href="control-tower.html" class="next-project-card p-12 flex flex-col justify-between min-h-[340px]">
                     <div>
                         <div class="mb-8"><span class="badge badge-enterprise">Enterprise UX</span></div>
                         <h4 class="bricolage-font text-4xl font-black uppercase tracking-tight">Control Tower</h4>
-                        <p class="text-sm text-[#4A4947] mt-4 max-w-xs">A centralized product engine designed for B2B operations.</p>
+                        <p class="text-sm text-[#4A4947] mt-4 max-w-xs">Centralized command centers for complex data.</p>
                     </div>
                     <p class="text-[10px] font-bold uppercase tracking-[0.3em] pt-8 border-t border-black/5">Next Project &rarr;</p>
                 </a>
-
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="w-full bg-[#1A1918] pt-32 pb-16 px-10 md:px-20 text-[#A38072] relative">
         <div class="max-w-[1440px] mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-20 border-b border-white/5 pb-32 mb-16">
                 <div class="lg:col-span-7">
                     <h4 class="bricolage-font text-5xl font-black text-white mb-10 tracking-tighter">LP</h4>
-                    <p class="text-xl font-normal text-white/30 max-w-md leading-relaxed">
-                        Designing clarity for complex product ecosystems. 
-                        Los Angeles / 2026.
-                    </p>
+                    <p class="text-xl font-normal text-white/30 max-w-md leading-relaxed">Designing clarity for complex product ecosystems. Los Angeles / 2026.</p>
                 </div>
                 <div class="lg:col-span-3">
                     <h5 class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/10 mb-10">Connectivity</h5>
@@ -370,28 +257,31 @@
                 </div>
                 <div class="lg:col-span-2">
                     <h5 class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/10 mb-10">Status</h5>
-                    <p class="text-sm font-bold text-white/60">Available Q1 2026</p>
+                    <p class="text-sm font-bold text-white/60">Available Q1 2026.</p>
                 </div>
             </div>
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6 opacity-30">
-                <p class="text-[9px] font-bold uppercase tracking-[0.4em]">
-                    &copy; 2026 Lesley Piercefield | Product Design Lead
-                </p>
-            </div>
+            <p class="text-[9px] font-bold uppercase tracking-[0.4em] opacity-30 mt-8 text-center md:text-left">
+                &copy; 2026 Lesley Piercefield | Product Design Lead
+            </p>
         </div>
     </footer>
     <script>
-        const video = document.getElementById('hero-video');
-        const container = document.getElementById('video-container');
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.getElementById('hero-video');
+            const container = document.getElementById('video-container');
 
-        // Check if video is already buffered enough
-        if (video.readyState >= 3) {
-            container.classList.add('video-loaded');
-        } else {
-            video.addEventListener('canplaythrough', () => {
-                container.classList.add('video-loaded');
-            });
-        }
+            if (video) {
+                // If the video is already cached or loaded
+                if (video.readyState >= 3) {
+                    container.classList.add('video-loaded');
+                }
+
+                // Trigger when the video can play through
+                video.addEventListener('canplaythrough', function() {
+                    container.classList.add('video-loaded');
+                });
+            }
+        });
     </script>
 </body>
 </html>
