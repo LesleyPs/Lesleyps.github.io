@@ -40,14 +40,15 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* HERO: Taller & Responsive */
         .hero-slot {
             width: 100%;
-            min-height: 500px; /* Forces height for the image */
+            aspect-ratio: 21/9;
             background: #E8E4E1;
             border-radius: 4px;
             margin-bottom: 4rem;
             display: flex;
+            align-items: center;
+            justify-content: center;
             overflow: hidden;
             border: 1px solid rgba(0,0,0,0.05);
         }
@@ -59,22 +60,34 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.05);
             margin-bottom: 2rem;
         }
+        .next-project-card {
+            border: 1px solid #F0EBE7;
+            background: white;
+            transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+            text-decoration: none;
+            color: inherit;
+        }
+        .next-project-card:hover { border-color: var(--sunset-peach); transform: translateY(-4px); }
 
-        /* FLEXIBLE FLOW LOCK: This prevents the overlapping "circles" */
-        .hype-flow-wrapper {
+
+        /* FLEXIBLE FLOW LOCK: Prevents overlap and clipping */
+        .hype-flex-container {
             display: block !important;
             position: relative !important;
             width: 100% !important;
-            /* Adjust this percentage to show more/less of the graphic's height */
-            padding-bottom: 35%; 
-            height: 0;
-            margin: 4rem 0 !important;
+            aspect-ratio: 16 / 5.5; 
+            min-height: 220px !important; 
+            margin: 2rem 0 4rem 0 !important;
             clear: both !important;
+            overflow: visible !important;
         }
 
-        .hype-inner-container {
-            position: absolute !important;
-            top: 0; left: 0; width: 100%; height: 100%;
+        .hype-container {
+            width: 100% !important;
+            height: 100% !important;
+            background: transparent !important;
+            border: none !important;
+            display: block !important;
         }
 
         .badge {
@@ -123,7 +136,7 @@
     <main class="max-w-[1440px] mx-auto px-10 md:px-20 py-32 border-t border-[#E8E4E1]">
         
         <div class="hero-slot">
-            <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Crackle%20(1)_2x.webp?raw=true" class="w-full h-full object-cover" alt="Sony Crackle Hero">
+            <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Crackle%20(1)_2x.webp?raw=true" class="w-full h-full object-cover" alt="Sony Crackle Ecosystem Hero">
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-20">
@@ -156,8 +169,8 @@
                                 I implemented a dynamic registration touchpoint directly into the Show Page. This animated trigger captures users during their primary flow, providing a frictionless path to registration that upholds the "Hassle-Free" brand promise.
                             </p>
                             
-                            <div class="hype-flow-wrapper">
-                                <div class="hype-inner-container">
+                            <div class="hype-flex-container">
+                                <div class="hype-container">
                                     <div id="crackleversionb_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;height:100%;overflow:hidden;">
                                         <script type="text/javascript" charset="utf-8" src="crackle-version-b.hyperesources/crackleversionb_hype_generated_script.js?49659"></script>
                                     </div>
@@ -180,12 +193,40 @@
         </div>
     </main>
 
-    <footer class="w-full bg-[#1A1918] pt-32 pb-16 px-10 md:px-20 text-[#A38072] mt-32">
+     <!-- NAVIGATION FOOTER -->
+    <section class="w-full bg-[#F3F0ED] py-32 border-t border-black/5">
+        <div class="max-w-[1440px] mx-auto px-10 md:px-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <a href="control-tower.html" class="next-project-card p-12 flex flex-col justify-between min-h-[340px]">
+                    <div>
+                        <div class="mb-8"><span class="badge badge-active-blue">B2B</span></div>
+                        <h4 class="bricolage-font text-4xl font-black uppercase tracking-tight">Control Tower</h4>
+                        <p class="text-sm text-[#4A4947] mt-4 max-w-xs">Enterprise operations and configuration engine.</p>
+                    </div>
+                    <p class="text-[10px] font-bold uppercase tracking-[0.3em] pt-8 border-t border-black/5">Next Project &rarr;</p>
+                </a>
+                <a href="envoy.html" class="next-project-card p-12 flex flex-col justify-between min-h-[340px]">
+                    <div>
+                        <div class="mb-8"><span class="badge badge-active-blue">AI</span></div>
+                        <h4 class="bricolage-font text-4xl font-black uppercase tracking-tight">Envoy</h4>
+                        <p class="text-sm text-[#4A4947] mt-4 max-w-xs">Conversational intelligence for the travel industry.</p>
+                    </div>
+                    <p class="text-[10px] font-bold uppercase tracking-[0.3em] pt-8 border-t border-black/5">Next Project &rarr;</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="w-full bg-[#1A1918] pt-32 pb-16 px-10 md:px-20 text-[#A38072] relative">
         <div class="max-w-[1440px] mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-20 border-b border-white/5 pb-32 mb-16">
                 <div class="lg:col-span-7">
                     <h4 class="bricolage-font text-5xl font-black text-white mb-10 tracking-tighter">LP</h4>
-                    <p class="text-xl font-normal text-white/30 max-w-md leading-relaxed">Designing clarity for complex product ecosystems. Los Angeles / 2026.</p>
+                    <p class="text-xl font-normal text-white/30 max-w-md leading-relaxed">
+                        Designing clarity for complex product ecosystems. 
+                        Los Angeles / 2026.
+                    </p>
                 </div>
                 <div class="lg:col-span-3">
                     <h5 class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/10 mb-10">Connectivity</h5>
@@ -200,7 +241,11 @@
                     <p class="text-sm font-bold text-white/60">Available Q1 2026</p>
                 </div>
             </div>
-            <p class="text-[9px] font-bold uppercase tracking-[0.4em] opacity-30">&copy; 2026 Lesley Piercefield | UX/UI Designer</p>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 opacity-30">
+                <p class="text-[9px] font-bold uppercase tracking-[0.4em]">
+                    &copy; 2026 Lesley Piercefield | Product Design Lead
+                </p>
+            </div>
         </div>
     </footer>
 
