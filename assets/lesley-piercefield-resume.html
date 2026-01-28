@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesley Piercefield - Senior Product Designer (Master)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Schibsted+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@500;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Print optimization */
+        @media print {
+            @page { 
+                size: letter;
+                margin: 0in !important; 
+            }
+            body { 
+                background: white !important; 
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                margin: 0;
+                padding: 0;
+            }
+            .no-print { display: none !important; }
+            .page-container { 
+                padding: 0.5in !important;
+                height: 11in; 
+                max-height: 11in; 
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                box-shadow: none !important;
+                border: none !important;
+            }
+        }
+
+        body {
+            font-family: 'Schibsted Grotesk', sans-serif;
+            color: #1A1918;
+            line-height: 1.45; 
+            background-color: #f4f4f4;
+        }
+
+        .page-container {
+            background-color: white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            margin: 2rem auto;
+            padding: 0.6in;
+            width: 8.5in;
+            min-height: 11in;
+            position: relative;
+        }
+
+        h1, h2, h3, h4 { 
+            font-family: 'Bricolage Grotesque', sans-serif; 
+            text-transform: uppercase;
+        }
+
+        .section-header {
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.2em;
+            color: #B15B32; 
+            border-bottom: 2px solid #F8F6F4;
+            padding-bottom: 4px;
+            margin-bottom: 12px;
+            margin-top: 24px;
+        }
+
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 10px; }
+        
+        .bullet {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 0.4rem;
+            font-size: 14px;
+            font-weight: 450;
+            letter-spacing: -0.01em;
+            color: #2D2C2A;
+            line-height: 1.4;
+        }
+        .bullet::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #B15B32;
+            font-weight: 900;
+        }
+
+        .job-title {
+            font-size: 18px;
+            letter-spacing: -0.02em;
+            color: #000;
+        }
+
+        .header-divider {
+            width: 1px;
+            height: 12px;
+            background-color: #d4d4d4;
+            display: inline-block;
+            margin: 0 10px;
+            vertical-align: middle;
+        }
+
+        .accent-text { color: #B15B32; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="page-container">
+        <div>
+            <!-- Header -->
+            <header class="border-b-[4px] border-black pb-6 mb-8">
+                <div class="flex justify-between items-start">
+                    <div class="flex-1">
+                        <h1 class="text-5xl font-extrabold tracking-tighter leading-none mb-2">Lesley Piercefield</h1>
+                        <p class="accent-text font-bold tracking-[0.25em] text-[11px] uppercase">Senior Product Designer & UX Strategist</p>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-[14px] font-black text-black leading-tight mb-1">
+                             lesleyps.github.io <span class="accent-text ml-1">↗</span>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="mt-4 flex items-center text-[10px] font-bold text-gray-700 uppercase tracking-widest">
+                    <span>lpiercefield@icloud.com</span>
+                    <span class="header-divider"></span>
+                    <span>310.713.6358</span>
+                    <span class="header-divider"></span>
+                    <span>Los Angeles, CA</span>
+                </div>
+            </header>
+
+            <div class="grid grid-cols-12 gap-10">
+                
+                <!-- Sidebar -->
+                <div class="col-span-4 border-r border-gray-100 pr-8">
+                    <h3 class="section-header mt-0">Profile</h3>
+                    <p class="text-[14px] leading-relaxed text-black font-medium mb-6">
+                        Senior Product Designer specializing in mobile-first AI workflows, complex app architectures, and scalable B2B ecosystems. Expert at transforming technical data into intuitive app experiences.
+                    </p>
+
+                    <h3 class="section-header">Expertise</h3>
+                    <div class="space-y-5 mb-6">
+                        <div>
+                            <p class="mono uppercase text-gray-600 font-bold mb-1">App Architecture</p>
+                            <p class="text-[13px] font-bold leading-tight text-black">Responsive Web & Native Apps</p>
+                        </div>
+                        <div>
+                            <p class="mono uppercase text-gray-600 font-bold mb-1">AI Systems</p>
+                            <p class="text-[13px] font-bold leading-tight text-black">LLM Workflows & Prompting</p>
+                        </div>
+                        <div>
+                            <p class="mono uppercase text-gray-600 font-bold mb-1">Infrastructure</p>
+                            <p class="text-[13px] font-bold leading-tight text-black">Figma Design Tokens & Systems</p>
+                        </div>
+                    </div>
+
+                    <h3 class="section-header">Core Stack</h3>
+                    <p class="text-[13px] font-bold leading-relaxed mb-6 text-black">
+                        Figma, AI/LLMs, HTML/CSS, Webflow, Jira, Hotjar, A/B Testing
+                    </p>
+
+                    <h3 class="section-header">Education</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-[13px] font-extrabold">UCLA Extension</p>
+                            <p class="text-[10px] text-gray-700 font-bold uppercase tracking-wider">Design Communication Arts</p>
+                        </div>
+                        <div>
+                            <p class="text-[13px] font-extrabold text-black">AIU Los Angeles</p>
+                            <p class="text-[10px] text-gray-700 font-bold uppercase tracking-wider">B.F.A. Fashion Design</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience -->
+                <div class="col-span-8">
+                    <h3 class="section-header mt-0">Experience</h3>
+                    
+                    <div class="mb-6">
+                        <div class="flex justify-between items-baseline">
+                            <h4 class="job-title font-black">Magnitude Pro</h4>
+                            <span class="mono text-gray-600 font-bold">Present</span>
+                        </div>
+                        <p class="text-[10px] font-bold uppercase tracking-[0.15em] accent-text mb-2">Lead Product Designer</p>
+                        <div class="space-y-1">
+                            <p class="bullet">Designing automated AI workflows and mobile-responsive charting for high-frequency market data.</p>
+                            <p class="bullet">Architecting mobile-first onboarding flows to simplify complex technical data entry for traders.</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <div class="flex justify-between items-baseline">
+                            <h4 class="job-title font-black">Clicktripz</h4>
+                            <span class="mono text-gray-600 font-bold">2017 — 2024</span>
+                        </div>
+                        <p class="text-[10px] font-bold uppercase tracking-[0.15em] accent-text mb-2">Senior Product Designer</p>
+                        <div class="space-y-1">
+                            <p class="bullet">Launched "Envoy" AI chat; built a token-based Design System that scaled across web and native app environments.</p>
+                            <p class="bullet">Developed mobile integration strategies that expanded core media products into iOS and Android ecosystems.</p>
+                            <p class="bullet">Utilized A/B testing to iterate on mobile UX, driving significant revenue growth for B2B travel products.</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <div class="flex justify-between items-baseline">
+                            <h4 class="job-title font-black text-[17px]">Sony Crackle</h4>
+                            <span class="mono text-gray-600 font-bold">2016 — 2017</span>
+                        </div>
+                        <p class="text-[10px] font-bold uppercase tracking-[0.15em] accent-text mb-1">UX/UI Designer</p>
+                        <p class="bullet">Redesigned the application interface for Roku, Xbox, and Smart TVs, ensuring a consistent cross-platform experience.</p>
+                    </div>
+
+                    <div class="mb-6">
+                        <div class="flex justify-between items-baseline">
+                            <h4 class="job-title font-black text-[17px]">MyLife.com</h4>
+                            <span class="mono text-gray-600 font-bold">2012 — 2016</span>
+                        </div>
+                        <p class="text-[10px] font-bold uppercase tracking-[0.15em] accent-text mb-1">UX/UI Designer</p>
+                        <p class="bullet">Optimized high-traffic registration funnels and visualized complex personal data into mobile-friendly dashboards.</p>
+                    </div>
+
+                    <div class="mb-2">
+                        <div class="flex justify-between items-baseline">
+                            <h4 class="job-title font-black text-[17px]">Freelance Consulting</h4>
+                            <span class="mono text-gray-600 font-bold">2010 — 2012</span>
+                        </div>
+                        <p class="text-[10px] font-bold uppercase tracking-[0.15em] accent-text mb-1">UI & Graphic Designer</p>
+                        <p class="bullet">Delivered end-to-end mobile app prototyping and branding for various early-stage technology startups.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="no-print mt-12 mb-12 flex flex-col items-center">
+        <button onclick="window.print()" class="px-12 py-4 bg-black text-white text-[12px] font-bold uppercase tracking-[0.25em] rounded-full hover:bg-[#B15B32] transition-all shadow-2xl hover:scale-105 active:scale-95">
+            Download PDF
+        </button>
+    </div>
+
+</body>
+</html>
