@@ -114,7 +114,7 @@
 </head>
 <body>
 
-    <!-- NAV -->
+    <!-- NAV (Global Element) -->
     <nav class="fixed top-0 w-full z-50 px-10 md:px-20 py-8 flex justify-between items-center bg-white/30 backdrop-blur-md border-b border-black/5">
         <a href="../index.html" class="bricolage-font font-black text-2xl tracking-tighter">LP</a>
         <div class="flex items-center gap-12">
@@ -130,13 +130,13 @@
                 <h2 class="text-[11px] font-bold uppercase tracking-[0.6em] text-[#E89E78] mb-10">Case Study 2</h2>
                 <h1 class="header-logic">
                     Envoy<br/>
-                    <span>Conversational UX.</span>
+                    <span>AI-Powered Concierge.</span>
                 </h1>
             </div>
             <div class="lg:col-span-4 pt-4">
                 <div class="space-y-8">
                     <p class="text-lg font-normal leading-snug text-[#4A4947]">
-                        A flagship AI product establishing a new revenue stream by scaling complex conversational functionality across global Destination Marketing Organizations (DMOs).
+                        A conversational concierge for Destination Marketing Organizations (DMOs) built on Tiki's platform to transform traveler questions into direct referrals for local businesses.
                     </p>
                     <div class="pt-8 border-t border-[#E8E4E1]">
                         <span class="badge badge-ai mb-4">AI Product Design</span>
@@ -146,22 +146,19 @@
             </div>
         </div>
         
-        <!-- FALLBACK STATIC PRODUCT IMAGE -->
+        <!-- PRODUCT IMAGE -->
         <div class="image-container aspect-video shadow-lg">
             <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/tiki-envoy-product-image.webp?raw=true" alt="Envoy Conversational UI Detail" class="w-full h-full object-cover">
         </div>
 
-                </div>
-                
-                <!-- PRODUCT VIDEO CONTAINER -->
+        <!-- PRODUCT VIDEO CONTAINER -->
         <div class="image-container aspect-video bg-black shadow-2xl mb-8">
             <video autoplay loop muted playsinline class="w-full h-auto">
-    <source src="https://www.dropbox.com/scl/fi/k2qc37zvtnkhagn35vbjf/tiki-enovy-drp.mp4?rlkey=go6duodfyujwutb6ok0ksk28s&st=uw6nac4f&raw=1" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
-
-
-            </header>
+                <source src="https://www.dropbox.com/scl/fi/k2qc37zvtnkhagn35vbjf/tiki-enovy-drp.mp4?rlkey=go6duodfyujwutb6ok0ksk28s&st=uw6nac4f&raw=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </header>
 
     <!-- CONTENT -->
     <main class="max-w-[1440px] mx-auto px-10 md:px-20 py-32 border-t border-[#E8E4E1]">
@@ -170,10 +167,10 @@
             <aside class="hidden lg:block lg:col-span-3">
                 <div class="sticky top-32 space-y-8">
                     <ul class="space-y-6 text-[10px] font-bold uppercase tracking-[0.4em] text-black/30">
-                        <li class="text-[#E89E78]">01. The Challenge</li>
-                        <li>02. AI Intelligence</li>
-                        <li>03. Design Process</li>
-                        <li>04. Impact & Outcome</li>
+                        <li class="text-[#E89E78]">01. The Problem</li>
+                        <li>02. Destination Advocacy</li>
+                        <li>03. Conversational UX</li>
+                        <li>04. Economic Impact</li>
                     </ul>
                 </div>
             </aside>
@@ -183,73 +180,75 @@
                 <section>
                     <h4 class="bricolage-font text-3xl font-black uppercase tracking-tight mb-8">The Challenge</h4>
                     <p class="text-xl font-normal leading-relaxed text-[#4A4947] max-w-3xl">
-                        Translating complex engagement goals into a scalable, multi-device UX that accommodated localization and unique branding for each destination.
+                        DMOs face a "visibility gap"—travelers seek advice from generic AI platforms like ChatGPT, which often lack up-to-date, hyper-local data. Our goal was to build Envoy as a Tiki-powered concierge that serves the DMO’s mission: championing local partners and driving measurable commerce back to the region.
                     </p>
                 </section>
 
-                <!-- AI COMPARISON MODULE -->
+                <!-- DESTINATION ADVOCACY MODULE -->
                 <section>
-                    <h4 class="bricolage-font text-3xl font-black uppercase tracking-tight mb-12">Contextual Intelligence</h4>
+                    <h4 class="bricolage-font text-3xl font-black uppercase tracking-tight mb-12">Bridging the Gap</h4>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div class="comparison-card">
-                            <h5 class="text-[10px] font-bold uppercase tracking-widest text-black/30 mb-6">Standard Chat AI</h5>
-                            <p class="text-xs italic mb-4">"Is Traverse City Boring?"</p>
+                            <h5 class="text-[10px] font-bold uppercase tracking-widest text-black/30 mb-6">Generic LLM Discovery</h5>
+                            <p class="text-xs italic mb-4">"Where should I eat in Traverse City?"</p>
                             <div class="p-6 bg-gray-50 rounded text-sm text-[#4A4947]">
-                                "Traverse City, Michigan, isn't a big city, so if you're looking for nightlife it might feel quiet..."
+                                "There are many popular options like Mama's Pizza and The Vineyard Cafe..."
                             </div>
+                            <p class="mt-4 text-[10px] text-gray-400 font-bold uppercase tracking-tighter">Issue: Outdated & Non-Actionable</p>
                         </div>
                         <div class="comparison-card border-[#E89E78]">
-                            <h5 class="text-[10px] font-bold uppercase tracking-widest text-[#E89E78] mb-6">Envoy AI</h5>
-                            <p class="text-xs italic mb-4">"Is Traverse City Boring?"</p>
+                            <h5 class="text-[10px] font-bold uppercase tracking-widest text-[#E89E78] mb-6">Envoy (Tiki Powered)</h5>
+                            <p class="text-xs italic mb-4">"Where should I eat in Traverse City?"</p>
                             <div class="p-6 bg-[#FFF9F6] border border-[#FEE9D7] rounded text-sm text-[#1A1918]">
-                                "Not at all! Traverse City is filled with exciting activities and beautiful scenery, known for its award-winning vineyards..."
+                                "Since you're downtown, <strong>The Artisan Kitchen</strong> just opened a rooftop. View their menu or book a table below."
                             </div>
+                            <p class="mt-4 text-[10px] text-[#E89E78] font-bold uppercase tracking-tighter">Value: High-Intent Referrals</p>
                         </div>
                     </div>
                 </section>
 
-                <!-- 4 PROCESS IMAGES -->
+                <!-- PROCESS IMAGES -->
                 <section>
-                    <h4 class="bricolage-font text-3xl font-black uppercase tracking-tight mb-12">Design Process</h4>
+                    <h4 class="bricolage-font text-3xl font-black uppercase tracking-tight mb-12">The Product Journey</h4>
                     <div class="space-y-24">
                         <div class="space-y-4">
                             <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/version%20A-1_2x.png?raw=true" class="process-shot" alt="Stage 1">
-                            <p class="text-[10px] font-bold uppercase tracking-widest text-black/40">01. MVP Concept</p>
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-black/40">01. Interaction Design: Defining how the concierge initiates high-value recommendations.</p>
                         </div>
                         <div class="space-y-4">
                             <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/version%20B-1_2x.png?raw=true" class="process-shot" alt="Stage 2">
-                            <p class="text-[10px] font-bold uppercase tracking-widest text-black/40">02. Topic Enhancement</p>
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-black/40">02. Data Integration: Mapping Tiki's dynamic local business directory into the chat UI.</p>
                         </div>
                         <div class="space-y-4">
                             <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/tiki-envoy-heatmap@2x.webp?raw=true" class="process-shot" alt="Stage 3">
-                            <p class="text-[10px] font-bold uppercase tracking-widest text-black/40">03. Engagement Data</p>
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-black/40">03. Performance Tuning: Analyzing engagement heatmaps to optimize referral CTR.</p>
                         </div>
                         <div class="space-y-4">
                             <img src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/V3-%20C-1_2x.png?raw=true" class="process-shot" alt="Stage 4">
-                            <p class="text-[10px] font-bold uppercase tracking-widest text-black/40">04. Confirmation: Data-Driven Design Refinement</p>
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-black/40">04. Final Product: A white-label solution ready for global DMO implementation.</p>
                         </div>
                     </div>
                 </section>
 
                 <section class="pb-32">
-                    <h4 class="bricolage-font text-3xl font-black uppercase tracking-tight mb-8">Impact & Outcome</h4>
+                    <h4 class="bricolage-font text-3xl font-black uppercase tracking-tight mb-8">Business Outcomes</h4>
                     <div class="space-y-16 max-w-4xl">
                         <p class="text-xl font-normal leading-relaxed text-[#4A4947]">
-                            By aligning the conversational UX with destination-specific brand voices, Envoy transformed how DMOs interact with travelers.
+                            By shifting Envoy from a generic chatbot to a dedicated "Destination Concierge," we empowered DMOs to reclaim the traveler's attention and drive direct economic support to their local partners.
                         </p>
                         
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-[#E8E4E1] pt-16">
                             <div class="space-y-4">
-                                <h5 class="bricolage-font font-black text-xs uppercase tracking-[0.2em] text-[#E89E78]">/ 01 Revenue</h5>
-                                <p class="text-sm text-[#4A4947] leading-relaxed">Established a new recurring revenue stream by productizing AI engagement for tourism boards.</p>
+                                <h5 class="bricolage-font font-black text-xs uppercase tracking-[0.2em] text-[#E89E78]">/ 01 Conversational Lead Gen</h5>
+                                <p class="text-sm text-[#4A4947] leading-relaxed">Transformed "passive browsing" into "active planning" with deep-links to partner booking sites.</p>
                             </div>
                             <div class="space-y-4">
-                                <h5 class="bricolage-font font-black text-xs uppercase tracking-[0.2em] text-[#E89E78]">/ 02 Scale</h5>
-                                <p class="text-sm text-[#4A4947] leading-relaxed">Successfully scaled to multiple international regions with zero compromise on brand integrity.</p>
+                                <h5 class="bricolage-font font-black text-xs uppercase tracking-[0.2em] text-[#E89E78]">/ 02 Data Sovereignty</h5>
+                                <p class="text-sm text-[#4A4947] leading-relaxed">Provided DMOs with proprietary insights on what travelers are searching for in real-time.</p>
                             </div>
                             <div class="space-y-4">
-                                <h5 class="bricolage-font font-black text-xs uppercase tracking-[0.2em] text-[#E89E78]">/ 03 Conversion</h5>
-                                <p class="text-sm text-[#4A4947] leading-relaxed">Significantly improved traveler intent conversion through refined conversational logic and brand-specific training.</p>
+                                <h5 class="bricolage-font font-black text-xs uppercase tracking-[0.2em] text-[#E89E78]">/ 03 Strategic ROI</h5>
+                                <p class="text-sm text-[#4A4947] leading-relaxed">Enabled Tiki to secure long-term contracts by proving direct attribution to local commerce.</p>
                             </div>
                         </div>
                     </div>
@@ -259,7 +258,7 @@
         </div>
     </main>
 
-    <!-- ADDITIONAL CASE STUDIES SECTION -->
+    <!-- ADDITIONAL CASE STUDIES (Global Element) -->
     <section class="w-full bg-[#F3F0ED] py-32 border-t border-black/5">
         <div class="max-w-[1440px] mx-auto px-10 md:px-20">
             <h4 class="text-[10px] font-bold uppercase tracking-[0.5em] text-[#E89E78] mb-16 text-center">View More Case Studies</h4>
@@ -287,7 +286,7 @@
         </div>
     </section>
 
-    <!-- UNIVERSAL FOOTER -->
+    <!-- UNIVERSAL FOOTER (Global Element) -->
     <footer class="w-full bg-[#1A1918] pt-32 pb-16 px-10 md:px-20 text-[#A38072] relative">
         <div class="max-w-[1440px] mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-20 border-b border-white/5 pb-32 mb-16">
