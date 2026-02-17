@@ -1,159 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magnitude Pro | Product Design Process</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .whiteboard-grid {
-            background-color: #f8fafc;
-            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
-            background-size: 30px 30px;
-        }
-        .sticky-note {
-            transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            cursor: grab;
-        }
-        .sticky-note:active {
-            cursor: grabbing;
-            transform: scale(1.05) rotate(2deg);
-            z-index: 50;
-        }
-        .perspective-text {
-            transform: rotate(-1deg);
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnitude Pro | Product Design Process</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .whiteboard-grid {
+            background-color: #f8fafc;
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 30px 30px;
+            cursor: crosshair;
+        }
+        .sticky-note {
+            transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: grab;
+        }
+        .sticky-note:active {
+            cursor: grabbing;
+            transform: scale(1.05) rotate(2deg);
+            z-index: 50;
+        }
+        .perspective-text {
+            transform: rotate(-1deg);
+        }
+        #canvas-wrapper {
+            will-change: transform;
+        }
+    </style>
 </head>
 <body class="bg-slate-50 font-sans text-slate-900 overflow-hidden h-screen flex flex-col">
 
-    <!-- Header -->
-    <header class="bg-white border-b border-slate-200 px-6 py-4 flex justify-between items-center z-10">
-        <div>
-            <h1 class="text-xl font-bold tracking-tight">Magnitude Pro <span class="text-blue-600">Process Canvas</span></h1>
-            <p class="text-sm text-slate-500">Bypassing Figma: AI-Driven Product Architecture & The Strat Logic</p>
-        </div>
-        <div class="flex gap-3">
-            <button onclick="resetBoard()" class="px-4 py-2 text-sm font-medium text-slate-600 bg-slate-100 rounded-lg hover:bg-slate-200 transition">Reset Layout</button>
-            <a href="https://lesleyps.github.io/" class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 shadow-sm transition">Back to Portfolio</a>
-        </div>
-    </header>
+    <!-- Header -->
+    <header class="bg-white border-b border-slate-200 px-6 py-4 flex justify-between items-center z-10">
+        <div>
+            <h1 class="text-xl font-bold tracking-tight">Magnitude Pro <span class="text-blue-600">Process Canvas</span></h1>
+            <p class="text-sm text-slate-500">Vibe Coding: AI-Driven Product Architecture & The Strat Logic</p>
+        </div>
+        <div class="flex gap-3">
+            <button onclick="resetBoard()" class="px-4 py-2 text-sm font-medium text-slate-600 bg-slate-100 rounded-lg hover:bg-slate-200 transition">Reset Layout</button>
+            <a href="https://lesleyps.github.io/" class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 shadow-sm transition">Back to Portfolio</a>
+        </div>
+    </header>
 
-    <div class="flex-1 flex overflow-hidden">
-        <!-- Sidebar: The Logic -->
-        <aside class="w-80 bg-white border-r border-slate-200 p-6 overflow-y-auto hidden md:block">
-            <h2 class="font-bold text-slate-800 mb-4 uppercase text-xs tracking-widest">Technical Foundation</h2>
-            <div class="space-y-6">
-                <section>
-                    <h3 class="text-sm font-semibold text-blue-600 mb-2">The Charting Engine</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        The core hurdle. Unlike standard TradingView clones, our engine must natively handle Strat numbering (1, 2U, 2D, 3) and automated broadening formations.
-                    </p>
-                </section>
-                <section>
-                    <h3 class="text-sm font-semibold text-blue-600 mb-2">Multi-Timeframe Sync</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        Real-time state management between Daily, Hourly, and 15m intervals to ensure Timeframe Continuity (TFC).
-                    </p>
-                </section>
-                <div class="p-4 bg-slate-50 rounded-xl border border-dashed border-slate-300">
-                    <p class="text-[10px] text-slate-400 font-mono">DEBUG_LOG: v0.4.2<br>> Color mapping: #808080 (1)<br>> Color mapping: #FFD700 (3)</p>
-                </div>
-            </div>
-        </aside>
+    <div class="flex-1 flex overflow-hidden">
+        <!-- Sidebar: The Logic -->
+        <aside class="w-80 bg-white border-r border-slate-200 p-6 overflow-y-auto hidden md:block z-20">
+            <h2 class="font-bold text-slate-800 mb-4 uppercase text-xs tracking-widest">Technical Foundation</h2>
+            <div class="space-y-6">
+                <section>
+                    <h3 class="text-sm font-semibold text-blue-600 mb-2">The Charting Engine</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                The core hurdle. Unlike standard TradingView clones, our engine must natively handle Strat numbering (1, 2U, 2D, 3) and automated broadening formations.
+                    </p>
+                </section>
+                <section>
+                    <h3 class="text-sm font-semibold text-blue-600 mb-2">Multi-Timeframe Sync</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                Real-time state management between Daily, Hourly, and 15m intervals to ensure Timeframe Continuity (TFC).
+                    </p>
+                </section>
 
-        <!-- Whiteboard Area -->
-        <main class="flex-1 relative whiteboard-grid overflow-hidden touch-none" id="board">
-            <!-- Labels -->
-            <div class="absolute top-10 left-10 opacity-30 pointer-events-none">
-                <h2 class="text-6xl font-black text-slate-300 perspective-text">STRAT LOGIC ARCHITECTURE</h2>
-            </div>
+                <!-- Recruiter Tip -->
+                <div class="p-4 bg-blue-50 rounded-xl border border-blue-200 shadow-sm">
+                    <p class="text-[11px] font-bold text-blue-800 uppercase tracking-wider mb-1">Tip:</p>
+                    <p class="text-xs text-blue-700 leading-tight">Cards are fully interactive. Feel free to drag them around to re-organize the architectural logic.</p>
+                </div>
 
-            <!-- Draggable Flashcards will be injected here -->
-            <div id="sticky-container"></div>
-        </main>
-    </div>
+                <div class="p-4 bg-slate-50 rounded-xl border border-dashed border-slate-300">
+                    <p class="text-[10px] text-slate-400 font-mono">DEBUG_LOG: v0.4.2<br>> Color mapping: #808080 (1)<br>> Color mapping: #FFD700 (3)</p>
+                </div>
+                <div class="mt-8 text-[10px] text-slate-400 italic">
+                    Tip: Click and drag the background to pan the canvas.
+                </div>
+            </div>
+        </aside>
 
-    <script>
-        const cards = [
-            { t: "Strat Candle Colors", c: "Green (2U), Red (2D), Gray (1), Gold (3)", color: "bg-yellow-50" },
-            { t: "Broadening Formations", c: "Automated 'Rodney' logic connecting pivot highs/lows.", color: "bg-blue-50" },
-            { t: "Timeframe Continuity", c: "TFC check: Above/Below open for M, W, D, H.", color: "bg-green-50" },
-            { t: "Magnitude Target", c: "Target = Previous pivot high/low of the candle being taken out.", color: "bg-purple-50" },
-            { t: "OHLC Data Pipeline", c: "Structured JSON ingestion for high-speed candle rendering.", color: "bg-orange-50" },
-            { t: "Observation Log", c: "State storage for 'Personality Stalling' notes.", color: "bg-rose-50" },
-            { t: "IWM Delta Check", c: "Tracking 0DTE contract movement near BF targets.", color: "bg-indigo-50" },
-            { t: "ATR Overlay", c: "Automatic daily range markers based on 14-day volatility.", color: "bg-teal-50" }
-        ];
+        <!-- Whiteboard Area -->
+        <main class="flex-1 relative whiteboard-grid overflow-hidden touch-none" id="board">
+            <div id="canvas-wrapper" class="absolute inset-0 w-[3000px] h-[3000px]">
+                <!-- Labels -->
+                <div id="canvas-label" class="absolute opacity-30 pointer-events-none">
+                    <h2 class="text-6xl font-black text-slate-300 perspective-text">STRAT LOGIC ARCHITECTURE</h2>
+                </div>
 
-        const container = document.getElementById('sticky-container');
+                <!-- Draggable Flashcards -->
+                <div id="sticky-container"></div>
+            </div>
+        </main>
+    </div>
 
-        function createNote(card, index) {
-            const note = document.createElement('div');
-            note.className = `sticky-note absolute p-6 w-64 shadow-xl border-t-4 border-slate-800 rounded-sm ${card.color} select-none`;
-            
-            // Random scatter
-            const x = 50 + (index % 3) * 280 + (Math.random() * 40);
-            const y = 50 + Math.floor(index / 3) * 200 + (Math.random() * 40);
-            const rotate = (Math.random() * 6) - 3;
+    <script>
+        const cards = [
+            { t: "Strat Candle Colors", c: "Green (2U), Red (2D), Gold (1), Blue (3)", color: "bg-yellow-50", completed: true },
+            { t: "Broadening Formations", c: "Automated logic connecting pivot highs and lows.", color: "bg-blue-50" },
+            { t: "Timeframe Continuity", c: "TFC check: Above/Below open for M, W, D, H.", color: "bg-green-50" },
+            { t: "Magnitude Target", c: "Target = Previous pivot high/low of the candle being taken out.", color: "bg-purple-50" },
+            { t: "OHLC Data Pipeline", c: "Structured JSON ingestion for high-speed candle rendering.", color: "bg-orange-50" },
+            { t: "Observation Log", c: "State storage for 'Personality Stalling' notes.", color: "bg-rose-50" },
+            { t: "Ticker Delta Check", c: "Tracking 0DTE contract movement near BF targets.", color: "bg-indigo-50" },
+            { t: "ATR Overlay", c: "Automatic daily range markers based on 14-day volatility.", color: "bg-teal-50" }
+        ];
 
-            note.style.left = `${x}px`;
-            note.style.top = `${y}px`;
-            note.style.transform = `rotate(${rotate}deg)`;
-            
-            note.innerHTML = `
-                <div class="text-[10px] uppercase tracking-widest text-slate-400 mb-2 font-bold">Requirement #${index + 1}</div>
-                <h4 class="font-bold text-slate-900 mb-2">${card.t}</h4>
-                <p class="text-sm text-slate-700 leading-snug">${card.c}</p>
-                <div class="mt-4 flex justify-end">
-                    <div class="w-2 h-2 rounded-full bg-slate-300"></div>
-                </div>
-            `;
+        const container = document.getElementById('sticky-container');
+        const board = document.getElementById('board');
+        const wrapper = document.getElementById('canvas-wrapper');
+        const label = document.getElementById('canvas-label');
 
-            setupDragging(note);
-            container.appendChild(note);
-        }
+        let isPanning = false;
+        let startX, startY;
+        let translateX = 0, translateY = 0;
 
-        function setupDragging(el) {
-            let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-            
-            el.onmousedown = dragMouseDown;
-            el.ontouchstart = (e) => dragMouseDown(e.touches[0]);
+        board.addEventListener('mousedown', (e) => {
+            if (e.target !== board && e.target !== wrapper) return;
+            isPanning = true;
+            board.style.cursor = 'grabbing';
+            startX = e.pageX - translateX;
+            startY = e.pageY - translateY;
+        });
 
-            function dragMouseDown(e) {
-                pos3 = e.clientX;
-                pos4 = e.clientY;
-                document.onmouseup = closeDragElement;
-                document.ontouchend = closeDragElement;
-                document.onmousemove = elementDrag;
-                document.ontouchmove = (ev) => elementDrag(ev.touches[0]);
-                el.style.zIndex = "100";
-            }
+        window.addEventListener('mousemove', (e) => {
+            if (!isPanning) return;
+            translateX = e.pageX - startX;
+            translateY = e.pageY - startY;
+            wrapper.style.transform = `translate(${translateX}px, ${translateY}px)`;
+        });
 
-            function elementDrag(e) {
-                pos1 = pos3 - e.clientX;
-                pos2 = pos4 - e.clientY;
-                pos3 = e.clientX;
-                pos4 = e.clientY;
-                el.style.top = (el.offsetTop - pos2) + "px";
-                el.style.left = (el.offsetLeft - pos1) + "px";
-            }
+        window.addEventListener('mouseup', () => {
+            isPanning = false;
+            board.style.cursor = 'crosshair';
+        });
 
-            function closeDragElement() {
-                document.onmouseup = null;
-                document.onmousemove = null;
-                document.ontouchend = null;
-                document.ontouchmove = null;
-                el.style.zIndex = "10";
-            }
-        }
+        function createNote(card, index, startX, startY) {
+            const note = document.createElement('div');
+            note.className = `sticky-note absolute p-6 w-64 shadow-xl border-t-4 border-slate-800 rounded-sm ${card.color} select-none`;
+            
+            const col = index % 3;
+            const row = Math.floor(index / 3);
+            const spacingX = 290;
+            const spacingY = 240;
 
-        function resetBoard() {
-            container.innerHTML = '';
-            cards.forEach((c, i) => createNote(c, i));
-        }
+            const x = startX + (col * spacingX) + (Math.random() * 20);
+            const y = startY + (row * spacingY) + (Math.random() * 20);
+            const rotate = (Math.random() * 4) - 2;
 
-        window.onload = resetBoard;
-    </script>
+            note.style.left = `${x}px`;
+            note.style.top = `${y}px`;
+            note.style.transform = `rotate(${rotate}deg)`;
+            
+            const statusBadge = card.completed 
+                ? `<div class="flex items-center gap-1 text-[10px] uppercase font-bold text-green-600 mb-2">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    Status: Shipped
+                   </div>`
+                : `<div class="text-[10px] uppercase tracking-widest text-slate-400 mb-2 font-bold">Requirement #${index + 1}</div>`;
+
+            note.innerHTML = `
+                ${statusBadge}
+                <h4 class="font-bold text-slate-900 mb-2">${card.t}</h4>
+                <p class="text-sm text-slate-700 leading-snug">${card.c}</p>
+                <div class="mt-4 flex justify-end">
+                    <div class="w-2 h-2 rounded-full ${card.completed ? 'bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.6)]' : 'bg-slate-300'}"></div>
+                </div>
+            `;
+
+            setupDragging(note);
+            container.appendChild(note);
+        }
+
+        function setupDragging(el) {
+            let p1 = 0, p2 = 0, p3 = 0, p4 = 0;
+            el.onmousedown = (e) => { e.stopPropagation(); dragMouseDown(e); };
+
+            function dragMouseDown(e) {
+                p3 = e.clientX; p4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                document.onmousemove = elementDrag;
+                el.style.zIndex = "100";
+            }
+
+            function elementDrag(e) {
+                p1 = p3 - e.clientX; p2 = p4 - e.clientY;
+                p3 = e.clientX; p4 = e.clientY;
+                el.style.top = (el.offsetTop - p2) + "px";
+                el.style.left = (el.offsetLeft - p1) + "px";
+            }
+
+            function closeDragElement() {
+                document.onmouseup = null; document.onmousemove = null;
+                el.style.zIndex = "10";
+            }
+        }
+
+        function resetBoard() {
+            container.innerHTML = '';
+            translateX = 0;
+            translateY = 0;
+            wrapper.style.transform = `translate(0px, 0px)`;
+
+            const boardWidth = board.clientWidth;
+            const boardHeight = board.clientHeight;
+            
+            const gridStartX = (boardWidth / 2) - 435;
+            const gridStartY = (boardHeight / 2) - 300;
+
+            label.style.left = `${gridStartX}px`;
+            label.style.top = `${gridStartY - 80}px`;
+
+            cards.forEach((c, i) => createNote(c, i, gridStartX, gridStartY));
+        }
+
+        window.addEventListener('resize', resetBoard);
+        window.onload = resetBoard;
+    </script>
 </body>
 </html>
