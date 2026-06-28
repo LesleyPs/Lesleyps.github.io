@@ -9,7 +9,7 @@ import markMamberAvatar from '../assets/images/mark_mamber_avatar_1779762406713.
 
 const HOME_SLIDES = [
   {
-    url: "https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Tiki-Tab-Unit-Gallery@2x.webp?raw=true",
+    url: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki-Tab-Unit-Gallery@2x.webp?raw=true",
     title: "Tiki Tab Unit Ecosystem",
     agency: "Clicktripz Ad Tech",
     zoom: true,
@@ -18,7 +18,7 @@ const HOME_SLIDES = [
     isDarkBg: false
   },
   {
-    url: "https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Donkey-Donkey-AI-Hero@2x.webp?raw=true",
+    url: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-Donkey-AI-Hero@2x.webp?raw=true",
     title: "Donkey AI Conversational Assistant",
     agency: "Donkey Donkey AI",
     zoom: true,
@@ -27,7 +27,7 @@ const HOME_SLIDES = [
     isDarkBg: false
   },
   {
-    url: "https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Crackle-Xbox-TV-Screen.png?raw=true",
+    url: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Crackle-Xbox-TV-Screen.png?raw=true",
     title: "Sony Crackle TV Platform",
     agency: "Crackle Connected TV",
     zoom: false,
@@ -36,7 +36,7 @@ const HOME_SLIDES = [
     isDarkBg: true
   },
   {
-    url: "https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Tiki-control-tower-metrics_2x.png?raw=true",
+    url: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki-control-tower-metrics_2x.png?raw=true",
     title: "Control Tower Yield Analytics",
     agency: "Clicktripz Enterprise",
     zoom: true,
@@ -360,7 +360,7 @@ export default function Home() {
                   times: [0, 0.25, 0.75, 1.0],
                   ease: [0.76, 0, 0.24, 1] 
                 }}
-                className="absolute inset-0 bg-zinc-950/85 backdrop-blur-[14px] z-30 pointer-events-none flex items-center justify-center overflow-hidden border-l border-r border-cyan-400/20"
+                className="absolute inset-0 bg-black/60 backdrop-blur-[12px] z-30 pointer-events-none flex items-center justify-center overflow-hidden border-l border-r border-cyan-400/20"
               >
                 {/* Embedded Glow scanner wave edge on leading side */}
                 <div className="absolute right-0 top-0 bottom-0 w-[4px] bg-gradient-to-l from-cyan-400 via-blue to-transparent shadow-[0_0_24px_rgba(6,182,212,0.8),-5px_0_15px_rgba(0,102,255,0.4)] z-40" />
@@ -642,7 +642,7 @@ export default function Home() {
               year: "2026",
               category: "Product Design / AI",
               description: "Neighborhood intelligence meets AI travel booking. Seamless visual discovery.",
-              img: "https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Donkey-Donkey-AI-Gallery-Image.png?raw=true",
+              img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-Donkey-AI-Gallery-Image.png?raw=true",
               link: "/projects/donkey"
             },
             { 
@@ -653,7 +653,7 @@ export default function Home() {
               year: "2017 — 2024",
               category: "Enterprise UX / AdTech",
               description: "Designing a unified product ecosystem for one of travel's leading ad tech platforms.",
-              img: "https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Tiki-Tab-Unit-Gallery@2x.webp?raw=true",
+              img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki-Tab-Unit-Gallery@2x.webp?raw=true",
               link: "/projects/tiki"
             },
             { 
@@ -664,7 +664,7 @@ export default function Home() {
               year: "2018",
               category: "OTT / Entertainment",
               description: "Redesigning the streaming experience for millions of users across multiple platforms.",
-              img: "https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Crackle-Sign-in-Screen@2x.webp?raw=true",
+              img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Crackle-Sign-in-Screen@2x.webp?raw=true",
               link: "/projects/crackle"
             },
             { 
@@ -675,7 +675,7 @@ export default function Home() {
               year: "2015",
               category: "Product Design / Data",
               description: "Visualizing personal identity data and simplifying complex privacy controls.",
-              img: "https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/Thumbnails/mylife-WSFY-thumb.webp?raw=true",
+              img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/Thumbnails/mylife-WSFY-thumb.webp?raw=true",
               link: "/projects/mylife"
             }
           ].map((project, i) => (

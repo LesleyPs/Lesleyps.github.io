@@ -9,14 +9,14 @@ export default function DonkeyDonkeyCaseStudy() {
   const x = useTransform(scrollY, [0, 1000], [0, -400]);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const images = [
-    "https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Donkey-conversational-greeting@2x.webp?raw=true",
-    "https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Donkey-conversational-events@2x.webp?raw=true",
-    "https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Donkey-conversational-city-insights@2x.webp?raw=true",
-    "https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Donkey-conversational-re-engagment@2x.webp?raw=true",
-    "https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Donkey-conversational-city-activties@2x.webp?raw=true",
-    "https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Donkey-conversational-weather@2x.webp?raw=true",
-    "https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Donkey-conversational-activites-2@2x.webp?raw=true",
-    "https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Donkey-conversational-map@2x.webp?raw=true"
+    "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-conversational-greeting@2x.webp?raw=true",
+    "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-conversational-events@2x.webp?raw=true",
+    "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-conversational-city-insights@2x.webp?raw=true",
+    "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-conversational-re-engagment@2x.webp?raw=true",
+    "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-conversational-city-activties@2x.webp?raw=true",
+    "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-conversational-weather@2x.webp?raw=true",
+    "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-conversational-activites-2@2x.webp?raw=true",
+    "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-conversational-map@2x.webp?raw=true"
   ];
 
   return (
@@ -54,7 +54,7 @@ export default function DonkeyDonkeyCaseStudy() {
         <Reveal delay={0.2}>
           <div className="aspect-video w-full relative">
             <img 
-              src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Donkey-Donkey-AI-Hero@2x.webp?raw=true" 
+              src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-Donkey-AI-Hero@2x.webp?raw=true" 
               alt="Donkey Donkey AI Hero" 
               className="w-full h-full object-cover transition-all duration-1000 ease-out"
               referrerPolicy="no-referrer"
@@ -170,7 +170,7 @@ export default function DonkeyDonkeyCaseStudy() {
           <div className="flex flex-col items-center max-w-7xl mx-auto">
             <div className="w-full overflow-hidden">
               <img 
-                src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Donkey-Trending-US-Destiantions@2x.webp?raw=true" 
+                src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-Trending-US-Destiantions@2x.webp?raw=true" 
                 alt="Donkey Trending US Destinations" 
                 className="w-full h-auto -mt-[3px]"
                 referrerPolicy="no-referrer"
@@ -185,13 +185,13 @@ export default function DonkeyDonkeyCaseStudy() {
         <Reveal>
           <div className="flex flex-col items-center gap-12 max-w-7xl mx-auto">
             <img 
-              src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Donkey-Night-Mode.webp?raw=true" 
+              src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-Night-Mode.webp?raw=true" 
               alt="Donkey Night Mode" 
               className="w-full h-auto"
               referrerPolicy="no-referrer"
             />
             <img 
-              src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Donkey-Night-Mode-Feed.webp?raw=true" 
+              src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-Night-Mode-Feed.webp?raw=true" 
               alt="Donkey Night Mode Feed" 
               className="w-full h-auto"
               referrerPolicy="no-referrer"
@@ -242,7 +242,7 @@ export default function DonkeyDonkeyCaseStudy() {
             <div className="grid grid-cols-2 gap-8 max-w-3xl mx-auto">
               <div className="shadow-xl">
                 <img 
-                  src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Donkey-mobile-night.png?raw=true" 
+                  src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-mobile-night.png?raw=true" 
                   alt="Donkey Mobile Night" 
                   className="w-full h-auto transition-all duration-1000"
                   referrerPolicy="no-referrer"
@@ -250,7 +250,7 @@ export default function DonkeyDonkeyCaseStudy() {
               </div>
               <div className="shadow-xl">
                 <img 
-                  src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Donkey-mobile-trending-night.png?raw=true" 
+                  src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-mobile-trending-night.png?raw=true" 
                   alt="Donkey Mobile Trending Night" 
                   className="w-full h-auto transition-all duration-1000"
                   referrerPolicy="no-referrer"

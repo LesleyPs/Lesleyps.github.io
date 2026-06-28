@@ -49,7 +49,7 @@ export default function About() {
               <div className="max-w-sm xl:max-w-full w-full">
                 {!imageError ? (
                   <img 
-                    src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/intro.hyperesources/Lesley%20Piercefield-1_2x.png?raw=true" 
+                    src="https://github.com/LesleyPs/old-protflio/blob/main/intro.hyperesources/Lesley%20Piercefield-1_2x.png?raw=true" 
                     alt="Lesley Piercefield"
                     className="w-full h-auto object-contain transition-all duration-500 hover:scale-[1.01]"
                     onError={() => setImageError(true)}

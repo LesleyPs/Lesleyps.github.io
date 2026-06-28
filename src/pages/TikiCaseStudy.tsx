@@ -42,7 +42,7 @@ export default function TikiCaseStudy() {
         <Reveal delay={0.2}>
           <div className="aspect-video w-full relative">
             <img 
-              src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Tiki-Tab-Unit-Gallery@2x.webp?raw=true" 
+              src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki-Tab-Unit-Gallery@2x.webp?raw=true" 
               alt="Tiki Envoy Ecosystem Hero" 
               className="w-full h-full object-cover transition-all duration-1000 ease-out"
               referrerPolicy="no-referrer"
@@ -150,7 +150,7 @@ export default function TikiCaseStudy() {
             <p className="font-mono text-[12px] opacity-50 uppercase tracking-[2px] mb-3 text-center">Version A // Direct Conversion Map</p>
             <div className="w-full overflow-hidden">
               <img 
-                src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/version%20A-1_2x.png?raw=true" 
+                src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/version%20A-1_2x.png?raw=true" 
                 alt="Envoy Version A" 
                 className="w-full h-auto"
                 referrerPolicy="no-referrer"
@@ -161,7 +161,7 @@ export default function TikiCaseStudy() {
             <p className="font-mono text-[12px] opacity-50 uppercase tracking-[2px] mb-3 text-center">Version B // Integrated Action Cards</p>
             <div className="w-full overflow-hidden">
               <img 
-                src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/version%20B-1_2x.png?raw=true" 
+                src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/version%20B-1_2x.png?raw=true" 
                 alt="Envoy Version B" 
                 className="w-full h-auto"
                 referrerPolicy="no-referrer"
@@ -176,7 +176,7 @@ export default function TikiCaseStudy() {
             <p className="font-mono text-[12px] opacity-50 uppercase tracking-[2px] mb-3 text-center">Traveller Interaction Heatmap Analysis</p>
             <div className="w-full overflow-hidden">
               <img 
-                src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/tiki-envoy-heatmap@2x.webp?raw=true" 
+                src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/tiki-envoy-heatmap@2x.webp?raw=true" 
                 alt="Envoy Heatmap Analysis" 
                 className="w-full h-auto"
                 referrerPolicy="no-referrer"
@@ -187,7 +187,7 @@ export default function TikiCaseStudy() {
             <p className="font-mono text-[12px] opacity-50 uppercase tracking-[2px] mb-3 text-center">Option C // High Density Partner Referral Unit</p>
             <div className="w-full overflow-hidden">
               <img 
-                src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/V3-%20C-1_2x.png?raw=true" 
+                src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/V3-%20C-1_2x.png?raw=true" 
                 alt="Envoy Version C Layout" 
                 className="w-full h-auto"
                 referrerPolicy="no-referrer"
@@ -220,7 +220,7 @@ export default function TikiCaseStudy() {
             <p className="font-mono text-[12px] opacity-50 uppercase tracking-[2px] mb-4 text-center">Programmatic Partner Structure Mapping</p>
             <div className="w-full overflow-hidden">
               <img 
-                src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Tiki-Organization_2x.png?raw=true" 
+                src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki-Organization_2x.png?raw=true" 
                 alt="Tiki Control Tower Partner Setup Mapping" 
                 className="w-full h-auto"
                 referrerPolicy="no-referrer"
@@ -261,7 +261,7 @@ export default function TikiCaseStudy() {
             <p className="font-mono text-[12px] opacity-50 uppercase tracking-[2px] mb-3 text-center">V1 Legacy: Deeply Nested Setting Form</p>
             <div className="w-full overflow-hidden">
               <img 
-                src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Tiki-overlay-media-setting@2x.png?raw=true" 
+                src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki-overlay-media-setting@2x.png?raw=true" 
                 alt="Control Tower V1 Overlay" 
                 className="w-full h-auto"
                 referrerPolicy="no-referrer"
@@ -272,7 +272,7 @@ export default function TikiCaseStudy() {
             <p className="font-mono text-[12px] opacity-50 uppercase tracking-[2px] mb-3 text-center">V2 Unified: Dynamic On-Spot Controls</p>
             <div className="w-full overflow-hidden">
               <img 
-                src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Tiki-overlay-media-setting-v2@2x.png?raw=true" 
+                src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki-overlay-media-setting-v2@2x.png?raw=true" 
                 alt="Control Tower V2 Overlay" 
                 className="w-full h-auto"
                 referrerPolicy="no-referrer"
@@ -289,7 +289,7 @@ export default function TikiCaseStudy() {
             <p className="font-mono text-[12px] opacity-50 uppercase tracking-[2px] mb-4 text-center">Yield Analysis & High-Fidelity Performance Dashboards</p>
             <div className="w-full overflow-hidden">
               <img 
-                src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Tiki-control-tower-metrics_2x.png?raw=true" 
+                src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki-control-tower-metrics_2x.png?raw=true" 
                 alt="Control Tower Metrics Screen" 
                 className="w-full h-auto"
                 referrerPolicy="no-referrer"
@@ -364,7 +364,7 @@ export default function TikiCaseStudy() {
             <p className="font-mono text-[12px] opacity-50 uppercase tracking-[2px] mb-3 text-center">Legacy Tab Unit Format</p>
             <div className="w-full overflow-hidden">
               <img 
-                src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/old-tab-unit@2x.png?raw=true" 
+                src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/old-tab-unit@2x.png?raw=true" 
                 alt="Old Tab Unit" 
                 className="w-full h-auto"
                 referrerPolicy="no-referrer"
@@ -375,7 +375,7 @@ export default function TikiCaseStudy() {
             <p className="font-mono text-[12px] opacity-50 uppercase tracking-[2px] mb-3 text-center">Optimized High-Yield Tab Unit</p>
             <div className="w-full overflow-hidden">
               <img 
-                src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/Tiki_tab-unit-max@2x.webp?raw=true" 
+                src="https://github.com/LesleyPs/old-protflio/blob/main/assets/Tiki_tab-unit-max@2x.webp?raw=true" 
                 alt="Maximized Tab Unit" 
                 className="w-full h-auto"
                 referrerPolicy="no-referrer"
@@ -392,7 +392,7 @@ export default function TikiCaseStudy() {
             <p className="font-mono text-[12px] opacity-50 uppercase tracking-[2px] mb-4 text-center">Expedia Live Partner Unit</p>
             <div className="w-full overflow-hidden">
               <img 
-                src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/expedia-media-unit.webp?raw=true" 
+                src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/expedia-media-unit.webp?raw=true" 
                 alt="Expedia integration view" 
                 className="w-full h-auto mx-auto"
                 referrerPolicy="no-referrer"
@@ -404,7 +404,7 @@ export default function TikiCaseStudy() {
             <p className="font-mono text-[12px] opacity-50 uppercase tracking-[2px] mb-4 text-center">Wetter Multi-Destination Campaign Unit</p>
             <div className="w-full overflow-hidden">
               <img 
-                src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/wetter-travel@2x.webp?raw=true" 
+                src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/wetter-travel@2x.webp?raw=true" 
                 alt="Wetter Multi-Destination integration view" 
                 className="w-full h-auto mx-auto"
                 referrerPolicy="no-referrer"
@@ -416,7 +416,7 @@ export default function TikiCaseStudy() {
             <p className="font-mono text-[12px] opacity-50 uppercase tracking-[2px] mb-4 text-center">AccuWeather iOS Native Mobile App Unit</p>
             <div className="w-full overflow-hidden relative">
               <img 
-                src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/accuweather_2x.jpg?raw=true" 
+                src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/accuweather_2x.jpg?raw=true" 
                 alt="AccuWeather iOS native mobile unit view" 
                 className="w-full h-auto mx-auto scale-[1.02] origin-left"
                 referrerPolicy="no-referrer"

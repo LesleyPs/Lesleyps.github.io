@@ -5,7 +5,7 @@ import { ArrowLeft } from 'lucide-react';
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [logoSrc, setLogoSrc] = useState("https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/favicons/apple-touch-icon.png?raw=true");
+  const [logoSrc, setLogoSrc] = useState("https://github.com/LesleyPs/old-protflio/blob/main/assets/favicons/apple-touch-icon.png?raw=true");
   const [logoErrorCount, setLogoErrorCount] = useState(0);
   const location = useLocation();
 
@@ -19,7 +19,7 @@ export function Navbar() {
 
   const handleLogoError = () => {
     if (logoErrorCount === 0) {
-      setLogoSrc("https://raw.githubusercontent.com/LesleyPs/Lesleyps.github.io/main/assets/favicons/apple-touch-icon.png");
+      setLogoSrc("https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/favicons/apple-touch-icon.png");
       setLogoErrorCount(1);
     } else if (logoErrorCount === 1) {
       setLogoSrc("https://lesleyps.github.io/assets/favicons/apple-touch-icon.png");

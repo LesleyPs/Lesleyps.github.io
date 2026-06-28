@@ -42,7 +42,7 @@ export default function MyLifeCaseStudy() {
         <Reveal delay={0.2}>
           <div className="aspect-video w-full relative">
             <img 
-              src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Mylife-public-background-report.jpg?raw=true" 
+              src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Mylife-public-background-report.jpg?raw=true" 
               alt="MyLife Background Report Dashboard" 
               className="w-full h-full object-cover transition-all duration-1000 ease-out"
               referrerPolicy="no-referrer"
@@ -101,7 +101,7 @@ export default function MyLifeCaseStudy() {
         <Reveal>
           <div className="border border-blue/10 max-w-5xl mx-auto">
             <img 
-              src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/Mylife-public-background-report.jpg?raw=true" 
+              src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Mylife-public-background-report.jpg?raw=true" 
               alt="MyLife Public Background Report Dashboard" 
               className="w-full h-auto transition-all duration-1000"
               referrerPolicy="no-referrer"
@@ -164,7 +164,7 @@ export default function MyLifeCaseStudy() {
           <Reveal>
             <div className="w-full">
               <img 
-                src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/WSFY-iPhone@2x.jpg?raw=true" 
+                src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/WSFY-iPhone@2x.jpg?raw=true" 
                 alt="Who's Searching For You Mobile UI" 
                 className="w-full h-auto object-contain mx-auto"
                 referrerPolicy="no-referrer"
@@ -174,7 +174,7 @@ export default function MyLifeCaseStudy() {
           <Reveal delay={0.1}>
             <div className="w-full">
               <img 
-                src="https://github.com/LesleyPs/Lesleyps.github.io/blob/main/assets/images/ML-mobile-menu@2x.jpg?raw=true" 
+                src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/ML-mobile-menu@2x.jpg?raw=true" 
                 alt="Reputation Score Mobile Interface" 
                 className="w-full h-auto object-contain mx-auto"
                 referrerPolicy="no-referrer"
