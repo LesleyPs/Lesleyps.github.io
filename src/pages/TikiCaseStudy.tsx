@@ -48,7 +48,7 @@ export default function TikiCaseStudy() {
               referrerPolicy="no-referrer"
               id="tiki-hero-img"
             />
-            <div className="absolute bottom-0 left-0 w-full bg-cream border-t border-blue/25 py-8 overflow-hidden" id="marquee-overlay">
+            <div className="absolute bottom-0 left-0 w-full bg-black/30 backdrop-blur-md border-t border-blue/20 py-8 overflow-hidden" id="marquee-overlay">
               <div className="marquee-outer mask-linear-to-r from-transparent via-black via-10% via-90% to-transparent">
                 <motion.div className="marquee-inner" style={{ x }}>
                   {[

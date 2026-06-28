@@ -47,7 +47,7 @@ export default function CrackleCaseStudy() {
               className="w-full h-full object-cover transition-all duration-1000 ease-out"
               referrerPolicy="no-referrer"
             />
-            <div className="absolute bottom-0 left-0 w-full bg-white border-t border-blue/25 py-8 overflow-hidden">
+            <div className="absolute bottom-0 left-0 w-full bg-black/30 backdrop-blur-md border-t border-blue/20 py-8 overflow-hidden">
               <div className="marquee-outer mask-linear-to-r from-transparent via-black via-10% via-90% to-transparent">
                 <motion.div className="marquee-inner" style={{ x }}>
                   {[
@@ -177,13 +177,37 @@ export default function CrackleCaseStudy() {
         <Reveal>
           <div className="border border-blue/10">
             <img 
-              src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Crackle-pluse-signup-screen.png?raw=true&v=2" 
+              src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Crackle-pluse-signup-screen@2x.webp?raw=true" 
               alt="Pause Position Account Connection Feature" 
               className="w-full h-auto transition-all duration-1000"
               referrerPolicy="no-referrer"
             />
           </div>
         </Reveal>
+      </section>
+
+      {/* DESIGN RATIONALE: PAUSE TO ACCOUNT BRIDGE */}
+      <section className="w-full border-b border-blue p-[120px_30px] bg-blue/5">
+        <div className="max-w-6xl mx-auto">
+          <Reveal>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
+              <div className="lg:col-span-5">
+                <p className="font-mono text-[13px] tracking-[3px] opacity-60 mb-8 uppercase">State Management</p>
+                <h3 className="font-sans font-semibold text-[clamp(28px,4vw,42px)] leading-[1.1em] tracking-[-0.03em] text-blue mb-8">
+                  The Pause-to-Account Bridge
+                </h3>
+              </div>
+              <div className="lg:col-span-7 flex flex-col justify-center">
+                <p className="font-mono text-[18px] leading-[1.7em] text-blue/90 font-medium italic mb-8">
+                  "Converting high-friction registration moments into a seamless state preservation flow."
+                </p>
+                <p className="font-mono text-[16px] leading-[1.8em] text-blue/80">
+                  Guest users often abandon streams when prompted to sign up, losing their playback position and history. By implementing a local-to-cloud transition bridge, we preserve the guest's local state—including active pause position and watch history—and automatically synchronize it to their new account upon completion of the simplified registration flow. This frictionless transition eliminated the "temporary state challenge," preserving the exact moment they left off.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+        </div>
       </section>
 
       {/* BIG STATEMENT 5: D-PAD */}
