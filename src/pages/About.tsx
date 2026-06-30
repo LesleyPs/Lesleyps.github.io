@@ -92,7 +92,7 @@ export default function About() {
                     <span className="font-mono text-[12px] tracking-[1px] opacity-50">{job.years}</span>
                   </div>
                   <p className="font-sans font-semibold text-[18px] text-blue/80 mb-4">{job.company}</p>
-                  <p className="font-mono text-[13px] leading-[1.8em] opacity-70 max-w-xl">{job.desc}</p>
+                  <p className="font-sans text-[15px] leading-[1.7em] text-blue/80 max-w-xl">{job.desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -110,9 +110,9 @@ export default function About() {
         <div className="flex-1 p-[70px_50px_70px_36px]">
           <div className="space-y-12">
             {[
-              { degree: "Certification in Data Analytics (Specializing in Data Visualization)", school: "Continuing Education", years: "In Progress", desc: "Developing advanced competencies in data analytics, statistical modeling, and interactive data visualization techniques (D3, Python, and modern front-end integration) to bridge the gap between complex quantitative datasets and highly intuitive user interfaces." },
-              { degree: "Certificate, Design Communication Arts", school: "UCLA Extension", years: "March 2008 — March 2010", desc: "Specialized study in design systems, visual communication, typography, and interactive design methodologies." },
-              { degree: "BFA, Fashion Marketing", school: "American InterContinental University", years: "Graduated", desc: "Deep study of consumer psychology, branding strategy, trend analysis, and market placement foundations." }
+              { degree: "Google Data Analytics Certification", school: "Continuing Education", years: "Certification", desc: "Developing advanced competencies in data analytics, statistical modeling, and interactive data visualization techniques (D3, Python, and modern front-end integration) to bridge the gap between complex quantitative datasets and highly intuitive user interfaces." },
+              { degree: "Design Communication Arts", school: "UCLA Extension", years: "Certification", desc: "Specialized study in design systems, visual communication, typography, and interactive design methodologies." },
+              { degree: "BFA, Fashion Marketing", school: "American InterContinental University", years: "Degree", desc: "Deep study of consumer psychology, branding strategy, trend analysis, and market placement foundations." }
             ].map((edu, i) => (
               <Reveal key={i} delay={i * 0.1}>
                 <div className="group border-b border-blue/20 pb-8 last:border-0">
@@ -121,7 +121,7 @@ export default function About() {
                     <span className="font-mono text-[12px] tracking-[1px] opacity-50">{edu.years}</span>
                   </div>
                   <p className="font-sans font-semibold text-[18px] text-blue/80 mb-4">{edu.school}</p>
-                  <p className="font-mono text-[13px] leading-[1.8em] opacity-70 max-w-xl">{edu.desc}</p>
+                  <p className="font-sans text-[15px] leading-[1.7em] text-blue/80 max-w-xl">{edu.desc}</p>
                 </div>
               </Reveal>
             ))}
