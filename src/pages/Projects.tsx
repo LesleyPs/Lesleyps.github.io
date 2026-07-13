@@ -169,6 +169,21 @@ const galleryItems = [
     badge: "iOS Mobile Unit",
     badgeIcon: "mobile",
     isTv: false
+  },
+  // 11. Tiki Envoy Conversational UI (interactive)
+  {
+    id: "tiki-envoy-conversational",
+    title: "Tiki Envoy Conversational UI",
+    company: "Tiki",
+    industry: "Ad Tech",
+    category: "Conversational Intent Optimization",
+    img: "https://github.com/LesleyPs/old-protflio/blob/main/Envoy-DPR-Tiki@2x.webp?raw=true",
+    link: "/projects/tiki",
+    aspect: "aspect-[16/10]",
+    platform: "Conversational UI",
+    badge: "Ad Unit",
+    badgeIcon: "ad",
+    isTv: false
   }
 ];
 
