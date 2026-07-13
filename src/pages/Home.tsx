@@ -27,6 +27,15 @@ const HOME_SLIDES = [
     isDarkBg: false
   },
   {
+    url: "https://github.com/LesleyPs/old-protflio/blob/main/Envoy-DPR-Tiki@2x.webp?raw=true",
+    title: "Tiki Envoy Conversational UI",
+    agency: "Tiki Ad Tech",
+    zoom: true,
+    zoomDirection: "pan-up",
+    effect: "blue-light-leak",
+    isDarkBg: false
+  },
+  {
     url: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Crackle-Xbox-TV-Screen.png?raw=true",
     title: "Sony Crackle TV Platform",
     agency: "Crackle Connected TV",

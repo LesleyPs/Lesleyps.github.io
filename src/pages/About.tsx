@@ -110,7 +110,7 @@ export default function About() {
         <div className="flex-1 p-[70px_50px_70px_36px]">
           <div className="space-y-12">
             {[
-              { degree: "Google Data Analytics Certification", school: "Continuing Education", years: "Certification", desc: "Developing advanced competencies in data analytics, statistical modeling, and interactive data visualization techniques (D3, Python, and modern front-end integration) to bridge the gap between complex quantitative datasets and highly intuitive user interfaces." },
+              { degree: "Google Data Analytics Certification", school: "Coursera (Sponsored by Google / Calbright)", years: "Certification", desc: "Developing advanced competencies in data analytics, statistical modeling, and interactive data visualization techniques (D3, Python, and modern front-end integration) to bridge the gap between complex quantitative datasets and highly intuitive user interfaces." },
               { degree: "Design Communication Arts", school: "UCLA Extension", years: "Certification", desc: "Specialized study in design systems, visual communication, typography, and interactive design methodologies." },
               { degree: "BFA, Fashion Marketing", school: "American InterContinental University", years: "Degree", desc: "Deep study of consumer psychology, branding strategy, trend analysis, and market placement foundations." }
             ].map((edu, i) => (
