@@ -340,11 +340,11 @@ export default function Projects() {
         <Reveal>
           <div className="max-w-4xl">
             <h1 className="font-sans font-semibold text-[clamp(36px,5.8vw,74px)] leading-[1.18em] tracking-[clamp(-2px,-0.3vw,-4px)] text-blue mb-10">
-              Design Collage<br />
-              <span className="opacity-60">visual archive of</span><br />
+              Selected Work<br />
+              <span className="opacity-60">a visual index of</span><br />
               travel, media, & interfaces.
             </h1>
-            <p className="font-mono text-[14px] tracking-[1px] opacity-70">Interactive case studies framed within clean environment viewports, grouped by product ecosystem.</p>
+            <p className="font-mono text-[14px] tracking-[1px] opacity-70">A comprehensive index of launched products, native utility layouts, and interactive case studies.</p>
           </div>
         </Reveal>
       </section>

@@ -112,7 +112,7 @@ export default function TikiCaseStudy() {
                 loop 
                 muted 
                 playsInline 
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-cover scale-[1.02]"
               />
             </div>
           </Reveal>
@@ -326,7 +326,7 @@ export default function TikiCaseStudy() {
                 loop 
                 muted 
                 playsInline 
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-cover scale-[1.02]"
               />
             </div>
           </Reveal>
