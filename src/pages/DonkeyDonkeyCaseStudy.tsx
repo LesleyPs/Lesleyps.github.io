@@ -112,7 +112,7 @@ export default function DonkeyDonkeyCaseStudy() {
                 rel="noopener noreferrer" 
                 className="inline-flex items-center gap-3 font-mono text-[13px] font-bold tracking-[1.5px] uppercase bg-blue text-cream hover:bg-blue/90 border border-blue px-8 py-4 shadow-sm transition-all group"
               >
-                Launch Live NVV Product <ArrowRight size={14} className="group-hover:translate-x-1.5 transition-transform" />
+                View MVP Version <ArrowRight size={14} className="group-hover:translate-x-1.5 transition-transform" />
               </a>
             </div>
           </Reveal>
