@@ -44,6 +44,19 @@ export default function DonkeyDonkeyCaseStudy() {
                 <p className="font-mono text-[13px] uppercase tracking-[2px] opacity-60 mb-3">Focus</p>
                 <p className="font-sans font-medium text-[18px] text-blue">Concept to Product</p>
               </div>
+              <div>
+                <p className="font-mono text-[13px] uppercase tracking-[2px] opacity-60 mb-3">Live Product</p>
+                <p className="font-sans font-medium text-[18px] text-blue">
+                  <a 
+                    href="https://DonkeyDonkeyAI.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="underline decoration-blue/30 hover:decoration-blue transition-all"
+                  >
+                    DonkeyDonkeyAI.com
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
         </Reveal>
@@ -89,9 +102,19 @@ export default function DonkeyDonkeyCaseStudy() {
         <div className="max-w-6xl">
           <Reveal>
             <p className="font-mono text-[13px] tracking-[3px] opacity-60 mb-8 uppercase">The Vision</p>
-            <h2 className="font-sans font-semibold text-[clamp(28px,4.5vw,56px)] leading-[1.15em] tracking-[-0.03em] text-blue max-w-6xl">
+            <h2 className="font-sans font-semibold text-[clamp(28px,4.5vw,56px)] leading-[1.15em] tracking-[-0.03em] text-blue max-w-6xl mb-10">
               Neighborhood intelligence meets conversational AI.
             </h2>
+            <div>
+              <a 
+                href="https://DonkeyDonkeyAI.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-flex items-center gap-3 font-mono text-[13px] font-bold tracking-[1.5px] uppercase bg-blue text-cream hover:bg-blue/90 border border-blue px-8 py-4 shadow-sm transition-all group"
+              >
+                Launch Live NVV Product <ArrowRight size={14} className="group-hover:translate-x-1.5 transition-transform" />
+              </a>
+            </div>
           </Reveal>
         </div>
       </section>

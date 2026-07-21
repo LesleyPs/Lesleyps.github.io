@@ -257,9 +257,6 @@ function ProjectCard({
               <div className="w-11 h-11 rounded-full bg-blue text-white flex items-center justify-center shadow-md transform hover:scale-110 transition-transform">
                 <Maximize2 size={18} />
               </div>
-              <span className="font-sans font-bold text-[14px] tracking-tight text-blue">
-                Click to Expand
-              </span>
             </div>
           </div>
         </div>
