@@ -235,7 +235,7 @@ export default function DonkeyDonkeyCaseStudy() {
       <section className="w-full border-b border-blue p-[100px_30px] bg-blue/5">
         <div className="max-w-6xl mx-auto">
           <Reveal>
-            <div className="bg-cream border border-blue p-8 sm:p-12 md:p-16 shadow-xl relative overflow-hidden">
+            <div className="bg-cream border border-blue p-8 sm:p-12 md:p-16 relative overflow-hidden">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                 <div className="lg:col-span-7">
                   <div className="inline-flex items-center gap-2 font-mono text-[11px] font-bold uppercase tracking-[2px] bg-blue text-cream px-3.5 py-1.5 mb-6">
@@ -250,7 +250,7 @@ export default function DonkeyDonkeyCaseStudy() {
                   <div className="flex flex-wrap items-center gap-6">
                     <button
                       onClick={() => setIsArticleOpen(true)}
-                      className="inline-flex items-center gap-3 font-mono text-[13px] font-bold tracking-[1.5px] uppercase bg-blue text-cream hover:bg-blue/90 border border-blue px-8 py-4 shadow-md transition-all group cursor-pointer"
+                      className="inline-flex items-center gap-3 font-mono text-[13px] font-bold tracking-[1.5px] uppercase bg-blue text-cream hover:bg-blue/90 border border-blue px-8 py-4 transition-all group cursor-pointer"
                     >
                       Read Full Article <ArrowRight size={14} className="group-hover:translate-x-1.5 transition-transform" />
                     </button>
@@ -262,7 +262,7 @@ export default function DonkeyDonkeyCaseStudy() {
                 <div className="lg:col-span-5 flex justify-center">
                   <div 
                     onClick={() => setIsArticleOpen(true)}
-                    className="w-full max-w-sm aspect-[4/3] bg-blue/10 border border-blue/30 overflow-hidden shadow-md cursor-pointer group relative"
+                    className="w-full max-w-sm aspect-[4/3] bg-blue/10 border border-blue/30 overflow-hidden cursor-pointer group relative"
                   >
                     <img 
                       src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-Donkey-AI-thumbnail.webp?raw=true" 
@@ -270,11 +270,6 @@ export default function DonkeyDonkeyCaseStudy() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       referrerPolicy="no-referrer"
                     />
-                    <div className="absolute inset-0 bg-blue/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-xs">
-                      <span className="font-mono text-[12px] font-bold uppercase tracking-[1.5px] bg-cream text-blue px-4 py-2 border border-blue shadow-lg">
-                        Click to Open Article
-                      </span>
-                    </div>
                   </div>
                 </div>
               </div>

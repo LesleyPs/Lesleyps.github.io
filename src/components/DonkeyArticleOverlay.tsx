@@ -61,7 +61,7 @@ export function DonkeyArticleOverlay({ isOpen, onClose }: DonkeyArticleOverlayPr
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.96, y: 20 }}
             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-            className="relative w-full h-full max-w-4xl max-h-[92vh] bg-cream border border-blue shadow-2xl rounded-none overflow-hidden flex flex-col z-10"
+            className="relative w-full h-full max-w-4xl max-h-[92vh] bg-cream border border-blue rounded-none overflow-hidden flex flex-col z-10"
           >
             {/* Top Reading Progress Bar */}
             <div className="w-full h-1 bg-blue/10">
@@ -154,7 +154,7 @@ export function DonkeyArticleOverlay({ isOpen, onClose }: DonkeyArticleOverlayPr
 
                 {/* HERO COVER IMAGE - THUMBNAIL WEBP */}
                 <figure className="mb-12">
-                  <div className="w-full bg-blue/5 border border-blue/20 overflow-hidden shadow-sm">
+                  <div className="w-full bg-blue/5 border border-blue/20 overflow-hidden">
                     <img
                       src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-Donkey-AI-thumbnail.webp?raw=true"
                       alt="Donkey Donkey AI Thumbnail"
@@ -180,7 +180,7 @@ export function DonkeyArticleOverlay({ isOpen, onClose }: DonkeyArticleOverlayPr
 
                   {/* BUILD PROCESS WEBP IMAGE */}
                   <figure className="my-10">
-                    <div className="w-full bg-white border border-blue/20 overflow-hidden shadow-sm">
+                    <div className="w-full bg-white border border-blue/20 overflow-hidden">
                       <img
                         src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-Donkey-AI-UX-build-process.webp?raw=true"
                         alt="Donkey Donkey AI UX Build Process"
@@ -200,7 +200,7 @@ export function DonkeyArticleOverlay({ isOpen, onClose }: DonkeyArticleOverlayPr
                   </h2>
 
                   <div className="space-y-6 mb-8">
-                    <div className="p-6 bg-white border border-blue/20 shadow-xs">
+                    <div className="p-6 bg-white border border-blue/20">
                       <h3 className="font-sans font-bold text-[18px] text-blue mb-2 flex items-center gap-2">
                         <CheckCircle2 size={18} className="text-blue" /> User First, Always
                       </h3>
@@ -209,7 +209,7 @@ export function DonkeyArticleOverlay({ isOpen, onClose }: DonkeyArticleOverlayPr
                       </p>
                     </div>
 
-                    <div className="p-6 bg-white border border-blue/20 shadow-xs">
+                    <div className="p-6 bg-white border border-blue/20">
                       <h3 className="font-sans font-bold text-[18px] text-blue mb-2 flex items-center gap-2">
                         <Zap size={18} className="text-amber-500" /> Prompt-Driven Build
                       </h3>
@@ -218,7 +218,7 @@ export function DonkeyArticleOverlay({ isOpen, onClose }: DonkeyArticleOverlayPr
                       </p>
                     </div>
 
-                    <div className="p-6 bg-white border border-blue/20 shadow-xs">
+                    <div className="p-6 bg-white border border-blue/20">
                       <h3 className="font-sans font-bold text-[18px] text-blue mb-2 flex items-center gap-2">
                         <Sparkles size={18} className="text-blue" /> Simulated Real-Time Logic
                       </h3>
@@ -230,7 +230,7 @@ export function DonkeyArticleOverlay({ isOpen, onClose }: DonkeyArticleOverlayPr
 
                   {/* WORKFLOW WEBP IMAGE */}
                   <figure className="my-10">
-                    <div className="w-full bg-white border border-blue/20 overflow-hidden shadow-sm">
+                    <div className="w-full bg-white border border-blue/20 overflow-hidden">
                       <img
                         src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-Donkey-AI-workflow.webp?raw=true"
                         alt="Donkey Donkey AI Workflow"
@@ -272,7 +272,7 @@ export function DonkeyArticleOverlay({ isOpen, onClose }: DonkeyArticleOverlayPr
                 </section>
 
                 {/* SECTION 4: THE BOTTOM LINE */}
-                <section className="mb-12 p-8 bg-blue text-cream border border-blue shadow-xl">
+                <section className="mb-12 p-8 bg-blue text-cream border border-blue">
                   <h2 className="font-sans font-bold text-[24px] text-white tracking-[-0.02em] mb-4">
                     The Bottom Line
                   </h2>
@@ -283,7 +283,7 @@ export function DonkeyArticleOverlay({ isOpen, onClose }: DonkeyArticleOverlayPr
                     href="https://DonkeyDonkeyAI.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 font-mono text-[13px] font-bold uppercase tracking-[1.5px] bg-cream text-blue border border-cream px-6 py-3.5 hover:bg-white transition-all shadow-md group cursor-pointer"
+                    className="inline-flex items-center gap-2 font-mono text-[13px] font-bold uppercase tracking-[1.5px] bg-cream text-blue border border-cream px-6 py-3.5 hover:bg-white transition-all group cursor-pointer"
                   >
                     Experience Donkey Donkey AI Live
                     <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -301,7 +301,7 @@ export function DonkeyArticleOverlay({ isOpen, onClose }: DonkeyArticleOverlayPr
                     />
                     <div>
                       <p className="font-sans font-bold text-[16px] text-blue">Lesley Piercefield</p>
-                      <p className="font-mono text-[12px] text-blue/70">Senior Product Designer &amp; Maker</p>
+                      <p className="font-mono text-[12px] text-blue/70">Senior Product Designer</p>
                     </div>
                   </div>
 
