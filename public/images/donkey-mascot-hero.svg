@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%">
+  <defs>
+    <!-- Grid Pattern -->
+    <pattern id="heroGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#0052cc" stroke-width="1" stroke-opacity="0.08" />
+    </pattern>
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="50%" stop-color="#f1f5f9"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="goldGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#eab308" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="blueAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0052cc"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0052cc" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#heroBg)"/>
+  <rect width="1200" height="630" fill="url(#heroGrid)"/>
+
+  <!-- Decorative Ambient Circles -->
+  <circle cx="200" cy="180" r="140" fill="#0052cc" fill-opacity="0.03" />
+  <circle cx="1000" cy="450" r="180" fill="#3b82f6" fill-opacity="0.04" />
+
+  <!-- Background Travel Graphic Elements -->
+  <!-- Map Pin & Path (Top Left) -->
+  <g transform="translate(240, 100)" opacity="0.85">
+    <!-- Path line -->
+    <path d="M -30 80 Q 20 20 90 40 T 160 10" fill="none" stroke="#3b82f6" stroke-width="4" stroke-dasharray="8 6" opacity="0.6"/>
+    <!-- Map Pin -->
+    <g transform="translate(90, 30)">
+      <path d="M 0 -28 C -14 -28 -24 -18 -24 -4 C -24 16 0 36 0 36 C 0 36 24 16 24 -4 C 24 -18 14 -28 0 -28 Z" fill="#3b82f6" opacity="0.25"/>
+      <path d="M 0 -28 C -14 -28 -24 -18 -24 -4 C -24 16 0 36 0 36 C 0 36 24 16 24 -4 C 24 -18 14 -28 0 -28 Z" fill="none" stroke="#0052cc" stroke-width="3"/>
+      <circle cx="0" cy="-6" r="8" fill="#eab308"/>
+    </g>
+  </g>
+
+  <!-- Search Pill (Top Center) -->
+  <g transform="translate(480, 110)" filter="url(#softShadow)">
+    <rect x="0" y="0" width="240" height="48" rx="24" fill="#ffffff" stroke="#0052cc" stroke-width="2" stroke-opacity="0.3"/>
+    <line x1="30" y1="24" x2="160" y2="24" stroke="#0052cc" stroke-width="4" stroke-linecap="round" stroke-opacity="0.3"/>
+    <circle cx="190" cy="24" r="5" fill="#eab308"/>
+    <circle cx="205" cy="24" r="3" fill="#0052cc" opacity="0.4"/>
+  </g>
+
+  <!-- Stars / Sparkles -->
+  <g transform="translate(580, 60)" fill="#0052cc" opacity="0.7">
+    <path d="M 0 -16 Q 0 0 16 0 Q 0 0 0 16 Q 0 0 -16 0 Q 0 0 0 -16 Z"/>
+  </g>
+  <g transform="translate(630, 90)" fill="#3b82f6" opacity="0.5">
+    <path d="M 0 -10 Q 0 0 10 0 Q 0 0 0 10 Q 0 0 -10 0 Q 0 0 0 -10 Z"/>
+  </g>
+
+  <!-- Airplane Icon (Right) -->
+  <g transform="translate(840, 360)">
+    <!-- Speed Lines -->
+    <line x1="-80" y1="0" x2="-20" y2="0" stroke="#eab308" stroke-width="4" stroke-linecap="round"/>
+    <line x1="-120" y1="20" x2="-40" y2="20" stroke="#0052cc" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+    <!-- Airplane -->
+    <path d="M 60 0 L -20 -30 L -10 0 L -30 10 L -40 0 L -50 0 L -40 20 L 0 10 L 60 0 Z" fill="#0052cc" opacity="0.15"/>
+    <path d="M 60 0 L -20 -30 L -10 0 L -30 10 L -40 0 L -50 0 L -40 20 L 0 10 L 60 0 Z" fill="none" stroke="#0052cc" stroke-width="3.5" stroke-linejoin="round"/>
+    <polygon points="60,0 10,-10 20,0" fill="#eab308"/>
+  </g>
+
+  <!-- Ground Shadow under Donkey -->
+  <ellipse cx="600" cy="520" rx="220" ry="20" fill="#0052cc" fill-opacity="0.08"/>
+
+  <!-- MAIN DONKEY MASCOT ILLUSTRATION -->
+  <g transform="translate(340, 110)">
+    <!-- Main Body & Head Silhouette Group -->
+    <!-- Tail -->
+    <path d="M 80 270 C 50 260 20 280 0 260 C 10 280 25 295 40 290 C 20 310 10 320 5 330 C 20 325 35 315 50 295 C 65 285 75 280 80 270 Z" fill="#0052cc" opacity="0.85"/>
+
+    <!-- Hind Legs -->
+    <path d="M 120 320 L 100 420 L 135 425 L 150 340 Z" fill="#93c5fd" opacity="0.7"/>
+    <rect x="100" y="415" width="35" height="12" rx="3" fill="#1e3a8a"/>
+
+    <path d="M 170 330 L 160 420 L 195 425 L 205 340 Z" fill="#2563eb" opacity="0.9"/>
+    <rect x="160" y="415" width="35" height="12" rx="3" fill="#0f172a"/>
+
+    <!-- Front Legs -->
+    <path d="M 320 330 L 310 420 L 345 425 L 355 330 Z" fill="#93c5fd" opacity="0.7"/>
+    <rect x="310" y="415" width="35" height="12" rx="3" fill="#1e3a8a"/>
+
+    <path d="M 380 320 L 390 420 L 425 425 L 415 310 Z" fill="#2563eb" opacity="0.9"/>
+    <rect x="390" y="415" width="35" height="12" rx="3" fill="#0f172a"/>
+
+    <!-- Torso / Barrel -->
+    <path d="M 110 270 C 100 200 160 170 260 170 C 340 170 410 200 420 270 C 430 320 380 350 310 350 C 220 350 120 330 110 270 Z" fill="#e0f2fe" stroke="#0052cc" stroke-width="5" stroke-linejoin="round"/>
+
+    <!-- Compass Badge on Flank -->
+    <g transform="translate(250, 250)">
+      <circle cx="0" cy="0" r="28" fill="#ffffff" stroke="#0052cc" stroke-width="3"/>
+      <!-- Compass Needles -->
+      <polygon points="0,-20 6,0 0,4 -6,0" fill="#0052cc"/>
+      <polygon points="0,20 6,0 0,-4 -6,0" fill="#eab308"/>
+      <polygon points="-20,0 0,-6 4,0 0,6" fill="#94a3b8"/>
+      <polygon points="20,0 0,-6 -4,0 0,6" fill="#3b82f6"/>
+    </g>
+
+    <!-- Neck & Head -->
+    <path d="M 370 220 L 430 80 C 440 60 460 50 480 60 L 520 80 C 540 90 550 110 540 130 C 520 160 470 200 430 250 Z" fill="#e0f2fe" stroke="#0052cc" stroke-width="5" stroke-linejoin="round"/>
+
+    <!-- Muzzle / Snout -->
+    <path d="M 480 110 C 510 110 545 125 535 155 C 525 180 490 180 460 160 Z" fill="#ffffff" stroke="#0052cc" stroke-width="4"/>
+    <circle cx="510" cy="135" r="3" fill="#0052cc"/> <!-- Nostril -->
+    <path d="M 495 150 Q 510 155 520 148" fill="none" stroke="#0052cc" stroke-width="3" stroke-linecap="round"/> <!-- Smile -->
+
+    <!-- Eye -->
+    <ellipse cx="465" cy="105" rx="7" ry="9" fill="#0052cc"/>
+    <circle cx="463" cy="102" r="2.5" fill="#ffffff"/>
+
+    <!-- Mane -->
+    <path d="M 365 210 Q 380 160 415 85 Q 410 110 425 70 Q 420 95 435 55 L 410 110 L 360 220 Z" fill="#0052cc"/>
+
+    <!-- Ears -->
+    <!-- Back Ear -->
+    <path d="M 425 80 C 410 20 440 -10 455 0 C 465 15 450 50 440 75 Z" fill="#bae6fd" stroke="#0052cc" stroke-width="4"/>
+    <!-- Front Ear -->
+    <path d="M 445 75 C 430 10 465 -20 480 -10 C 490 10 470 50 455 75 Z" fill="#e0f2fe" stroke="#0052cc" stroke-width="4"/>
+    <path d="M 455 55 C 448 20 468 5 473 10 C 478 20 468 45 460 58 Z" fill="#3b82f6" opacity="0.3"/>
+  </g>
+</svg>

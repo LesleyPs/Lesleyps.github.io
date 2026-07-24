@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="100%" height="100%">
+  <defs>
+    <!-- Grid Pattern -->
+    <pattern id="wfGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#0052cc" stroke-width="1" stroke-opacity="0.06" />
+    </pattern>
+    <linearGradient id="wfBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <linearGradient id="card1Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+    <linearGradient id="card2Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <linearGradient id="card3Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#bae6fd"/>
+    </linearGradient>
+    <linearGradient id="card4Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#dcfce7"/>
+      <stop offset="100%" stop-color="#86efac"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0052cc" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="600" fill="url(#wfBg)"/>
+  <rect width="1200" height="600" fill="url(#wfGrid)"/>
+
+  <!-- MAIN HEADING -->
+  <text x="600" y="55" font-family="'Manrope', sans-serif" font-weight="800" font-size="28" letter-spacing="2" fill="#0052cc" text-anchor="middle">
+    RAPID UX ITERATION &amp; PROTOTYPING PIPELINE
+  </text>
+  <line x1="450" y1="70" x2="750" y2="70" stroke="#eab308" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- CARD 1: UX Direction & Mental Model -->
+  <g transform="translate(60, 110)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="240" height="420" rx="20" fill="url(#card1Grad)" stroke="#3b82f6" stroke-width="2.5"/>
+    <text x="120" y="45" font-family="'Manrope', sans-serif" font-weight="800" font-size="17" fill="#1e3a8a" text-anchor="middle">
+      UX Direction &amp;
+    </text>
+    <text x="120" y="68" font-family="'Manrope', sans-serif" font-weight="800" font-size="17" fill="#1e3a8a" text-anchor="middle">
+      Mental Model
+    </text>
+
+    <!-- Wireframe Drawing Illustration -->
+    <g transform="translate(45, 110)">
+      <rect x="0" y="0" width="150" height="240" rx="16" fill="#ffffff" stroke="#2563eb" stroke-width="3"/>
+      <rect x="15" y="20" width="120" height="20" rx="4" fill="#dbeafe"/>
+      <rect x="15" y="50" width="120" height="70" rx="8" fill="#f1f5f9" stroke="#93c5fd" stroke-width="2"/>
+      <!-- Wireframe X -->
+      <line x1="15" y1="50" x2="135" y2="120" stroke="#cbd5e1" stroke-width="2"/>
+      <line x1="135" y1="50" x2="15" y2="120" stroke="#cbd5e1" stroke-width="2"/>
+      <rect x="15" y="130" width="55" height="40" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+      <rect x="80" y="130" width="55" height="40" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+      <rect x="15" y="180" width="120" height="35" rx="6" fill="#2563eb"/>
+
+      <!-- Hand holding Stylus -->
+      <path d="M 120 100 L 170 60 L 180 70 L 130 110 Z" fill="#f59e0b"/>
+      <polygon points="120,100 128,102 122,108" fill="#1e293b"/>
+    </g>
+  </g>
+
+  <!-- ARROW 1 -> 2 -->
+  <g transform="translate(305, 300)">
+    <path d="M 0 0 L 25 0" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round"/>
+    <polygon points="32,0 20,-7 20,7" fill="#2563eb"/>
+  </g>
+
+  <!-- CARD 2: AI Studio Prompts -->
+  <g transform="translate(340, 110)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="240" height="420" rx="20" fill="url(#card2Grad)" stroke="#d97706" stroke-width="2.5"/>
+    <text x="120" y="45" font-family="'Manrope', sans-serif" font-weight="800" font-size="17" fill="#78350f" text-anchor="middle">
+      AI Studio
+    </text>
+    <text x="120" y="68" font-family="'Manrope', sans-serif" font-weight="800" font-size="17" fill="#78350f" text-anchor="middle">
+      Prompts
+    </text>
+
+    <!-- Code Window Graphic -->
+    <g transform="translate(25, 110)">
+      <rect x="0" y="0" width="190" height="240" rx="12" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+      <circle cx="15" cy="15" r="5" fill="#ef4444"/>
+      <circle cx="30" cy="15" r="5" fill="#f59e0b"/>
+      <circle cx="45" cy="15" r="5" fill="#10b981"/>
+      <line x1="0" y1="30" x2="190" y2="30" stroke="#334155" stroke-width="1.5"/>
+
+      <text x="15" y="55" font-family="'Geist Mono', monospace" font-size="11" fill="#f59e0b">&gt; draft clean</text>
+      <text x="15" y="75" font-family="'Geist Mono', monospace" font-size="11" fill="#ffffff">  travel card...</text>
+      <rect x="110" y="65" width="2" height="12" fill="#ffffff"/>
+
+      <text x="15" y="115" font-family="'Geist Mono', monospace" font-size="12" fill="#38bdf8">&lt;html&gt;</text>
+      <text x="25" y="135" font-family="'Geist Mono', monospace" font-size="11" fill="#a7f3d0">{context}</text>
+      <text x="25" y="155" font-family="'Geist Mono', monospace" font-size="11" fill="#fef08a">&lt;MapPin /&gt;</text>
+      <text x="15" y="175" font-family="'Geist Mono', monospace" font-size="12" fill="#38bdf8">&lt;/html&gt;</text>
+    </g>
+  </g>
+
+  <!-- ARROW 2 -> 3 -->
+  <g transform="translate(585, 300)">
+    <path d="M 0 0 L 25 0" fill="none" stroke="#d97706" stroke-width="4" stroke-linecap="round"/>
+    <polygon points="32,0 20,-7 20,7" fill="#d97706"/>
+  </g>
+
+  <!-- CARD 3: Interactive Map Simulations -->
+  <g transform="translate(620, 110)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="240" height="420" rx="20" fill="url(#card3Grad)" stroke="#0284c7" stroke-width="2.5"/>
+    <text x="120" y="45" font-family="'Manrope', sans-serif" font-weight="800" font-size="17" fill="#0c4a6e" text-anchor="middle">
+      Interactive Map
+    </text>
+    <text x="120" y="68" font-family="'Manrope', sans-serif" font-weight="800" font-size="17" fill="#0c4a6e" text-anchor="middle">
+      Simulations
+    </text>
+
+    <!-- Map & Bubbles Graphic -->
+    <g transform="translate(25, 110)">
+      <rect x="0" y="0" width="190" height="240" rx="12" fill="#ffffff" stroke="#38bdf8" stroke-width="2"/>
+      <!-- Map Grid roads -->
+      <path d="M 0 60 L 190 80 M 0 160 L 190 140 M 80 0 L 100 240 M 140 0 L 120 240" stroke="#bae6fd" stroke-width="8" fill="none"/>
+      <!-- Pin 1 -->
+      <g transform="translate(60, 90)">
+        <path d="M 0 -16 C -8 -16 -12 -10 -12 0 C -12 10 0 20 0 20 C 0 20 12 10 12 0 C 12 -10 8 -16 0 -16 Z" fill="#0284c7"/>
+        <circle cx="0" cy="-4" r="4" fill="#ffffff"/>
+      </g>
+      <!-- Pin 2 -->
+      <g transform="translate(130, 130)">
+        <path d="M 0 -20 C -10 -20 -15 -12 -15 0 C -15 12 0 24 0 24 C 0 24 15 12 15 0 C 15 -12 10 -20 0 -20 Z" fill="#eab308"/>
+        <circle cx="0" cy="-5" r="5" fill="#ffffff"/>
+      </g>
+
+      <!-- Speech Bubble -->
+      <rect x="20" y="10" width="110" height="35" rx="8" fill="#0284c7"/>
+      <text x="75" y="32" font-family="'Manrope', sans-serif" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">5 min walk to gate</text>
+    </g>
+  </g>
+
+  <!-- ARROW 3 -> 4 -->
+  <g transform="translate(865, 300)">
+    <path d="M 0 0 L 25 0" fill="none" stroke="#0284c7" stroke-width="4" stroke-linecap="round"/>
+    <polygon points="32,0 20,-7 20,7" fill="#0284c7"/>
+  </g>
+
+  <!-- CARD 4: Live MVP -->
+  <g transform="translate(900, 110)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="240" height="420" rx="20" fill="url(#card4Grad)" stroke="#15803d" stroke-width="2.5"/>
+    <text x="120" y="45" font-family="'Manrope', sans-serif" font-weight="800" font-size="18" fill="#14532d" text-anchor="middle">
+      Live MVP
+    </text>
+    <text x="120" y="68" font-family="'Geist Mono', monospace" font-size="11" font-weight="700" fill="#166534" text-anchor="middle">
+      DonkeyDonkeyAI.com
+    </text>
+
+    <!-- Smartphone with Live App Screen -->
+    <g transform="translate(45, 100)">
+      <rect x="0" y="0" width="150" height="260" rx="24" fill="#0f172a" stroke="#15803d" stroke-width="3"/>
+      <!-- Notch -->
+      <rect x="50" y="8" width="50" height="10" rx="5" fill="#1e293b"/>
+
+      <!-- Screen Body -->
+      <rect x="8" y="24" width="134" height="224" rx="16" fill="#ffffff"/>
+
+      <text x="75" y="55" font-family="'Manrope', sans-serif" font-weight="800" font-size="12" fill="#0052cc" text-anchor="middle">Donkey AI</text>
+
+      <!-- Live pill -->
+      <rect x="45" y="65" width="60" height="18" rx="9" fill="#dcfce7"/>
+      <circle cx="57" cy="74" r="4" fill="#22c55e"/>
+      <text x="78" y="78" font-family="'Manrope', sans-serif" font-weight="800" font-size="9" fill="#15803d" text-anchor="middle">LIVE</text>
+
+      <!-- Input UI -->
+      <rect x="20" y="95" width="110" height="24" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+      <rect x="20" y="125" width="110" height="24" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+
+      <!-- CTA Button -->
+      <rect x="20" y="170" width="110" height="30" rx="8" fill="#0052cc"/>
+      <text x="75" y="189" font-family="'Manrope', sans-serif" font-weight="700" font-size="11" fill="#ffffff" text-anchor="middle">Search Hotels</text>
+    </g>
+  </g>
+</svg>

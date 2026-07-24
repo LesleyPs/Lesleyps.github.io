@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="100%" height="100%">
+  <defs>
+    <!-- Grid Pattern -->
+    <pattern id="logicGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#0052cc" stroke-width="1" stroke-opacity="0.06" />
+    </pattern>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#eff6ff"/>
+    </linearGradient>
+    <linearGradient id="stepGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f0f7ff"/>
+    </linearGradient>
+    <linearGradient id="highlightGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="100%" stop-color="#fef3c7"/>
+    </linearGradient>
+    <filter id="boxShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#0052cc" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="680" fill="url(#bgGrad)"/>
+  <rect width="1200" height="680" fill="url(#logicGrid)"/>
+
+  <!-- City Skyline Silhouette Background -->
+  <path d="M 0 540 L 40 540 L 40 460 L 80 460 L 80 500 L 120 500 L 120 420 L 170 420 L 170 540 L 220 540 L 220 480 L 280 480 L 280 540 L 880 540 L 880 440 L 930 440 L 930 490 L 980 490 L 980 390 L 1030 390 L 1030 540 L 1080 540 L 1080 460 L 1150 460 L 1150 540 L 1200 540 L 1200 680 L 0 680 Z" fill="#93c5fd" opacity="0.15"/>
+
+  <!-- TITLE BANNER -->
+  <text x="600" y="55" font-family="'Manrope', 'Geist Mono', sans-serif" font-weight="800" font-size="30" letter-spacing="3" fill="#0052cc" text-anchor="middle">
+    DONKEY AI PROCESSING LOGIC
+  </text>
+  <line x1="420" y1="70" x2="780" y2="70" stroke="#eab308" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- PROMPT INPUT BOX (Top Center) -->
+  <g transform="translate(360, 95)" filter="url(#boxShadow)">
+    <rect x="0" y="0" width="480" height="60" rx="16" fill="#ffffff" stroke="#0052cc" stroke-width="2.5"/>
+    <text x="240" y="36" font-family="'Manrope', sans-serif" font-weight="600" font-size="16" fill="#1e293b" text-anchor="middle">
+      “Hotels within walking distance of Disneyland for a family of 4.”
+    </text>
+  </g>
+
+  <!-- Flow Arrow from Input Down to Split -->
+  <path d="M 600 155 L 600 180" fill="none" stroke="#0052cc" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="600,188 594,178 606,178" fill="#0052cc"/>
+
+  <!-- LEFT BRANCH: ENTITY EXTRACTION & MASCOT -->
+  <g transform="translate(60, 200)">
+    <!-- Mascot Rearing Up -->
+    <g transform="translate(0, 40) scale(0.85)">
+      <!-- Rearing Legs -->
+      <path d="M 120 320 L 80 410 L 115 415 L 140 330 Z" fill="#93c5fd" opacity="0.7"/>
+      <path d="M 160 330 L 140 415 L 175 420 L 195 340 Z" fill="#2563eb" opacity="0.9"/>
+      <rect x="80" y="405" width="35" height="12" rx="3" fill="#1e3a8a"/>
+      <rect x="140" y="410" width="35" height="12" rx="3" fill="#0f172a"/>
+
+      <!-- Rearing Front Legs in air -->
+      <path d="M 220 200 Q 250 140 280 160 Q 260 190 230 220 Z" fill="#2563eb"/>
+      <path d="M 230 220 Q 280 180 300 210 Q 270 230 240 250 Z" fill="#93c5fd"/>
+
+      <!-- Body & Neck -->
+      <path d="M 110 260 C 100 190 180 170 240 200 C 270 140 330 80 370 70 C 400 80 410 110 390 140 C 350 200 300 280 220 300 Z" fill="#e0f2fe" stroke="#0052cc" stroke-width="4"/>
+      <!-- Snout & Ears -->
+      <path d="M 370 70 C 400 60 425 80 405 105 Z" fill="#ffffff" stroke="#0052cc" stroke-width="3"/>
+      <path d="M 340 70 C 330 20 360 -10 375 0 C 385 15 365 50 355 75 Z" fill="#e0f2fe" stroke="#0052cc" stroke-width="3"/>
+      <circle cx="370" cy="85" r="4" fill="#0052cc"/>
+      <!-- Compass -->
+      <circle cx="210" cy="220" r="18" fill="#ffffff" stroke="#0052cc" stroke-width="2"/>
+      <polygon points="210,206 214,220 210,223 206,220" fill="#0052cc"/>
+      <polygon points="210,234 214,220 210,217 206,220" fill="#eab308"/>
+    </g>
+
+    <!-- ENTITY EXTRACTION HIGHLIGHT CARD -->
+    <g transform="translate(180, 20)" filter="url(#boxShadow)">
+      <rect x="0" y="0" width="310" height="150" rx="16" fill="url(#highlightGrad)" stroke="#0052cc" stroke-width="2.5"/>
+      <!-- Icons in Extraction -->
+      <g transform="translate(25, 25)">
+        <path d="M 12 0 C 4 0 0 6 0 12 C 0 20 12 32 12 32 C 12 32 24 20 24 12 C 24 6 20 0 12 0 Z" fill="#eab308"/>
+        <circle cx="12" cy="10" r="4" fill="#ffffff"/>
+      </g>
+      <g transform="translate(130, 25)" fill="#0052cc">
+        <circle cx="10" cy="8" r="6"/>
+        <path d="M 0 24 C 0 18 4 15 10 15 C 16 15 20 18 20 24 Z"/>
+        <circle cx="28" cy="10" r="5"/>
+        <path d="M 20 24 C 20 19 23 17 28 17 C 33 17 36 19 36 24 Z"/>
+      </g>
+      <text x="155" y="95" font-family="'Manrope', sans-serif" font-weight="800" font-size="14" letter-spacing="1" fill="#0052cc" text-anchor="middle">
+        KEY ENTITY EXTRACTION:
+      </text>
+      <text x="155" y="118" font-family="'Geist Mono', monospace" font-weight="600" font-size="13" fill="#1e293b" text-anchor="middle">
+        [Location: Disneyland]
+      </text>
+      <text x="155" y="136" font-family="'Geist Mono', monospace" font-weight="600" font-size="13" fill="#1e293b" text-anchor="middle">
+        [Parameters: Family (4)]
+      </text>
+    </g>
+  </g>
+
+  <!-- Arrow connecting Entity Extraction to DB Query -->
+  <path d="M 550 295 L 610 295" fill="none" stroke="#0052cc" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="620,295 608,289 608,301" fill="#0052cc"/>
+
+  <!-- RIGHT BRANCH: SEQUENTIAL STEPS FLOW -->
+  <!-- STEP 2 -->
+  <g transform="translate(620, 200)" filter="url(#boxShadow)">
+    <rect x="0" y="0" width="360" height="70" rx="14" fill="url(#stepGrad)" stroke="#0052cc" stroke-width="2"/>
+    <text x="180" y="28" font-family="'Manrope', sans-serif" font-weight="800" font-size="14" letter-spacing="1" fill="#0052cc" text-anchor="middle">
+      STEP 2: DATABASE QUERY
+    </text>
+    <text x="180" y="50" font-family="'Manrope', sans-serif" font-weight="500" font-size="13" fill="#475569" text-anchor="middle">
+      (Filter by Location Radius)
+    </text>
+  </g>
+
+  <path d="M 800 270 L 800 300" fill="none" stroke="#0052cc" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="800,308 795,298 805,298" fill="#0052cc"/>
+
+  <!-- STEP 3 -->
+  <g transform="translate(620, 310)" filter="url(#boxShadow)">
+    <rect x="0" y="0" width="360" height="70" rx="14" fill="url(#stepGrad)" stroke="#0052cc" stroke-width="2"/>
+    <text x="180" y="28" font-family="'Manrope', sans-serif" font-weight="800" font-size="14" letter-spacing="1" fill="#0052cc" text-anchor="middle">
+      STEP 3: CAPACITY CHECK
+    </text>
+    <text x="180" y="50" font-family="'Manrope', sans-serif" font-weight="500" font-size="13" fill="#475569" text-anchor="middle">
+      (Filter by Room Size &gt; 4)
+    </text>
+  </g>
+
+  <path d="M 800 380 L 800 410" fill="none" stroke="#0052cc" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="800,418 795,408 805,408" fill="#0052cc"/>
+
+  <!-- STEP 4 -->
+  <g transform="translate(620, 420)" filter="url(#boxShadow)">
+    <rect x="0" y="0" width="360" height="70" rx="14" fill="url(#stepGrad)" stroke="#0052cc" stroke-width="2"/>
+    <text x="180" y="28" font-family="'Manrope', sans-serif" font-weight="800" font-size="14" letter-spacing="1" fill="#0052cc" text-anchor="middle">
+      STEP 4: PROXIMITY RANKING
+    </text>
+    <text x="180" y="50" font-family="'Manrope', sans-serif" font-weight="500" font-size="13" fill="#475569" text-anchor="middle">
+      (Calculate Walking Times &amp; WalkScores)
+    </text>
+  </g>
+
+  <path d="M 800 490 L 800 520" fill="none" stroke="#0052cc" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="800,528 795,518 805,518" fill="#0052cc"/>
+
+  <!-- STEP 5 -->
+  <g transform="translate(620, 530)" filter="url(#boxShadow)">
+    <rect x="0" y="0" width="360" height="85" rx="16" fill="#ffffff" stroke="#0052cc" stroke-width="2.5"/>
+    <text x="180" y="32" font-family="'Manrope', sans-serif" font-weight="800" font-size="15" letter-spacing="1" fill="#0052cc" text-anchor="middle">
+      STEP 5: OUTPUT UI GENERATION
+    </text>
+    <text x="180" y="56" font-family="'Manrope', sans-serif" font-weight="600" font-size="13" fill="#1e293b" text-anchor="middle">
+      (Construct Result Cards &amp; Interactive Map)
+    </text>
+  </g>
+</svg>

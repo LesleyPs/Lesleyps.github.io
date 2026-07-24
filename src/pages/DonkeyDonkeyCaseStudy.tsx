@@ -1,13 +1,15 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { Reveal } from '../components/Reveal';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { ArrowLeft, ArrowRight, BookOpen, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { DonkeyArticleOverlay } from '../components/DonkeyArticleOverlay';
 
 export default function DonkeyDonkeyCaseStudy() {
   const { scrollY } = useScroll();
   const x = useTransform(scrollY, [0, 1000], [0, -400]);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [isArticleOpen, setIsArticleOpen] = useState(false);
   const images = [
     "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-conversational-greeting@2x.webp?raw=true",
     "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-conversational-events@2x.webp?raw=true",
@@ -105,7 +107,7 @@ export default function DonkeyDonkeyCaseStudy() {
             <h2 className="font-sans font-semibold text-[clamp(28px,4.5vw,56px)] leading-[1.15em] tracking-[-0.03em] text-blue max-w-6xl mb-10">
               Neighborhood intelligence meets conversational AI.
             </h2>
-            <div>
+            <div className="flex flex-wrap items-center gap-4">
               <a 
                 href="https://DonkeyDonkeyAI.com" 
                 target="_blank" 
@@ -114,6 +116,12 @@ export default function DonkeyDonkeyCaseStudy() {
               >
                 View MVP Version <ArrowRight size={14} className="group-hover:translate-x-1.5 transition-transform" />
               </a>
+              <button 
+                onClick={() => setIsArticleOpen(true)}
+                className="inline-flex items-center gap-2.5 font-mono text-[13px] font-bold tracking-[1.5px] uppercase bg-cream text-blue hover:bg-blue/10 border border-blue px-7 py-4 shadow-sm transition-all group cursor-pointer"
+              >
+                <BookOpen size={16} /> Inside the Build <Sparkles size={14} className="text-amber-500 group-hover:scale-125 transition-transform" />
+              </button>
             </div>
           </Reveal>
         </div>
@@ -223,24 +231,52 @@ export default function DonkeyDonkeyCaseStudy() {
         </Reveal>
       </section>
 
-      {/* DESIGN RATIONALE: VIBE CODING */}
-      <section className="w-full border-b border-blue p-[120px_30px] bg-blue/5">
+      {/* FEATURED UX BACKSTORY PROMOTER CARD */}
+      <section className="w-full border-b border-blue p-[100px_30px] bg-blue/5">
         <div className="max-w-6xl mx-auto">
           <Reveal>
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
-              <div className="lg:col-span-5">
-                <p className="font-mono text-[13px] tracking-[3px] opacity-60 mb-8 uppercase">Design Methodology</p>
-                <h3 className="font-sans font-semibold text-[clamp(28px,4vw,42px)] leading-[1.1em] tracking-[-0.03em] text-blue mb-8">
-                  Interactive Prototyping
-                </h3>
-              </div>
-              <div className="lg:col-span-7 flex flex-col justify-center">
-                <p className="font-mono text-[18px] leading-[1.7em] text-blue/90 font-medium italic mb-8">
-                  "Moving beyond static screens to high-fidelity, interactive sandbox prototypes that validate complex interactions and state-based responsive motion directly."
-                </p>
-                <p className="font-mono text-[16px] leading-[1.8em] text-blue/80">
-                  By utilizing advanced in-browser prototyping frameworks, we bypassed traditional static layout stages. This allowed us to immediately stress-test fluid elastic physics, dynamic system-wide light/dark transitions, and adaptive context cards, leading to rapid usability refinement.
-                </p>
+            <div className="bg-cream border border-blue p-8 sm:p-12 md:p-16 shadow-xl relative overflow-hidden">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div className="lg:col-span-7">
+                  <div className="inline-flex items-center gap-2 font-mono text-[11px] font-bold uppercase tracking-[2px] bg-blue text-cream px-3.5 py-1.5 mb-6">
+                    <BookOpen size={13} /> Featured Build Breakdown
+                  </div>
+                  <h3 className="font-sans font-bold text-[clamp(28px,4.2vw,42px)] leading-[1.12em] tracking-[-0.03em] text-blue mb-4">
+                    Shipping an MVP at AI Speed
+                  </h3>
+                  <p className="font-mono text-[15px] leading-[1.7em] text-blue/80 mb-8 max-w-2xl font-medium">
+                    How Prompt-Driven Prototyping Bridged Design, Code, and Engineering for Donkey Donkey AI
+                  </p>
+                  <div className="flex flex-wrap items-center gap-6">
+                    <button
+                      onClick={() => setIsArticleOpen(true)}
+                      className="inline-flex items-center gap-3 font-mono text-[13px] font-bold tracking-[1.5px] uppercase bg-blue text-cream hover:bg-blue/90 border border-blue px-8 py-4 shadow-md transition-all group cursor-pointer"
+                    >
+                      Read Full Article <ArrowRight size={14} className="group-hover:translate-x-1.5 transition-transform" />
+                    </button>
+                    <span className="font-mono text-[12px] text-blue/60 uppercase tracking-[1px]">
+                      5 MIN READ · BY LESLEY PIERCEFIELD
+                    </span>
+                  </div>
+                </div>
+                <div className="lg:col-span-5 flex justify-center">
+                  <div 
+                    onClick={() => setIsArticleOpen(true)}
+                    className="w-full max-w-sm aspect-[4/3] bg-blue/10 border border-blue/30 overflow-hidden shadow-md cursor-pointer group relative"
+                  >
+                    <img 
+                      src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-Donkey-AI-thumbnail.webp?raw=true" 
+                      alt="Shipping an MVP at AI Speed Thumbnail" 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute inset-0 bg-blue/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-xs">
+                      <span className="font-mono text-[12px] font-bold uppercase tracking-[1.5px] bg-cream text-blue px-4 py-2 border border-blue shadow-lg">
+                        Click to Open Article
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </Reveal>
@@ -292,6 +328,9 @@ export default function DonkeyDonkeyCaseStudy() {
           </Link>
         </Reveal>
       </section>
+
+      {/* MEDIUM-STYLE UX ARTICLE OVERLAY */}
+      <DonkeyArticleOverlay isOpen={isArticleOpen} onClose={() => setIsArticleOpen(false)} />
     </div>
   );
 }
