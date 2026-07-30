@@ -10,11 +10,11 @@ import markMamberAvatar from '../assets/images/mark_mamber_avatar_1779762406713.
 const HOME_SLIDES = [
   {
     url: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki-Tab-Unit-Gallery@2x.webp?raw=true",
-    title: "Tiki Tab Unit Ecosystem",
+    title: "Tiki Interactive Ad Unit UI",
     agency: "Clicktripz Ad Tech",
     zoom: true,
     zoomDirection: "in",
-    effect: "blue-light-leak",
+    effect: "blue-slide-over",
     isDarkBg: false
   },
   {
@@ -23,7 +23,7 @@ const HOME_SLIDES = [
     agency: "Donkey Donkey AI",
     zoom: true,
     zoomDirection: "out",
-    effect: "shutter-flash",
+    effect: "blue-slide-over",
     isDarkBg: false
   },
   {
@@ -32,7 +32,7 @@ const HOME_SLIDES = [
     agency: "Tiki Ad Tech",
     zoom: true,
     zoomDirection: "pan-up",
-    effect: "blue-light-leak",
+    effect: "blue-slide-over",
     isDarkBg: false
   },
   {
@@ -41,7 +41,7 @@ const HOME_SLIDES = [
     agency: "Crackle Connected TV",
     zoom: false,
     zoomDirection: "none",
-    effect: "tv-glitch",
+    effect: "blue-slide-over",
     isDarkBg: true
   },
   {
@@ -660,8 +660,8 @@ export default function Home() {
               company: "Tiki",
               industry: "Ad Tech",
               year: "2017 — 2024",
-              category: "Enterprise UX / AdTech",
-              description: "Designing a unified product ecosystem for one of travel's leading ad tech platforms.",
+              category: "Interactive Ad Unit UI",
+              description: "Designing interactive ad unit UI and high-yield placements for travel's leading ad tech platforms.",
               img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki-Tab-Unit-Gallery@2x.webp?raw=true",
               link: "/projects/tiki"
             },

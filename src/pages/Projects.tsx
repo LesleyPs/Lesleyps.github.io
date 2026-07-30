@@ -83,14 +83,14 @@ const galleryItems = [
   // 5. Tiki Tab Unit Case Study (interactive, desktop)
   {
     id: "tiki-tab-unit",
-    title: "Clicktripz Core Placement",
+    title: "Interactive Ad Unit UI",
     company: "Tiki",
     industry: "Ad Tech",
-    category: "High-Intent Browser Tab Unit",
+    category: "Interactive Ad Unit UI",
     img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki-Tab-Unit-Gallery@2x.webp?raw=true",
     link: "/projects/tiki",
     aspect: "aspect-[16/10]",
-    platform: "High-Yield Ad Unit",
+    platform: "Interactive Ad Unit UI",
     badge: "Ad Unit",
     badgeIcon: "ad",
     isTv: false
@@ -98,14 +98,14 @@ const galleryItems = [
   // 6. Tiki Optimized Tab Unit (interactive, desktop)
   {
     id: "tiki-tab-unit-max",
-    title: "Optimized High-Yield Tab Unit",
+    title: "Optimized High-Yield Ad Unit UI",
     company: "Tiki",
     industry: "Ad Tech",
-    category: "Evolving Placements · Tab UX",
+    category: "Interactive Ad Unit UI",
     img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/Tiki_tab-unit-max@2x.webp?raw=true",
     link: "/projects/tiki",
     aspect: "aspect-[16/10]",
-    platform: "High-Yield Ad Unit",
+    platform: "Interactive Ad Unit UI",
     badge: "Ad Unit",
     badgeIcon: "ad",
     isTv: false
@@ -116,11 +116,11 @@ const galleryItems = [
     title: "Wetter Campaign Unit",
     company: "Tiki",
     industry: "Ad Tech",
-    category: "Evolving Placements · Campaign UX",
+    category: "Interactive Ad Unit UI",
     img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/wetter-travel@2x.webp?raw=true",
     link: "/projects/tiki",
     aspect: "aspect-[16/10]",
-    platform: "Native Campaign Ad Unit",
+    platform: "Interactive Ad Unit UI",
     badge: "Ad Unit",
     badgeIcon: "ad",
     isTv: false

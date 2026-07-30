@@ -43,7 +43,7 @@ export default function TikiCaseStudy() {
           <div className="aspect-video w-full relative">
             <img 
               src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki-Tab-Unit-Gallery@2x.webp?raw=true" 
-              alt="Tiki Envoy Ecosystem Hero" 
+              alt="Tiki Envoy Interactive Ad Unit Hero" 
               className="w-full h-full object-cover transition-all duration-1000 ease-out"
               referrerPolicy="no-referrer"
               id="tiki-hero-img"
@@ -309,7 +309,7 @@ export default function TikiCaseStudy() {
           <Reveal>
             <p className="font-mono text-[13px] tracking-[3px] opacity-60 mb-8 uppercase">Case Study 03 // Ad Tech & Retention Placements</p>
             <h2 className="font-sans font-semibold text-[clamp(32px,5vw,64px)] leading-[1.1em] tracking-[-0.04em] text-blue max-w-5xl">
-              The Tab Unit: Redirecting traveler intent and boosting retention through native ad placements.
+              Interactive Ad Unit UI: Redirecting traveler intent and boosting retention through native ad placements.
             </h2>
           </Reveal>
         </div>
@@ -361,18 +361,18 @@ export default function TikiCaseStudy() {
       <section className="w-full border-b border-blue overflow-hidden bg-cream p-10 sm:p-20" id="tab-comparisons">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
           <Reveal>
-            <p className="font-mono text-[12px] opacity-50 uppercase tracking-[2px] mb-3 text-center">Legacy Tab Unit Format</p>
+            <p className="font-mono text-[12px] opacity-50 uppercase tracking-[2px] mb-3 text-center">Legacy Interactive Ad Unit UI</p>
             <div className="w-full overflow-hidden">
               <img 
                 src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/old-tab-unit@2x.png?raw=true" 
-                alt="Old Tab Unit" 
+                alt="Old Interactive Ad Unit UI" 
                 className="w-full h-auto"
                 referrerPolicy="no-referrer"
               />
             </div>
           </Reveal>
           <Reveal delay={0.15}>
-            <p className="font-mono text-[12px] opacity-50 uppercase tracking-[2px] mb-3 text-center">Optimized High-Yield Tab Unit</p>
+            <p className="font-mono text-[12px] opacity-50 uppercase tracking-[2px] mb-3 text-center">Optimized High-Yield Interactive Ad Unit UI</p>
             <div className="w-full overflow-hidden">
               <img 
                 src="https://github.com/LesleyPs/old-protflio/blob/main/assets/Tiki_tab-unit-max@2x.webp?raw=true" 
