@@ -36,7 +36,7 @@ const HOME_SLIDES = [
     isDarkBg: false
   },
   {
-    url: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Crackle-Xbox-TV-Screen.png?raw=true",
+    url: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Crackle-pluse-signup-screen@2x.webp?raw=true",
     title: "Sony Crackle TV Platform",
     agency: "Crackle Connected TV",
     zoom: false,
