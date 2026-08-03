@@ -134,11 +134,11 @@ export default function CrackleCaseStudy() {
                 </h3>
               </div>
               <div className="lg:col-span-7 flex flex-col justify-center">
-                <p className="font-mono text-[18px] leading-[1.7em] text-blue/90 font-medium italic mb-8">
-                  "Recontextualizing standard conversion milestones as value-driven accomplishments to minimize registration abandonment."
+                <p className="font-mono text-[18px] leading-[1.7em] text-blue/90 font-medium italic mb-6">
+                  "Reframing 'Sign Up' as 'Unlock' emphasized immediate value and reduced registration drop-offs."
                 </p>
                 <p className="font-mono text-[16px] leading-[1.8em] text-blue/80">
-                  While <span className="underline decoration-blue/30 underline-offset-4">"Sign Up"</span> signals effort and data-sharing friction to users, <span className="text-blue font-bold">"Unlock"</span> emphasizes immediate access to desired media. Reframing this functional gate as a rewarding milestone resulted in smoother onboarding and higher intent activation without altering the technical back-end system.
+                  While <span className="underline decoration-blue/30 underline-offset-4">"Sign Up"</span> can feel like a chore, <span className="text-blue font-bold">"Unlock"</span> focuses on the reward—immediate access to great content. A simple copy shift made onboarding feel encouraging and natural without touching backend code.
                 </p>
               </div>
             </div>
@@ -198,11 +198,11 @@ export default function CrackleCaseStudy() {
                 </h3>
               </div>
               <div className="lg:col-span-7 flex flex-col justify-center">
-                <p className="font-mono text-[18px] leading-[1.7em] text-blue/90 font-medium italic mb-8">
-                  "Converting high-friction registration moments into a seamless state preservation flow."
+                <p className="font-mono text-[18px] leading-[1.7em] text-blue/90 font-medium italic mb-6">
+                  "Letting guest users sign up without losing their place in a show made creating an account feel effortless."
                 </p>
                 <p className="font-mono text-[16px] leading-[1.8em] text-blue/80">
-                  Guest users often abandon streams when prompted to sign up, losing their playback position and history. By implementing a local-to-cloud transition bridge, we preserve the guest's local state—including active pause position and watch history—and automatically synchronize it to their new account upon completion of the simplified registration flow. This frictionless transition eliminated the "temporary state challenge," preserving the exact moment they left off.
+                  Guest users often abandon streams when prompted to sign up because they lose their spot. We designed a background handoff that saves their watch history and pause position locally, then syncs it the moment they create an account—so they pick up right where they left off.
                 </p>
               </div>
             </div>

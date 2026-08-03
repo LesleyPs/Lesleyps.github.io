@@ -177,7 +177,7 @@ export default function DonkeyDonkeyCaseStudy() {
         <Reveal delay={0.4}>
           <div className="px-[30px] mt-[50px] max-w-3xl">
             <p className="font-mono text-[16px] leading-[1.8em] text-blue/70">
-              **Continuous Conversational Loops**: Reducing cognitive load by mapping multi-source local insights and complex geographic queries into standardized, responsive modules. Every state transition is designed around progressive disclosure—serving rich data only when the user requests deeper detail.
+              **Conversational Discovery**: Instead of overwhelming travelers with dense maps and lists, the assistant shares recommendations step by step—bringing up helpful details, photos, and tips right when the user asks for them.
             </p>
           </div>
         </Reveal>

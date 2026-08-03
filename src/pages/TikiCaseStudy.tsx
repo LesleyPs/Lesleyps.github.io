@@ -95,7 +95,7 @@ export default function TikiCaseStudy() {
           <Reveal>
             <p className="font-mono text-[13px] tracking-[3px] opacity-60 mb-8 uppercase">Case Study 01 // Generative UX</p>
             <h2 className="font-sans font-semibold text-[clamp(32px,5vw,64px)] leading-[1.1em] tracking-[-0.04em] text-blue max-w-5xl">
-              Envoy: A conversational assistant converting consideration into direct commerce.
+              Envoy: An AI conversational assistant driving traveler traffic to DMO websites.
             </h2>
           </Reveal>
         </div>
@@ -127,15 +127,15 @@ export default function TikiCaseStudy() {
               <div className="lg:col-span-5">
                 <p className="font-mono text-[13px] tracking-[3px] opacity-60 mb-8 uppercase">A/B Testing Insights</p>
                 <h3 className="font-sans font-semibold text-[clamp(28px,4vw,42px)] leading-[1.1em] tracking-[-0.03em] text-blue mb-8">
-                  Pills vs. Pure Text
+                  AI Prompt Suggestions
                 </h3>
               </div>
               <div className="lg:col-span-7 flex flex-col justify-center">
-                <p className="font-mono text-[18px] leading-[1.7em] text-blue/90 font-medium italic mb-8">
-                  "Iterative visual tuning and component placement reduced cognitive load and significantly improved traveler conversion rates."
+                <p className="font-mono text-[18px] leading-[1.7em] text-blue/90 font-medium italic mb-6">
+                  "Replacing cluttered keyword lists with clean prompt suggestions increased DMO click-throughs."
                 </p>
                 <p className="font-mono text-[16px] leading-[1.8em] text-blue/80">
-                  By comparing standard text hyperlinks with custom-engineered, localized recommendation pills, we discovered that surfacing structured rates directly within the chat interface significantly increased user trust and accelerated the booking decision flow.
+                  When destination partners asked for clickable prompts to highlight local experiences, the initial keyword lists felt cluttered and had low engagement. I redesigned them into clean, conversational prompt suggestions that made it easy for travelers to explore destination questions, significantly increasing click-through rates.
                 </p>
               </div>
             </div>
@@ -147,7 +147,7 @@ export default function TikiCaseStudy() {
       <section className="w-full border-b border-blue overflow-hidden bg-cream p-10 sm:p-20" id="envoy-variants-display">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
           <Reveal>
-            <p className="font-mono text-[12px] opacity-50 uppercase tracking-[2px] mb-3 text-center">Version A // Direct Conversion Map</p>
+            <p className="font-mono text-[12px] opacity-50 uppercase tracking-[2px] mb-3 text-center">Version A // DMO Destination Exploration Map</p>
             <div className="w-full overflow-hidden">
               <img 
                 src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/version%20A-1_2x.png?raw=true" 
@@ -158,7 +158,7 @@ export default function TikiCaseStudy() {
             </div>
           </Reveal>
           <Reveal delay={0.15}>
-            <p className="font-mono text-[12px] opacity-50 uppercase tracking-[2px] mb-3 text-center">Version B // Integrated Action Cards</p>
+            <p className="font-mono text-[12px] opacity-50 uppercase tracking-[2px] mb-3 text-center">Version B // AI Prompt Suggestions UI</p>
             <div className="w-full overflow-hidden">
               <img 
                 src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/version%20B-1_2x.png?raw=true" 
@@ -169,7 +169,9 @@ export default function TikiCaseStudy() {
             </div>
           </Reveal>
         </div>
-      </section>      {/* IMAGES: HEATMAP & V3 */}
+      </section>
+
+      {/* IMAGES: HEATMAP & V3 */}
       <section className="w-full border-b border-blue overflow-hidden bg-cream p-10 sm:p-20" id="envoy-heatmap-display">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
           <Reveal>
@@ -184,7 +186,7 @@ export default function TikiCaseStudy() {
             </div>
           </Reveal>
           <Reveal delay={0.15}>
-            <p className="font-mono text-[12px] opacity-50 uppercase tracking-[2px] mb-3 text-center">Option C // High Density Partner Referral Unit</p>
+            <p className="font-mono text-[12px] opacity-50 uppercase tracking-[2px] mb-3 text-center">Option C // High Density DMO Referral UI</p>
             <div className="w-full overflow-hidden">
               <img 
                 src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/V3-%20C-1_2x.png?raw=true" 
@@ -243,10 +245,10 @@ export default function TikiCaseStudy() {
               </div>
               <div className="lg:col-span-7 flex flex-col justify-center">
                 <p className="font-mono text-[18px] leading-[1.7em] text-blue/90 font-medium italic mb-8">
-                  "Transitioning frequency configuration forward as contextual prompts eliminated operational friction and simplified high-frequency tasks."
+                  "Moving frequency controls into on-spot overlays simplified daily campaign management."
                 </p>
                 <p className="font-mono text-[16px] leading-[1.8em] text-blue/80">
-                  Instead of routing platform managers through deeply nested setting panels, we surfaced key interactive limits inside on-spot overlays. This architectural shift maximized spatial awareness, speeded up campaign optimization, and virtually eliminated manual input error.
+                  Instead of burying settings in nested menus, we surfaced key controls right where managers needed them. This simpler workflow sped up campaign setup and reduced manual errors.
                 </p>
               </div>
             </div>
@@ -346,10 +348,10 @@ export default function TikiCaseStudy() {
               </div>
               <div className="lg:col-span-7 flex flex-col justify-center">
                 <p className="font-mono text-[18px] leading-[1.7em] text-blue/90 font-medium italic mb-8">
-                  "Redesigning spatial limits to deliver contextual, high-value partner deals inside a compact, unified utility format."
+                  "Replacing chaotic banners with a clean tab unit created clear paths for readers."
                 </p>
                 <p className="font-mono text-[16px] leading-[1.8em] text-blue/80">
-                  Replacing legacy chaotic display banners with a single, highly integrated Tab Unit allowed for multi-destination contextual offerings. This elegant layout provided clear conversion shortcuts for intent-driven readers without degrading the core editorial experience.
+                  We replaced cluttered display banners with a single, integrated tab unit for destination offers. This layout gave readers clear shortcuts to relevant deals while keeping the article reading experience clean.
                 </p>
               </div>
             </div>
