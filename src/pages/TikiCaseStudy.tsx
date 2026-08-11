@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { Reveal } from '../components/Reveal';
+import { VideoPlayer } from '../components/VideoPlayer';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -106,13 +107,9 @@ export default function TikiCaseStudy() {
         <div className="max-w-5xl w-full">
           <Reveal>
             <div className="w-full overflow-hidden">
-              <video 
+              <VideoPlayer 
                 src="https://www.dropbox.com/scl/fi/k2qc37zvtnkhagn35vbjf/tiki-enovy-drp.mp4?rlkey=go6duodfyujwutb6ok0ksk28s&st=uw6nac4f&raw=1"
-                autoPlay 
-                loop 
-                muted 
-                playsInline 
-                className="w-full h-auto object-cover scale-[1.02]"
+                id="envoy-video-player"
               />
             </div>
           </Reveal>
@@ -322,13 +319,9 @@ export default function TikiCaseStudy() {
         <div className="max-w-5xl w-full">
           <Reveal>
             <div className="w-full overflow-hidden">
-              <video 
+              <VideoPlayer 
                 src="https://www.dropbox.com/scl/fi/55l3fbya7v7owwbt958vc/Tiki-Tab-Unit-example.mp4?rlkey=tndihx2wlatani8cded664jbw&st=3w66eiuc&raw=1"
-                autoPlay 
-                loop 
-                muted 
-                playsInline 
-                className="w-full h-auto object-cover scale-[1.02]"
+                id="media-unit-video-player"
               />
             </div>
           </Reveal>

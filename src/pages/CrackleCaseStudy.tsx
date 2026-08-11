@@ -38,13 +38,13 @@ export default function CrackleCaseStudy() {
       </section>
 
       {/* HERO IMAGE */}
-      <section className="w-full border-b border-blue overflow-hidden bg-white">
+      <section className="w-full border-b border-blue overflow-hidden bg-black">
         <Reveal delay={0.2}>
-          <div className="aspect-video w-full relative">
+          <div className="aspect-video w-full relative bg-black">
             <img 
               src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Crackle-welcome-screen.png?raw=true" 
               alt="Sony Crackle Welcome Screen" 
-              className="w-full h-full object-cover transition-all duration-1000 ease-out"
+              className="w-full h-full object-contain bg-black transition-all duration-1000 ease-out"
               referrerPolicy="no-referrer"
             />
             <div className="absolute bottom-0 left-0 w-full bg-black/30 backdrop-blur-md border-t border-blue/20 py-8 overflow-hidden">
@@ -97,13 +97,13 @@ export default function CrackleCaseStudy() {
       </section>
 
       {/* IMAGE 2: TV PAGE */}
-      <section className="w-full border-b border-blue overflow-hidden bg-white p-10 sm:p-20">
+      <section className="w-full border-b border-blue overflow-hidden bg-black p-10 sm:p-20">
         <Reveal>
-          <div className="border border-blue/10">
+          <div className="border border-blue/10 bg-black">
             <img 
               src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Crackle-Xbox-TV-Screen.png?raw=true" 
               alt="TV Page Show Listings" 
-              className="w-full h-auto transition-all duration-1000"
+              className="w-full h-auto object-contain bg-black transition-all duration-1000"
               referrerPolicy="no-referrer"
             />
           </div>
