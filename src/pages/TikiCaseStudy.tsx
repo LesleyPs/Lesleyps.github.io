@@ -308,7 +308,7 @@ export default function TikiCaseStudy() {
           <Reveal>
             <p className="font-mono text-[13px] tracking-[3px] opacity-60 mb-8 uppercase">Case Study 03 // Ad Tech & Retention Placements</p>
             <h2 className="font-sans font-semibold text-[clamp(32px,5vw,64px)] leading-[1.1em] tracking-[-0.04em] text-blue max-w-5xl">
-              Interactive Ad Unit UI: Redirecting traveler intent and boosting retention through native ad placements.
+              Interactive Ad Unit UI: Driving traveler intent and boosting retention.
             </h2>
           </Reveal>
         </div>

@@ -690,12 +690,11 @@ export default function Home() {
           ].map((project, i) => (
             <Reveal key={i} delay={(i % 2) * 0.15 + Math.floor(i / 2) * 0.05}>
               <Link to={project.link} className="group block border border-blue/10 hover:border-blue/30 transition-colors">
-                  <div className={`work-card interactive group ${project.title === 'Sony Crackle' ? '!bg-black' : ''}`}>
+                  <div className="work-card interactive group">
                   <img 
                     src={project.img} 
                     alt={project.title} 
                     referrerPolicy="no-referrer" 
-                    className={project.title === 'Sony Crackle' ? '!object-contain !bg-black p-1' : ''} 
                   />
                   <div className="absolute inset-[14px] z-30 pointer-events-none opacity-0 group-hover:opacity-100 group-hover:inset-2.5 transition-all duration-400">
                     <div className="absolute top-0 left-0 w-[18px] h-[18px] border-t-2 border-l-2 border-white/80" />

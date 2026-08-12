@@ -183,15 +183,13 @@ function ProjectCard({
         className="relative overflow-hidden border border-blue/10 bg-white p-0 shadow-[0_4px_20px_rgba(0,0,0,0.02)] transition-all duration-500 ease-out group-hover/card:shadow-[0_12px_32px_rgba(0,102,255,0.06)] group-hover/card:border-blue/20 group-hover/card:-translate-y-1 cursor-pointer"
       >
         {/* Uniform 16:10 aspect ratio for equal image heights */}
-        <div className={`work-card interactive group relative overflow-hidden aspect-[16/10] w-full ${project.id.startsWith('crackle') ? '!bg-black' : 'bg-cream/10'}`}>
+        <div className="work-card interactive group relative overflow-hidden aspect-[16/10] w-full bg-cream/10">
           <img 
             src={project.img} 
             alt={project.title} 
             referrerPolicy="no-referrer" 
             className={`w-full h-full ${
-              project.id.startsWith('crackle')
-                ? '!object-contain !bg-black p-1'
-                : project.id === 'tiki-accuweather-unit'
+              project.id === 'tiki-accuweather-unit'
                 ? '!object-cover !object-top scale-[1.03] origin-left'
                 : 'object-cover object-top'
             }`} 

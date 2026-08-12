@@ -128,7 +128,7 @@ export function VideoPlayer({ src, className = "", id }: VideoPlayerProps) {
     <div 
       ref={containerRef} 
       id={id}
-      className={`relative group overflow-hidden bg-cream/20 border border-blue/20 shadow-sm ${className}`}
+      className={`relative group overflow-hidden bg-cream/20 shadow-sm ${className}`}
     >
       <video
         ref={videoRef}
@@ -139,7 +139,7 @@ export function VideoPlayer({ src, className = "", id }: VideoPlayerProps) {
         onTimeUpdate={handleTimeUpdate}
         onLoadedMetadata={handleTimeUpdate}
         onClick={togglePlay}
-        className="w-full h-auto object-cover cursor-pointer block"
+        className="w-full h-auto object-cover cursor-pointer block scale-[1.025] transform origin-center"
       />
 
       {/* Sleek, Modest Playback Controls Bar */}
