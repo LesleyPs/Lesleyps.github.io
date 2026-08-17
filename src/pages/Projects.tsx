@@ -2,16 +2,12 @@ import { useState, useEffect } from 'react';
 import { Reveal } from '../components/Reveal';
 import { BrandMarquee } from '../components/BrandMarquee';
 import { 
-  Tv, 
-  Monitor, 
-  Smartphone, 
-  Sparkles, 
-  Layers, 
   LayoutGrid, 
   List, 
   Maximize2, 
   ChevronLeft, 
   ChevronRight, 
+  ArrowUpRight,
   X
 } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
@@ -158,23 +154,6 @@ function ProjectCard({
   project: any; 
   onInspect: () => void; 
 }) {
-  const renderIcon = () => {
-    switch (project.badgeIcon) {
-      case "tv":
-        return <Tv size={10} className="text-blue/80" />;
-      case "mobile":
-        return <Smartphone size={10} className="text-blue/80" />;
-      case "ai":
-        return <Sparkles size={10} className="text-blue/80" />;
-      case "ad":
-      case "record":
-        return <Layers size={10} className="text-blue/80" />;
-      case "web":
-      default:
-        return <Monitor size={10} className="text-blue/80" />;
-    }
-  };
-
   return (
     <div className="flex flex-col gap-3 group/card h-full">
       {/* Viewport Card Container - Click to Inspect */}
@@ -194,12 +173,6 @@ function ProjectCard({
                 : 'object-cover object-top'
             }`} 
           />
-          
-          {/* Corner Badges */}
-          <div className="absolute top-3 left-3 flex items-center gap-1.5 bg-white/90 backdrop-blur-md border border-blue/10 px-3 py-1 text-[9px] font-mono font-bold uppercase tracking-[0.5px] text-blue shadow-sm z-30">
-            {renderIcon()}
-            <span>{project.badge || "Web Platform"}</span>
-          </div>
 
           {/* White Corner Brackets Overlay (matching Homepage) */}
           <div className="absolute inset-[14px] z-30 pointer-events-none opacity-0 group-hover:opacity-100 group-hover:inset-2.5 transition-all duration-400">
@@ -210,40 +183,35 @@ function ProjectCard({
           </div>
 
           {/* Work Card Hover Overlay (matching Homepage) */}
-          <div className="work-card-label z-30">
-            <div className="flex flex-col items-center gap-4 text-center px-4">
-              <h4 className="font-sans font-semibold text-[clamp(18px,2vw,26px)] tracking-[-0.8px] text-blue leading-[1.2em]">
-                {project.title}
-              </h4>
-              <div className="pt-3 border-t border-blue/20">
-                <p className="font-sans font-medium text-[14px] text-blue/80 tracking-[-0.2px]">
-                  {project.company} <span className="opacity-40 mx-1">/</span> {project.industry}
-                </p>
+          <div className="work-card-label z-30 pointer-events-none">
+            <div className="flex flex-col items-center gap-5">
+              <div className="text-center">
+                <h4 className="font-sans font-semibold text-[clamp(20px,2.2vw,28px)] tracking-[-0.8px] text-blue leading-[1.2em] relative z-20">
+                  {project.title}
+                </h4>
+                <div className="mt-4 pt-4 border-t border-blue/20">
+                  <p className="font-sans font-medium text-[14px] text-blue/80 tracking-[-0.2px]">
+                    {project.company} <span className="opacity-40 mx-1">/</span> {project.industry || project.category}
+                  </p>
+                </div>
               </div>
-              <div className="text-blue opacity-0 group-hover:opacity-100 transition-all duration-400 transform translate-y-2 group-hover:translate-y-0 pt-1">
-                <Maximize2 size={24} strokeWidth={1.5} />
+              <div className="text-blue opacity-0 group-hover:opacity-100 transition-all duration-400 transform translate-y-2 group-hover:translate-y-0">
+                <ArrowUpRight size={32} strokeWidth={1.5} />
               </div>
             </div>
           </div>
         </div>
       </div>
       
-      {/* Clean Metadata below image */}
+      {/* Clean Title below image */}
       <div className="flex items-start justify-between px-1 py-0.5">
-        <div className="flex flex-col gap-1">
-          <div className="flex items-center gap-2 flex-wrap">
-            <span className="font-sans font-semibold text-[17px] tracking-tight text-blue">
-              {project.title}
-            </span>
-            <span className="font-mono text-[8px] font-bold tracking-[1.5px] uppercase bg-blue/5 text-blue border border-blue/15 px-2 py-0.5">
-              {project.company}
-            </span>
-          </div>
-          <div className="flex items-center gap-2 text-blue/50 text-[10px] font-mono uppercase tracking-[0.5px]">
-            <span>{project.category}</span>
-            <span>•</span>
-            <span className="text-blue/70 font-bold">{project.platform}</span>
-          </div>
+        <div className="flex items-center gap-2 flex-wrap">
+          <span className="font-sans font-semibold text-[17px] tracking-tight text-blue">
+            {project.title}
+          </span>
+          <span className="font-mono text-[8px] font-bold tracking-[1.5px] uppercase bg-blue/5 text-blue border border-blue/15 px-2 py-0.5">
+            {project.company}
+          </span>
         </div>
       </div>
     </div>
