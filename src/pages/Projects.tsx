@@ -105,7 +105,7 @@ const galleryItems = [
     company: "Tiki",
     industry: "Ad Tech",
     category: "Programmatic Enterprise Suite",
-    img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki-control-tower-metrics_2x.png?raw=true",
+    img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/TIKI-control-tower-metrics-thumb@2x.webp?raw=true",
     platform: "Enterprise Web Console",
     badge: "Web Platform",
     badgeIcon: "web",

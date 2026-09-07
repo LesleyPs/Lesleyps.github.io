@@ -18,6 +18,15 @@ const HOME_SLIDES = [
     isDarkBg: false
   },
   {
+    url: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/TIKI-control-tower-metrics-thumb@2x.webp?raw=true",
+    title: "Control Tower Yield Analytics",
+    agency: "Clicktripz Enterprise",
+    zoom: true,
+    zoomDirection: "pan-right",
+    effect: "blue-slide-over",
+    isDarkBg: false
+  },
+  {
     url: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-Donkey-AI-Hero@2x.webp?raw=true",
     title: "Donkey AI Conversational Assistant",
     agency: "Donkey Donkey AI",
@@ -43,15 +52,6 @@ const HOME_SLIDES = [
     zoomDirection: "none",
     effect: "blue-slide-over",
     isDarkBg: true
-  },
-  {
-    url: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki-control-tower-metrics_2x.png?raw=true",
-    title: "Control Tower Yield Analytics",
-    agency: "Clicktripz Enterprise",
-    zoom: true,
-    zoomDirection: "pan-right",
-    effect: "blue-slide-over",
-    isDarkBg: false
   }
 ];
 
@@ -91,7 +91,7 @@ export default function Home() {
     const interval = setInterval(() => {
       setDirection(1);
       setCurrentSlide((prev) => (prev + 1) % HOME_SLIDES.length);
-    }, 3600);
+    }, 6500);
     return () => clearInterval(interval);
   }, [isPlaying, isPreloading]);
 
@@ -185,7 +185,7 @@ export default function Home() {
                 CT-TV // SONY CRACKLE // DONKEY AI // CLICKTRIPZ // MYLIFE.COM // SYSTEMS ACTIVE
               </div>
               <div className="font-mono text-[8.5px] text-blue/70 tracking-[1px] uppercase text-right">
-                REEL PLAYBACK SPEED: 3.6S<br />
+                REEL PLAYBACK SPEED: 6.5S<br />
                 CODEC: WEB-COMPILATION-2026
               </div>
             </div>
@@ -267,9 +267,9 @@ export default function Home() {
                       transition: {
                         x: { type: "spring", damping: 28, stiffness: 120 },
                         opacity: { duration: 0.85, ease: "easeInOut" },
-                        scale: { duration: 3.6, ease: "linear" },
-                        y: { duration: 3.6, ease: "linear" },
-                        rotate: { duration: 3.6, ease: "linear" },
+                        scale: { duration: 6.5, ease: "linear" },
+                        y: { duration: 6.5, ease: "linear" },
+                        rotate: { duration: 6.5, ease: "linear" },
                         filter: { duration: 0.75, ease: "easeOut" }
                       }
                     };
@@ -474,7 +474,7 @@ export default function Home() {
               key={currentSlide}
               initial={{ width: "0%" }}
               animate={isPlaying && !isPreloading ? { width: "100%" } : { width: "0%" }}
-              transition={{ duration: 3.6, ease: "linear" }}
+              transition={{ duration: 6.5, ease: "linear" }}
               className="h-full bg-blue shadow-[0_0_8px_rgba(0,102,255,0.6)]"
             />
           </div>
@@ -655,17 +655,6 @@ export default function Home() {
               link: "/projects/donkey"
             },
             { 
-              title: "Tiki (Clicktripz)", 
-              subtitle: "Staff UX/UI Product Designer",
-              company: "Tiki",
-              industry: "Ad Tech",
-              year: "2017 — 2024",
-              category: "Interactive Ad Unit UI",
-              description: "Designing interactive ad unit UI and high-yield placements for travel's leading ad tech platforms.",
-              img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki-Tab-Unit-Gallery@2x.webp?raw=true",
-              link: "/projects/tiki"
-            },
-            { 
               title: "Control Tower", 
               subtitle: "Enterprise Yield Platform",
               company: "Tiki",
@@ -675,6 +664,17 @@ export default function Home() {
               description: "Streamlining enterprise publisher onboarding, real-time yield analytics, and self-serve ad product management.",
               img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/TIKI-control-tower-metrics-thumb@2x.webp?raw=true",
               link: "/projects/control-tower"
+            },
+            { 
+              title: "Tiki (Clicktripz)", 
+              subtitle: "Staff UX/UI Product Designer",
+              company: "Tiki",
+              industry: "Ad Tech",
+              year: "2017 — 2024",
+              category: "Interactive Ad Unit UI",
+              description: "Designing interactive ad unit UI and high-yield placements for travel's leading ad tech platforms.",
+              img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki-Tab-Unit-Gallery@2x.webp?raw=true",
+              link: "/projects/tiki"
             },
             { 
               title: "Sony Crackle", 
