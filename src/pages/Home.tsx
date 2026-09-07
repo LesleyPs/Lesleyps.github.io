@@ -9,11 +9,11 @@ import markMamberAvatar from '../assets/images/mark_mamber_avatar_1779762406713.
 
 const HOME_SLIDES = [
   {
-    url: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki-Tab-Unit-Gallery@2x.webp?raw=true",
-    title: "Tiki Interactive Ad Unit UI",
-    agency: "Clicktripz Ad Tech",
+    url: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-Donkey-AI-Hero@2x.webp?raw=true",
+    title: "Donkey AI Conversational Assistant",
+    agency: "Donkey Donkey AI",
     zoom: true,
-    zoomDirection: "in",
+    zoomDirection: "out",
     effect: "blue-slide-over",
     isDarkBg: false
   },
@@ -27,11 +27,11 @@ const HOME_SLIDES = [
     isDarkBg: false
   },
   {
-    url: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-Donkey-AI-Hero@2x.webp?raw=true",
-    title: "Donkey AI Conversational Assistant",
-    agency: "Donkey Donkey AI",
+    url: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki-Tab-Unit-Gallery@2x.webp?raw=true",
+    title: "Tiki Interactive Ad Unit UI",
+    agency: "Clicktripz Ad Tech",
     zoom: true,
-    zoomDirection: "out",
+    zoomDirection: "in",
     effect: "blue-slide-over",
     isDarkBg: false
   },
