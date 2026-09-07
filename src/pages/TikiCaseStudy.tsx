@@ -128,11 +128,11 @@ export default function TikiCaseStudy() {
                 </h3>
               </div>
               <div className="lg:col-span-7 flex flex-col justify-center">
-                <p className="font-mono text-[18px] leading-[1.7em] text-blue/90 font-medium italic mb-6">
+                <p className="font-sans text-[18px] leading-[1.6em] text-blue font-medium italic mb-4">
                   "Replacing cluttered keyword lists with clean prompt suggestions increased DMO click-throughs."
                 </p>
-                <p className="font-mono text-[16px] leading-[1.8em] text-blue/80">
-                  When destination partners asked for clickable prompts to highlight local experiences, the initial keyword lists felt cluttered and had low engagement. I redesigned them into clean, conversational prompt suggestions that made it easy for travelers to explore destination questions, significantly increasing click-through rates.
+                <p className="font-sans text-[16px] leading-[1.65em] text-blue font-medium">
+                  Redesigned dense keyword links into clean, conversational prompt suggestions—making destination discovery effortless for travelers and significantly boosting partner engagement.
                 </p>
               </div>
             </div>
@@ -241,11 +241,11 @@ export default function TikiCaseStudy() {
                 </h3>
               </div>
               <div className="lg:col-span-7 flex flex-col justify-center">
-                <p className="font-mono text-[18px] leading-[1.7em] text-blue/90 font-medium italic mb-8">
+                <p className="font-sans text-[18px] leading-[1.6em] text-blue font-medium italic mb-4">
                   "Moving frequency controls into on-spot overlays simplified daily campaign management."
                 </p>
-                <p className="font-mono text-[16px] leading-[1.8em] text-blue/80">
-                  Instead of burying settings in nested menus, we surfaced key controls right where managers needed them. This simpler workflow sped up campaign setup and reduced manual errors.
+                <p className="font-sans text-[16px] leading-[1.65em] text-blue font-medium">
+                  Surfaced critical controls directly into contextual overlays—accelerating partner campaign setups and eliminating manual configuration errors.
                 </p>
               </div>
             </div>
@@ -340,11 +340,11 @@ export default function TikiCaseStudy() {
                 </h3>
               </div>
               <div className="lg:col-span-7 flex flex-col justify-center">
-                <p className="font-mono text-[18px] leading-[1.7em] text-blue/90 font-medium italic mb-8">
+                <p className="font-sans text-[18px] leading-[1.6em] text-blue font-medium italic mb-4">
                   "Replacing chaotic banners with a clean tab unit created clear paths for readers."
                 </p>
-                <p className="font-mono text-[16px] leading-[1.8em] text-blue/80">
-                  We replaced cluttered display banners with a single, integrated tab unit for destination offers. This layout gave readers clear shortcuts to relevant deals while keeping the article reading experience clean.
+                <p className="font-sans text-[16px] leading-[1.65em] text-blue font-medium">
+                  Replaced intrusive display banners with an interactive destination tab unit—delivering targeted partner deals while preserving editorial flow.
                 </p>
               </div>
             </div>
@@ -424,9 +424,9 @@ export default function TikiCaseStudy() {
       {/* FOOTER NAV */}
       <section className="w-full p-[140px_30px] flex justify-center bg-cream border-t border-blue" id="next-project-footer">
         <Reveal>
-          <Link to="/projects/mylife" className="group flex flex-col items-center gap-6" id="next-project-link">
+          <Link to="/projects/control-tower" className="group flex flex-col items-center gap-6" id="next-project-link">
             <p className="font-mono text-[13px] tracking-[3px] opacity-60 group-hover:opacity-100 group-hover:tracking-[5px] transition-all duration-500">NEXT PROJECT</p>
-            <h4 className="font-sans font-semibold text-[clamp(32px,5vw,64px)] tracking-[-0.04em] text-blue group-hover:scale-[1.02] transition-all duration-500">MyLife.com</h4>
+            <h4 className="font-sans font-semibold text-[clamp(32px,5vw,64px)] tracking-[-0.04em] text-blue group-hover:scale-[1.02] transition-all duration-500">Control Tower</h4>
           </Link>
         </Reveal>
       </section>

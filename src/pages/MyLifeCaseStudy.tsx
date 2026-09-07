@@ -134,11 +134,11 @@ export default function MyLifeCaseStudy() {
                 </h3>
               </div>
               <div className="lg:col-span-7 flex flex-col justify-center">
-                <p className="font-mono text-[18px] leading-[1.7em] text-blue/90 font-medium italic mb-8">
+                <p className="font-sans text-[18px] leading-[1.6em] text-blue font-medium italic mb-4">
                   "Streamlining form inputs and purchase screens to lower checkout anxiety."
                 </p>
-                <p className="font-mono text-[16px] leading-[1.8em] text-blue/80">
-                  Refining the PO pages with progressive pricing indicators and simplified forms reduced user cognitive load, directly increasing completion rates.
+                <p className="font-sans text-[16px] leading-[1.65em] text-blue font-medium">
+                  Redesigned multi-step purchase orders with transparent pricing tiers and friction-free inputs, noticeably improving subscription completion rates.
                 </p>
               </div>
             </div>
@@ -196,15 +196,15 @@ export default function MyLifeCaseStudy() {
                 </h3>
               </div>
               <div className="lg:col-span-7 flex flex-col justify-center">
-                <div className="font-mono text-[16px] leading-[1.8em] text-blue/80 space-y-6">
+                <div className="font-sans text-[16px] leading-[1.65em] text-blue space-y-4 font-medium">
                   <p>
-                    Designing across web, mobile, and email required a cohesive visual language to ensure alignment and brand trust.
+                    Designing across web, mobile, and email required a unified visual language to establish subscriber trust:
                   </p>
-                  <ul className="list-disc pl-5 space-y-3 pt-2 text-[15px]">
-                    <li><strong className="text-blue">Main Profile UX</strong>: Organized scattered records into clear dashboards.</li>
-                    <li><strong className="text-blue">PO Flows</strong>: Streamlined purchase order pages to reduce checkout friction.</li>
-                    <li><strong className="text-blue">SEO Pages</strong>: Designed clean, search-optimized entry screens.</li>
-                    <li><strong className="text-blue">Dynamic Emails</strong>: Formatted responsive emails powered by personalized user metrics.</li>
+                  <ul className="list-disc pl-5 space-y-2.5 pt-1 text-[15px]">
+                    <li><strong className="text-blue font-semibold">Profile UX:</strong> Structured scattered personal records into digestible dashboards.</li>
+                    <li><strong className="text-blue font-semibold">PO Conversion:</strong> Streamlined purchase flows to minimize checkout drop-off.</li>
+                    <li><strong className="text-blue font-semibold">SEO Landing Pages:</strong> Designed fast, clear acquisition screens.</li>
+                    <li><strong className="text-blue font-semibold">Dynamic Emails:</strong> Built responsive email templates driven by personalized alerts.</li>
                   </ul>
                 </div>
               </div>

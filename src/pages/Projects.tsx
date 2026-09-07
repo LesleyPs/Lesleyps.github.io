@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Reveal } from '../components/Reveal';
 import { BrandMarquee } from '../components/BrandMarquee';
 import { 
@@ -107,7 +108,8 @@ const galleryItems = [
     img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki-control-tower-metrics_2x.png?raw=true",
     platform: "Enterprise Web Console",
     badge: "Web Platform",
-    badgeIcon: "web"
+    badgeIcon: "web",
+    caseStudyUrl: "/projects/control-tower"
   },
   // 9. MyLife Case Study
   {
@@ -396,6 +398,15 @@ export default function Projects() {
                   {galleryItems[activeImageIndex].platform}
                 </span>
               </div>
+              {galleryItems[activeImageIndex].caseStudyUrl && (
+                <Link
+                  to={galleryItems[activeImageIndex].caseStudyUrl}
+                  className="flex items-center gap-2 font-mono text-[11px] font-bold tracking-[1px] uppercase bg-blue text-cream hover:bg-blue/90 px-4 py-2 border border-blue transition-all group/cta"
+                >
+                  <span>Explore Case Study</span>
+                  <ArrowUpRight size={14} className="group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5 transition-transform" />
+                </Link>
+              )}
             </div>
           </motion.div>
         )}

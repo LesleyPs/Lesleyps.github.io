@@ -10,6 +10,7 @@ import Projects from './pages/Projects';
 import CrackleCaseStudy from './pages/CrackleCaseStudy';
 import DonkeyDonkeyCaseStudy from './pages/DonkeyDonkeyCaseStudy';
 import TikiCaseStudy from './pages/TikiCaseStudy';
+import TikiControlTowerCaseStudy from './pages/TikiControlTowerCaseStudy';
 import MyLifeCaseStudy from './pages/MyLifeCaseStudy';
 
 function ScrollToTop() {
@@ -86,6 +87,22 @@ export default function App() {
                   element={
                     <PageWrapper>
                       <TikiCaseStudy />
+                    </PageWrapper>
+                  } 
+                />
+                <Route 
+                  path="/projects/control-tower" 
+                  element={
+                    <PageWrapper>
+                      <TikiControlTowerCaseStudy />
+                    </PageWrapper>
+                  } 
+                />
+                <Route 
+                  path="/projects/tiki-control-tower" 
+                  element={
+                    <PageWrapper>
+                      <TikiControlTowerCaseStudy />
                     </PageWrapper>
                   } 
                 />

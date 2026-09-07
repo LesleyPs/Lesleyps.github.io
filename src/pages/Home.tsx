@@ -608,9 +608,9 @@ export default function Home() {
 
       {/* INTRO */}
       <section className="flex flex-col sm:flex-row w-full border-b border-blue">
-        <div className="w-full sm:w-[305px] shrink-0 border-b sm:border-b-0 sm:border-r border-blue p-[30px] flex items-center justify-center h-[140px] sm:h-auto">
+        <div className="w-full sm:w-[305px] shrink-0 border-b sm:border-b-0 sm:border-r border-blue p-[30px] flex items-center justify-center h-[140px] sm:h-auto text-blue">
           <svg className="w-full sm:w-[220px] h-auto arrow-pulse" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M24 100 L180 100 M148 72 L180 100 L148 128" stroke="#0052cc" strokeWidth="8" strokeLinejoin="miter" strokeLinecap="butt"/>
+            <path d="M24 100 L180 100 M148 72 L180 100 L148 128" stroke="currentColor" strokeWidth="8" strokeLinejoin="miter" strokeLinecap="butt"/>
           </svg>
         </div>
         <div className="flex-1 p-[36px_30px] flex flex-col gap-8 relative">
@@ -619,7 +619,7 @@ export default function Home() {
               <HeartIcon />
               <HeartIcon />
             </div>
-            <h1 className="font-sans font-semibold text-[clamp(36px,5.8vw,74px)] leading-[1.18em] tracking-[clamp(-2px,-0.3vw,-4px)] text-blue my-8">
+            <h1 className="font-sans font-semibold text-[clamp(36px,5.8vw,74px)] leading-[1.18em] tracking-normal text-blue my-8">
               Travel. Streaming. AI.<br />I design things<br />that simply work.
             </h1>
             <div className="flex justify-between px-2.5">
@@ -634,10 +634,10 @@ export default function Home() {
       <section id="gallery" className="w-full border-b border-blue">
         <Reveal>
           <div className="flex items-end justify-between p-[28px_30px] border-b border-blue">
-            <h3 className="font-sans font-semibold text-[clamp(20px,2.3vw,30px)] leading-none tracking-[-1.2px]">Gallery –<br />Highlights&nbsp;</h3>
-            <Link to="/projects" className="flex items-center gap-2 font-sans font-semibold text-[18px] tracking-[-0.7px] hover:gap-[13px] transition-all">
+            <h3 className="font-sans font-semibold text-[clamp(20px,2.3vw,30px)] leading-none tracking-normal">Gallery –<br />Highlights&nbsp;</h3>
+            <Link to="/projects" className="flex items-center gap-2 font-sans font-semibold text-[18px] tracking-normal hover:gap-[13px] transition-all">
               View Full Gallery
-              <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M10.892 11.12V3.593L1.493 13 0 11.507 9.407 2.108H1.88V0H13V11.12H10.892Z" fill="#0066ff"/></svg>
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M10.892 11.12V3.593L1.493 13 0 11.507 9.407 2.108H1.88V0H13V11.12H10.892Z" fill="currentColor"/></svg>
             </Link>
           </div>
         </Reveal>
@@ -664,6 +664,17 @@ export default function Home() {
               description: "Designing interactive ad unit UI and high-yield placements for travel's leading ad tech platforms.",
               img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki-Tab-Unit-Gallery@2x.webp?raw=true",
               link: "/projects/tiki"
+            },
+            { 
+              title: "Control Tower", 
+              subtitle: "Enterprise Yield Platform",
+              company: "Tiki",
+              industry: "SaaS / Ad Ops",
+              year: "2023 — 2024",
+              category: "Enterprise Platform",
+              description: "Streamlining enterprise publisher onboarding, real-time yield analytics, and self-serve ad product management.",
+              img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/TIKI-control-tower-metrics-thumb@2x.webp?raw=true",
+              link: "/projects/control-tower"
             },
             { 
               title: "Sony Crackle", 
@@ -705,11 +716,11 @@ export default function Home() {
                   <div className="work-card-label">
                     <div className="flex flex-col items-center gap-5">
                       <div className="text-center">
-                        <h4 className="font-sans font-semibold text-[clamp(20px,2.2vw,28px)] tracking-[-0.8px] text-blue leading-[1.2em] relative z-20">
+                        <h4 className="font-sans font-semibold text-[clamp(20px,2.2vw,28px)] tracking-normal text-blue leading-[1.2em] relative z-20">
                           {project.title}
                         </h4>
                         <div className="mt-4 pt-4 border-t border-blue/20">
-                          <p className="font-sans font-medium text-[14px] text-blue/80 tracking-[-0.2px]">
+                          <p className="font-sans font-medium text-[14px] text-blue/80 tracking-normal">
                             {project.company} <span className="opacity-40 mx-1">/</span> {project.industry}
                           </p>
                         </div>
@@ -726,7 +737,7 @@ export default function Home() {
                       <span className="font-mono text-[10px] uppercase tracking-[2px] opacity-60">{project.year}</span>
                       <span className="font-mono text-[10px] uppercase tracking-[2px] text-blue">{project.category}</span>
                     </div>
-                    <h3 className="font-sans font-semibold text-[24px] tracking-[-0.8px]">{project.subtitle}</h3>
+                    <h3 className="font-sans font-semibold text-[24px] tracking-normal">{project.subtitle}</h3>
                     <p className="font-mono text-[16px] leading-[1.8em] text-blue/80 max-w-md">{project.description}</p>
                   </div>
                 </div>
@@ -740,13 +751,13 @@ export default function Home() {
       <section className="flex flex-col lg:flex-row w-full border-b border-blue">
         <div className="w-full lg:w-[305px] shrink-0 border-b lg:border-b-0 lg:border-r border-blue p-[70px_30px_50px] flex flex-col gap-5">
           <Reveal direction="left">
-            <h3 className="font-sans font-semibold text-[19px] tracking-[-0.7px] leading-[1.4em]">People I've<br />made things for:</h3>
+            <h3 className="font-sans font-semibold text-[19px] tracking-normal leading-[1.4em]">People I've<br />made things for:</h3>
             <p className="font-mono font-normal text-[16px] leading-[1.8em] text-blue/80 mt-5">Over the years I've had the privilege of working with great people and companies across travel tech, streaming, and data.</p>
           </Reveal>
         </div>
         <div className="flex-1 p-[70px_0_60px_36px] flex flex-col gap-11 overflow-hidden">
           <Reveal>
-            <h2 className="font-sans font-semibold text-[clamp(20px,4vw,40px)] leading-[1.12em] tracking-[-1.6px] pr-20">Brands I've worked with</h2>
+            <h2 className="font-sans font-semibold text-[clamp(20px,4vw,40px)] leading-[1.12em] tracking-normal pr-20">Brands I've worked with</h2>
           </Reveal>
           <BrandMarquee />
         </div>
@@ -816,7 +827,7 @@ export default function Home() {
         </div>
         <div className="flex-1 mx-6 sm:mr-[70px] sm:ml-0">
           <Reveal>
-            <div className="bg-white/11 backdrop-blur-[12px] border border-white/22 rounded-2xl p-7 sm:p-[44px_48px] flex flex-col gap-[30px] hover:shadow-[0_10px_44px_rgba(255,255,255,0.13)] hover:-translate-y-0.5 transition-all duration-350">
+            <div className="bg-white/11 backdrop-blur-[12px] border border-white/22 rounded-2xl p-7 sm:p-[44px_48px] flex flex-col gap-[30px]">
               <blockquote className="font-sans font-semibold text-[clamp(18px,2.2vw,26px)] leading-[1.35em] tracking-[-0.8px] text-white">
                 "Lesley consistently delivers high-quality work with a sharp eye for UX and design detail. She's eager to learn new tools and technologies and picks them up quickly. A great listener and thoughtful collaborator, Lesley brings both creativity and adaptability to every project."
               </blockquote>

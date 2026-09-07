@@ -31,15 +31,15 @@ export default function About() {
         <div className="flex-1 p-[70px_50px_70px_36px] grid grid-cols-1 xl:grid-cols-12 gap-12">
           <div className="xl:col-span-7 flex flex-col justify-start">
             <Reveal>
-              <div className="space-y-8 font-sans text-[clamp(18px,2vw,24px)] leading-[1.4em] tracking-[-0.5px] text-blue">
+              <div className="space-y-6 font-sans text-[clamp(17px,1.8vw,22px)] leading-[1.5em] tracking-normal text-blue font-medium">
                 <p>
-                  I’m a Senior Product Designer with a background in AdTech, conversion optimization, and user interface design. My primary expertise is designing native utility interfaces that shape user intent, capture exit-intent traffic, and resolve real-time user friction.
+                  I’m a Senior Product Designer specializing in AdTech, conversion optimization, and interface architecture. My focus is crafting high-performing native interfaces that capture user intent and solve real-time interaction friction.
                 </p>
                 <p>
-                  Lately, I’ve been focusing on conversational layouts, partnering with an engineering team to design and ship Donkey Donkey AI—a travel-focused conversational tool. I leverage advanced Figma proficiency for team collaboration and use Google AI Studio to rapidly build functional prototypes and finished application builds.
+                  Currently exploring conversational UX—partnering with engineering to design and launch <strong className="font-semibold text-blue">Donkey Donkey AI</strong>. I build rapid interactive prototypes and production-ready applications with Google AI Studio and modern design systems.
                 </p>
                 <p>
-                  To expand my toolkit further, I am also completing a certification in Data Analytics, adding data visualization and analytics directly to my interface design skillset.
+                  Completing a Google Data Analytics Certification to deepen the integration between quantitative user metrics and high-conversion product design.
                 </p>
               </div>
             </Reveal>
@@ -79,11 +79,11 @@ export default function About() {
         <div className="flex-1 p-[70px_50px_70px_36px]">
           <div className="space-y-12">
             {[
-              { role: "Lead Product Designer", company: "Donkey Donkey AI", years: "Jan 2026 — Present", desc: "Designing a travel-focused conversational tool from early-stage concept to launch. Crafting chat interface layouts to handle complex, real-time conversation logic and utilizing Google AI Studio to build functional prototypes to streamline engineering cycles." },
-              { role: "Sr. Product Designer — UI/UX", company: "Tiki (formerly Clicktripz)", years: "May 2017 — Jan 2025", desc: "Led the end-to-end design lifecycle for 7+ years through multiple company pivots. Created high-performing 'Native Utility' interfaces to capture exit-intent traffic, simplified complex travel data engines, and directed design execution within distributed teams." },
-              { role: "Senior UX Designer", company: "Sony Crackle", years: "Oct 2016 — Feb 2017", desc: "Redesigned critical sign-up and VOD playback flows to reduce user friction and maximize user acquisition, scaling unified viewing experiences across 20+ platforms (Roku, Apple TV, Web) for a global audience." },
-              { role: "Senior UX Designer", company: "MyLife.com", years: "Jun 2012 — Sep 2016", desc: "Transformed dense, high-stakes data sets into actionable insights and intuitive layouts to improve user trust, leading design of core product features in a complex, data-heavy environment." },
-              { role: "Mobile Application Designer", company: "Freelance Work", years: "May 2011 — Feb 2012", desc: "Designed mobile concierge applications for hotels. Conducted rapid wireframing, designed visual interfaces, and owned the creation of all product assets for App Store submission." }
+              { role: "Lead Product Designer", company: "Donkey Donkey AI", years: "Jan 2026 — Present", desc: "Leading product design and conversational interface architecture from concept to MVP launch. Built interactive prototypes with Google AI Studio to accelerate engineering sprints." },
+              { role: "Sr. Product Designer — UI/UX", company: "Tiki (formerly Clicktripz)", years: "May 2017 — Jan 2025", desc: "Led end-to-end UX/UI for enterprise publisher tools and interactive ad units across 7+ years of product growth. Created high-yield exit-intent units and self-serve onboarding suites." },
+              { role: "Senior UX Designer", company: "Sony Crackle", years: "Oct 2016 — Feb 2017", desc: "Redesigned registration and VOD playback flows to reduce drop-offs, unifying 10-foot living room (Roku, Apple TV, Smart TVs) and mobile streaming experiences." },
+              { role: "Senior UX Designer", company: "MyLife.com", years: "Jun 2012 — Sep 2016", desc: "Designed identity dashboards and streamlined multi-step purchase funnels, increasing conversion across data-dense privacy and public record products." },
+              { role: "Mobile Application Designer", company: "Freelance Work", years: "May 2011 — Feb 2012", desc: "Designed mobile concierge applications for hospitality brands, managing wireframing, UI visual design, and asset delivery." }
             ].map((job, i) => (
               <Reveal key={i} delay={i * 0.1}>
                 <div className="group border-b border-blue/20 pb-8 last:border-0">
@@ -91,8 +91,8 @@ export default function About() {
                     <h4 className="font-sans font-semibold text-[24px] tracking-[-0.8px]">{job.role}</h4>
                     <span className="font-mono text-[12px] tracking-[1px] opacity-50">{job.years}</span>
                   </div>
-                  <p className="font-sans font-semibold text-[18px] text-blue/80 mb-4">{job.company}</p>
-                  <p className="font-sans text-[15px] leading-[1.7em] text-blue/80 max-w-xl">{job.desc}</p>
+                  <p className="font-sans font-semibold text-[18px] text-blue mb-4">{job.company}</p>
+                  <p className="font-sans text-[15px] leading-[1.7em] text-blue font-medium max-w-xl">{job.desc}</p>
                 </div>
               </Reveal>
             ))}

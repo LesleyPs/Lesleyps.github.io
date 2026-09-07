@@ -176,8 +176,8 @@ export default function DonkeyDonkeyCaseStudy() {
         
         <Reveal delay={0.4}>
           <div className="px-[30px] mt-[50px] max-w-3xl">
-            <p className="font-mono text-[16px] leading-[1.8em] text-blue/70">
-              **Conversational Discovery**: Instead of overwhelming travelers with dense maps and lists, the assistant shares recommendations step by step—bringing up helpful details, photos, and tips right when the user asks for them.
+            <p className="font-sans text-[17px] leading-[1.65em] text-blue font-medium">
+              <strong className="font-semibold text-blue">Conversational Discovery:</strong> Instead of overwhelming travelers with dense maps and static filters, Donkey surfaces recommendations progressively—delivering curated photos, context, and tips directly in the conversation flow.
             </p>
           </div>
         </Reveal>
@@ -244,7 +244,7 @@ export default function DonkeyDonkeyCaseStudy() {
                   <h3 className="font-sans font-bold text-[clamp(28px,4.2vw,42px)] leading-[1.12em] tracking-[-0.03em] text-blue mb-4">
                     Shipping an MVP at AI Speed
                   </h3>
-                  <p className="font-mono text-[15px] leading-[1.7em] text-blue/80 mb-8 max-w-2xl font-medium">
+                  <p className="font-mono text-[15px] leading-[1.7em] text-blue mb-8 max-w-2xl font-medium">
                     How Prompt-Driven Prototyping Bridged Design, Code, and Engineering for Donkey Donkey AI
                   </p>
                   <div className="flex flex-wrap items-center gap-6">

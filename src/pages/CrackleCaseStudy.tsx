@@ -134,11 +134,11 @@ export default function CrackleCaseStudy() {
                 </h3>
               </div>
               <div className="lg:col-span-7 flex flex-col justify-center">
-                <p className="font-mono text-[18px] leading-[1.7em] text-blue/90 font-medium italic mb-6">
+                <p className="font-sans text-[18px] leading-[1.6em] text-blue font-medium italic mb-4">
                   "Reframing 'Sign Up' as 'Unlock' emphasized immediate value and reduced registration drop-offs."
                 </p>
-                <p className="font-mono text-[16px] leading-[1.8em] text-blue/80">
-                  While <span className="underline decoration-blue/30 underline-offset-4">"Sign Up"</span> can feel like a chore, <span className="text-blue font-bold">"Unlock"</span> focuses on the reward—immediate access to great content. A simple copy shift made onboarding feel encouraging and natural without touching backend code.
+                <p className="font-sans text-[16px] leading-[1.65em] text-blue font-medium">
+                  While <span className="underline decoration-blue/30 underline-offset-4">"Sign Up"</span> feels transactional, <span className="text-blue font-semibold">"Unlock"</span> centers on the immediate reward—instant access to premium titles. This subtle shift increased sign-up conversion without engineering changes.
                 </p>
               </div>
             </div>
@@ -198,11 +198,11 @@ export default function CrackleCaseStudy() {
                 </h3>
               </div>
               <div className="lg:col-span-7 flex flex-col justify-center">
-                <p className="font-mono text-[18px] leading-[1.7em] text-blue/90 font-medium italic mb-6">
-                  "Letting guest users sign up without losing their place in a show made creating an account feel effortless."
+                <p className="font-sans text-[18px] leading-[1.6em] text-blue font-medium italic mb-4">
+                  "Letting guest users sign up without losing their place in a show made account creation frictionless."
                 </p>
-                <p className="font-mono text-[16px] leading-[1.8em] text-blue/80">
-                  Guest users often abandon streams when prompted to sign up because they lose their spot. We designed a background handoff that saves their watch history and pause position locally, then syncs it the moment they create an account—so they pick up right where they left off.
+                <p className="font-sans text-[16px] leading-[1.65em] text-blue font-medium">
+                  Guest users frequently abandon streams when registration resets their position. We designed a background state sync that preserves playback timecodes locally and resumes playback seamlessly the instant their account is verified.
                 </p>
               </div>
             </div>
@@ -248,14 +248,14 @@ export default function CrackleCaseStudy() {
                 </h3>
               </div>
               <div className="lg:col-span-7 flex flex-col justify-center">
-                <div className="font-mono text-[16px] leading-[1.8em] text-blue/80 space-y-6">
+                <div className="font-sans text-[16px] leading-[1.65em] text-blue space-y-4 font-medium">
                   <p>
-                    Designing for a premium streaming landscape means architecting for a highly fragmented device footprint. I focused on maintaining complete brand and cognitive alignment whether a traveler is browsing on a 5-inch touchscreen or a 75-inch smart TV.
+                    Streaming ecosystems span diverse screen sizes and input modalities. I unified design rules across mobile, web, and connected TVs to preserve cognitive coherence and interaction clarity:
                   </p>
-                  <ul className="list-disc pl-5 space-y-3 pt-2 text-[15px]">
-                    <li><strong className="text-blue">Lean-Back Ergonomics</strong>: Designed precise D-pad focus states, optimized contrast ratios, and structured layout rules for 10-foot OTT user journeys.</li>
-                    <li><strong className="text-blue">Dynamic Scaling</strong>: Maintained a cohesive design system that translated smoothly across Web, iOS, Android, Roku, and gaming environments.</li>
-                    <li><strong className="text-blue">State Persistence</strong>: Ensured seamless playback handover and interface continuity during cross-platform user sessions.</li>
+                  <ul className="list-disc pl-5 space-y-2.5 pt-1 text-[15px]">
+                    <li><strong className="text-blue font-semibold">10-Foot Navigation:</strong> Precision D-pad focus states, optimized contrast ratios, and spatial navigation guidelines for remote-control journeys.</li>
+                    <li><strong className="text-blue font-semibold">Cross-Device Cohesion:</strong> A unified design system scaled smoothly across iOS, Android, Web, Roku, and game consoles.</li>
+                    <li><strong className="text-blue font-semibold">State Continuity:</strong> Seamless watch history and pause-state synchronization across devices.</li>
                   </ul>
                 </div>
               </div>
