@@ -11,37 +11,39 @@ export default function TikiControlTowerCaseStudy() {
     <div className="pt-[72px] bg-cream min-h-screen">
       {/* 1. HEADER SECTION */}
       <section className="w-full border-b border-blue p-[120px_30px_80px]" id="control-tower-header">
-        <Reveal>
-          <div className="max-w-5xl">
-            <Link 
-              to="/projects" 
-              className="flex items-center gap-2 font-mono text-[13px] tracking-[1px] text-blue mb-12 hover:gap-3 transition-all opacity-70 hover:opacity-100" 
-              id="back-to-portfolio-btn"
-            >
-              <ArrowLeft size={14} /> BACK TO PORTFOLIO
-            </Link>
+        <div className="max-w-6xl mx-auto w-full">
+          <Reveal>
+            <div className="max-w-5xl">
+              <Link 
+                to="/projects" 
+                className="flex items-center gap-2 font-mono text-[13px] tracking-[1px] text-blue mb-12 hover:gap-3 transition-all opacity-70 hover:opacity-100" 
+                id="back-to-portfolio-btn"
+              >
+                <ArrowLeft size={14} /> BACK TO PORTFOLIO
+              </Link>
 
-            <h1 className="font-sans font-semibold text-[clamp(45px,8vw,110px)] leading-[0.95em] tracking-normal text-blue mb-10" id="case-study-title">
-              Control Tower
-            </h1>
+              <h1 className="font-sans font-semibold text-[clamp(45px,8vw,110px)] leading-[0.95em] tracking-normal text-blue mb-10" id="case-study-title">
+                Control Tower
+              </h1>
 
-            {/* Metadata Grid */}
-            <div className="flex flex-wrap gap-x-16 gap-y-8" id="case-metadata-grid">
-              <div>
-                <p className="font-mono text-[13px] uppercase tracking-[2px] opacity-60 mb-3">Role</p>
-                <p className="font-sans font-medium text-[18px] text-blue">Senior Product Designer</p>
-              </div>
-              <div>
-                <p className="font-mono text-[13px] uppercase tracking-[2px] opacity-60 mb-3">Scope</p>
-                <p className="font-sans font-medium text-[18px] text-blue">Product Design & UI/UX</p>
-              </div>
-              <div>
-                <p className="font-mono text-[13px] uppercase tracking-[2px] opacity-60 mb-3">Platform</p>
-                <p className="font-sans font-medium text-[18px] text-blue">Desktop Web SaaS Portal</p>
+              {/* Metadata Grid */}
+              <div className="flex flex-wrap gap-x-16 gap-y-8" id="case-metadata-grid">
+                <div>
+                  <p className="font-mono text-[13px] uppercase tracking-[2px] opacity-60 mb-3">Role</p>
+                  <p className="font-sans font-medium text-[18px] text-blue">Senior Product Designer</p>
+                </div>
+                <div>
+                  <p className="font-mono text-[13px] uppercase tracking-[2px] opacity-60 mb-3">Scope</p>
+                  <p className="font-sans font-medium text-[18px] text-blue">Product Design & UI/UX</p>
+                </div>
+                <div>
+                  <p className="font-mono text-[13px] uppercase tracking-[2px] opacity-60 mb-3">Platform</p>
+                  <p className="font-sans font-medium text-[18px] text-blue">Desktop Web SaaS Portal</p>
+                </div>
               </div>
             </div>
-          </div>
-        </Reveal>
+          </Reveal>
+        </div>
       </section>
 
       {/* HERO IMAGE SECTION */}
@@ -82,7 +84,7 @@ export default function TikiControlTowerCaseStudy() {
 
       {/* 2. OVERVIEW & KEY OUTCOMES */}
       <section className="w-full border-b border-blue p-[100px_30px]" id="outcomes-section">
-        <div className="max-w-6xl">
+        <div className="max-w-6xl mx-auto w-full">
           <Reveal>
             <p className="font-mono text-[13px] tracking-[3px] opacity-60 mb-6 uppercase">Key Outcomes & Mission</p>
             <h2 className="font-sans font-semibold text-[clamp(30px,4.5vw,56px)] leading-[1.12em] tracking-normal text-blue max-w-5xl mb-12">
@@ -114,10 +116,10 @@ export default function TikiControlTowerCaseStudy() {
 
       {/* 3. SECTION 01: THE MISSION */}
       <section className="w-full border-b border-blue p-[100px_30px] bg-cream" id="section-01-mission">
-        <div className="max-w-6xl">
+        <div className="max-w-6xl mx-auto w-full">
           <Reveal>
             <p className="font-mono text-[13px] tracking-[3px] opacity-60 mb-6 uppercase">01. The Mission</p>
-            <h2 className="font-sans font-semibold text-[clamp(30px,4.5vw,56px)] leading-[1.12em] tracking-normal text-blue max-w-5xl mb-8">
+            <h2 className="font-sans font-semibold text-[clamp(30px,4.5vw,56px)] leading-[1.12em] tracking-normal text-blue w-[880px] max-w-full mb-8">
               Turning manual onboarding into a self-service engine.
             </h2>
             <div className="font-sans text-[17px] sm:text-[18px] leading-[1.7em] text-blue max-w-4xl space-y-4 font-medium">
@@ -134,10 +136,10 @@ export default function TikiControlTowerCaseStudy() {
 
       {/* 4. SECTION 02: PRODUCT EVOLUTION: V1 TO V2 */}
       <section className="w-full border-b border-blue p-[100px_30px] bg-cream text-blue" id="section-02-evolution-header">
-        <div className="max-w-6xl">
+        <div className="max-w-6xl mx-auto w-full">
           <Reveal>
             <p className="font-mono text-[13px] tracking-[3px] opacity-60 mb-6 uppercase">02. Product Evolution: V1 to V2</p>
-            <h2 className="font-sans font-semibold text-[clamp(30px,4.5vw,56px)] leading-[1.12em] tracking-normal text-blue max-w-5xl mb-8">
+            <h2 className="font-sans font-semibold text-[clamp(30px,4.5vw,56px)] leading-[1.12em] tracking-normal text-blue w-[880px] max-w-full mb-8">
               Surfacing critical controls directly on the card face.
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 font-sans text-[16px] leading-[1.65em] text-blue font-medium">
@@ -207,10 +209,10 @@ export default function TikiControlTowerCaseStudy() {
 
       {/* 5. SECTION 03: REAL-TIME YIELD METRICS */}
       <section className="w-full border-b border-blue p-[100px_30px] bg-cream text-blue" id="section-03-metrics-header">
-        <div className="max-w-6xl">
+        <div className="max-w-6xl mx-auto w-full">
           <Reveal>
             <p className="font-mono text-[13px] tracking-[3px] opacity-60 mb-6 uppercase">03. Real-Time Yield Metrics</p>
-            <h2 className="font-sans font-semibold text-[clamp(30px,4.5vw,56px)] leading-[1.12em] tracking-normal text-blue max-w-5xl mb-6">
+            <h2 className="font-sans font-semibold text-[clamp(30px,4.5vw,56px)] leading-[1.12em] tracking-normal text-blue w-[880px] max-w-full mb-6">
               Data density engineered for quick calls.
             </h2>
             <p className="font-sans text-[17px] sm:text-[18px] leading-[1.7em] text-blue max-w-4xl font-medium">
@@ -222,8 +224,8 @@ export default function TikiControlTowerCaseStudy() {
 
       {/* SECTION 03: FULL-WIDTH LARGE METRICS IMAGE */}
       <section className="w-full border-b border-blue overflow-hidden bg-cream p-6 sm:p-12 md:p-[80px_30px]" id="section-03-image">
-        <Reveal>
-          <div className="w-full max-w-7xl mx-auto flex flex-col items-center">
+        <div className="w-full max-w-7xl mx-auto flex flex-col items-center">
+          <Reveal>
             <div className="w-full overflow-hidden">
               <img 
                 src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki_Control_Tower_Metrics@2x.webp?raw=true" 
@@ -232,16 +234,16 @@ export default function TikiControlTowerCaseStudy() {
                 referrerPolicy="no-referrer"
               />
             </div>
-          </div>
-        </Reveal>
+          </Reveal>
+        </div>
       </section>
 
       {/* 6. SECTION 04: DEVELOPER ONBOARDING & SITE REGISTRY */}
       <section className="w-full border-b border-blue p-[100px_30px] bg-cream text-blue" id="section-04-onboarding-header">
-        <div className="max-w-6xl">
+        <div className="max-w-6xl mx-auto w-full">
           <Reveal>
             <p className="font-mono text-[13px] tracking-[3px] opacity-60 mb-6 uppercase">04. Developer Onboarding & Site Registry</p>
-            <h2 className="font-sans font-semibold text-[clamp(30px,4.5vw,56px)] leading-[1.12em] tracking-normal text-blue max-w-5xl mb-8">
+            <h2 className="font-sans font-semibold text-[clamp(30px,4.5vw,56px)] leading-[1.12em] tracking-normal text-blue w-[880px] max-w-full mb-8">
               Clean technical handoffs for partner teams.
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 font-sans text-[16px] leading-[1.65em] text-blue font-medium">
@@ -301,7 +303,7 @@ export default function TikiControlTowerCaseStudy() {
 
       {/* 7. SECTION 05: ACCOUNT SYSTEMS & OPERATIONS */}
       <section className="w-full border-b border-blue p-[100px_30px] bg-cream text-blue" id="section-05-account-header">
-        <div className="max-w-6xl">
+        <div className="max-w-6xl mx-auto w-full">
           <Reveal>
             <p className="font-mono text-[13px] tracking-[3px] opacity-60 mb-6 uppercase">05. Account Systems & Operations</p>
             <h2 className="font-sans font-semibold text-[clamp(30px,4.5vw,56px)] leading-[1.12em] tracking-normal text-blue max-w-5xl mb-6">
@@ -316,8 +318,8 @@ export default function TikiControlTowerCaseStudy() {
 
       {/* SECTION 05: FULL-WIDTH LARGE ACCOUNT IMAGE */}
       <section className="w-full border-b border-blue overflow-hidden bg-cream p-6 sm:p-12 md:p-[80px_30px]" id="section-05-image">
-        <Reveal>
-          <div className="w-full max-w-7xl mx-auto flex flex-col items-center">
+        <div className="w-full max-w-7xl mx-auto flex flex-col items-center">
+          <Reveal>
             <div className="w-full overflow-hidden">
               <img 
                 src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki_Control_Tower_Account@2x.webp?raw=true" 
@@ -326,18 +328,20 @@ export default function TikiControlTowerCaseStudy() {
                 referrerPolicy="no-referrer"
               />
             </div>
-          </div>
-        </Reveal>
+          </Reveal>
+        </div>
       </section>
 
       {/* FOOTER NAV */}
       <section className="w-full p-[140px_30px] flex justify-center bg-cream" id="next-project-footer">
-        <Reveal>
-          <Link to="/projects/crackle" className="group flex flex-col items-center gap-6" id="next-project-link">
-            <p className="font-mono text-[13px] tracking-[3px] opacity-60 group-hover:opacity-100 group-hover:tracking-[5px] transition-all duration-500">NEXT PROJECT</p>
-            <h4 className="font-sans font-semibold text-[clamp(32px,5vw,64px)] tracking-normal text-blue group-hover:scale-[1.02] transition-all duration-500">Sony Crackle</h4>
-          </Link>
-        </Reveal>
+        <div className="max-w-6xl mx-auto w-full flex justify-center">
+          <Reveal>
+            <Link to="/projects/tiki" className="group flex flex-col items-center gap-6" id="next-project-link">
+              <p className="font-mono text-[13px] tracking-[3px] opacity-60 group-hover:opacity-100 group-hover:tracking-[5px] transition-all duration-500">NEXT PROJECT</p>
+              <h4 className="font-sans font-semibold text-[clamp(32px,5vw,64px)] tracking-normal text-blue group-hover:scale-[1.02] transition-all duration-500">Tiki (Clicktripz)</h4>
+            </Link>
+          </Reveal>
+        </div>
       </section>
     </div>
   );

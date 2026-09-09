@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Reveal } from '../components/Reveal';
 import { BrandMarquee } from '../components/BrandMarquee';
+import { BallBeakerCard } from '../components/BallBeakerGame';
 import { ArrowUpRight, Play, Pause, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 // @ts-ignore
@@ -120,7 +121,7 @@ export default function Home() {
             className="fixed inset-0 bg-zinc-950 z-50 flex flex-col justify-between p-8 select-none"
           >
             {/* Top Info Header */}
-            <div className="flex justify-between font-mono text-[9px] text-blue/70 tracking-[2px] uppercase">
+            <div className="flex justify-between font-mono text-[11px] text-blue/70 tracking-[2px] uppercase">
               <div>LP.DSGN // PORTFOLIO MEDIA ARCHIVE</div>
               <div className="flex items-center gap-1.5 animate-pulse">
                 <span className="w-1.5 h-1.5 bg-blue rounded-full" />
@@ -141,14 +142,14 @@ export default function Home() {
 
               <div className="flex flex-col items-center gap-1">
                 <motion.span 
-                  className="font-mono text-[70px] font-thin leading-none tracking-[-3px] text-blue select-none tabular-nums"
+                  className="font-mono text-[clamp(28px,4.5vw,56px)] scale-125 font-thin leading-none tracking-[-3px] text-blue select-none tabular-nums"
                   initial={{ scale: 0.95 }}
                   animate={{ scale: [0.95, 1, 0.95] }}
                   transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
                 >
                   {preloadPercent.toString().padStart(3, '0')}%
                 </motion.span>
-                <div className="font-mono text-[10px] text-blue/40 tracking-[4px] uppercase h-4 overflow-hidden relative w-[220px] text-center">
+                <div className="font-mono text-[11px] text-blue/40 tracking-[4px] uppercase h-4 overflow-hidden relative w-[220px] text-center">
                   <AnimatePresence mode="popLayout">
                     <motion.div
                       key={preloadPercent < 40 ? "reading" : preloadPercent < 80 ? "compiling" : "rendering"}
@@ -181,10 +182,10 @@ export default function Home() {
 
             {/* Bottom watermark metadata info */}
             <div className="flex justify-between items-end">
-              <div className="font-mono text-[8px] text-blue/30 leading-relaxed max-w-[200px] uppercase">
+              <div className="font-mono text-[11px] text-blue/30 leading-relaxed max-w-[220px] uppercase">
                 CT-TV // SONY CRACKLE // DONKEY AI // CLICKTRIPZ // MYLIFE.COM // SYSTEMS ACTIVE
               </div>
-              <div className="font-mono text-[8.5px] text-blue/70 tracking-[1px] uppercase text-right">
+              <div className="font-mono text-[11px] text-blue/70 tracking-[1px] uppercase text-right">
                 REEL PLAYBACK SPEED: 6.5S<br />
                 CODEC: WEB-COMPILATION-2026
               </div>
@@ -395,10 +396,10 @@ export default function Home() {
                 <div className="absolute bottom-6 right-6 w-3 h-3 border-b border-r border-cream/30" />
 
                 {/* Tiny HUD Coordinate watermarks */}
-                <div className="absolute top-6 left-12 font-mono text-[7px] text-cream/40 tracking-[1px]">
+                <div className="absolute top-6 left-12 font-mono text-[11px] text-cream/40 tracking-[1px]">
                   [WIPE_SCAN.v2]
                 </div>
-                <div className="absolute bottom-6 right-12 font-mono text-[7px] text-cream/40 tracking-[1px] text-right">
+                <div className="absolute bottom-6 right-12 font-mono text-[11px] text-cream/40 tracking-[1px] text-right">
                   SECTOR_INDEX0{currentSlide + 1} // AUTO_REEL
                 </div>
 
@@ -409,13 +410,13 @@ export default function Home() {
                     transition={{ duration: 2.2, times: [0, 0.25, 0.75, 1.0], ease: "easeInOut" }}
                     className="flex flex-col items-center select-none"
                   >
-                    <span className="font-mono text-[10px] tracking-[5px] text-cyan-300 mr-[-5px] font-semibold uppercase">
+                    <span className="font-mono text-[11px] tracking-[5px] text-cyan-300 mr-[-5px] font-semibold uppercase">
                       {HOME_SLIDES[currentSlide].agency}
                     </span>
-                    <h4 className="font-sans font-semibold text-[clamp(24px,4.5vw,48px)] tracking-[-0.03em] text-cream leading-tight max-w-[650px] text-center mt-2 px-6">
+                    <h4 className="font-sans font-semibold text-[clamp(28px,4.5vw,56px)] tracking-[-0.03em] text-cream leading-tight max-w-[650px] text-center mt-2 px-6">
                       {HOME_SLIDES[currentSlide].title}
                     </h4>
-                    <div className="flex items-center gap-2 mt-4 font-mono text-[7.5px] text-cream/55 tracking-[3px] uppercase">
+                    <div className="flex items-center gap-2 mt-4 font-mono text-[11px] text-cream/55 tracking-[3px] uppercase">
                       <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-pulse" />
                       <span>LIVE REEL VIEW</span>
                     </div>
@@ -498,7 +499,7 @@ export default function Home() {
             >
               <ChevronLeft size={12} />
             </button>
-            <span className={`font-mono text-[10px] font-bold select-none mini:px-1 ${isDark ? 'text-cream' : 'text-blue'}`}>
+            <span className={`font-mono text-[11px] font-bold select-none mini:px-1 ${isDark ? 'text-cream' : 'text-blue'}`}>
               {currentSlide + 1}/{HOME_SLIDES.length}
             </span>
             <button 
@@ -517,7 +518,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -5 }}
               transition={{ duration: 0.3 }}
-              className={`font-mono text-[9px] uppercase tracking-[1px] max-w-[120px] md:max-w-[280px] truncate select-none ${isDark ? 'text-cream/90' : 'text-blue/90'}`}
+              className={`font-mono text-[11px] uppercase tracking-[1px] max-w-[120px] md:max-w-[280px] truncate select-none ${isDark ? 'text-cream/90' : 'text-blue/90'}`}
             >
               {HOME_SLIDES[currentSlide].title}
             </motion.div>
@@ -531,7 +532,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <div className={`flex font-mono font-normal text-[10px] uppercase tracking-[0.3px] transition-all duration-500 ${isDark ? 'text-cream' : 'text-blue'}`}>
+            <div className={`flex font-mono font-normal text-[11px] uppercase tracking-[0.3px] transition-all duration-500 ${isDark ? 'text-cream' : 'text-blue'}`}>
               {"Lesley".split("").map((char, i) => (
                 <motion.span 
                   key={i} 
@@ -544,7 +545,7 @@ export default function Home() {
                 </motion.span>
               ))}
             </div>
-            <div className={`flex font-mono font-normal text-[10px] uppercase tracking-[0.3px] transition-all duration-500 ${isDark ? 'text-cream' : 'text-blue'}`}>
+            <div className={`flex font-mono font-normal text-[11px] uppercase tracking-[0.3px] transition-all duration-500 ${isDark ? 'text-cream' : 'text-blue'}`}>
               {"Piercefield".split("").map((char, i) => (
                 <motion.span 
                   key={i} 
@@ -557,7 +558,7 @@ export default function Home() {
                 </motion.span>
               ))}
             </div>
-            <div className={`flex font-mono font-normal text-[10px] uppercase tracking-[0.3px] transition-all duration-500 ${isDark ? 'text-cream' : 'text-blue'}`}>
+            <div className={`flex font-mono font-normal text-[11px] uppercase tracking-[0.3px] transition-all duration-500 ${isDark ? 'text-cream' : 'text-blue'}`}>
               {"20—26".split("").map((char, i) => (
                 <motion.span 
                   key={i} 
@@ -573,7 +574,7 @@ export default function Home() {
           </motion.div>
           <div className="flex items-end justify-between w-full">
             <motion.div 
-              className={`flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.3px] transition-all duration-500 pointer-events-auto ${isDark ? 'text-cream' : 'text-blue'}`}
+              className={`flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.3px] transition-all duration-500 pointer-events-auto ${isDark ? 'text-cream' : 'text-blue'}`}
               initial={{ opacity: 0, filter: 'blur(8px)', x: -10 }}
               animate={{ opacity: 1, filter: 'blur(0)', x: 0 }}
               transition={{ delay: 2.3, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
@@ -589,7 +590,7 @@ export default function Home() {
             >
               <Link 
                 to="/projects" 
-                className={`flex items-center gap-2 backdrop-blur-[12px] saturate-180 rounded-[40px] px-[22px] py-[9px] font-sans font-semibold text-[14px] tracking-[-0.5px] hover:scale-[1.03] transition-all group overflow-hidden relative shadow-[0_4px_16px_rgba(0,102,255,0.06)] ${
+                className={`flex items-center gap-2 backdrop-blur-[12px] saturate-180 rounded-[40px] px-[22px] py-[9px] font-sans font-semibold text-[16px] tracking-[-0.5px] hover:scale-[1.03] transition-all group overflow-hidden relative shadow-[0_4px_16px_rgba(0,102,255,0.06)] ${
                   isDark 
                     ? 'bg-blue text-cream border border-blue hover:bg-cream hover:text-blue hover:border-cream shadow-[0_4px_16px_rgba(0,102,255,0.2)]' 
                     : 'bg-cream/80 text-blue border border-blue/60 hover:bg-cream/95'
@@ -619,7 +620,7 @@ export default function Home() {
               <HeartIcon />
               <HeartIcon />
             </div>
-            <h1 className="font-sans font-semibold text-[clamp(36px,5.8vw,74px)] leading-[1.18em] tracking-normal text-blue my-8">
+            <h1 className="font-sans font-semibold text-[clamp(28px,4.5vw,56px)] leading-[1.18em] tracking-normal text-blue my-8">
               Travel. Streaming. AI.<br />I design things<br />that simply work.
             </h1>
             <div className="flex justify-between px-2.5">
@@ -634,8 +635,8 @@ export default function Home() {
       <section id="gallery" className="w-full border-b border-blue">
         <Reveal>
           <div className="flex items-end justify-between p-[28px_30px] border-b border-blue">
-            <h3 className="font-sans font-semibold text-[clamp(20px,2.3vw,30px)] leading-none tracking-normal">Gallery –<br />Highlights&nbsp;</h3>
-            <Link to="/projects" className="flex items-center gap-2 font-sans font-semibold text-[18px] tracking-normal hover:gap-[13px] transition-all">
+            <h3 className="font-sans font-bold text-[16px] leading-[1.35em] tracking-normal text-blue">Gallery –<br />Highlights&nbsp;</h3>
+            <Link to="/projects" className="flex items-center gap-2 font-sans font-semibold text-[16px] tracking-normal hover:gap-[13px] transition-all">
               View Full Gallery
               <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M10.892 11.12V3.593L1.493 13 0 11.507 9.407 2.108H1.88V0H13V11.12H10.892Z" fill="currentColor"/></svg>
             </Link>
@@ -700,8 +701,8 @@ export default function Home() {
             }
           ].map((project, i) => (
             <Reveal key={i} delay={(i % 2) * 0.15 + Math.floor(i / 2) * 0.05}>
-              <Link to={project.link} className="group block border border-blue/10 hover:border-blue/30 transition-colors">
-                  <div className="work-card interactive group">
+              <Link to={project.link} className="group block border border-blue/10 hover:border-blue/30 transition-colors bg-cream h-full flex flex-col justify-between">
+                <div className="work-card interactive group">
                   <img 
                     src={project.img} 
                     alt={project.title} 
@@ -716,11 +717,11 @@ export default function Home() {
                   <div className="work-card-label">
                     <div className="flex flex-col items-center gap-5">
                       <div className="text-center">
-                        <h4 className="font-sans font-semibold text-[clamp(20px,2.2vw,28px)] tracking-normal text-blue leading-[1.2em] relative z-20">
+                        <h4 className="font-sans font-bold text-[16px] tracking-normal text-blue leading-[1.2em] relative z-20">
                           {project.title}
                         </h4>
                         <div className="mt-4 pt-4 border-t border-blue/20">
-                          <p className="font-sans font-medium text-[14px] text-blue/80 tracking-normal">
+                          <p className="font-sans font-medium text-[16px] text-blue/80 tracking-normal">
                             {project.company} <span className="opacity-40 mx-1">/</span> {project.industry}
                           </p>
                         </div>
@@ -732,18 +733,40 @@ export default function Home() {
                       )}
                     </div>
                   </div>
-                  <div className="p-6 flex flex-col gap-4">
-                    <div className="flex items-center justify-between">
-                      <span className="font-mono text-[10px] uppercase tracking-[2px] opacity-60">{project.year}</span>
-                      <span className="font-mono text-[10px] uppercase tracking-[2px] text-blue">{project.category}</span>
-                    </div>
-                    <h3 className="font-sans font-semibold text-[24px] tracking-normal">{project.subtitle}</h3>
-                    <p className="font-mono text-[16px] leading-[1.8em] text-blue/80 max-w-md">{project.description}</p>
-                  </div>
                 </div>
-                </Link>
+
+                {/* Card Metadata under the thumbnail */}
+                <div className="p-6 flex flex-col gap-4">
+                  <div className="flex items-center justify-between">
+                    <span className="font-mono text-[11px] uppercase tracking-[2px] opacity-60">{project.year}</span>
+                    <span className="font-mono text-[11px] uppercase tracking-[2px] text-blue">{project.category}</span>
+                  </div>
+                  {project.title === "MyLife.com" ? (
+                    <div className="flex items-center justify-between gap-4">
+                      <div className="flex-1">
+                        <h3 className="font-sans font-bold text-[16px] tracking-normal text-blue">{project.subtitle}</h3>
+                        <p className="font-mono text-[16px] leading-[1.8em] text-blue/80 max-w-[260px] sm:max-w-xs">{project.description}</p>
+                      </div>
+                      <div className="shrink-0 w-24 sm:w-32 md:w-40 flex items-center justify-center text-blue self-center">
+                        <svg className="w-full h-auto arrow-pulse" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M24 100 L180 100 M148 72 L180 100 L148 128" stroke="currentColor" strokeWidth="8" strokeLinejoin="miter" strokeLinecap="butt"/>
+                        </svg>
+                      </div>
+                    </div>
+                  ) : (
+                    <>
+                      <h3 className="font-sans font-bold text-[16px] tracking-normal text-blue">{project.subtitle}</h3>
+                      <p className="font-mono text-[16px] leading-[1.8em] text-blue/80 max-w-md">{project.description}</p>
+                    </>
+                  )}
+                </div>
+              </Link>
             </Reveal>
           ))}
+          {/* 6TH SLOT: PLAYABLE BALL BEAKER SORT GAME */}
+          <Reveal delay={0.25}>
+            <BallBeakerCard />
+          </Reveal>
         </div>
       </section>
 
@@ -751,13 +774,13 @@ export default function Home() {
       <section className="flex flex-col lg:flex-row w-full border-b border-blue">
         <div className="w-full lg:w-[305px] shrink-0 border-b lg:border-b-0 lg:border-r border-blue p-[70px_30px_50px] flex flex-col gap-5">
           <Reveal direction="left">
-            <h3 className="font-sans font-semibold text-[19px] tracking-normal leading-[1.4em]">People I've<br />made things for:</h3>
+            <h3 className="font-sans font-bold text-[16px] tracking-normal leading-[1.4em]">People I've<br />made things for:</h3>
             <p className="font-mono font-normal text-[16px] leading-[1.8em] text-blue/80 mt-5">Over the years I've had the privilege of working with great people and companies across travel tech, streaming, and data.</p>
           </Reveal>
         </div>
         <div className="flex-1 p-[70px_0_60px_36px] flex flex-col gap-11 overflow-hidden">
           <Reveal>
-            <h2 className="font-sans font-semibold text-[clamp(20px,4vw,40px)] leading-[1.12em] tracking-normal pr-20">Brands I've worked with</h2>
+            <h2 className="font-sans font-semibold text-[clamp(28px,4.5vw,56px)] leading-[1.12em] tracking-normal pr-20">Brands I've worked with</h2>
           </Reveal>
           <BrandMarquee />
         </div>
@@ -767,7 +790,7 @@ export default function Home() {
       <section className="flex flex-col lg:flex-row w-full border-b border-blue">
         <div className="w-full lg:w-[305px] shrink-0 border-b lg:border-b-0 lg:border-r border-blue p-[70px_30px_40px]">
           <Reveal direction="left">
-            <h3 className="font-sans font-semibold text-[19px] tracking-[-0.7px] leading-[1.4em]">Services:</h3>
+            <h3 className="font-sans font-bold text-[16px] tracking-[-0.7px] leading-[1.4em]">Services:</h3>
           </Reveal>
         </div>
         <div className="flex-1 p-[70px_50px_70px_36px] grid grid-cols-1 sm:grid-cols-2 gap-x-10">
@@ -786,7 +809,7 @@ export default function Home() {
                     initial="initial"
                     whileHover="active"
                   >
-                    <h3 className="font-sans font-semibold text-[18px] tracking-[-0.6px] relative z-10 transition-all">
+                    <h3 className="font-sans font-semibold text-[16px] tracking-[-0.6px] relative z-10 transition-all">
                       {service}
                     </h3>
                     <div className="shrink-0 w-7 h-7 flex items-center justify-center relative z-10">
@@ -823,12 +846,14 @@ export default function Home() {
       <section className="bg-blue flex flex-col sm:flex-row w-full p-[110px_0] relative overflow-hidden">
         <div className="absolute inset-0 bg-radial-[circle_at_70%_50%] from-white/9 to-transparent pointer-events-none" />
         <div className="w-full sm:w-[305px] shrink-0 flex items-start justify-start sm:justify-end p-6 sm:p-[0_24px_0_0]">
-          <div className="font-sans font-extrabold text-[100px] sm:text-[200px] leading-[0.65em] text-white/10 select-none">"</div>
+          <svg className="w-20 sm:w-28 h-auto text-white/10 fill-current select-none" viewBox="0 0 24 24">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+          </svg>
         </div>
         <div className="flex-1 mx-6 sm:mr-[70px] sm:ml-0">
           <Reveal>
             <div className="bg-white/11 backdrop-blur-[12px] border border-white/22 rounded-2xl p-7 sm:p-[44px_48px] flex flex-col gap-[30px]">
-              <blockquote className="font-sans font-semibold text-[clamp(18px,2.2vw,26px)] leading-[1.35em] tracking-[-0.8px] text-white">
+              <blockquote className="font-sans font-medium text-[16px] leading-[1.8em] tracking-normal text-white">
                 "Lesley consistently delivers high-quality work with a sharp eye for UX and design detail. She's eager to learn new tools and technologies and picks them up quickly. A great listener and thoughtful collaborator, Lesley brings both creativity and adaptability to every project."
               </blockquote>
               <div className="flex items-center gap-4">
@@ -839,8 +864,8 @@ export default function Home() {
                   referrerPolicy="no-referrer"
                 />
                 <div>
-                  <div className="font-sans font-semibold text-[17px] tracking-[-0.5px] text-white">Mark Mamber</div>
-                  <div className="font-mono font-light text-[10.5px] tracking-[0.2px] text-white/70 mt-[2px]">Chief Executive Officer at Tiki · via LinkedIn</div>
+                  <div className="font-sans font-semibold text-[16px] tracking-[-0.5px] text-white">Mark Mamber</div>
+                  <div className="font-mono font-light text-[11px] tracking-[0.2px] text-white/70 mt-[2px]">Chief Executive Officer at Tiki · via LinkedIn</div>
                 </div>
               </div>
             </div>

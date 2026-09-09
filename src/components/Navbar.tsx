@@ -55,7 +55,7 @@ export function Navbar() {
               </span>
             )}
           </div>
-          <span className="font-sans font-bold text-[17px] tracking-[-0.3px]">
+          <span className="font-sans font-bold text-[16px] tracking-[-0.3px]">
             Lesley<span className="font-medium text-blue/70 ml-1 hidden sm:inline">Piercefield</span>
           </span>
         </Link>
@@ -64,7 +64,7 @@ export function Navbar() {
       <div className="flex items-center gap-2">
         <Link 
           to="/projects" 
-          className="relative font-sans font-semibold text-[15px] tracking-[-0.5px] text-blue hover:opacity-65 transition-opacity px-3 py-1.5"
+          className="relative font-sans font-semibold text-[16px] tracking-[-0.5px] text-blue hover:opacity-65 transition-opacity px-3 py-1.5"
         >
           Gallery
           {location.pathname === '/projects' && (
@@ -73,14 +73,14 @@ export function Navbar() {
         </Link>
         <Link 
           to="/about" 
-          className="relative font-sans font-semibold text-[15px] tracking-[-0.5px] text-blue hover:opacity-65 transition-opacity px-3 py-1.5"
+          className="relative font-sans font-semibold text-[16px] tracking-[-0.5px] text-blue hover:opacity-65 transition-opacity px-3 py-1.5"
         >
           About
           {location.pathname === '/about' && (
             <div className="absolute left-1/2 bottom-0 w-5 h-[2px] bg-blue/80 -translate-x-1/2 rounded-full" />
           )}
         </Link>
-        <a href="mailto:lpiercefield@icloud.com" className="font-sans font-semibold text-[15px] tracking-[-0.5px] bg-blue text-cream px-5 py-[7px] rounded-[60px] hover:opacity-85 hover:scale-[1.03] transition-all relative overflow-hidden group ml-1">
+        <a href="mailto:lpiercefield@icloud.com" className="font-sans font-semibold text-[16px] tracking-[-0.5px] bg-blue text-cream px-5 py-[7px] rounded-[60px] hover:opacity-85 hover:scale-[1.03] transition-all relative overflow-hidden group ml-1">
           Contact
           <div className="absolute top-0 left-[-100%] w-[55%] h-full pointer-events-none bg-linear-to-r from-transparent via-white/25 to-transparent -skew-x-18 group-hover:left-[160%] transition-all duration-500" />
         </a>
