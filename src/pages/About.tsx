@@ -150,7 +150,7 @@ export default function About() {
               <p className="mb-6 border-t border-blue/20 pt-6">
                 Senior Product Designer based in Los Angeles, California, specializing in native utility interfaces, intent-driven UX, conversion optimization, and AdTech.
               </p>
-              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[10px] uppercase tracking-[2px] opacity-60">
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[12px] font-semibold uppercase tracking-[1.5px] text-blue/70">
                 <span>EST. 2010</span>
                 <span>•</span>
                 <span>INTENT & UTILITY</span>

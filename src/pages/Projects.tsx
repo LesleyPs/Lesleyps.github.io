@@ -206,12 +206,12 @@ function ProjectCard({
       </div>
       
       {/* Clean Title below image */}
-      <div className="flex items-start justify-between px-1 py-0.5">
-        <div className="flex items-center gap-2 flex-wrap">
-          <span className="font-sans font-semibold text-[17px] tracking-tight text-blue">
+      <div className="flex items-center justify-between px-1.5 py-1">
+        <div className="flex items-center gap-2.5 flex-wrap">
+          <span className="font-sans font-semibold text-[18px] sm:text-[19px] tracking-tight text-blue">
             {project.title}
           </span>
-          <span className="font-mono text-[8px] font-bold tracking-[1.5px] uppercase bg-blue/5 text-blue border border-blue/15 px-2 py-0.5">
+          <span className="font-mono text-[12px] font-bold tracking-[1px] uppercase bg-blue/10 text-blue border border-blue/20 px-2.5 py-1">
             {project.company}
           </span>
         </div>
@@ -256,7 +256,7 @@ export default function Projects() {
       {/* VIEWPORT CONTROLS BAR */}
       <div className="w-full border-b border-blue py-3 px-4 sm:px-8 md:px-12 bg-cream/90 backdrop-blur-md sticky top-[72px] z-[90] flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <span className="font-mono text-[10px] uppercase tracking-[1.5px] text-blue/60">Display:</span>
+          <span className="font-mono text-[12px] uppercase tracking-[1.5px] text-blue/70 font-semibold">Display:</span>
           <div className="flex items-center border border-blue/20 p-0.5 bg-white shadow-sm">
             <button 
               onClick={() => setViewMode('grid')}
@@ -304,28 +304,28 @@ export default function Projects() {
           >
             {/* Lightbox Header */}
             <div className="flex items-center justify-between border-b border-blue/10 pb-4">
-              <div className="flex flex-col gap-0.5">
-                <div className="flex items-center gap-2">
-                  <span className="font-sans font-bold text-[18px] tracking-tight text-blue">
+              <div className="flex flex-col gap-1">
+                <div className="flex items-center gap-2.5 flex-wrap">
+                  <span className="font-sans font-bold text-[20px] sm:text-[24px] tracking-tight text-blue">
                     {galleryItems[activeImageIndex].title}
                   </span>
-                  <span className="font-mono text-[8px] font-bold tracking-[1.5px] uppercase bg-blue/5 text-blue border border-blue/15 px-2 py-0.5">
+                  <span className="font-mono text-[12px] font-bold tracking-[1px] uppercase bg-blue/10 text-blue border border-blue/20 px-2.5 py-1">
                     {galleryItems[activeImageIndex].company}
                   </span>
                 </div>
-                <div className="font-mono text-[10px] text-blue/50 uppercase tracking-[0.5px]">
+                <div className="font-mono text-[13px] text-blue/70 uppercase tracking-[1px]">
                   {galleryItems[activeImageIndex].category}
                 </div>
               </div>
 
               {/* Close & Counter */}
               <div className="flex items-center gap-4">
-                <span className="font-mono text-[11px] font-bold tracking-[1px] text-blue/60 bg-blue/5 border border-blue/10 px-3 py-1">
+                <span className="font-mono text-[13px] font-bold tracking-[1px] text-blue bg-blue/10 border border-blue/20 px-3.5 py-1.5">
                   {String(activeImageIndex + 1).padStart(2, '0')} / {String(galleryItems.length).padStart(2, '0')}
                 </span>
                 <button 
                   onClick={() => setActiveImageIndex(null)}
-                  className="w-10 h-10 flex items-center justify-center bg-white border border-blue/15 text-blue hover:bg-blue hover:text-white transition-all cursor-pointer shadow-sm"
+                  className="w-10 h-10 flex items-center justify-center bg-white border border-blue/20 text-blue hover:bg-blue hover:text-white transition-all cursor-pointer shadow-sm"
                 >
                   <X size={18} />
                 </button>
@@ -393,18 +393,18 @@ export default function Projects() {
             {/* Lightbox Footer Info */}
             <div className="flex flex-col sm:flex-row items-center justify-between border-t border-blue/10 pt-4 gap-4">
               <div className="flex items-center gap-3">
-                <span className="font-mono text-[9px] uppercase tracking-[1.5px] text-blue/40">Environment Profile:</span>
-                <span className="font-mono text-[10px] font-bold text-blue tracking-[0.5px] uppercase bg-blue/5 border border-blue/10 px-2.5 py-1">
+                <span className="font-mono text-[13px] uppercase tracking-[1px] text-blue/70 font-medium">Environment Profile:</span>
+                <span className="font-mono text-[13px] font-bold text-blue tracking-[0.5px] uppercase bg-blue/10 border border-blue/20 px-3 py-1">
                   {galleryItems[activeImageIndex].platform}
                 </span>
               </div>
               {galleryItems[activeImageIndex].caseStudyUrl && (
                 <Link
                   to={galleryItems[activeImageIndex].caseStudyUrl}
-                  className="flex items-center gap-2 font-mono text-[11px] font-bold tracking-[1px] uppercase bg-blue text-cream hover:bg-blue/90 px-4 py-2 border border-blue transition-all group/cta"
+                  className="flex items-center gap-2 font-mono text-[13px] font-bold tracking-[1px] uppercase bg-blue text-cream hover:bg-blue/90 px-5 py-2.5 border border-blue transition-all group/cta"
                 >
                   <span>Explore Case Study</span>
-                  <ArrowUpRight size={14} className="group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5 transition-transform" />
+                  <ArrowUpRight size={15} className="group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5 transition-transform" />
                 </Link>
               )}
             </div>

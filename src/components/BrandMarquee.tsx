@@ -31,7 +31,7 @@ function BrandLogoImage({ brand }: { brand: Brand }) {
         viewBox="0 0 160 50"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="h-[36px] sm:h-[48px] md:h-[56px] w-auto max-w-full object-contain transition-all duration-300 ease-out transform group-hover/brand:scale-[1.08]"
+        className="h-[36px] sm:h-[48px] md:h-[56px] w-auto max-w-full object-contain"
       >
         <g>
           <path fillRule="evenodd" clipRule="evenodd" d="M30.0789 9.89547C31.6443 7.40658 33.0172 4.7981 34.1718 2.1124C34.2111 2.02011 34.2504 1.92688 34.2896 1.8346L29.8165 0.000183105C29.7801 0.0849353 29.7437 0.170629 29.7073 0.255382C28.9366 2.04742 28.0587 3.80273 27.085 5.50625C27.5723 6.30856 28.0817 7.09865 28.613 7.87177C29.084 8.55733 29.5733 9.23252 30.0789 9.89547Z" fill="#85E2D2"/>
@@ -96,8 +96,8 @@ function BrandLogoImage({ brand }: { brand: Brand }) {
             svgTag = svgTag.replace(/\bheight=(?:"[^"]*"|'[^']*'|\d+)/gi, "");
             svgTag = svgTag.replace(/\bclass(?:Name)?=(?:"[^"]*"|'[^']*')/gi, "");
             
-            // Inject polished, highly performant CSS classes with group-hover animation matching Tiki logo exactly
-            svgTag = svgTag.replace(/<svg/i, '<svg class="h-[36px] sm:h-[48px] md:h-[56px] w-auto max-w-full object-contain transition-all duration-300 ease-out transform group-hover/brand:scale-[1.08]"');
+            // Inject polished, clean CSS classes without rollover scale effect
+            svgTag = svgTag.replace(/<svg/i, '<svg class="h-[36px] sm:h-[48px] md:h-[56px] w-auto max-w-full object-contain"');
             
             cleaned = cleaned.substring(0, svgOpenIndex) + svgTag + cleaned.substring(svgCloseIndex + 1);
           }
@@ -123,7 +123,7 @@ function BrandLogoImage({ brand }: { brand: Brand }) {
         src={brand.logo}
         alt={brand.name}
         title={brand.name}
-        className="h-[36px] sm:h-[48px] md:h-[56px] max-w-full w-auto object-contain transition-all duration-300 ease-out transform group-hover/brand:scale-[1.08] mix-blend-multiply"
+        className="h-[36px] sm:h-[48px] md:h-[56px] max-w-full w-auto object-contain mix-blend-multiply"
         referrerPolicy="no-referrer"
       />
     );
@@ -177,7 +177,7 @@ export function BrandMarquee() {
             {currentBrands.map((brand, i) => (
               <div
                 key={`${brand.name}-${page}-${i}`}
-                className="flex h-[120px] items-center justify-center overflow-hidden group/brand"
+                className="flex h-[120px] items-center justify-center overflow-hidden"
               >
                 <motion.div
                   variants={{

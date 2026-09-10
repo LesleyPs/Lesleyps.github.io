@@ -38,7 +38,7 @@ export default function CrackleCaseStudy() {
                 </div>
                 <div>
                   <p className="font-mono text-[13px] uppercase tracking-[2px] opacity-60 mb-3">Focus</p>
-                  <p className="font-sans font-medium text-[18px] text-blue">Cross-Device Continuity</p>
+                  <p className="font-sans font-medium text-[18px] text-blue">Sign-Up Conversion & Onboarding Strategy</p>
                 </div>
               </div>
             </div>

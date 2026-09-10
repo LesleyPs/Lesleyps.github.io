@@ -191,14 +191,14 @@ export function VideoPlayer({ src, className = "", id }: VideoPlayerProps) {
             </button>
 
             {/* Time Stamp */}
-            <span className="opacity-90 font-mono text-[10px] tracking-[1px] uppercase bg-black/40 px-2 py-1 border border-white/10">
+            <span className="opacity-95 font-mono text-[12px] font-semibold tracking-[0.5px] uppercase bg-black/50 px-2.5 py-1 border border-white/15">
               {currentTimeFormatted} / {durationFormatted}
             </span>
           </div>
 
           <div className="flex items-center gap-2">
             {/* Visibility / Auto Status Badge */}
-            <span className="hidden sm:inline-block font-mono text-[9px] uppercase tracking-[1px] text-white/80 bg-black/50 px-2 py-1 border border-white/10">
+            <span className="hidden sm:inline-block font-mono text-[11px] font-medium uppercase tracking-[1px] text-white/90 bg-black/60 px-2.5 py-1 border border-white/15">
               {isInView ? (isPlaying ? "Auto Playing" : "Paused") : "Out of View"}
             </span>
 

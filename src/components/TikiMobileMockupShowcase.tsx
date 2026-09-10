@@ -684,8 +684,8 @@ export const TikiMobileMockupShowcase: React.FC = () => {
                   className="bg-white/70 border border-blue p-4 rounded-2xl hover:border-blue hover:shadow-xl transition-all cursor-pointer group flex flex-col justify-between"
                 >
                   <div className="text-center mb-3">
-                    <span className="font-mono text-[11px] font-bold text-blue uppercase tracking-[1px]">{m.name}</span>
-                    <p className="font-mono text-[11px] opacity-60">{m.city}</p>
+                    <span className="font-mono text-[13px] font-bold text-blue uppercase tracking-[1px]">{m.name}</span>
+                    <p className="font-mono text-[12px] text-blue/70 font-medium mt-0.5">{m.city}</p>
                   </div>
 
                   {/* MINI VECTOR SMARTPHONE */}

@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { Reveal } from '../components/Reveal';
-import { ArrowLeft, ArrowRight, BookOpen, Sparkles } from 'lucide-react';
+import { ArrowLeft, ArrowRight, BookOpen, Info, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { DonkeyArticleOverlay } from '../components/DonkeyArticleOverlay';
@@ -54,19 +54,6 @@ export default function DonkeyDonkeyCaseStudy() {
                 <div>
                   <p className="font-mono text-[13px] uppercase tracking-[2px] opacity-60 mb-3">Focus</p>
                   <p className="font-sans font-medium text-[18px] text-blue">Concept to Product</p>
-                </div>
-                <div>
-                  <p className="font-mono text-[13px] uppercase tracking-[2px] opacity-60 mb-3">Live Product</p>
-                  <p className="font-sans font-medium text-[18px] text-blue">
-                    <a 
-                      href="https://DonkeyDonkeyAI.com" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="underline decoration-blue/30 hover:decoration-blue transition-all"
-                    >
-                      DonkeyDonkeyAI.com
-                    </a>
-                  </p>
                 </div>
               </div>
             </div>
@@ -162,7 +149,7 @@ export default function DonkeyDonkeyCaseStudy() {
                 rel="noopener noreferrer" 
                 className="inline-flex items-center gap-3 font-mono text-[13px] font-bold tracking-[1.5px] uppercase bg-blue text-cream hover:bg-blue/90 border border-blue px-8 py-4 shadow-sm transition-all group"
               >
-                View MVP Version <ArrowRight size={14} className="group-hover:translate-x-1.5 transition-transform" />
+                View Live Build <ArrowRight size={14} className="group-hover:translate-x-1.5 transition-transform" />
               </a>
               <button 
                 onClick={() => setIsArticleOpen(true)}
@@ -170,6 +157,15 @@ export default function DonkeyDonkeyCaseStudy() {
               >
                 <BookOpen size={16} /> Inside the Build <Sparkles size={14} className="text-amber-500 group-hover:scale-125 transition-transform" />
               </button>
+            </div>
+
+            {/* Codebase Testing Status Note */}
+            <div className="mt-8 flex items-start gap-3 p-4 sm:p-5 bg-blue/5 border border-blue/20 max-w-2xl" id="build-status-note">
+              <Info size={18} className="text-blue shrink-0 mt-0.5" />
+              <div className="font-sans text-[14px] leading-[1.6em] text-blue font-medium">
+                <span className="font-mono text-[11px] font-bold uppercase tracking-[1.5px] text-blue/70 block mb-0.5">Please Note</span>
+                We are actively undergoing codebase changes and testing, so some features might be temporarily unavailable.
+              </div>
             </div>
           </Reveal>
         </div>
@@ -270,9 +266,9 @@ export default function DonkeyDonkeyCaseStudy() {
           <Reveal>
             <div className="w-full overflow-hidden border border-blue/10">
               <img 
-                src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-Trending-US-Destiantions@2x.webp?raw=true" 
+                src="/images/Donkey-Trending-US-Destinations-cropped.webp" 
                 alt="Donkey Trending US Destinations" 
-                className="w-full h-auto"
+                className="w-full h-auto block"
                 referrerPolicy="no-referrer"
               />
             </div>

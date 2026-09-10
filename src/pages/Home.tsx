@@ -395,29 +395,29 @@ export default function Home() {
                 <div className="absolute bottom-6 left-6 w-3 h-3 border-b border-l border-cream/30" />
                 <div className="absolute bottom-6 right-6 w-3 h-3 border-b border-r border-cream/30" />
 
-                {/* Tiny HUD Coordinate watermarks */}
-                <div className="absolute top-6 left-12 font-mono text-[11px] text-cream/40 tracking-[1px]">
+                {/* HUD Coordinate watermarks */}
+                <div className="absolute top-6 left-12 font-mono text-[13px] text-cream/70 tracking-[1px] font-medium">
                   [WIPE_SCAN.v2]
                 </div>
-                <div className="absolute bottom-6 right-12 font-mono text-[11px] text-cream/40 tracking-[1px] text-right">
+                <div className="absolute bottom-6 right-12 font-mono text-[13px] text-cream/70 tracking-[1px] font-medium text-right">
                   SECTOR_INDEX0{currentSlide + 1} // AUTO_REEL
                 </div>
 
-                <div className="flex flex-col items-center gap-2.5 z-40">
+                <div className="flex flex-col items-center gap-3 z-40">
                   <motion.div 
                     initial={{ opacity: 0, scale: 0.95, filter: "blur(4px)" }}
                     animate={{ opacity: [0, 1, 1, 0], scale: [0.95, 1, 1, 0.95], filter: ["blur(4px)", "blur(0px)", "blur(0px)", "blur(4px)"] }}
                     transition={{ duration: 2.2, times: [0, 0.25, 0.75, 1.0], ease: "easeInOut" }}
                     className="flex flex-col items-center select-none"
                   >
-                    <span className="font-mono text-[11px] tracking-[5px] text-cyan-300 mr-[-5px] font-semibold uppercase">
+                    <span className="font-mono text-[13px] sm:text-[14px] tracking-[3px] text-cyan-300 font-bold uppercase">
                       {HOME_SLIDES[currentSlide].agency}
                     </span>
                     <h4 className="font-sans font-semibold text-[clamp(28px,4.5vw,56px)] tracking-[-0.03em] text-cream leading-tight max-w-[650px] text-center mt-2 px-6">
                       {HOME_SLIDES[currentSlide].title}
                     </h4>
-                    <div className="flex items-center gap-2 mt-4 font-mono text-[11px] text-cream/55 tracking-[3px] uppercase">
-                      <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-pulse" />
+                    <div className="flex items-center gap-2.5 mt-4 font-mono text-[13px] text-cream/80 tracking-[2px] font-semibold uppercase">
+                      <span className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
                       <span>LIVE REEL VIEW</span>
                     </div>
                   </motion.div>
@@ -499,7 +499,7 @@ export default function Home() {
             >
               <ChevronLeft size={12} />
             </button>
-            <span className={`font-mono text-[11px] font-bold select-none mini:px-1 ${isDark ? 'text-cream' : 'text-blue'}`}>
+            <span className={`font-mono text-[13px] font-bold select-none mini:px-1 ${isDark ? 'text-cream' : 'text-blue'}`}>
               {currentSlide + 1}/{HOME_SLIDES.length}
             </span>
             <button 
@@ -518,7 +518,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -5 }}
               transition={{ duration: 0.3 }}
-              className={`font-mono text-[11px] uppercase tracking-[1px] max-w-[120px] md:max-w-[280px] truncate select-none ${isDark ? 'text-cream/90' : 'text-blue/90'}`}
+              className={`font-mono text-[13px] font-semibold uppercase tracking-[1px] max-w-[140px] md:max-w-[320px] truncate select-none ${isDark ? 'text-cream/90' : 'text-blue/90'}`}
             >
               {HOME_SLIDES[currentSlide].title}
             </motion.div>
@@ -635,8 +635,8 @@ export default function Home() {
       <section id="gallery" className="w-full border-b border-blue">
         <Reveal>
           <div className="flex items-end justify-between p-[28px_30px] border-b border-blue">
-            <h3 className="font-sans font-bold text-[16px] leading-[1.35em] tracking-normal text-blue">Gallery –<br />Highlights&nbsp;</h3>
-            <Link to="/projects" className="flex items-center gap-2 font-sans font-semibold text-[16px] tracking-normal hover:gap-[13px] transition-all">
+            <h3 className="font-sans font-bold text-[20px] sm:text-[22px] leading-[1.25em] tracking-tight text-blue">Gallery –<br />Highlights&nbsp;</h3>
+            <Link to="/projects" className="flex items-center gap-2 font-sans font-semibold text-[16px] sm:text-[18px] tracking-tight hover:gap-[13px] transition-all text-blue">
               View Full Gallery
               <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M10.892 11.12V3.593L1.493 13 0 11.507 9.407 2.108H1.88V0H13V11.12H10.892Z" fill="currentColor"/></svg>
             </Link>
@@ -649,7 +649,7 @@ export default function Home() {
               subtitle: "AI build for your travels",
               company: "Concept",
               industry: "Travel AI",
-              year: "2026",
+              year: "In Progress",
               category: "Product Design / AI",
               description: "Neighborhood intelligence meets AI travel booking. Seamless visual discovery.",
               img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-Donkey-AI-Gallery-Image.png?raw=true",
@@ -701,7 +701,7 @@ export default function Home() {
             }
           ].map((project, i) => (
             <Reveal key={i} delay={(i % 2) * 0.15 + Math.floor(i / 2) * 0.05}>
-              <Link to={project.link} className="group block border border-blue/10 hover:border-blue/30 transition-colors bg-cream h-full flex flex-col justify-between">
+              <Link to={project.link} className="group block border border-blue/10 hover:border-blue/30 transition-colors bg-cream h-full flex flex-col justify-start">
                 <div className="work-card interactive group">
                   <img 
                     src={project.img} 
@@ -717,11 +717,11 @@ export default function Home() {
                   <div className="work-card-label">
                     <div className="flex flex-col items-center gap-5">
                       <div className="text-center">
-                        <h4 className="font-sans font-bold text-[16px] tracking-normal text-blue leading-[1.2em] relative z-20">
+                        <h4 className="font-sans font-bold text-[24px] sm:text-[28px] tracking-tight text-blue leading-[1.2em] relative z-20">
                           {project.title}
                         </h4>
                         <div className="mt-4 pt-4 border-t border-blue/20">
-                          <p className="font-sans font-medium text-[16px] text-blue/80 tracking-normal">
+                          <p className="font-sans font-semibold text-[16px] text-blue/90 tracking-normal">
                             {project.company} <span className="opacity-40 mx-1">/</span> {project.industry}
                           </p>
                         </div>
@@ -736,16 +736,23 @@ export default function Home() {
                 </div>
 
                 {/* Card Metadata under the thumbnail */}
-                <div className="p-6 flex flex-col gap-4">
+                <div className="p-6 flex flex-col gap-3.5">
                   <div className="flex items-center justify-between">
-                    <span className="font-mono text-[11px] uppercase tracking-[2px] opacity-60">{project.year}</span>
-                    <span className="font-mono text-[11px] uppercase tracking-[2px] text-blue">{project.category}</span>
+                    <span className="font-mono text-[13px] font-semibold uppercase tracking-[1.5px] text-blue/70">{project.year}</span>
+                    <span className="font-mono text-[13px] font-bold uppercase tracking-[1.5px] text-blue">{project.category}</span>
+                  </div>
+                  <div>
+                    <h3 className="font-sans font-bold text-[20px] sm:text-[22px] tracking-tight text-blue">
+                      {project.title}
+                    </h3>
+                    <p className="font-sans font-semibold text-[15px] text-blue/75 mt-1">
+                      {project.subtitle}
+                    </p>
                   </div>
                   {project.title === "MyLife.com" ? (
                     <div className="flex items-center justify-between gap-4">
                       <div className="flex-1">
-                        <h3 className="font-sans font-bold text-[16px] tracking-normal text-blue">{project.subtitle}</h3>
-                        <p className="font-mono text-[16px] leading-[1.8em] text-blue/80 max-w-[260px] sm:max-w-xs">{project.description}</p>
+                        <p className="font-mono text-[15px] sm:text-[16px] leading-[1.7em] text-blue/80 max-w-[260px] sm:max-w-xs">{project.description}</p>
                       </div>
                       <div className="shrink-0 w-24 sm:w-32 md:w-40 flex items-center justify-center text-blue self-center">
                         <svg className="w-full h-auto arrow-pulse" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -754,10 +761,7 @@ export default function Home() {
                       </div>
                     </div>
                   ) : (
-                    <>
-                      <h3 className="font-sans font-bold text-[16px] tracking-normal text-blue">{project.subtitle}</h3>
-                      <p className="font-mono text-[16px] leading-[1.8em] text-blue/80 max-w-md">{project.description}</p>
-                    </>
+                    <p className="font-mono text-[15px] sm:text-[16px] leading-[1.7em] text-blue/80 max-w-md">{project.description}</p>
                   )}
                 </div>
               </Link>

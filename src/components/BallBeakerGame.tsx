@@ -642,30 +642,27 @@ export function BallBeakerCard() {
 
   return (
     <>
-      <div className="border border-blue/10 hover:border-blue/30 transition-colors h-full flex flex-col justify-between bg-cream" id="ball-beaker-card">
+      <div className="border border-blue/10 hover:border-blue/30 transition-colors h-full flex flex-col justify-start bg-cream" id="ball-beaker-card">
         {/* Playable Stage Area matching other cards' aspect ratio */}
         <div className="relative overflow-hidden aspect-[1.49] min-h-[250px] bg-[#f6f6f1] flex flex-col border-b border-blue/10">
           <BallBeakerGame onToggleExpand={() => setIsModalOpen(true)} />
         </div>
 
         {/* Card Metadata matching portfolio typography */}
-        <div className="p-6 flex flex-col gap-4">
+        <div className="p-6 flex flex-col gap-3.5">
           <div className="flex items-center justify-between">
-            <span className="font-mono text-[11px] uppercase tracking-[2px] opacity-60">2026 // STUDIO LAB</span>
-            <span className="font-mono text-[11px] uppercase tracking-[2px] text-blue">PLAYABLE · BALL BEAKER SORT</span>
+            <span className="font-mono text-[13px] font-semibold uppercase tracking-[1.5px] text-blue/70">2026 // STUDIO LAB</span>
+            <span className="font-mono text-[13px] font-bold uppercase tracking-[1.5px] text-blue">PLAYABLE · BALL BEAKER SORT</span>
           </div>
-          <div className="flex items-center justify-between">
-            <h3 className="font-sans font-bold text-[16px] tracking-normal text-blue">Ball Beaker Sort</h3>
-            <button
-              type="button"
-              onClick={() => setIsModalOpen(true)}
-              className="font-mono text-[11px] text-blue uppercase tracking-[1px] flex items-center gap-1 hover:underline cursor-pointer"
-              title="Open Fullscreen Lab"
-            >
-              EXPAND <Maximize2 size={12} />
-            </button>
+          <div>
+            <h3 className="font-sans font-bold text-[20px] sm:text-[22px] tracking-tight text-blue">
+              Ball Beaker Sort
+            </h3>
+            <p className="font-sans font-semibold text-[15px] text-blue/80 mt-0.5">
+              Chromatic Flask Sorting Engine
+            </p>
           </div>
-          <p className="font-mono text-[16px] leading-[1.8em] text-blue/80 max-w-md">
+          <p className="font-mono text-[15px] sm:text-[16px] leading-[1.7em] text-blue/80 max-w-md">
             A laboratory sorting puzzle inspired by Lesley's favorite game. Isolate, pour, and organize the chromatic orbs by hue to clear each beaker.
           </p>
         </div>
