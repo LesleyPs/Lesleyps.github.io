@@ -260,17 +260,105 @@ export default function DonkeyDonkeyCaseStudy() {
         </div>
       </section>
 
-      {/* SECTION 03: VISION IMAGE PLATFORM */}
+      {/* SECTION 03: VISION IMAGE PLATFORM & HOTEL SEARCH EXAMPLES */}
       <section className="w-full border-b border-blue overflow-hidden bg-white/40 p-6 sm:p-12 md:p-[80px_30px]" id="section-03-image">
-        <div className="w-full max-w-7xl mx-auto">
+        <div className="w-full max-w-7xl mx-auto space-y-16">
+          {/* Trending US Destinations Platform */}
           <Reveal>
-            <div className="w-full overflow-hidden border border-blue/10">
-              <img 
-                src="/images/Donkey-Trending-US-Destinations-cropped.webp" 
-                alt="Donkey Trending US Destinations" 
-                className="w-full h-auto block"
-                referrerPolicy="no-referrer"
-              />
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <span className="font-mono text-[11px] font-bold uppercase tracking-[2px] bg-blue text-cream px-3 py-1">
+                  Destination Discovery
+                </span>
+                <span className="font-mono text-[13px] text-blue/70">Macro Trending Destinations Canvas</span>
+              </div>
+              <div className="w-full overflow-hidden border border-blue/10">
+                <img 
+                  src="/images/Donkey-Trending-US-Destinations-cropped.webp" 
+                  alt="Donkey Trending US Destinations" 
+                  className="w-full h-auto block"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+            </div>
+          </Reveal>
+
+          {/* Hotel Search & Insights Prompt Flow */}
+          <Reveal>
+            <div className="border-t border-blue/20 pt-12 space-y-10">
+              <div>
+                <span className="font-mono text-[11px] font-bold uppercase tracking-[2px] bg-blue text-cream px-3 py-1 inline-block mb-3">
+                  Prompt Flow
+                </span>
+                <h3 className="font-sans font-semibold text-[clamp(22px,3vw,34px)] leading-[1.2em] tracking-tight text-blue mb-2">
+                  Hotel Search & Insights
+                </h3>
+                <p className="font-sans text-[15px] sm:text-[16px] leading-[1.6em] text-blue/80 max-w-2xl font-medium">
+                  A snippet of the prompt flow showing how Donkey transitions from conversational hotel discovery into detailed property insights.
+                </p>
+              </div>
+
+              {/* Step 1: Hotel Search */}
+              <div className="space-y-3">
+                <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+                  <div className="flex items-center gap-2.5">
+                    <span className="font-mono text-[12px] font-bold uppercase tracking-[1.5px] text-blue">
+                      01 // Initial Search
+                    </span>
+                    <span className="font-sans text-[14px] text-blue/70 font-medium">
+                      Conversational query & curated lodging cards
+                    </span>
+                  </div>
+                  <p className="font-mono text-[12px] text-blue/60 uppercase tracking-[1px]">
+                    Step 1 of Prompt Flow
+                  </p>
+                </div>
+                <div className="w-full overflow-hidden border border-blue/10">
+                  <img 
+                    src="/images/Donkey_Donkey_AI_Hotel_Search.webp" 
+                    alt="Donkey Donkey AI Hotel Search - Prompt Flow Step 1" 
+                    className="w-full h-auto block"
+                    onError={(e) => {
+                      e.currentTarget.src = "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey_Donkey_AI_Hotel_Search.webp?raw=true";
+                    }}
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+                <p className="font-sans text-[14px] leading-[1.5em] text-blue/75 font-medium">
+                  Travelers prompt Donkey with stay preferences, returning curated property cards with real-time rates and neighborhood context.
+                </p>
+              </div>
+
+              {/* Step 2: Hotel Insight */}
+              <div className="space-y-3 pt-4">
+                <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+                  <div className="flex items-center gap-2.5">
+                    <span className="font-mono text-[12px] font-bold uppercase tracking-[1.5px] text-blue">
+                      02 // Deep Property Insight
+                    </span>
+                    <span className="font-sans text-[14px] text-blue/70 font-medium">
+                      Synthesized reviews, amenities & room options
+                    </span>
+                  </div>
+                  <p className="font-mono text-[12px] text-blue/60 uppercase tracking-[1px]">
+                    Step 2 of Prompt Flow
+                  </p>
+                </div>
+                <div className="w-full overflow-hidden border border-blue/10">
+                  <img 
+                    src="/images/Donkey_Donkey_AI_Hotel_Insight.webp" 
+                    alt="Donkey Donkey AI Hotel Insight - Prompt Flow Step 2" 
+                    className="w-full h-auto block"
+                    onError={(e) => {
+                      e.currentTarget.src = "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey_Donkey_AI_Hotel_Insight.webp?raw=true";
+                    }}
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+                <p className="font-sans text-[14px] leading-[1.5em] text-blue/75 font-medium">
+                  Selecting a property unfolds an inline canvas synthesizing guest reviews, key amenities, and room availability directly in the flow.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>
