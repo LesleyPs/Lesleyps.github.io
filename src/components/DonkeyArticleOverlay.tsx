@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Clock, ArrowUpRight, BookOpen, Share2, Check, Sparkles, CheckCircle2, Zap, Rocket, Info } from 'lucide-react';
+import { X, Clock, ArrowUpRight, BookOpen, Share2, Check, Sparkles, CheckCircle2, Zap, Rocket } from 'lucide-react';
 import React, { useEffect, useState, UIEvent } from 'react';
 
 const LESLEY_PHOTO_URL = 'https://github.com/LesleyPs/old-protflio/blob/main/intro.hyperesources/Lesley%20Piercefield-1_2x.png?raw=true';
@@ -288,13 +288,9 @@ export function DonkeyArticleOverlay({ isOpen, onClose }: DonkeyArticleOverlayPr
                     Experience Donkey Donkey AI Live
                     <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </a>
-                  <div className="mt-5 flex items-start gap-2.5 p-3.5 bg-black/20 border border-white/20 text-cream/90">
-                    <Info size={16} className="text-cream shrink-0 mt-0.5" />
-                    <p className="font-sans text-[13px] leading-[1.5em] font-medium">
-                      <strong className="font-mono text-[11px] uppercase tracking-[1px] block text-white/80">Active Testing:</strong>
-                      We are currently undergoing codebase changes and testing, so some features might be temporarily unavailable.
-                    </p>
-                  </div>
+                  <p className="font-sans text-sm text-cream/80 leading-relaxed mt-4">
+                    Due to codebase updates, some features on the live build may be temporarily unavailable.
+                  </p>
                 </section>
 
                 {/* ARTICLE FOOTER / AUTHOR PROFILE */}

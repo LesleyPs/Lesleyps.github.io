@@ -646,12 +646,12 @@ export default function Home() {
           {[
             { 
               title: "Donkey Donkey AI", 
-              subtitle: "AI build for your travels",
+              subtitle: "AI Travel Assistant",
               company: "Concept",
               industry: "Travel AI",
               year: "In Progress",
               category: "Product Design / AI",
-              description: "Neighborhood intelligence meets AI travel booking. Seamless visual discovery.",
+              description: "Conversational trip planner that finds curated hotel stays, local spots, and personalized itineraries.",
               img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-Donkey-AI-Gallery-Image.png?raw=true",
               link: "/projects/donkey"
             },
@@ -662,7 +662,7 @@ export default function Home() {
               industry: "SaaS / Ad Ops",
               year: "2023 — 2024",
               category: "Enterprise Platform",
-              description: "Streamlining enterprise publisher onboarding, real-time yield analytics, and self-serve ad product management.",
+              description: "Enterprise platform for automated publisher onboarding, ad rules, and real-time yield analytics.",
               img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/TIKI-control-tower-metrics-thumb@2x.webp?raw=true",
               link: "/projects/control-tower"
             },
@@ -673,7 +673,7 @@ export default function Home() {
               industry: "Ad Tech",
               year: "2017 — 2024",
               category: "Interactive Ad Unit UI",
-              description: "Designing interactive ad unit UI and high-yield placements for travel's leading ad tech platforms.",
+              description: "High-yield interactive ad units and conversational AI assistants for global travel publishers.",
               img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki-Tab-Unit-Gallery@2x.webp?raw=true",
               link: "/projects/tiki"
             },
@@ -684,7 +684,7 @@ export default function Home() {
               industry: "Entertainment",
               year: "2018",
               category: "OTT / Entertainment",
-              description: "Redesigning the streaming experience for millions of users across multiple platforms.",
+              description: "10-foot TV interfaces, remote navigation architecture, and frictionless viewer sign-up flows.",
               img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Crackle-Sign-in-Screen@2x.webp?raw=true",
               link: "/projects/crackle"
             },
@@ -695,7 +695,7 @@ export default function Home() {
               industry: "Identity & Data",
               year: "2015",
               category: "Product Design / Data",
-              description: "Visualizing personal identity data and simplifying complex privacy controls.",
+              description: "Transforming complex public record archives into clean, reassuring personal identity reports.",
               img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/Thumbnails/mylife-WSFY-thumb.webp?raw=true",
               link: "/projects/mylife"
             }

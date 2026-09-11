@@ -16,7 +16,7 @@ export default function TikiControlTowerCaseStudy() {
             <div className="max-w-5xl">
               <Link 
                 to="/projects" 
-                className="flex items-center gap-2 font-mono text-[13px] tracking-[1px] text-blue mb-12 hover:gap-3 transition-all opacity-70 hover:opacity-100" 
+                className="inline-flex items-center gap-2 font-mono text-xs tracking-wider text-blue mb-10 hover:gap-3 transition-all opacity-70 hover:opacity-100 uppercase"
                 id="back-to-portfolio-btn"
               >
                 <ArrowLeft size={14} /> BACK TO PORTFOLIO
@@ -27,18 +27,18 @@ export default function TikiControlTowerCaseStudy() {
               </h1>
 
               {/* Metadata Grid */}
-              <div className="flex flex-wrap gap-x-16 gap-y-8" id="case-metadata-grid">
+              <div className="flex flex-wrap gap-x-12 sm:gap-x-16 gap-y-6 sm:gap-y-8" id="case-metadata-grid">
                 <div>
-                  <p className="font-mono text-[13px] uppercase tracking-[2px] opacity-60 mb-3">Role</p>
-                  <p className="font-sans font-medium text-[18px] text-blue">Senior Product Designer</p>
+                  <p className="font-mono text-xs uppercase tracking-widest opacity-60 mb-2">Role</p>
+                  <p className="font-sans font-medium text-lg text-blue">Senior Product Designer</p>
                 </div>
                 <div>
-                  <p className="font-mono text-[13px] uppercase tracking-[2px] opacity-60 mb-3">Scope</p>
-                  <p className="font-sans font-medium text-[18px] text-blue">Product Design & UI/UX</p>
+                  <p className="font-mono text-xs uppercase tracking-widest opacity-60 mb-2">Scope</p>
+                  <p className="font-sans font-medium text-lg text-blue">Enterprise SaaS & B2B Portal</p>
                 </div>
                 <div>
-                  <p className="font-mono text-[13px] uppercase tracking-[2px] opacity-60 mb-3">Platform</p>
-                  <p className="font-sans font-medium text-[18px] text-blue">Desktop Web SaaS Portal</p>
+                  <p className="font-mono text-xs uppercase tracking-widest opacity-60 mb-2">Platform</p>
+                  <p className="font-sans font-medium text-lg text-blue">Desktop Web SaaS Portal</p>
                 </div>
               </div>
             </div>
@@ -69,7 +69,7 @@ export default function TikiControlTowerCaseStudy() {
                     <div key={i} className="flex items-center px-8 shrink-0">
                       <motion.span 
                         whileHover={{ scale: 1.05 }}
-                        className="font-mono text-[12px] font-bold tracking-[1.5px] bg-white text-blue border border-blue rounded-full px-6 py-2.5 whitespace-nowrap shadow-sm cursor-pointer inline-block uppercase"
+                        className="font-mono text-xs font-bold tracking-wider bg-cream text-blue border border-blue rounded-full px-6 py-2.5 whitespace-nowrap shadow-sm cursor-pointer inline-block uppercase"
                       >
                         {p}
                       </motion.span>
@@ -82,151 +82,99 @@ export default function TikiControlTowerCaseStudy() {
         </Reveal>
       </section>
 
-      {/* 2. OVERVIEW & KEY OUTCOMES */}
-      <section className="w-full border-b border-blue p-[100px_30px]" id="outcomes-section">
+      {/* 2. EXECUTIVE SUMMARY & MISSION */}
+      <section className="w-full border-b border-blue py-12 sm:py-16 px-6 sm:px-12 bg-cream" id="overview-section">
         <div className="max-w-6xl mx-auto w-full">
           <Reveal>
-            <p className="font-mono text-[13px] tracking-[3px] opacity-60 mb-6 uppercase">Key Outcomes & Mission</p>
-            <h2 className="font-sans font-semibold text-[clamp(30px,4.5vw,56px)] leading-[1.12em] tracking-normal text-blue max-w-5xl mb-12">
-              Streamlining publisher onboarding, yield analytics, and self-serve ad product management.
+            <p className="font-mono text-xs tracking-widest opacity-60 mb-2 uppercase">Executive Summary</p>
+            <h2 className="font-sans font-semibold text-3xl sm:text-4xl text-blue tracking-tight leading-tight max-w-4xl mb-4">
+              Publisher onboarding, ad controls, and yield analytics.
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="space-y-2">
-                <p className="font-mono text-[12px] uppercase tracking-[2px] font-bold text-blue">01 // Self-Serve Setup</p>
-                <p className="font-sans text-[16px] leading-[1.6em] text-blue font-medium">
-                  Automated publisher tag verification, removing engineering setup bottlenecks.
-                </p>
-              </div>
-              <div className="space-y-2">
-                <p className="font-mono text-[12px] uppercase tracking-[2px] font-bold text-blue">02 // Fewer Clicks</p>
-                <p className="font-sans text-[16px] leading-[1.6em] text-blue font-medium">
-                  Surfaced frequency caps and active rules into a single card view, cutting sub-menu friction.
-                </p>
-              </div>
-              <div className="space-y-2">
-                <p className="font-mono text-[12px] uppercase tracking-[2px] font-bold text-blue">03 // Built for Scale</p>
-                <p className="font-sans text-[16px] leading-[1.6em] text-blue font-medium">
-                  Engineered to manage high-yield travel inventory across millions of daily impressions.
-                </p>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* 3. SECTION 01: THE MISSION */}
-      <section className="w-full border-b border-blue p-[100px_30px] bg-cream" id="section-01-mission">
-        <div className="max-w-6xl mx-auto w-full">
-          <Reveal>
-            <p className="font-mono text-[13px] tracking-[3px] opacity-60 mb-6 uppercase">01. The Mission</p>
-            <h2 className="font-sans font-semibold text-[clamp(30px,4.5vw,56px)] leading-[1.12em] tracking-normal text-blue w-[880px] max-w-full mb-8">
-              Turning manual onboarding into a self-service engine.
-            </h2>
-            <div className="font-sans text-[17px] sm:text-[18px] leading-[1.7em] text-blue max-w-4xl space-y-4 font-medium">
-              <p>
-                Tiki runs high-yield ad systems for major travel publishers. Partner onboarding previously required endless email coordination between publishers, sales reps, and developers just to verify script tags or adjust campaign rules.
-              </p>
-              <p>
-                I designed Control Tower as a dual-purpose portal—a self-serve setup tool for publishers and an operational command center for account leads. It eliminates integration friction and allows sales to scale partnerships without engineering overhead.
-              </p>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* 4. SECTION 02: PRODUCT EVOLUTION: V1 TO V2 */}
-      <section className="w-full border-b border-blue p-[100px_30px] bg-cream text-blue" id="section-02-evolution-header">
-        <div className="max-w-6xl mx-auto w-full">
-          <Reveal>
-            <p className="font-mono text-[13px] tracking-[3px] opacity-60 mb-6 uppercase">02. Product Evolution: V1 to V2</p>
-            <h2 className="font-sans font-semibold text-[clamp(30px,4.5vw,56px)] leading-[1.12em] tracking-normal text-blue w-[880px] max-w-full mb-8">
-              Surfacing critical controls directly on the card face.
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 font-sans text-[16px] leading-[1.65em] text-blue font-medium">
-              <div className="space-y-2">
-                <p className="font-mono text-[12px] uppercase tracking-[2px] font-bold text-blue">The Problem (V1)</p>
-                <p>
-                  Legacy product settings were buried in static tables. Checking frequency caps, device targets, or toggling product states required drilling into sub-menus for each domain.
-                </p>
-              </div>
-              <div className="space-y-2">
-                <p className="font-mono text-[12px] uppercase tracking-[2px] font-bold text-blue">The Fix (V2)</p>
-                <p>
-                  Surfaced key decision controls directly on product cards—introducing high-contrast status tags, instant toggles, and inline rules visible at a glance.
-                </p>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* SECTION 02: STACKED FULL-WIDTH IMAGES */}
-      <section className="w-full border-b border-blue overflow-hidden bg-cream p-6 sm:p-12 md:p-[80px_30px]" id="section-02-images">
-        <div className="w-full max-w-7xl mx-auto space-y-20">
-          <Reveal>
-            <div className="flex flex-col gap-4">
-              <div className="flex items-center justify-between border-b border-blue/20 pb-3">
-                <p className="font-mono text-[13px] uppercase tracking-[2px] font-bold text-blue/70">
-                  V1: Legacy List View
-                </p>
-                <span className="font-mono text-[11px] uppercase tracking-[1px] opacity-60">
-                  Sub-menu nested controls
-                </span>
-              </div>
-              <div className="w-full overflow-hidden">
-                <img 
-                  src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki-Products@2x.webp?raw=true" 
-                  alt="V1: Legacy List View" 
-                  className="w-full h-auto"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.15}>
-            <div className="flex flex-col gap-4">
-              <div className="flex items-center justify-between border-b border-blue pb-3">
-                <p className="font-mono text-[13px] uppercase tracking-[2px] font-bold text-blue">
-                  V2: Redesigned Card View
-                </p>
-                <span className="font-mono text-[11px] uppercase tracking-[1px] bg-blue text-cream px-2.5 py-0.5 font-bold">
-                  Surfaced In-Card Controls
-                </span>
-              </div>
-              <div className="w-full overflow-hidden">
-                <img 
-                  src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki_Control_Tower_Products_v2@2x.webp?raw=true" 
-                  alt="V2: Redesigned Card View" 
-                  className="w-full h-auto"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* 5. SECTION 03: REAL-TIME YIELD METRICS */}
-      <section className="w-full border-b border-blue p-[100px_30px] bg-cream text-blue" id="section-03-metrics-header">
-        <div className="max-w-6xl mx-auto w-full">
-          <Reveal>
-            <p className="font-mono text-[13px] tracking-[3px] opacity-60 mb-6 uppercase">03. Real-Time Yield Metrics</p>
-            <h2 className="font-sans font-semibold text-[clamp(30px,4.5vw,56px)] leading-[1.12em] tracking-normal text-blue w-[880px] max-w-full mb-6">
-              Data density engineered for quick calls.
-            </h2>
-            <p className="font-sans text-[17px] sm:text-[18px] leading-[1.7em] text-blue max-w-4xl font-medium">
-              Structured a clean KPI dashboard with primary metrics—Revenue, eCPM, Impressions, and Visitors—paired with instant date and domain filters for immediate performance insights.
+            <p className="font-sans text-base leading-relaxed text-blue/90 max-w-3xl">
+              Designed Control Tower as an internal command center and self-serve partner portal to manage ad rules, verify site tags, and track live earnings.
             </p>
           </Reveal>
         </div>
       </section>
 
-      {/* SECTION 03: FULL-WIDTH LARGE METRICS IMAGE */}
-      <section className="w-full border-b border-blue overflow-hidden bg-cream p-6 sm:p-12 md:p-[80px_30px]" id="section-03-image">
-        <div className="w-full max-w-7xl mx-auto flex flex-col items-center">
+      {/* 3. SECTION 01: PRODUCT EVOLUTION: V1 TO V2 */}
+      <section className="w-full border-b border-blue py-12 sm:py-16 px-6 sm:px-12 bg-white text-blue" id="section-01-evolution">
+        <div className="max-w-6xl mx-auto w-full space-y-10">
           <Reveal>
-            <div className="w-full overflow-hidden">
+            <div className="max-w-3xl">
+              <p className="font-mono text-xs tracking-widest opacity-60 mb-2 uppercase">01 // Product Evolution: V1 to V2</p>
+              <h2 className="font-sans font-semibold text-2xl sm:text-3xl text-blue tracking-tight leading-snug mb-3">
+                Surfacing controls right on the card face.
+              </h2>
+              <p className="font-sans text-base leading-relaxed text-blue/90">
+                Moved key ad toggles and status badges out of nested menus and directly onto cards for one-click adjustments.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="space-y-12">
+            <Reveal>
+              <div className="flex flex-col gap-3">
+                <div className="flex items-center justify-between border-b border-blue/20 pb-2">
+                  <p className="font-mono text-xs uppercase tracking-wider font-bold text-blue/70">
+                    V1: Legacy List View
+                  </p>
+                  <span className="font-mono text-xs uppercase tracking-wider opacity-60">
+                    Sub-menu nested controls
+                  </span>
+                </div>
+                <div className="w-full overflow-hidden border border-blue/10 bg-white">
+                  <img 
+                    src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki-Products@2x.webp?raw=true" 
+                    alt="V1: Legacy List View" 
+                    className="w-full h-auto"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.15}>
+              <div className="flex flex-col gap-3">
+                <div className="flex items-center justify-between border-b border-blue pb-2">
+                  <p className="font-mono text-xs uppercase tracking-wider font-bold text-blue">
+                    V2: Redesigned Card View
+                  </p>
+                  <span className="font-mono text-xs uppercase tracking-wider bg-blue text-cream px-2 py-0.5 font-bold">
+                    Surfaced In-Card Controls
+                  </span>
+                </div>
+                <div className="w-full overflow-hidden border border-blue/10 bg-white">
+                  <img 
+                    src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki_Control_Tower_Products_v2@2x.webp?raw=true" 
+                    alt="V2: Redesigned Card View" 
+                    className="w-full h-auto"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. SECTION 02: REAL-TIME YIELD METRICS */}
+      <section className="w-full border-b border-blue py-12 sm:py-16 px-6 sm:px-12 bg-cream text-blue" id="section-02-metrics">
+        <div className="max-w-6xl mx-auto w-full space-y-6">
+          <Reveal>
+            <div className="max-w-3xl">
+              <p className="font-mono text-xs tracking-widest opacity-60 mb-2 uppercase">02 // Real-Time Yield Metrics</p>
+              <h2 className="font-sans font-semibold text-2xl sm:text-3xl text-blue tracking-tight leading-snug mb-3">
+                Dense data arranged for quick calls.
+              </h2>
+              <p className="font-sans text-base leading-relaxed text-blue/90">
+                A clean KPI cockpit focusing on revenue, eCPM, impressions, and visitors with quick date and domain filters.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal>
+            <div className="w-full overflow-hidden border border-blue/10 bg-white">
               <img 
                 src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki_Control_Tower_Metrics@2x.webp?raw=true" 
                 alt="Tiki Control Tower Real-Time Yield Metrics" 
@@ -238,89 +186,74 @@ export default function TikiControlTowerCaseStudy() {
         </div>
       </section>
 
-      {/* 6. SECTION 04: DEVELOPER ONBOARDING & SITE REGISTRY */}
-      <section className="w-full border-b border-blue p-[100px_30px] bg-cream text-blue" id="section-04-onboarding-header">
-        <div className="max-w-6xl mx-auto w-full">
+      {/* 5. SECTION 03: DEVELOPER ONBOARDING & SITE REGISTRY */}
+      <section className="w-full border-b border-blue py-12 sm:py-16 px-6 sm:px-12 bg-white text-blue" id="section-03-onboarding">
+        <div className="max-w-6xl mx-auto w-full space-y-10">
           <Reveal>
-            <p className="font-mono text-[13px] tracking-[3px] opacity-60 mb-6 uppercase">04. Developer Onboarding & Site Registry</p>
-            <h2 className="font-sans font-semibold text-[clamp(30px,4.5vw,56px)] leading-[1.12em] tracking-normal text-blue w-[880px] max-w-full mb-8">
-              Clean technical handoffs for partner teams.
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 font-sans text-[16px] leading-[1.65em] text-blue font-medium">
-              <div className="space-y-2">
-                <p className="font-mono text-[12px] uppercase tracking-[2px] font-bold text-blue">Learning Hub</p>
-                <p>
-                  Structured a tabbed documentation portal with clear JavaScript specs, interactive code snippets, and error alerts to guide partner developers without support tickets.
-                </p>
-              </div>
-              <div className="space-y-2">
-                <p className="font-mono text-[12px] uppercase tracking-[2px] font-bold text-blue">Site Registry</p>
-                <p>
-                  Designed a domain registry for instant script tag verification, active status monitoring, and automated publisher tag provisioning.
-                </p>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* SECTION 04: FULL-WIDTH STACKED IMAGES */}
-      <section className="w-full border-b border-blue overflow-hidden bg-cream p-6 sm:p-12 md:p-[80px_30px]" id="section-04-images">
-        <div className="w-full max-w-7xl mx-auto space-y-16">
-          <Reveal>
-            <div className="flex flex-col gap-4">
-              <p className="font-mono text-[13px] uppercase tracking-[2px] opacity-60 text-center">
-                Developer Integration & UCO Learning Hub
+            <div className="max-w-3xl">
+              <p className="font-mono text-xs tracking-widest opacity-60 mb-2 uppercase">03 // Developer Center & Site Registry</p>
+              <h2 className="font-sans font-semibold text-2xl sm:text-3xl text-blue tracking-tight leading-snug mb-3">
+                Frictionless developer onboarding.
+              </h2>
+              <p className="font-sans text-base leading-relaxed text-blue/90">
+                Tabbed documentation with live JavaScript snippets paired with automated domain tag verification and instant health checks.
               </p>
-              <div className="w-full overflow-hidden">
-                <img 
-                  src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki_Control_Tower_Learning_Hub@2x.webp?raw=true" 
-                  alt="Tiki Control Tower Learning Hub" 
-                  className="w-full h-auto"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
             </div>
           </Reveal>
 
-          <Reveal delay={0.15}>
-            <div className="flex flex-col gap-4">
-              <p className="font-mono text-[13px] uppercase tracking-[2px] opacity-60 text-center">
-                Site Registry & Script Tag Verification
+          <div className="space-y-10">
+            <Reveal>
+              <div className="flex flex-col gap-3">
+                <p className="font-mono text-xs uppercase tracking-wider opacity-60 text-center">
+                  Developer Integration & UCO Learning Hub
+                </p>
+                <div className="w-full overflow-hidden border border-blue/10 bg-white">
+                  <img 
+                    src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki_Control_Tower_Learning_Hub@2x.webp?raw=true" 
+                    alt="Tiki Control Tower Learning Hub" 
+                    className="w-full h-auto"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.15}>
+              <div className="flex flex-col gap-3">
+                <p className="font-mono text-xs uppercase tracking-wider opacity-60 text-center">
+                  Site Registry & Script Tag Verification
+                </p>
+                <div className="w-full overflow-hidden border border-blue/10 bg-white">
+                  <img 
+                    src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki_Control_Tower_Site_Integration@2x.webp?raw=true" 
+                    alt="Tiki Control Tower Site Registry" 
+                    className="w-full h-auto"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. SECTION 04: ACCOUNT SYSTEMS & OPERATIONS */}
+      <section className="w-full border-b border-blue py-12 sm:py-16 px-6 sm:px-12 bg-cream text-blue" id="section-04-account">
+        <div className="max-w-6xl mx-auto w-full space-y-6">
+          <Reveal>
+            <div className="max-w-3xl">
+              <p className="font-mono text-xs tracking-widest opacity-60 mb-2 uppercase">04 // Account Systems & Operations</p>
+              <h2 className="font-sans font-semibold text-2xl sm:text-3xl text-blue tracking-tight leading-snug mb-3">
+                Centralized controls built to scale.
+              </h2>
+              <p className="font-sans text-base leading-relaxed text-blue/90">
+                Unified team permissions, organization IDs, and security policies built on a consistent, accessible design token system.
               </p>
-              <div className="w-full overflow-hidden">
-                <img 
-                  src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki_Control_Tower_Site_Integration@2x.webp?raw=true" 
-                  alt="Tiki Control Tower Site Registry" 
-                  className="w-full h-auto"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
             </div>
           </Reveal>
-        </div>
-      </section>
 
-      {/* 7. SECTION 05: ACCOUNT SYSTEMS & OPERATIONS */}
-      <section className="w-full border-b border-blue p-[100px_30px] bg-cream text-blue" id="section-05-account-header">
-        <div className="max-w-6xl mx-auto w-full">
           <Reveal>
-            <p className="font-mono text-[13px] tracking-[3px] opacity-60 mb-6 uppercase">05. Account Systems & Operations</p>
-            <h2 className="font-sans font-semibold text-[clamp(30px,4.5vw,56px)] leading-[1.12em] tracking-normal text-blue max-w-5xl mb-6">
-              Centralized controls built to scale.
-            </h2>
-            <p className="font-sans text-[17px] sm:text-[18px] leading-[1.7em] text-blue max-w-4xl font-medium">
-              Unified organization IDs, team permissions, security settings, and licensing terms into a single view. Leveraged a customized Material Design token system to maintain rapid engineering velocity while ensuring accessible, cohesive controls.
-            </p>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* SECTION 05: FULL-WIDTH LARGE ACCOUNT IMAGE */}
-      <section className="w-full border-b border-blue overflow-hidden bg-cream p-6 sm:p-12 md:p-[80px_30px]" id="section-05-image">
-        <div className="w-full max-w-7xl mx-auto flex flex-col items-center">
-          <Reveal>
-            <div className="w-full overflow-hidden">
+            <div className="w-full overflow-hidden border border-blue/10 bg-white">
               <img 
                 src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki_Control_Tower_Account@2x.webp?raw=true" 
                 alt="Tiki Control Tower Account View" 
@@ -333,12 +266,16 @@ export default function TikiControlTowerCaseStudy() {
       </section>
 
       {/* FOOTER NAV */}
-      <section className="w-full p-[140px_30px] flex justify-center bg-cream" id="next-project-footer">
+      <section className="w-full py-24 sm:py-32 px-6 sm:px-12 flex justify-center bg-cream" id="next-project-footer">
         <div className="max-w-6xl mx-auto w-full flex justify-center">
           <Reveal>
-            <Link to="/projects/tiki" className="group flex flex-col items-center gap-6" id="next-project-link">
-              <p className="font-mono text-[13px] tracking-[3px] opacity-60 group-hover:opacity-100 group-hover:tracking-[5px] transition-all duration-500">NEXT PROJECT</p>
-              <h4 className="font-sans font-semibold text-[clamp(32px,5vw,64px)] tracking-normal text-blue group-hover:scale-[1.02] transition-all duration-500">Tiki (Clicktripz)</h4>
+            <Link to="/projects/mylife" className="group flex flex-col items-center gap-4 sm:gap-6" id="next-project-link">
+              <p className="font-mono text-xs tracking-widest opacity-60 group-hover:opacity-100 group-hover:tracking-[4px] transition-all duration-500 uppercase">
+                NEXT PROJECT
+              </p>
+              <h4 className="font-sans font-semibold text-3xl sm:text-5xl lg:text-6xl tracking-tight text-blue group-hover:scale-[1.02] transition-all duration-500">
+                MyLife
+              </h4>
             </Link>
           </Reveal>
         </div>
