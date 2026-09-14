@@ -269,12 +269,12 @@ export default function TikiControlTowerCaseStudy() {
       <section className="w-full py-24 sm:py-32 px-6 sm:px-12 flex justify-center bg-cream" id="next-project-footer">
         <div className="max-w-6xl mx-auto w-full flex justify-center">
           <Reveal>
-            <Link to="/projects/mylife" className="group flex flex-col items-center gap-4 sm:gap-6" id="next-project-link">
+            <Link to="/projects/tiki" className="group flex flex-col items-center gap-4 sm:gap-6" id="next-project-link">
               <p className="font-mono text-xs tracking-widest opacity-60 group-hover:opacity-100 group-hover:tracking-[4px] transition-all duration-500 uppercase">
                 NEXT PROJECT
               </p>
               <h4 className="font-sans font-semibold text-3xl sm:text-5xl lg:text-6xl tracking-tight text-blue group-hover:scale-[1.02] transition-all duration-500">
-                MyLife
+                Tiki (Clicktripz)
               </h4>
             </Link>
           </Reveal>

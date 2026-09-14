@@ -132,11 +132,22 @@ export default function MyLifeCaseStudy() {
             <div className="max-w-3xl">
               <p className="font-mono text-xs tracking-widest opacity-60 mb-2 uppercase">02 // Purchase Order Flow</p>
               <h2 className="font-sans font-semibold text-2xl sm:text-3xl text-blue tracking-tight leading-snug mb-3">
-                Transparent billing that eliminates checkout bounce.
+                Simple, straightforward, and timeless.
               </h2>
               <p className="font-sans text-base leading-relaxed text-blue/90">
-                Removed checkout friction with upfront pricing breakdowns and simplified payment inputs.
+                Proof that great UI is classic. Clean inputs, transparent choices, and zero clutter — a layout so effective it remains in active use a decade later.
               </p>
+            </div>
+          </Reveal>
+
+          <Reveal>
+            <div className="w-full overflow-hidden border border-blue/10 bg-white">
+              <img 
+                src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/join_now_mylife-v1%201.webp?raw=true" 
+                alt="MyLife Join Now & Purchase Order Page" 
+                className="w-full h-auto"
+                referrerPolicy="no-referrer"
+              />
             </div>
           </Reveal>
         </div>

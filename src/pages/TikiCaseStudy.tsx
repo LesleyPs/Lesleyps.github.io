@@ -119,7 +119,7 @@ export default function TikiCaseStudy() {
               <p className="font-mono text-xs uppercase tracking-wider opacity-60 text-center">
                 Envoy Interactive AI Assistant Demo
               </p>
-              <div className="w-full overflow-hidden border border-blue/10 bg-white">
+              <div className="w-full overflow-hidden">
                 <VideoPlayer 
                   src="https://www.dropbox.com/scl/fi/k2qc37zvtnkhagn35vbjf/tiki-enovy-drp.mp4?rlkey=go6duodfyujwutb6ok0ksk28s&st=uw6nac4f&raw=1"
                   id="envoy-video-player"
@@ -140,7 +140,7 @@ export default function TikiCaseStudy() {
                     Geographic exploration
                   </span>
                 </div>
-                <div className="w-full overflow-hidden border border-blue/10 bg-white">
+                <div className="w-full overflow-hidden">
                   <img 
                     src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/version%20A-1_2x.png?raw=true" 
                     alt="Envoy Version A" 
@@ -161,7 +161,7 @@ export default function TikiCaseStudy() {
                     Higher CTR Winner
                   </span>
                 </div>
-                <div className="w-full overflow-hidden border border-blue/10 bg-white">
+                <div className="w-full overflow-hidden">
                   <img 
                     src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/version%20B-1_2x.png?raw=true" 
                     alt="Envoy Version B" 
@@ -180,7 +180,7 @@ export default function TikiCaseStudy() {
                 <p className="font-mono text-xs uppercase tracking-wider opacity-60 text-center">
                   Traveller Interaction Heatmap Analysis
                 </p>
-                <div className="w-full overflow-hidden border border-blue/10 bg-white">
+                <div className="w-full overflow-hidden">
                   <img 
                     src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/tiki-envoy-heatmap@2x.webp?raw=true" 
                     alt="Envoy Heatmap Analysis" 
@@ -196,7 +196,7 @@ export default function TikiCaseStudy() {
                 <p className="font-mono text-xs uppercase tracking-wider opacity-60 text-center">
                   Option C: High Density DMO Referral UI
                 </p>
-                <div className="w-full overflow-hidden border border-blue/10 bg-white">
+                <div className="w-full overflow-hidden">
                   <img 
                     src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/V3-%20C-1_2x.png?raw=true" 
                     alt="Envoy Version C Layout" 
@@ -217,7 +217,7 @@ export default function TikiCaseStudy() {
             <div className="max-w-3xl">
               <p className="font-mono text-xs tracking-widest opacity-60 mb-2 uppercase">02 // Interactive Tab Units</p>
               <h2 className="font-sans font-semibold text-2xl sm:text-3xl text-blue tracking-tight leading-snug mb-3">
-                Replacing intrusive popups with native utility.
+                Replacing intrusive pop-unders with native utility.
               </h2>
               <p className="font-sans text-base leading-relaxed text-blue/90">
                 Contextual deal tabs that slide in alongside travel articles, letting readers compare live rates without leaving the page.
@@ -231,7 +231,7 @@ export default function TikiCaseStudy() {
               <p className="font-mono text-xs uppercase tracking-wider opacity-60 text-center">
                 Interactive Tab Unit Motion Demo
               </p>
-              <div className="w-full overflow-hidden border border-blue/10 bg-white">
+              <div className="w-full overflow-hidden">
                 <VideoPlayer 
                   src="https://www.dropbox.com/scl/fi/55l3fbya7v7owwbt958vc/Tiki-Tab-Unit-example.mp4?rlkey=tndihx2wlatani8cded664jbw&st=3w66eiuc&raw=1"
                   id="media-unit-video-player"
@@ -252,7 +252,7 @@ export default function TikiCaseStudy() {
                     Initial layout
                   </span>
                 </div>
-                <div className="w-full overflow-hidden border border-blue/10 bg-white">
+                <div className="w-full overflow-hidden">
                   <img 
                     src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/old-tab-unit@2x.png?raw=true" 
                     alt="Old Interactive Ad Unit UI" 
@@ -273,7 +273,7 @@ export default function TikiCaseStudy() {
                     Production Winner
                   </span>
                 </div>
-                <div className="w-full overflow-hidden border border-blue/10 bg-white">
+                <div className="w-full overflow-hidden">
                   <img 
                     src="https://github.com/LesleyPs/old-protflio/blob/main/assets/Tiki_tab-unit-max@2x.webp?raw=true" 
                     alt="Maximized Tab Unit" 
@@ -308,7 +308,7 @@ export default function TikiCaseStudy() {
                 <p className="font-mono text-xs uppercase tracking-wider opacity-60 text-center">
                   Expedia Live Partner Unit
                 </p>
-                <div className="w-full overflow-hidden border border-blue/10 bg-white">
+                <div className="w-full overflow-hidden">
                   <img 
                     src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/expedia-media-unit.webp?raw=true" 
                     alt="Expedia integration view" 
@@ -324,7 +324,7 @@ export default function TikiCaseStudy() {
                 <p className="font-mono text-xs uppercase tracking-wider opacity-60 text-center">
                   Wetter Multi-Destination Campaign Unit
                 </p>
-                <div className="w-full overflow-hidden border border-blue/10 bg-white">
+                <div className="w-full overflow-hidden">
                   <img 
                     src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/wetter-travel@2x.webp?raw=true" 
                     alt="Wetter Multi-Destination integration view" 
@@ -340,7 +340,7 @@ export default function TikiCaseStudy() {
                 <p className="font-mono text-xs uppercase tracking-wider opacity-60 text-center">
                   AccuWeather iOS Native Mobile App Unit
                 </p>
-                <div className="w-full overflow-hidden border border-blue/10 bg-white">
+                <div className="w-full overflow-hidden">
                   <img 
                     src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/accuweather_2x.jpg?raw=true" 
                     alt="AccuWeather iOS native mobile unit view" 
@@ -358,12 +358,12 @@ export default function TikiCaseStudy() {
       <section className="w-full py-24 sm:py-32 px-6 sm:px-12 flex justify-center bg-cream" id="next-project-footer">
         <div className="max-w-6xl mx-auto w-full flex justify-center">
           <Reveal>
-            <Link to="/projects/control-tower" className="group flex flex-col items-center gap-4 sm:gap-6" id="next-project-link">
+            <Link to="/projects/crackle" className="group flex flex-col items-center gap-4 sm:gap-6" id="next-project-link">
               <p className="font-mono text-xs tracking-widest opacity-60 group-hover:opacity-100 group-hover:tracking-[4px] transition-all duration-500 uppercase">
                 NEXT PROJECT
               </p>
               <h4 className="font-sans font-semibold text-3xl sm:text-5xl lg:text-6xl tracking-tight text-blue group-hover:scale-[1.02] transition-all duration-500">
-                Control Tower
+                Sony Crackle
               </h4>
             </Link>
           </Reveal>
