@@ -389,20 +389,6 @@ export default function Home() {
                   className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-12"
                 />
 
-                {/* HUD Camera Target Corners */}
-                <div className="absolute top-6 left-6 w-3 h-3 border-t border-l border-cream/30" />
-                <div className="absolute top-6 right-6 w-3 h-3 border-t border-r border-cream/30" />
-                <div className="absolute bottom-6 left-6 w-3 h-3 border-b border-l border-cream/30" />
-                <div className="absolute bottom-6 right-6 w-3 h-3 border-b border-r border-cream/30" />
-
-                {/* HUD Coordinate watermarks */}
-                <div className="absolute top-6 left-12 font-mono text-[13px] text-cream/70 tracking-[1px] font-medium">
-                  [WIPE_SCAN.v2]
-                </div>
-                <div className="absolute bottom-6 right-12 font-mono text-[13px] text-cream/70 tracking-[1px] font-medium text-right">
-                  SECTOR_INDEX0{currentSlide + 1} // AUTO_REEL
-                </div>
-
                 <div className="flex flex-col items-center gap-3 z-40">
                   <motion.div 
                     initial={{ opacity: 0, scale: 0.95, filter: "blur(4px)" }}
