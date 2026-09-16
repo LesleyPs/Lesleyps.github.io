@@ -246,6 +246,8 @@ export function BallBeakerGame({ isExpanded = false, onToggleExpand }: GameConte
   const [shakingTube, setShakingTube] = useState<number | null>(null);
   const [soundEnabled, setSoundEnabled] = useState(true);
   const [isPouring, setIsPouring] = useState(false);
+  const [hasInteracted, setHasInteracted] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     audio.enabled = soundEnabled;
@@ -260,6 +262,15 @@ export function BallBeakerGame({ isExpanded = false, onToggleExpand }: GameConte
     setMoves(0);
     setIsWon(false);
     setShakingTube(null);
+  };
+
+  const handleStartPlay = () => {
+    setHasInteracted(true);
+    // Find the first tube that contains balls and pick it up
+    const firstPlayableTube = tubes.findIndex(t => t.length > 0);
+    if (firstPlayableTube !== -1) {
+      handleTubeClick(firstPlayableTube);
+    }
   };
 
   const checkWin = (currentTubes: BallColor[][]) => {
@@ -278,6 +289,7 @@ export function BallBeakerGame({ isExpanded = false, onToggleExpand }: GameConte
 
   const handleTubeClick = (tubeIndex: number) => {
     if (isWon || isPouring) return;
+    if (!hasInteracted) setHasInteracted(true);
 
     if (selectedTube === null) {
       const tube = tubes[tubeIndex];
@@ -363,7 +375,11 @@ export function BallBeakerGame({ isExpanded = false, onToggleExpand }: GameConte
     : (numTubes <= 3 ? 'w-7 sm:w-7.5 h-7 sm:h-7.5' : numTubes <= 4 ? 'w-6.5 sm:w-7 h-6.5 sm:h-7' : 'w-5.5 sm:w-6 h-5.5 sm:h-6');
 
   return (
-    <div className={`relative w-full h-full flex flex-col justify-between bg-[#f6f6f1] overflow-hidden select-none ${isExpanded ? 'p-2' : ''}`}>
+    <div 
+      className={`relative w-full h-full flex flex-col justify-between bg-[#f6f6f1] overflow-hidden select-none ${isExpanded ? 'p-2' : ''}`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       {/* Background blueprint grid pattern */}
       <div 
         className="absolute inset-0 pointer-events-none opacity-35"
@@ -434,6 +450,34 @@ export function BallBeakerGame({ isExpanded = false, onToggleExpand }: GameConte
       <div className={`relative z-10 flex-1 flex flex-col items-center justify-center p-2 sm:p-4 ${isExpanded ? 'min-h-[320px]' : 'min-h-[175px]'}`}>
         {/* Beakers Rack Shelf */}
         <div className="relative flex items-end justify-center gap-2 sm:gap-3 md:gap-4 pb-1">
+          {/* Subtle bouncing "Let's Play" rectangle matching portfolio theme */}
+          <AnimatePresence>
+            {!hasInteracted && !isHovered && moves === 0 && selectedTube === null && !isWon && (
+              <motion.button
+                type="button"
+                onClick={handleStartPlay}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ 
+                  opacity: 1, 
+                  scale: 1,
+                  y: [0, -4, 0]
+                }}
+                exit={{ opacity: 0, scale: 0.9, y: 2, transition: { duration: 0.16 } }}
+                transition={{ 
+                  y: { repeat: Infinity, duration: 1.6, ease: "easeInOut" },
+                  opacity: { duration: 0.2 },
+                  scale: { duration: 0.2 }
+                }}
+                className="absolute -top-6.5 sm:-top-7 left-1/2 -translate-x-1/2 z-30 cursor-pointer focus:outline-none"
+                title="Click to play!"
+                aria-label="Let's Play - Interactive beaker sorting game"
+              >
+                <div className="border border-blue/50 hover:border-blue bg-cream text-blue hover:bg-blue hover:text-cream font-mono text-[11px] font-medium uppercase tracking-[1.5px] px-3 py-1 shadow-sm transition-all whitespace-nowrap select-none">
+                  Let's Play
+                </div>
+              </motion.button>
+            )}
+          </AnimatePresence>
           {tubes.map((tube, tIdx) => {
             const isSelected = selectedTube === tIdx;
             const isShaking = shakingTube === tIdx;
