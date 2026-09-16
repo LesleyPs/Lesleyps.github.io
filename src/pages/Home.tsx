@@ -37,7 +37,7 @@ const HOME_SLIDES = [
     isDarkBg: false
   },
   {
-    url: "https://github.com/LesleyPs/old-protflio/blob/main/Envoy-DPR-Tiki@2x.webp?raw=true",
+    url: "https://github.com/LesleyPs/old-protflio/blob/main/assets/tiki-envoy-product-image@2x.webp?raw=true",
     title: "Tiki Envoy Conversational UI",
     agency: "Tiki Ad Tech",
     zoom: true,
@@ -696,7 +696,7 @@ export default function Home() {
               year: "2015",
               category: "Product Design / Data",
               description: "Transforming complex public record archives into clean, reassuring personal identity reports.",
-              img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/Thumbnails/mylife-WSFY-thumb.webp?raw=true",
+              img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/ML-mobile-menu@2x.jpg?raw=true",
               link: "/projects/mylife"
             }
           ].map((project, i) => (

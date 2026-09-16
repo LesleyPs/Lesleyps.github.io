@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { Reveal } from '../components/Reveal';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ArrowDown, MousePointerClick } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function MyLifeCaseStudy() {
@@ -88,10 +88,10 @@ export default function MyLifeCaseStudy() {
           <Reveal>
             <p className="font-mono text-xs tracking-widest opacity-60 mb-2 uppercase">Executive Summary</p>
             <h2 className="font-sans font-semibold text-3xl sm:text-4xl text-blue tracking-tight leading-tight max-w-4xl mb-4">
-              Turning raw public records into clean identity reports.
+              Turning raw public records into clear identity reports.
             </h2>
             <p className="font-sans text-base leading-relaxed text-blue/90 max-w-3xl">
-              Redesigned MyLife's core background report, simplified checkout friction, and optimized mobile entry for search visitors.
+              Cleaned up MyLife's core background reports, stripped the friction out of checkout, and dialed in mobile entry points for folks landing from search.
             </p>
           </Reveal>
         </div>
@@ -99,25 +99,97 @@ export default function MyLifeCaseStudy() {
 
       {/* 3. SECTION 01: MAIN PROFILE UX */}
       <section className="w-full border-b border-blue py-12 sm:py-16 px-6 sm:px-12 bg-white text-blue" id="section-01-profile">
+        <div className="max-w-6xl mx-auto w-full space-y-8">
+          <Reveal>
+            <div className="max-w-3xl">
+              <p className="font-mono text-xs tracking-widest opacity-60 mb-2 uppercase">01 // Main Profile UX & Public Data</p>
+              <h2 className="font-sans font-semibold text-2xl sm:text-3xl text-blue tracking-tight leading-snug mb-3">
+                Making complicated data easy to digest.
+              </h2>
+              <p className="font-sans text-base leading-relaxed text-blue/90">
+                Public records are messy and scattered all over the place. We took thousands of data points—from criminal court filings to contact history—and organized them into straightforward, easy-to-read cards that don't overwhelm people.
+              </p>
+            </div>
+          </Reveal>
+
+          {/* Scrollable Full-Page Paid Experience */}
+          <Reveal delay={0.15}>
+            <div className="space-y-3">
+              <div className="flex flex-wrap items-center justify-between gap-3 border-b border-blue/20 pb-2">
+                <p className="font-mono text-xs uppercase tracking-wider font-bold text-blue">
+                  Complete Logged-In Paid Public Record Page
+                </p>
+                <div className="flex items-center gap-2 font-mono text-xs opacity-70">
+                  <MousePointerClick size={14} className="text-blue" />
+                  <span>Scroll inside preview to explore</span>
+                  <ArrowDown size={14} className="text-blue animate-bounce" />
+                </div>
+              </div>
+
+              {/* Scrollable Mockup Container */}
+              <div className="w-full max-w-4xl mx-auto border border-blue/20 bg-[#f7f7f7] relative overflow-hidden">
+                {/* Browser-like clean header bar */}
+                <div className="bg-cream border-b border-blue/15 px-4 py-2 flex items-center justify-between select-none">
+                  <div className="flex items-center gap-1.5">
+                    <div className="w-2.5 h-2.5 rounded-full bg-blue/20"></div>
+                    <div className="w-2.5 h-2.5 rounded-full bg-blue/20"></div>
+                    <div className="w-2.5 h-2.5 rounded-full bg-blue/20"></div>
+                  </div>
+                  <p className="font-mono text-[11px] text-blue/70 truncate max-w-md">
+                    mylife.com/profile/public-report-paid-view
+                  </p>
+                  <span className="font-mono text-[10px] uppercase tracking-wider text-blue/60 font-semibold">
+                    Scrollable
+                  </span>
+                </div>
+
+                {/* Scrollable Viewport */}
+                <div 
+                  className="h-[520px] sm:h-[620px] overflow-y-auto overflow-x-hidden bg-white cursor-ns-resize scroll-smooth"
+                  tabIndex={0}
+                  aria-label="Scrollable MyLife public page mockup"
+                >
+                  <img 
+                    src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/PS%20Logged%20in%20paid%201220px.png?raw=true" 
+                    alt="MyLife Complete Logged In Paid Public Page" 
+                    className="w-full max-w-[960px] mx-auto h-auto block"
+                    loading="lazy"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+
+                {/* Subtle indicator bar at bottom */}
+                <div className="bg-cream/90 backdrop-blur-sm border-t border-blue/10 px-4 py-2 flex items-center justify-between text-blue font-mono text-[11px]">
+                  <span>Full layout hierarchy (6,450px)</span>
+                  <span className="opacity-70">Scroll inside to view the whole page</span>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* 4. SECTION 02: WHO'S SEARCHING FOR YOU */}
+      <section className="w-full border-b border-blue py-12 sm:py-16 px-6 sm:px-12 bg-cream text-blue" id="section-02-wsfy">
         <div className="max-w-6xl mx-auto w-full space-y-6">
           <Reveal>
             <div className="max-w-3xl">
-              <p className="font-mono text-xs tracking-widest opacity-60 mb-2 uppercase">01 // Main Profile UX</p>
+              <p className="font-mono text-xs tracking-widest opacity-60 mb-2 uppercase">02 // Who's Searching For You (WSFY)</p>
               <h2 className="font-sans font-semibold text-2xl sm:text-3xl text-blue tracking-tight leading-snug mb-3">
-                Structured data replacing visual anxiety.
+                Actionable identity alerts on mobile.
               </h2>
               <p className="font-sans text-base leading-relaxed text-blue/90">
-                Grouped contact histories, court filings, and reputation scores into clear, digestible cards.
+                Who's Searching For You was easily one of the highest-engagement features on the platform. We built a clean mobile flow that alerts people right when someone views their profile, giving clear insight into who's looking without crossing privacy lines.
               </p>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="border border-blue/10 w-full overflow-hidden">
+            <div className="w-full overflow-hidden flex justify-center">
               <img 
-                src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Mylife-public-background-report.jpg?raw=true" 
-                alt="MyLife Public Background Report Dashboard" 
-                className="w-full h-auto"
+                src="/images/wsfy-iphone-zoomed.jpg" 
+                alt="Who's Searching For You Mobile Interface - Zoomed Detail" 
+                className="w-full max-w-4xl h-auto object-contain mx-auto"
                 referrerPolicy="no-referrer"
               />
             </div>
@@ -125,86 +197,57 @@ export default function MyLifeCaseStudy() {
         </div>
       </section>
 
-      {/* 4. SECTION 02: PURCHASE ORDER FLOW & CONVERSION */}
-      <section className="w-full border-b border-blue py-12 sm:py-16 px-6 sm:px-12 bg-cream text-blue" id="section-02-checkout">
+      {/* 5. SECTION 03: QUANTIFYING REPUTATION */}
+      <section className="w-full border-b border-blue py-12 sm:py-16 px-6 sm:px-12 bg-white text-blue" id="section-03-reputation">
         <div className="max-w-6xl mx-auto w-full space-y-6">
           <Reveal>
             <div className="max-w-3xl">
-              <p className="font-mono text-xs tracking-widest opacity-60 mb-2 uppercase">02 // Purchase Order Flow</p>
+              <p className="font-mono text-xs tracking-widest opacity-60 mb-2 uppercase">03 // Quantifying Reputation & Mobile Navigation</p>
+              <h2 className="font-sans font-semibold text-2xl sm:text-3xl text-blue tracking-tight leading-snug mb-3">
+                Keeping scores clear and actionable.
+              </h2>
+              <p className="font-sans text-base leading-relaxed text-blue/90">
+                We designed the mobile breakdown for MyLife's Reputation Score. The goal was transparency: showing people exactly what went into their number and giving them direct control to manage and update their public records.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal>
+            <div className="w-full overflow-hidden">
+              <img 
+                src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/ML-mobile-menu@2x.jpg?raw=true" 
+                alt="MyLife Reputation Score Mobile Interface" 
+                className="w-full h-auto object-contain"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* 6. SECTION 04: PURCHASE ORDER FLOW & CONVERSION */}
+      <section className="w-full border-b border-blue py-12 sm:py-16 px-6 sm:px-12 bg-cream text-blue" id="section-04-checkout">
+        <div className="max-w-6xl mx-auto w-full space-y-6">
+          <Reveal>
+            <div className="max-w-3xl">
+              <p className="font-mono text-xs tracking-widest opacity-60 mb-2 uppercase">04 // Purchase Order Flow & Conversion</p>
               <h2 className="font-sans font-semibold text-2xl sm:text-3xl text-blue tracking-tight leading-snug mb-3">
                 Simple, straightforward, and timeless.
               </h2>
               <p className="font-sans text-base leading-relaxed text-blue/90">
-                Proof that great UI is classic. Clean inputs, transparent choices, and zero clutter — a layout so effective it remains in active use a decade later.
+                Proof that solid UI holds up. Clean inputs, clear pricing tiers, and zero clutter — a checkout flow so effective it remained in production for over a decade.
               </p>
             </div>
           </Reveal>
 
           <Reveal>
-            <div className="w-full overflow-hidden border border-blue/10 bg-white">
+            <div className="w-full overflow-hidden">
               <img 
                 src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/join_now_mylife-v1%201.webp?raw=true" 
                 alt="MyLife Join Now & Purchase Order Page" 
-                className="w-full h-auto"
+                className="w-full h-auto object-cover"
                 referrerPolicy="no-referrer"
               />
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* 5. SECTION 03: SEO LANDING PAGES & MOBILE INTERFACES */}
-      <section className="w-full border-b border-blue py-12 sm:py-16 px-6 sm:px-12 bg-white text-blue" id="section-03-mobile">
-        <div className="max-w-6xl mx-auto w-full space-y-10">
-          <Reveal>
-            <div className="max-w-3xl">
-              <p className="font-mono text-xs tracking-widest opacity-60 mb-2 uppercase">03 // SEO Pages & Mobile Entry</p>
-              <h2 className="font-sans font-semibold text-2xl sm:text-3xl text-blue tracking-tight leading-snug mb-3">
-                Fast mobile previews for search visitors.
-              </h2>
-              <p className="font-sans text-base leading-relaxed text-blue/90">
-                Lightweight preview screens confirming identity details before transitioning visitors to the full report.
-              </p>
-            </div>
-          </Reveal>
-
-          <div className="flex flex-col sm:flex-row gap-8 max-w-4xl mx-auto justify-center items-center">
-            <Reveal>
-              <div className="w-full max-w-sm border border-blue/10 bg-white p-2">
-                <img 
-                  src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/WSFY-iPhone@2x.jpg?raw=true" 
-                  alt="Who's Searching For You Mobile UI" 
-                  className="w-full h-auto object-contain mx-auto" 
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-            </Reveal>
-            <Reveal delay={0.15}>
-              <div className="w-full max-w-sm border border-blue/10 bg-white p-2">
-                <img 
-                  src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/ML-mobile-menu@2x.jpg?raw=true" 
-                  alt="Reputation Score Mobile Interface" 
-                  className="w-full h-auto object-contain mx-auto" 
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
-      {/* 6. SECTION 04: RETENTION TRIGGERS */}
-      <section className="w-full border-b border-blue py-12 sm:py-16 px-6 sm:px-12 bg-cream text-blue" id="section-04-retention">
-        <div className="max-w-6xl mx-auto w-full space-y-6">
-          <Reveal>
-            <div className="max-w-3xl">
-              <p className="font-mono text-xs tracking-widest opacity-60 mb-2 uppercase">04 // Systematic Design & Retention</p>
-              <h2 className="font-sans font-semibold text-2xl sm:text-3xl text-blue tracking-tight leading-snug mb-3">
-                Consistent styling and active alert loops.
-              </h2>
-              <p className="font-sans text-base leading-relaxed text-blue/90">
-                Unified cross-device components paired with email alerts when search activity updates.
-              </p>
             </div>
           </Reveal>
         </div>
