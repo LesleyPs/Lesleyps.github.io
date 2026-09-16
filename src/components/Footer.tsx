@@ -34,8 +34,8 @@ export function Footer() {
           <div className="flex-1 p-8">
             <h3 className="font-sans font-bold text-[16px] tracking-[-0.6px] mb-5">Find me:</h3>
             <div className="flex flex-col">
-              <a href="#" className="flex items-center justify-between font-mono font-normal text-[11px] tracking-[1.5px] py-3.25 border-b border-blue hover:tracking-[2.4px] hover:opacity-70 transition-all">LinkedIn</a>
-              <a href="#" className="flex items-center justify-between font-mono font-normal text-[11px] tracking-[1.5px] py-3.25 border-b border-blue hover:tracking-[2.4px] hover:opacity-70 transition-all">Resume PDF</a>
+              <a href="https://www.linkedin.com/in/lesleypiercefield" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between font-mono font-normal text-[11px] tracking-[1.5px] py-3.25 border-b border-blue hover:tracking-[2.4px] hover:opacity-70 transition-all">LinkedIn</a>
+              <a href="/Lesley%20Piercefield%20-%20Resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between font-mono font-normal text-[11px] tracking-[1.5px] py-3.25 border-b border-blue hover:tracking-[2.4px] hover:opacity-70 transition-all">Resume PDF</a>
               <a href="mailto:lpiercefield@icloud.com" className="flex items-center justify-between font-mono font-normal text-[11px] tracking-[1.5px] py-3.25 hover:tracking-[2.4px] hover:opacity-70 transition-all">Email</a>
             </div>
           </div>
@@ -52,11 +52,19 @@ export function Footer() {
 
       <div className="flex items-center gap-1.5 p-4 sm:px-8 border-b border-blue">
         {[
-          { icon: <Linkedin size={14} />, title: "LinkedIn" },
-          { icon: <Mail size={14} />, title: "Email" },
-          { icon: <FileText size={14} />, title: "Resume" }
+          { icon: <Linkedin size={14} />, title: "LinkedIn", href: "https://www.linkedin.com/in/lesleypiercefield", download: undefined, external: true },
+          { icon: <Mail size={14} />, title: "Email", href: "mailto:lpiercefield@icloud.com", download: undefined, external: false },
+          { icon: <FileText size={14} />, title: "Resume", href: "/Lesley%20Piercefield%20-%20Resume.pdf", download: undefined, external: true }
         ].map((social, i) => (
-          <a key={i} href="#" className="w-9 h-9 border border-blue rounded-full flex items-center justify-center transition-all hover:bg-blue hover:scale-110 group relative overflow-hidden" title={social.title}>
+          <a 
+            key={i} 
+            href={social.href}
+            download={social.download}
+            target={social.external ? "_blank" : undefined}
+            rel={social.external ? "noopener noreferrer" : undefined}
+            className="w-9 h-9 border border-blue rounded-full flex items-center justify-center transition-all hover:bg-blue hover:scale-110 group relative overflow-hidden" 
+            title={social.title}
+          >
             <div className="absolute inset-0 rounded-full bg-radial-[circle_at_30%_30%] from-white/28 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             <span className="text-blue group-hover:text-cream transition-colors">{social.icon}</span>
           </a>

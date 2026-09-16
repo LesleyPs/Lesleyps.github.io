@@ -413,7 +413,7 @@ export default function Home() {
                     <span className="font-mono text-[13px] sm:text-[14px] tracking-[3px] text-cyan-300 font-bold uppercase">
                       {HOME_SLIDES[currentSlide].agency}
                     </span>
-                    <h4 className="font-sans font-semibold text-[clamp(28px,4.5vw,56px)] tracking-[-0.03em] text-cream leading-tight max-w-[650px] text-center mt-2 px-6">
+                    <h4 className="font-sans font-semibold text-[clamp(20px,3.2vw,48px)] tracking-tight text-cream leading-tight max-w-full md:max-w-4xl lg:max-w-5xl text-center mt-2 px-4 sm:px-6 md:whitespace-nowrap">
                       {HOME_SLIDES[currentSlide].title}
                     </h4>
                     <div className="flex items-center gap-2.5 mt-4 font-mono text-[13px] text-cream/80 tracking-[2px] font-semibold uppercase">

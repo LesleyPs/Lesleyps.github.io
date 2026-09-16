@@ -15,11 +15,11 @@ export default function CrackleCaseStudy() {
           <Reveal>
             <div className="max-w-5xl">
               <Link 
-                to="/projects" 
+                to="/" 
                 className="inline-flex items-center gap-2 font-mono text-xs tracking-wider text-blue mb-10 hover:gap-3 transition-all opacity-70 hover:opacity-100 uppercase"
                 id="back-to-portfolio-btn"
               >
-                <ArrowLeft size={14} /> BACK TO PORTFOLIO
+                <ArrowLeft size={14} /> BACK TO HOME
               </Link>
 
               <h1 className="font-sans font-semibold text-[clamp(45px,8vw,110px)] leading-[0.95em] tracking-normal text-blue mb-10" id="case-study-title">
