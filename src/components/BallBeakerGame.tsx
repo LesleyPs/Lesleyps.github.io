@@ -426,19 +426,19 @@ export function BallBeakerGame({ isExpanded = false, onToggleExpand }: GameConte
         </div>
       </div>
 
-      {/* Playable beaker stage */}
-      <div className={`relative z-10 flex-1 flex flex-col items-center justify-between p-2 sm:p-3 ${isExpanded ? 'min-h-[320px]' : 'min-h-[185px]'}`}>
-        {/* Dedicated "Let's Play" / Action Status Cue (Never overlaps beakers) */}
-        <div className="w-full flex items-center justify-center pt-0.5 pb-1">
-          <AnimatePresence mode="wait">
-            {!hasInteracted && moves === 0 && selectedTube === null && !isWon ? (
+      {/* Playable beaker stage - centered vertically and horizontally */}
+      <div className={`relative z-10 flex-1 flex items-center justify-center p-2 sm:p-4 ${isExpanded ? 'min-h-[320px]' : 'min-h-[185px]'}`}>
+        {/* Floating "Let's Play" Cue (Absolute positioning so beakers remain centered) */}
+        <div className="absolute top-2 sm:top-2.5 left-1/2 -translate-x-1/2 z-20 pointer-events-auto">
+          <AnimatePresence>
+            {!hasInteracted && moves === 0 && selectedTube === null && !isWon && (
               <motion.div
                 key="lets-play"
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ 
                   opacity: 1, 
                   scale: 1,
-                  y: [0, -3, 0]
+                  y: [0, -2, 0]
                 }}
                 exit={{ opacity: 0, scale: 0.9, transition: { duration: 0.15 } }}
                 transition={{ 
@@ -455,7 +455,7 @@ export function BallBeakerGame({ isExpanded = false, onToggleExpand }: GameConte
                       handleTubeClick(firstPlayable);
                     }
                   }}
-                  className="cursor-pointer border border-blue/60 hover:border-blue bg-cream text-blue font-mono text-[11px] font-semibold uppercase tracking-[2px] px-3.5 py-1 shadow-xs hover:bg-blue hover:text-cream transition-colors flex items-center gap-1.5"
+                  className="cursor-pointer border border-blue/60 hover:border-blue bg-cream text-blue font-mono text-[11px] font-semibold uppercase tracking-[2px] px-3.5 py-1 shadow-xs hover:bg-blue hover:text-cream transition-colors flex items-center gap-1.5 whitespace-nowrap"
                   title="Click to start playing"
                   aria-label="Let's Play - Start sorting game"
                 >
@@ -463,25 +463,12 @@ export function BallBeakerGame({ isExpanded = false, onToggleExpand }: GameConte
                   <span>LET'S PLAY</span>
                 </button>
               </motion.div>
-            ) : (
-              <motion.div
-                key="status-hint"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="font-mono text-[10.5px] uppercase tracking-[1.5px] text-blue/70"
-              >
-                {selectedTube !== null 
-                  ? "TAP TARGET BEAKER TO POUR" 
-                  : isWon 
-                  ? "SOLVED! CHROMATOGRAPHY COMPLETE" 
-                  : "TAP ANY BEAKER TO SELECT"}
-              </motion.div>
             )}
           </AnimatePresence>
         </div>
 
-        {/* Beakers Rack Shelf */}
-        <div className="relative flex items-end justify-center gap-2 sm:gap-3 md:gap-4 pb-1">
+        {/* Beakers Rack Shelf - centered in middle of canvas */}
+        <div className="relative flex items-end justify-center gap-2 sm:gap-3 md:gap-4">
           {tubes.map((tube, tIdx) => {
             const isSelected = selectedTube === tIdx;
             const isShaking = shakingTube === tIdx;
@@ -624,7 +611,11 @@ export function BallBeakerGame({ isExpanded = false, onToggleExpand }: GameConte
       {/* Card footer instruction / quick navigation */}
       <div className="relative z-10 flex items-center justify-between px-3.5 py-2 border-t border-blue/15 bg-white/80">
         <p className="font-mono text-[11px] uppercase tracking-[1.2px] text-blue/70">
-          TAP BEAKER TO POUR &bull; SORT BY HUE
+          {selectedTube !== null 
+            ? "TAP TARGET BEAKER TO POUR" 
+            : isWon 
+            ? "CHROMATOGRAPHY COMPLETE!" 
+            : "TAP BEAKER TO POUR • SORT BY HUE"}
         </p>
 
         <button

@@ -775,7 +775,7 @@ export default function Home() {
       <section className="flex flex-col lg:flex-row w-full border-b border-blue">
         <div className="w-full lg:w-[305px] shrink-0 border-b lg:border-b-0 lg:border-r border-blue p-[70px_30px_50px] flex flex-col gap-5">
           <Reveal direction="left">
-            <h3 className="font-sans font-bold text-[16px] tracking-normal leading-[1.4em]">People I've<br />made things for:</h3>
+            <h3 className="font-sans font-bold text-[20px] sm:text-[22px] tracking-tight leading-[1.3em]">People I've<br />made things for:</h3>
             <p className="font-mono font-normal text-[16px] leading-[1.8em] text-blue/80 mt-5">Over the years I've had the privilege of working with great people and companies across travel tech, streaming, and data.</p>
           </Reveal>
         </div>
@@ -844,20 +844,24 @@ export default function Home() {
       </section>
 
       {/* TESTIMONIAL */}
-      <section className="bg-blue flex flex-col sm:flex-row w-full p-[110px_0] relative overflow-hidden">
-        <div className="absolute inset-0 bg-radial-[circle_at_70%_50%] from-white/9 to-transparent pointer-events-none" />
-        <div className="w-full sm:w-[305px] shrink-0 flex items-start justify-start sm:justify-end p-6 sm:p-[0_24px_0_0]">
-          <svg className="w-20 sm:w-28 h-auto text-white/10 fill-current select-none" viewBox="0 0 24 24">
-            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-          </svg>
-        </div>
-        <div className="flex-1 mx-6 sm:mr-[70px] sm:ml-0">
+      <section className="bg-blue flex flex-col items-center justify-center w-full p-[80px_20px] sm:p-[100px_32px] md:p-[110px_40px] relative overflow-hidden">
+        <div className="absolute inset-0 bg-radial-[circle_at_50%_50%] from-white/9 to-transparent pointer-events-none" />
+        
+        <div className="w-full max-w-[910px] mx-auto relative z-10">
           <Reveal>
-            <div className="bg-white/11 backdrop-blur-[12px] border border-white/22 rounded-2xl p-7 sm:p-[44px_48px] flex flex-col gap-[30px]">
-              <blockquote className="font-sans font-medium text-[16px] leading-[1.8em] tracking-normal text-white">
+            <div className="relative bg-white/11 backdrop-blur-[12px] border border-white/22 rounded-2xl p-7 sm:p-[44px_48px] flex flex-col gap-[26px] shadow-[0_16px_36px_rgba(0,0,0,0.12)]">
+              {/* Subtle quotation mark watermark */}
+              <div className="text-white/15 select-none pointer-events-none -mb-3">
+                <svg className="w-10 sm:w-12 h-auto fill-current" viewBox="0 0 24 24">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                </svg>
+              </div>
+
+              <blockquote className="font-sans font-medium text-[20px] sm:text-[22px] leading-[1.55em] sm:leading-[1.6em] tracking-tight text-white">
                 "Lesley consistently delivers high-quality work with a sharp eye for UX and design detail. She's eager to learn new tools and technologies and picks them up quickly. A great listener and thoughtful collaborator, Lesley brings both creativity and adaptability to every project."
               </blockquote>
-              <div className="flex items-center gap-4">
+
+              <div className="flex items-center gap-4 pt-1 border-t border-white/15">
                 <img 
                   src={markMamberAvatar} 
                   alt="Mark Mamber" 
