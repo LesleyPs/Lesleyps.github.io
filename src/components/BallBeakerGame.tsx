@@ -247,7 +247,6 @@ export function BallBeakerGame({ isExpanded = false, onToggleExpand }: GameConte
   const [soundEnabled, setSoundEnabled] = useState(true);
   const [isPouring, setIsPouring] = useState(false);
   const [hasInteracted, setHasInteracted] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     audio.enabled = soundEnabled;
@@ -262,15 +261,6 @@ export function BallBeakerGame({ isExpanded = false, onToggleExpand }: GameConte
     setMoves(0);
     setIsWon(false);
     setShakingTube(null);
-  };
-
-  const handleStartPlay = () => {
-    setHasInteracted(true);
-    // Find the first tube that contains balls and pick it up
-    const firstPlayableTube = tubes.findIndex(t => t.length > 0);
-    if (firstPlayableTube !== -1) {
-      handleTubeClick(firstPlayableTube);
-    }
   };
 
   const checkWin = (currentTubes: BallColor[][]) => {
@@ -315,9 +305,8 @@ export function BallBeakerGame({ isExpanded = false, onToggleExpand }: GameConte
     const movingBall = sourceTube[sourceTube.length - 1];
 
     const isTargetFull = targetTube.length >= TUBE_CAPACITY;
-    const isColorMatch = targetTube.length === 0 || targetTube[targetTube.length - 1] === movingBall;
 
-    if (!isTargetFull && isColorMatch) {
+    if (!isTargetFull) {
       setIsPouring(true);
       audio.playDrop();
 
@@ -336,14 +325,9 @@ export function BallBeakerGame({ isExpanded = false, onToggleExpand }: GameConte
         checkWin(newTubes);
       }, 140);
     } else {
-      if (targetTube.length > 0) {
-        setSelectedTube(tubeIndex);
-        audio.playPop();
-      } else {
-        setShakingTube(tubeIndex);
-        audio.playInvalid();
-        setTimeout(() => setShakingTube(null), 320);
-      }
+      setShakingTube(tubeIndex);
+      audio.playInvalid();
+      setTimeout(() => setShakingTube(null), 320);
     }
   };
 
@@ -375,11 +359,7 @@ export function BallBeakerGame({ isExpanded = false, onToggleExpand }: GameConte
     : (numTubes <= 3 ? 'w-7 sm:w-7.5 h-7 sm:h-7.5' : numTubes <= 4 ? 'w-6.5 sm:w-7 h-6.5 sm:h-7' : 'w-5.5 sm:w-6 h-5.5 sm:h-6');
 
   return (
-    <div 
-      className={`relative w-full h-full flex flex-col justify-between bg-[#f6f6f1] overflow-hidden select-none ${isExpanded ? 'p-2' : ''}`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
+    <div className={`relative w-full h-full flex flex-col justify-between bg-[#f6f6f1] overflow-hidden select-none ${isExpanded ? 'p-2' : ''}`}>
       {/* Background blueprint grid pattern */}
       <div 
         className="absolute inset-0 pointer-events-none opacity-35"
@@ -447,37 +427,61 @@ export function BallBeakerGame({ isExpanded = false, onToggleExpand }: GameConte
       </div>
 
       {/* Playable beaker stage */}
-      <div className={`relative z-10 flex-1 flex flex-col items-center justify-center p-2 sm:p-4 ${isExpanded ? 'min-h-[320px]' : 'min-h-[175px]'}`}>
-        {/* Beakers Rack Shelf */}
-        <div className="relative flex items-end justify-center gap-2 sm:gap-3 md:gap-4 pb-1">
-          {/* Subtle bouncing "Let's Play" rectangle matching portfolio theme */}
-          <AnimatePresence>
-            {!hasInteracted && !isHovered && moves === 0 && selectedTube === null && !isWon && (
-              <motion.button
-                type="button"
-                onClick={handleStartPlay}
-                initial={{ opacity: 0, scale: 0.9 }}
+      <div className={`relative z-10 flex-1 flex flex-col items-center justify-between p-2 sm:p-3 ${isExpanded ? 'min-h-[320px]' : 'min-h-[185px]'}`}>
+        {/* Dedicated "Let's Play" / Action Status Cue (Never overlaps beakers) */}
+        <div className="w-full flex items-center justify-center pt-0.5 pb-1">
+          <AnimatePresence mode="wait">
+            {!hasInteracted && moves === 0 && selectedTube === null && !isWon ? (
+              <motion.div
+                key="lets-play"
+                initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ 
                   opacity: 1, 
                   scale: 1,
-                  y: [0, -4, 0]
+                  y: [0, -3, 0]
                 }}
-                exit={{ opacity: 0, scale: 0.9, y: 2, transition: { duration: 0.16 } }}
+                exit={{ opacity: 0, scale: 0.9, transition: { duration: 0.15 } }}
                 transition={{ 
-                  y: { repeat: Infinity, duration: 1.6, ease: "easeInOut" },
-                  opacity: { duration: 0.2 },
-                  scale: { duration: 0.2 }
+                  y: { repeat: Infinity, duration: 1.8, ease: "easeInOut" },
+                  duration: 0.2
                 }}
-                className="absolute -top-6.5 sm:-top-7 left-1/2 -translate-x-1/2 z-30 cursor-pointer focus:outline-none"
-                title="Click to play!"
-                aria-label="Let's Play - Interactive beaker sorting game"
               >
-                <div className="border border-blue/50 hover:border-blue bg-cream text-blue hover:bg-blue hover:text-cream font-mono text-[11px] font-medium uppercase tracking-[1.5px] px-3 py-1 shadow-sm transition-all whitespace-nowrap select-none">
-                  Let's Play
-                </div>
-              </motion.button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setHasInteracted(true);
+                    const firstPlayable = tubes.findIndex(t => t.length > 0);
+                    if (firstPlayable !== -1) {
+                      handleTubeClick(firstPlayable);
+                    }
+                  }}
+                  className="cursor-pointer border border-blue/60 hover:border-blue bg-cream text-blue font-mono text-[11px] font-semibold uppercase tracking-[2px] px-3.5 py-1 shadow-xs hover:bg-blue hover:text-cream transition-colors flex items-center gap-1.5"
+                  title="Click to start playing"
+                  aria-label="Let's Play - Start sorting game"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue animate-pulse" />
+                  <span>LET'S PLAY</span>
+                </button>
+              </motion.div>
+            ) : (
+              <motion.div
+                key="status-hint"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="font-mono text-[10.5px] uppercase tracking-[1.5px] text-blue/70"
+              >
+                {selectedTube !== null 
+                  ? "TAP TARGET BEAKER TO POUR" 
+                  : isWon 
+                  ? "SOLVED! CHROMATOGRAPHY COMPLETE" 
+                  : "TAP ANY BEAKER TO SELECT"}
+              </motion.div>
             )}
           </AnimatePresence>
+        </div>
+
+        {/* Beakers Rack Shelf */}
+        <div className="relative flex items-end justify-center gap-2 sm:gap-3 md:gap-4 pb-1">
           {tubes.map((tube, tIdx) => {
             const isSelected = selectedTube === tIdx;
             const isShaking = shakingTube === tIdx;
@@ -486,123 +490,128 @@ export function BallBeakerGame({ isExpanded = false, onToggleExpand }: GameConte
 
             return (
               <div key={tIdx} className="relative flex flex-col items-center">
-                {/* Floating lifted ball indicator when selected */}
-                <div className={`${isExpanded ? 'h-10' : 'h-7 sm:h-8'} flex items-center justify-center mb-1`}>
-                  <AnimatePresence>
-                    {isSelected && hasBalls && (
-                      <motion.div
-                        initial={{ y: 14, scale: 0.8, opacity: 0 }}
-                        animate={{ 
-                          y: [0, -3, 0], 
-                          scale: 1, 
-                          opacity: 1 
-                        }}
-                        exit={{ y: 14, scale: 0.8, opacity: 0 }}
-                        transition={{ 
-                          y: { repeat: Infinity, duration: 1.5, ease: "easeInOut" },
-                          duration: 0.16 
-                        }}
-                        className={`${ballSizeClass} rounded-full border border-white/60 shadow-md relative`}
-                        style={{
-                          background: BALL_CONFIGS[tube[tube.length - 1]].gradient,
-                          boxShadow: `0 6px 14px ${BALL_CONFIGS[tube[tube.length - 1]].shadow}`
-                        }}
-                      >
-                        <div className="absolute top-0.5 left-1 w-2 h-1.5 bg-white/75 rounded-full blur-[0.3px] rotate-[-25deg]" />
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-
-                {/* Beaker Glass Tube */}
-                <motion.button
+                <button
                   type="button"
                   onClick={() => handleTubeClick(tIdx)}
-                  animate={{
-                    x: isShaking ? [-3, 3, -3, 3, 0] : 0,
-                    y: isSelected ? -2 : 0
-                  }}
-                  transition={{ duration: isShaking ? 0.28 : 0.14 }}
-                  className={`
-                    group relative ${tubeWidthClass} rounded-b-[22px] cursor-pointer
-                    border-2 transition-all duration-200 flex flex-col justify-end p-1 overflow-visible
-                    ${isSelected 
-                      ? 'border-blue bg-blue/10 shadow-[0_0_16px_rgba(0,82,204,0.22)]' 
-                      : isSolved
-                      ? 'border-emerald-500/60 bg-emerald-500/5 shadow-[0_0_12px_rgba(16,185,129,0.15)]'
-                      : 'border-blue/35 bg-white/55 hover:border-blue hover:bg-white/80'
-                    }
-                  `}
+                  className="group relative flex flex-col items-center cursor-pointer select-none focus:outline-none"
+                  aria-label={`Beaker ${tIdx + 1}, contains ${tube.length} orbs`}
                 >
-                  {/* Flared Beaker Rim Lip */}
-                  <div 
-                    className={`
-                      absolute -top-1.5 -left-1 -right-1 h-2 rounded-full border-2 transition-colors
-                      ${isSelected 
-                        ? 'border-blue bg-blue/30' 
-                        : isSolved 
-                        ? 'border-emerald-500/60 bg-emerald-500/20' 
-                        : 'border-blue/40 bg-white/85 group-hover:border-blue'
-                      }
-                    `}
-                  />
-
-                  {/* Beaker graduation measurement lines */}
-                  <div className="absolute left-1 top-3.5 bottom-3.5 w-1.5 flex flex-col justify-between pointer-events-none opacity-40">
-                    <div className="w-1.5 h-[1px] bg-blue" />
-                    <div className="w-1 h-[1px] bg-blue" />
-                    <div className="w-1.5 h-[1px] bg-blue" />
-                    <div className="w-1 h-[1px] bg-blue" />
-                    <div className="w-1.5 h-[1px] bg-blue" />
-                  </div>
-
-                  {/* Vertical glass specular reflection streak */}
-                  <div className="absolute right-1 top-2 bottom-3 w-1 bg-gradient-to-b from-white/80 via-white/25 to-transparent rounded-full pointer-events-none opacity-70" />
-
-                  {/* Stacked Balls inside beaker */}
-                  <div className="relative z-10 w-full flex flex-col-reverse items-center gap-0.5 sm:gap-1 mb-0.5">
-                    {tube.map((ballColor, bIdx) => {
-                      const isTopAndSelected = isSelected && bIdx === tube.length - 1;
-                      if (isTopAndSelected) {
-                        return (
-                          <div 
-                            key={bIdx} 
-                            className={`${ballSizeClass} rounded-full opacity-0`}
-                          />
-                        );
-                      }
-
-                      const config = BALL_CONFIGS[ballColor];
-                      return (
+                  {/* Floating lifted ball indicator when selected */}
+                  <div className={`${isExpanded ? 'h-10' : 'h-7 sm:h-8'} flex items-center justify-center mb-1`}>
+                    <AnimatePresence>
+                      {isSelected && hasBalls && (
                         <motion.div
-                          key={bIdx}
-                          layout
-                          initial={{ scale: 0.8, y: -15, opacity: 0 }}
-                          animate={{ scale: 1, y: 0, opacity: 1 }}
-                          transition={{ type: "spring", stiffness: 360, damping: 24 }}
-                          className={`${ballSizeClass} rounded-full border border-white/50 relative shrink-0`}
+                          initial={{ y: 14, scale: 0.8, opacity: 0 }}
+                          animate={{ 
+                            y: [0, -3, 0], 
+                            scale: 1, 
+                            opacity: 1 
+                          }}
+                          exit={{ y: 14, scale: 0.8, opacity: 0 }}
+                          transition={{ 
+                            y: { repeat: Infinity, duration: 1.5, ease: "easeInOut" },
+                            duration: 0.16 
+                          }}
+                          className={`${ballSizeClass} rounded-full border border-white/60 shadow-md relative`}
                           style={{
-                            background: config.gradient,
-                            boxShadow: `inset 0 -2px 3px rgba(0,0,0,0.2), 0 2px 5px ${config.shadow}`
+                            background: BALL_CONFIGS[tube[tube.length - 1]].gradient,
+                            boxShadow: `0 6px 14px ${BALL_CONFIGS[tube[tube.length - 1]].shadow}`
                           }}
                         >
-                          <div className="absolute top-0.5 left-1 w-1.5 h-1 bg-white/75 rounded-full blur-[0.2px] rotate-[-25deg]" />
+                          <div className="absolute top-0.5 left-1 w-2 h-1.5 bg-white/75 rounded-full blur-[0.3px] rotate-[-25deg]" />
                         </motion.div>
-                      );
-                    })}
+                      )}
+                    </AnimatePresence>
                   </div>
 
-                  {/* Solved spark badge */}
-                  {isSolved && (
-                    <motion.div
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      className="absolute -top-3 right-0 bg-emerald-500 text-white rounded-full p-0.5 shadow-sm"
-                    >
-                      <Sparkles size={9} />
-                    </motion.div>
-                  )}
-                </motion.button>
+                  {/* Beaker Glass Tube */}
+                  <motion.div
+                    animate={{
+                      x: isShaking ? [-3, 3, -3, 3, 0] : 0,
+                      y: isSelected ? -2 : 0
+                    }}
+                    transition={{ duration: isShaking ? 0.28 : 0.14 }}
+                    className={`
+                      relative ${tubeWidthClass} rounded-b-[22px]
+                      border-2 transition-all duration-200 flex flex-col justify-end p-1 overflow-visible
+                      ${isSelected 
+                        ? 'border-blue bg-blue/10 shadow-[0_0_16px_rgba(0,82,204,0.22)]' 
+                        : isSolved
+                        ? 'border-emerald-500/60 bg-emerald-500/5 shadow-[0_0_12px_rgba(16,185,129,0.15)]'
+                        : 'border-blue/35 bg-white/55 group-hover:border-blue group-hover:bg-white/80'
+                      }
+                    `}
+                  >
+                    {/* Flared Beaker Rim Lip */}
+                    <div 
+                      className={`
+                        absolute -top-1.5 -left-1 -right-1 h-2 rounded-full border-2 transition-colors
+                        ${isSelected 
+                          ? 'border-blue bg-blue/30' 
+                          : isSolved 
+                          ? 'border-emerald-500/60 bg-emerald-500/20' 
+                          : 'border-blue/40 bg-white/85 group-hover:border-blue'
+                        }
+                      `}
+                    />
+
+                    {/* Beaker graduation measurement lines */}
+                    <div className="absolute left-1 top-3.5 bottom-3.5 w-1.5 flex flex-col justify-between pointer-events-none opacity-40">
+                      <div className="w-1.5 h-[1px] bg-blue" />
+                      <div className="w-1 h-[1px] bg-blue" />
+                      <div className="w-1.5 h-[1px] bg-blue" />
+                      <div className="w-1 h-[1px] bg-blue" />
+                      <div className="w-1.5 h-[1px] bg-blue" />
+                    </div>
+
+                    {/* Vertical glass specular reflection streak */}
+                    <div className="absolute right-1 top-2 bottom-3 w-1 bg-gradient-to-b from-white/80 via-white/25 to-transparent rounded-full pointer-events-none opacity-70" />
+
+                    {/* Stacked Balls inside beaker */}
+                    <div className="relative z-10 w-full flex flex-col-reverse items-center gap-0.5 sm:gap-1 mb-0.5">
+                      {tube.map((ballColor, bIdx) => {
+                        const isTopAndSelected = isSelected && bIdx === tube.length - 1;
+                        if (isTopAndSelected) {
+                          return (
+                            <div 
+                              key={bIdx} 
+                              className={`${ballSizeClass} rounded-full opacity-0`}
+                            />
+                          );
+                        }
+
+                        const config = BALL_CONFIGS[ballColor];
+                        return (
+                          <motion.div
+                            key={bIdx}
+                            layout
+                            initial={{ scale: 0.8, y: -15, opacity: 0 }}
+                            animate={{ scale: 1, y: 0, opacity: 1 }}
+                            transition={{ type: "spring", stiffness: 360, damping: 24 }}
+                            className={`${ballSizeClass} rounded-full border border-white/50 relative shrink-0`}
+                            style={{
+                              background: config.gradient,
+                              boxShadow: `inset 0 -2px 3px rgba(0,0,0,0.2), 0 2px 5px ${config.shadow}`
+                            }}
+                          >
+                            <div className="absolute top-0.5 left-1 w-1.5 h-1 bg-white/75 rounded-full blur-[0.2px] rotate-[-25deg]" />
+                          </motion.div>
+                        );
+                      })}
+                    </div>
+
+                    {/* Solved spark badge */}
+                    {isSolved && (
+                      <motion.div
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        className="absolute -top-3 right-0 bg-emerald-500 text-white rounded-full p-0.5 shadow-sm"
+                      >
+                        <Sparkles size={9} />
+                      </motion.div>
+                    )}
+                  </motion.div>
+                </button>
 
                 {/* Tube stand base plate */}
                 <div className="w-10 sm:w-12 h-1 bg-blue/15 rounded-full mt-1 blur-[0.4px]" />
