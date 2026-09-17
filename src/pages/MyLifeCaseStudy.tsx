@@ -117,7 +117,7 @@ export default function MyLifeCaseStudy() {
             <div className="space-y-3">
               <div className="flex flex-wrap items-center justify-between gap-3 border-b border-blue/20 pb-2">
                 <p className="font-mono text-xs uppercase tracking-wider font-bold text-blue">
-                  Complete Logged-In Paid Public Record Page
+                  Logged-In Paid Public Record Page
                 </p>
                 <div className="flex items-center gap-2 font-mono text-xs opacity-70">
                   <MousePointerClick size={14} className="text-blue" />
@@ -138,9 +138,7 @@ export default function MyLifeCaseStudy() {
                   <p className="font-mono text-[11px] text-blue/70 truncate max-w-md">
                     mylife.com/profile/public-report-paid-view
                   </p>
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-blue/60 font-semibold">
-                    Scrollable
-                  </span>
+                  <div className="w-10"></div>
                 </div>
 
                 {/* Scrollable Viewport */}
@@ -151,17 +149,11 @@ export default function MyLifeCaseStudy() {
                 >
                   <img 
                     src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/PS%20Logged%20in%20paid%201220px.png?raw=true" 
-                    alt="MyLife Complete Logged In Paid Public Page" 
+                    alt="MyLife Logged In Paid Public Page" 
                     className="w-full max-w-[960px] mx-auto h-auto block"
                     loading="lazy"
                     referrerPolicy="no-referrer"
                   />
-                </div>
-
-                {/* Subtle indicator bar at bottom */}
-                <div className="bg-cream/90 backdrop-blur-sm border-t border-blue/10 px-4 py-2 flex items-center justify-between text-blue font-mono text-[11px]">
-                  <span>Full layout hierarchy (6,450px)</span>
-                  <span className="opacity-70">Scroll inside to view the whole page</span>
                 </div>
               </div>
             </div>
