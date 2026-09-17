@@ -16,7 +16,9 @@ const HOME_SLIDES = [
     zoom: true,
     zoomDirection: "out",
     effect: "blue-slide-over",
-    isDarkBg: false
+    isDarkBg: false,
+    caseStudyPath: "/projects/donkey",
+    caseStudyName: "Donkey AI"
   },
   {
     url: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/TIKI-control-tower-metrics-thumb@2x.webp?raw=true",
@@ -25,7 +27,9 @@ const HOME_SLIDES = [
     zoom: true,
     zoomDirection: "pan-right",
     effect: "blue-slide-over",
-    isDarkBg: false
+    isDarkBg: false,
+    caseStudyPath: "/projects/control-tower",
+    caseStudyName: "Control Tower"
   },
   {
     url: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki-Tab-Unit-Gallery@2x.webp?raw=true",
@@ -34,7 +38,9 @@ const HOME_SLIDES = [
     zoom: true,
     zoomDirection: "in",
     effect: "blue-slide-over",
-    isDarkBg: false
+    isDarkBg: false,
+    caseStudyPath: "/projects/tiki",
+    caseStudyName: "Tiki Ad Tech"
   },
   {
     url: "https://github.com/LesleyPs/old-protflio/blob/main/assets/tiki-envoy-product-image@2x.webp?raw=true",
@@ -43,7 +49,9 @@ const HOME_SLIDES = [
     zoom: true,
     zoomDirection: "pan-up",
     effect: "blue-slide-over",
-    isDarkBg: false
+    isDarkBg: false,
+    caseStudyPath: "/projects/tiki",
+    caseStudyName: "Tiki Envoy"
   },
   {
     url: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Crackle-pluse-signup-screen@2x.webp?raw=true",
@@ -52,7 +60,9 @@ const HOME_SLIDES = [
     zoom: false,
     zoomDirection: "none",
     effect: "blue-slide-over",
-    isDarkBg: true
+    isDarkBg: true,
+    caseStudyPath: "/projects/crackle",
+    caseStudyName: "Sony Crackle"
   }
 ];
 
@@ -575,8 +585,9 @@ export default function Home() {
               transition={{ delay: 2.5, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             >
               <Link 
-                to="/projects" 
-                className={`flex items-center gap-2 backdrop-blur-[12px] saturate-180 rounded-[40px] px-[22px] py-[9px] font-sans font-semibold text-[16px] tracking-[-0.5px] hover:scale-[1.03] transition-all group overflow-hidden relative shadow-[0_4px_16px_rgba(0,102,255,0.06)] ${
+                to={HOME_SLIDES[currentSlide].caseStudyPath}
+                id="hero-dynamic-case-study-btn"
+                className={`flex items-center gap-2 backdrop-blur-[12px] saturate-180 rounded-[40px] px-[22px] py-[9px] font-sans font-semibold text-[16px] tracking-[-0.5px] hover:scale-[1.03] active:scale-[0.98] transition-all group overflow-hidden relative shadow-[0_4px_16px_rgba(0,102,255,0.06)] select-none whitespace-nowrap ${
                   isDark 
                     ? 'bg-blue text-cream border border-blue hover:bg-cream hover:text-blue hover:border-cream shadow-[0_4px_16px_rgba(0,102,255,0.2)]' 
                     : 'bg-cream/80 text-blue border border-blue/60 hover:bg-cream/95'
@@ -584,7 +595,7 @@ export default function Home() {
               >
                 <div className="absolute top-0 left-[-100%] w-[55%] h-full pointer-events-none bg-linear-to-r from-transparent via-white/25 to-transparent -skew-x-18 group-hover:left-[160%] transition-all duration-500" />
                 View My Work
-                <svg width="14" height="12" viewBox="0 0 14 12.74" fill="none" className="group-hover:translate-x-[3px] transition-transform">
+                <svg width="14" height="12" viewBox="0 0 14 12.74" fill="none" className="group-hover:translate-x-[3px] transition-transform shrink-0">
                   <path d="M6.4424 11.5375L10.7427 7.2242H0V5.5155H10.7427L6.4424 1.2032 7.6496 0 14 6.3704 7.6496 12.7397 6.4424 11.5305V11.5375Z" fill="currentColor"/>
                 </svg>
               </Link>
