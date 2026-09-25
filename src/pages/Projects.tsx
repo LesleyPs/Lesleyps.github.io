@@ -26,14 +26,14 @@ const galleryItems = [
     badge: "AI Application",
     badgeIcon: "ai"
   },
-  // 2. Sony Crackle Xbox UI
+  // 2. Sony Crackle TV Platform
   {
-    id: "crackle-xbox",
-    title: "Sony Crackle TV Console",
+    id: "crackle-platform",
+    title: "Sony Crackle TV Platform",
     company: "Sony",
     industry: "Streaming",
     category: "10-Foot OTT Television Interface",
-    img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Crackle-Xbox-TV-Screen.png?raw=true",
+    img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Crackle-pluse-signup-screen@2x.webp?raw=true",
     platform: "10-Foot OTT Television Platform",
     badge: "10-Foot OTT",
     badgeIcon: "tv"
@@ -142,7 +142,7 @@ const galleryItems = [
     company: "Tiki",
     industry: "Ad Tech",
     category: "Conversational Intent Optimization",
-    img: "https://github.com/LesleyPs/old-protflio/blob/main/Envoy-DPR-Tiki@2x.webp?raw=true",
+    img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/tiki-envoy-product-image@2x.webp?raw=true",
     platform: "Conversational UI",
     badge: "Ad Unit",
     badgeIcon: "ad"
