@@ -13,7 +13,21 @@ import {
 } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
 
-const galleryItems = [
+interface GalleryItem {
+  id: string;
+  title: string;
+  company: string;
+  industry: string;
+  category: string;
+  img: string;
+  platform: string;
+  badge: string;
+  badgeIcon: string;
+  caseStudyUrl?: string;
+  caseStudyTitle?: string;
+}
+
+const galleryItems: GalleryItem[] = [
   // 1. Donkey Donkey AI Case Study
   {
     id: "donkey-hero",
@@ -24,7 +38,9 @@ const galleryItems = [
     img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-Donkey-AI-Gallery-Image.png?raw=true",
     platform: "AI Application",
     badge: "AI Application",
-    badgeIcon: "ai"
+    badgeIcon: "ai",
+    caseStudyUrl: "/projects/donkey",
+    caseStudyTitle: "Donkey Donkey AI"
   },
   // 2. Sony Crackle TV Platform
   {
@@ -36,7 +52,9 @@ const galleryItems = [
     img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Crackle-pluse-signup-screen@2x.webp?raw=true",
     platform: "10-Foot OTT Television Platform",
     badge: "10-Foot OTT",
-    badgeIcon: "tv"
+    badgeIcon: "tv",
+    caseStudyUrl: "/projects/crackle",
+    caseStudyTitle: "Sony Crackle"
   },
   // 3. Sony Crackle Profile Welcome
   {
@@ -48,7 +66,9 @@ const galleryItems = [
     img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Crackle-welcome-screen.png?raw=true",
     platform: "10-Foot Smart TV Platform",
     badge: "10-Foot OTT",
-    badgeIcon: "tv"
+    badgeIcon: "tv",
+    caseStudyUrl: "/projects/crackle",
+    caseStudyTitle: "Sony Crackle"
   },
   // 4. Sony Crackle Show Page Touchpoint
   {
@@ -60,7 +80,9 @@ const galleryItems = [
     img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Carckle-show-page-touchpoint.webp?raw=true",
     platform: "10-Foot OTT Ecosystem",
     badge: "10-Foot OTT",
-    badgeIcon: "tv"
+    badgeIcon: "tv",
+    caseStudyUrl: "/projects/crackle",
+    caseStudyTitle: "Sony Crackle"
   },
   // 5. Tiki Tab Unit Case Study
   {
@@ -72,7 +94,9 @@ const galleryItems = [
     img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki-Tab-Unit-Gallery@2x.webp?raw=true",
     platform: "Interactive Ad Unit UI",
     badge: "Ad Unit",
-    badgeIcon: "ad"
+    badgeIcon: "ad",
+    caseStudyUrl: "/projects/tiki",
+    caseStudyTitle: "Tiki"
   },
   // 6. Tiki Optimized Tab Unit
   {
@@ -84,9 +108,11 @@ const galleryItems = [
     img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/Tiki_tab-unit-max@2x.webp?raw=true",
     platform: "Interactive Ad Unit UI",
     badge: "Ad Unit",
-    badgeIcon: "ad"
+    badgeIcon: "ad",
+    caseStudyUrl: "/projects/tiki",
+    caseStudyTitle: "Tiki"
   },
-  // 7. Tiki Wetter Campaign Unit
+  // 7. Tiki Wetter Campaign Unit (Standalone artifact without dedicated case study)
   {
     id: "tiki-wetter-unit",
     title: "Wetter Campaign Unit",
@@ -109,7 +135,8 @@ const galleryItems = [
     platform: "Enterprise Web Console",
     badge: "Web Platform",
     badgeIcon: "web",
-    caseStudyUrl: "/projects/control-tower"
+    caseStudyUrl: "/projects/control-tower",
+    caseStudyTitle: "Control Tower"
   },
   // 9. MyLife Case Study
   {
@@ -121,9 +148,11 @@ const galleryItems = [
     img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Mylife-public-background-report.jpg?raw=true",
     platform: "Background Record System",
     badge: "Background Record",
-    badgeIcon: "record"
+    badgeIcon: "record",
+    caseStudyUrl: "/projects/mylife",
+    caseStudyTitle: "MyLife.com"
   },
-  // 10. Tiki AccuWeather Unit
+  // 10. Tiki AccuWeather Unit (Standalone artifact without dedicated case study)
   {
     id: "tiki-accuweather-unit",
     title: "AccuWeather iOS Native Mobile Unit",
@@ -145,7 +174,9 @@ const galleryItems = [
     img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/tiki-envoy-product-image@2x.webp?raw=true",
     platform: "Conversational UI",
     badge: "Ad Unit",
-    badgeIcon: "ad"
+    badgeIcon: "ad",
+    caseStudyUrl: "/projects/tiki",
+    caseStudyTitle: "Tiki Envoy"
   }
 ];
 
@@ -153,7 +184,7 @@ function ProjectCard({
   project, 
   onInspect 
 }: { 
-  project: any; 
+  project: GalleryItem; 
   onInspect: () => void; 
 }) {
   return (
@@ -215,6 +246,16 @@ function ProjectCard({
             {project.company}
           </span>
         </div>
+        {project.caseStudyUrl && (
+          <Link
+            to={project.caseStudyUrl}
+            onClick={(e) => e.stopPropagation()}
+            className="inline-flex items-center gap-1 font-mono text-[12px] font-bold uppercase tracking-[1px] text-blue/70 hover:text-blue hover:underline transition-colors shrink-0 ml-2 group/cs-link"
+          >
+            <span>Case Study</span>
+            <ArrowUpRight size={13} className="group-hover/cs-link:translate-x-0.5 group-hover/cs-link:-translate-y-0.5 transition-transform" />
+          </Link>
+        )}
       </div>
     </div>
   );
@@ -303,8 +344,8 @@ export default function Projects() {
             className="fixed inset-0 z-[1000] bg-cream/95 backdrop-blur-[16px] flex flex-col justify-between p-4 sm:p-6 md:p-10"
           >
             {/* Lightbox Header */}
-            <div className="flex items-center justify-between border-b border-blue/10 pb-4">
-              <div className="flex flex-col gap-1">
+            <div className="flex items-center justify-between border-b border-blue/10 pb-4 gap-4">
+              <div className="flex flex-col gap-1 min-w-0">
                 <div className="flex items-center gap-2.5 flex-wrap">
                   <span className="font-sans font-bold text-[20px] sm:text-[24px] tracking-tight text-blue">
                     {galleryItems[activeImageIndex].title}
@@ -313,19 +354,20 @@ export default function Projects() {
                     {galleryItems[activeImageIndex].company}
                   </span>
                 </div>
-                <div className="font-mono text-[13px] text-blue/70 uppercase tracking-[1px]">
+                <div className="font-mono text-[13px] text-blue/70 uppercase tracking-[1px] truncate">
                   {galleryItems[activeImageIndex].category}
                 </div>
               </div>
 
               {/* Close & Counter */}
-              <div className="flex items-center gap-4">
-                <span className="font-mono text-[13px] font-bold tracking-[1px] text-blue bg-blue/10 border border-blue/20 px-3.5 py-1.5">
+              <div className="flex items-center gap-2.5 sm:gap-4 shrink-0">
+                <span className="font-mono text-[13px] font-bold tracking-[1px] text-blue bg-blue/10 border border-blue/20 px-3 py-1.5">
                   {String(activeImageIndex + 1).padStart(2, '0')} / {String(galleryItems.length).padStart(2, '0')}
                 </span>
                 <button 
                   onClick={() => setActiveImageIndex(null)}
                   className="w-10 h-10 flex items-center justify-center bg-white border border-blue/20 text-blue hover:bg-blue hover:text-white transition-all cursor-pointer shadow-sm"
+                  aria-label="Close expanded view"
                 >
                   <X size={18} />
                 </button>
@@ -401,9 +443,10 @@ export default function Projects() {
               {galleryItems[activeImageIndex].caseStudyUrl && (
                 <Link
                   to={galleryItems[activeImageIndex].caseStudyUrl}
-                  className="flex items-center gap-2 font-mono text-[13px] font-bold tracking-[1px] uppercase bg-blue text-cream hover:bg-blue/90 px-5 py-2.5 border border-blue transition-all group/cta"
+                  onClick={() => setActiveImageIndex(null)}
+                  className="inline-flex items-center gap-1.5 font-mono text-[13px] font-bold tracking-[1px] uppercase bg-blue text-cream hover:bg-blue/90 px-5 py-2.5 border border-blue transition-all group/cta shadow-sm"
                 >
-                  <span>Explore Case Study</span>
+                  <span>View Case Study</span>
                   <ArrowUpRight size={15} className="group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5 transition-transform" />
                 </Link>
               )}
