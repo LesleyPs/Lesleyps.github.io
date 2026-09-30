@@ -5,9 +5,9 @@ export function Footer() {
   return (
     <footer className="relative border-t border-blue mt-20">
       <div className="flex flex-col lg:flex-row border-b border-blue">
-        <div className="w-full lg:w-[280px] shrink-0 border-b lg:border-b-0 lg:border-r border-blue p-8 flex flex-col gap-3.5">
+        <div className="w-full lg:w-[300px] shrink-0 border-b lg:border-b-0 lg:border-r border-blue p-8 flex flex-col gap-3.5">
           <h3 className="font-sans font-bold text-[16px] tracking-[-0.6px]">Lesley Piercefield<br />© 2026</h3>
-          <p className="font-mono font-normal text-[11px] leading-[1.9em] opacity-85">
+          <p className="font-mono font-normal text-[13px] leading-[1.7em] opacity-85">
             Working at the intersection of data, AI, and human experience. If you're building something that needs to feel as good as it performs — let's talk.
           </p>
         </div>
@@ -20,11 +20,11 @@ export function Footer() {
                 <div className="w-[52px] h-[52px] rounded-full bg-blue text-cream flex items-center justify-center font-sans font-semibold text-[16px] tracking-[1px] shrink-0">
                   LP
                 </div>
-                <p className="font-mono font-normal text-[11px] leading-[1.9em] max-w-[260px]">
+                <p className="font-mono font-normal text-[13px] leading-[1.7em] max-w-[280px]">
                   Senior Product Designer based in Los Angeles. 15+ years designing AI-driven interfaces for travel tech, streaming, and fintech.
                 </p>
               </div>
-              <a href="/about" className="inline-flex items-center gap-2 font-mono font-normal text-[11px] tracking-[1.5px] text-blue hover:gap-3 transition-all">
+              <a href="/about" className="inline-flex items-center gap-2 font-mono font-medium text-[13px] tracking-[1.2px] text-blue hover:gap-3 transition-all">
                 View full bio
                 <svg width="11" height="10" viewBox="0 0 13 13" fill="none"><path d="M10.892 11.12V3.593L1.493 13 0 11.507 9.407 2.108H1.88V0H13V11.12H10.892Z" fill="#0066ff"/></svg>
               </a>
@@ -34,9 +34,9 @@ export function Footer() {
           <div className="flex-1 p-8">
             <h3 className="font-sans font-bold text-[16px] tracking-[-0.6px] mb-5">Find me:</h3>
             <div className="flex flex-col">
-              <a href="https://www.linkedin.com/in/lesleypiercefield" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between font-mono font-normal text-[11px] tracking-[1.5px] py-3.25 border-b border-blue hover:tracking-[2.4px] hover:opacity-70 transition-all">LinkedIn</a>
-              <a href="/Lesley%20Piercefield%20-%20Resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between font-mono font-normal text-[11px] tracking-[1.5px] py-3.25 border-b border-blue hover:tracking-[2.4px] hover:opacity-70 transition-all">Resume PDF</a>
-              <a href="mailto:lpiercefield@icloud.com" className="flex items-center justify-between font-mono font-normal text-[11px] tracking-[1.5px] py-3.25 hover:tracking-[2.4px] hover:opacity-70 transition-all">Email</a>
+              <a href="https://www.linkedin.com/in/lesleypiercefield" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between font-mono font-medium text-[13px] tracking-[1.2px] py-3.25 border-b border-blue hover:tracking-[2px] hover:opacity-70 transition-all">LinkedIn</a>
+              <a href="/Lesley%20Piercefield%20-%20Resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between font-mono font-medium text-[13px] tracking-[1.2px] py-3.25 border-b border-blue hover:tracking-[2px] hover:opacity-70 transition-all">Resume PDF</a>
+              <a href="mailto:lpiercefield@icloud.com" className="flex items-center justify-between font-mono font-medium text-[13px] tracking-[1.2px] py-3.25 hover:tracking-[2px] hover:opacity-70 transition-all">Email</a>
             </div>
           </div>
         </div>
@@ -73,15 +73,15 @@ export function Footer() {
 
       <div className="p-12 sm:p-8 border-b border-blue flex flex-col gap-3.5 min-h-[160px] justify-center">
         <span className="font-sans font-semibold text-[clamp(28px,4.5vw,56px)] leading-none tracking-[-3px] text-blue">Lesley Piercefield</span>
-        <span className="font-mono font-normal text-[11px] tracking-[2px] opacity-50">Product Designer · Los Angeles · 2026</span>
+        <span className="font-mono font-normal text-[13px] tracking-[1.5px] opacity-60">Product Designer · Los Angeles · 2026</span>
       </div>
 
       <div className="flex flex-col sm:flex-row items-center justify-between p-3.5 sm:px-8 bg-blue/3">
         <div className="flex items-center gap-3 mb-2 sm:mb-0">
           <span className="font-sans font-semibold text-[16px] tracking-[3px] text-blue">LP</span>
-          <p className="font-mono font-normal text-[11px] tracking-[0.2px] opacity-80">© 2026 Lesley Piercefield — Product Designer · Los Angeles</p>
+          <p className="font-mono font-normal text-[13px] tracking-[0.2px] opacity-85">© 2026 Lesley Piercefield — Product Designer · Los Angeles</p>
         </div>
-        <p className="font-mono font-normal text-[11px] tracking-[0.2px] opacity-80">
+        <p className="font-mono font-normal text-[13px] tracking-[0.2px] opacity-85">
           Portfolio vibe coded with AI &nbsp;·&nbsp; <a href="mailto:lpiercefield@icloud.com" className="underline underline-offset-3 hover:opacity-100">lpiercefield@icloud.com</a>
         </p>
       </div>

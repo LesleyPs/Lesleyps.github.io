@@ -171,7 +171,7 @@ const galleryItems: GalleryItem[] = [
     company: "Tiki",
     industry: "Ad Tech",
     category: "Conversational Intent Optimization",
-    img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/tiki-envoy-product-image@2x.webp?raw=true",
+    img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/tiki-envoy-product-image@2x.webp?raw=true",
     platform: "Conversational UI",
     badge: "Ad Unit",
     badgeIcon: "ad",

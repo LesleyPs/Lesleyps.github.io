@@ -43,7 +43,7 @@ const HOME_SLIDES = [
     caseStudyName: "Tiki Ad Tech"
   },
   {
-    url: "https://github.com/LesleyPs/old-protflio/blob/main/assets/tiki-envoy-product-image@2x.webp?raw=true",
+    url: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/tiki-envoy-product-image@2x.webp?raw=true",
     title: "Tiki Envoy Conversational UI",
     agency: "Tiki Ad Tech",
     zoom: true,

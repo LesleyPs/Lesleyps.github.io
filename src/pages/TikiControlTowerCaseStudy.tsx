@@ -51,7 +51,7 @@ export default function TikiControlTowerCaseStudy() {
         <Reveal delay={0.2}>
           <div className="aspect-video w-full relative">
             <img 
-              src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki_Control_Tower_Metrics.webp?raw=true" 
+              src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki_Control_Tower_Metrics@2x.webp?raw=true" 
               alt="Tiki Control Tower Metrics" 
               className="w-full h-full object-cover transition-all duration-1000 ease-out"
               referrerPolicy="no-referrer"
@@ -176,7 +176,7 @@ export default function TikiControlTowerCaseStudy() {
           <Reveal>
             <div className="w-full overflow-hidden border border-blue/10 bg-white">
               <img 
-                src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki_Control_Tower_Metrics.webp?raw=true" 
+                src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki_Control_Tower_Metrics@2x.webp?raw=true" 
                 alt="Tiki Control Tower Real-Time Yield Metrics" 
                 className="w-full h-auto"
                 referrerPolicy="no-referrer"
