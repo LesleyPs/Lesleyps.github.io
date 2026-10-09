@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { X, Clock, ArrowUpRight, BookOpen, Share2, Check, Sparkles, CheckCircle2, Zap, Rocket } from 'lucide-react';
 import React, { useEffect, useState, UIEvent } from 'react';
 
-const LESLEY_PHOTO_URL = 'https://raw.githubusercontent.com/LesleyPs/old-protflio/main/intro.hyperesources/Lesley%20Piercefield-1_2x.png';
+const LESLEY_PHOTO_URL = 'https://github.com/LesleyPs/old-protflio/blob/main/intro.hyperesources/Lesley%20Piercefield-1_2x.png?raw=true';
 
 interface DonkeyArticleOverlayProps {
   isOpen: boolean;
@@ -156,7 +156,7 @@ export function DonkeyArticleOverlay({ isOpen, onClose }: DonkeyArticleOverlayPr
                 <figure className="mb-12">
                   <div className="w-full bg-blue/5 border border-blue/20 overflow-hidden">
                     <img
-                      src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Donkey-Donkey-AI-thumbnail.webp"
+                      src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-Donkey-AI-thumbnail.webp?raw=true"
                       alt="Donkey Donkey AI Thumbnail"
                       className="w-full h-auto object-cover"
                     />
@@ -182,7 +182,7 @@ export function DonkeyArticleOverlay({ isOpen, onClose }: DonkeyArticleOverlayPr
                   <figure className="my-10">
                     <div className="w-full bg-white border border-blue/20 overflow-hidden">
                       <img
-                        src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Donkey-Donkey-AI-UX-build-process.webp"
+                        src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-Donkey-AI-UX-build-process.webp?raw=true"
                         alt="Donkey Donkey AI UX Build Process"
                         className="w-full h-auto object-cover"
                       />
@@ -232,7 +232,7 @@ export function DonkeyArticleOverlay({ isOpen, onClose }: DonkeyArticleOverlayPr
                   <figure className="my-10">
                     <div className="w-full bg-white border border-blue/20 overflow-hidden">
                       <img
-                        src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Donkey-Donkey-AI-workflow.webp"
+                        src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-Donkey-AI-workflow.webp?raw=true"
                         alt="Donkey Donkey AI Workflow"
                         className="w-full h-auto object-cover"
                       />

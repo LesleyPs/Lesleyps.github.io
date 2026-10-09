@@ -51,7 +51,7 @@ export default function MyLifeCaseStudy() {
         <Reveal delay={0.2}>
           <div className="aspect-video w-full relative">
             <img 
-              src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Mylife-public-background-report.jpg" 
+              src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Mylife-public-background-report.jpg?raw=true" 
               alt="MyLife Background Report Dashboard" 
               className="w-full h-full object-cover transition-all duration-1000 ease-out"
               referrerPolicy="no-referrer"
@@ -148,7 +148,7 @@ export default function MyLifeCaseStudy() {
                   aria-label="Scrollable MyLife public page mockup"
                 >
                   <img 
-                    src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/PS%20Logged%20in%20paid%201220px.png" 
+                    src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/PS%20Logged%20in%20paid%201220px.png?raw=true" 
                     alt="MyLife Logged In Paid Public Page" 
                     className="w-full max-w-[960px] mx-auto h-auto block"
                     loading="lazy"
@@ -207,7 +207,7 @@ export default function MyLifeCaseStudy() {
           <Reveal>
             <div className="w-full overflow-hidden">
               <img 
-                src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/ML-mobile-menu@2x.jpg" 
+                src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/ML-mobile-menu@2x.jpg?raw=true" 
                 alt="MyLife Reputation Score Mobile Interface" 
                 className="w-full h-auto object-contain"
                 referrerPolicy="no-referrer"
@@ -235,7 +235,7 @@ export default function MyLifeCaseStudy() {
           <Reveal>
             <div className="w-full overflow-hidden">
               <img 
-                src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/join_now_mylife-v1%201.webp" 
+                src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/join_now_mylife-v1%201.webp?raw=true" 
                 alt="MyLife Join Now & Purchase Order Page" 
                 className="w-full h-auto object-cover"
                 referrerPolicy="no-referrer"

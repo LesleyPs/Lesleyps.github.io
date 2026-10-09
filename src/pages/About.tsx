@@ -4,7 +4,7 @@ import { motion } from 'motion/react';
 import localProfilePhoto from '../assets/images/lesley_profile_1782630497258.jpg';
 
 export default function About() {
-  const [photoSrc, setPhotoSrc] = useState("https://raw.githubusercontent.com/LesleyPs/old-protflio/main/intro.hyperesources/Lesley%20Piercefield-1_2x.png");
+  const [photoSrc, setPhotoSrc] = useState("https://github.com/LesleyPs/old-protflio/blob/main/intro.hyperesources/Lesley%20Piercefield-1_2x.png?raw=true");
   const [useLocalFallback, setUseLocalFallback] = useState(false);
 
   const handleImageError = () => {

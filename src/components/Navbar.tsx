@@ -5,7 +5,7 @@ import { ArrowLeft } from 'lucide-react';
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [logoSrc, setLogoSrc] = useState("https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/favicons/apple-touch-icon.png");
+  const [logoSrc, setLogoSrc] = useState("https://github.com/LesleyPs/old-protflio/blob/main/assets/favicons/apple-touch-icon.png?raw=true");
   const [logoFailed, setLogoFailed] = useState(false);
   const location = useLocation();
 

@@ -12,14 +12,14 @@ export default function DonkeyDonkeyCaseStudy() {
   const [isArticleOpen, setIsArticleOpen] = useState(false);
   
   const images = [
-    "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Donkey-conversational-greeting@2x.webp",
-    "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Donkey-conversational-events@2x.webp",
-    "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Donkey-conversational-city-insights@2x.webp",
-    "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Donkey-conversational-re-engagment@2x.webp",
-    "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Donkey-conversational-city-activties@2x.webp",
-    "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Donkey-conversational-weather@2x.webp",
-    "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Donkey-conversational-activites-2@2x.webp",
-    "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Donkey-conversational-map@2x.webp"
+    "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-conversational-greeting@2x.webp?raw=true",
+    "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-conversational-events@2x.webp?raw=true",
+    "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-conversational-city-insights@2x.webp?raw=true",
+    "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-conversational-re-engagment@2x.webp?raw=true",
+    "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-conversational-city-activties@2x.webp?raw=true",
+    "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-conversational-weather@2x.webp?raw=true",
+    "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-conversational-activites-2@2x.webp?raw=true",
+    "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-conversational-map@2x.webp?raw=true"
   ];
 
   return (
@@ -66,7 +66,7 @@ export default function DonkeyDonkeyCaseStudy() {
         <Reveal delay={0.2}>
           <div className="aspect-video w-full relative">
             <img 
-              src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Donkey-Donkey-AI-Hero@2x.webp" 
+              src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-Donkey-AI-Hero@2x.webp?raw=true" 
               alt="Donkey Donkey AI Hero" 
               className="w-full h-full object-cover transition-all duration-1000 ease-out"
               referrerPolicy="no-referrer"
@@ -248,7 +248,7 @@ export default function DonkeyDonkeyCaseStudy() {
                     alt="Donkey Donkey AI Hotel Search - Prompt Flow Step 1" 
                     className="w-full h-auto block"
                     onError={(e) => {
-                      e.currentTarget.src = "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Donkey_Donkey_AI_Hotel_Search.webp";
+                      e.currentTarget.src = "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey_Donkey_AI_Hotel_Search.webp?raw=true";
                     }}
                     referrerPolicy="no-referrer"
                   />
@@ -269,7 +269,7 @@ export default function DonkeyDonkeyCaseStudy() {
                     alt="Donkey Donkey AI Hotel Insight - Prompt Flow Step 2" 
                     className="w-full h-auto block"
                     onError={(e) => {
-                      e.currentTarget.src = "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Donkey_Donkey_AI_Hotel_Insight.webp";
+                      e.currentTarget.src = "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey_Donkey_AI_Hotel_Insight.webp?raw=true";
                     }}
                     referrerPolicy="no-referrer"
                   />
@@ -298,7 +298,7 @@ export default function DonkeyDonkeyCaseStudy() {
           <Reveal>
             <div className="w-full overflow-hidden border border-blue/10">
               <img 
-                src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Donkey-Night-Mode.webp" 
+                src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-Night-Mode.webp?raw=true" 
                 alt="Donkey Night Mode" 
                 className="w-full h-auto"
                 referrerPolicy="no-referrer"
@@ -310,7 +310,7 @@ export default function DonkeyDonkeyCaseStudy() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto pt-4">
               <div className="shadow-lg border border-blue/10">
                 <img 
-                  src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Donkey-mobile-night.png" 
+                  src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-mobile-night.png?raw=true" 
                   alt="Donkey Mobile Night" 
                   className="w-full h-auto"
                   referrerPolicy="no-referrer"
@@ -318,7 +318,7 @@ export default function DonkeyDonkeyCaseStudy() {
               </div>
               <div className="shadow-lg border border-blue/10">
                 <img 
-                  src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Donkey-mobile-trending-night.png" 
+                  src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-mobile-trending-night.png?raw=true" 
                   alt="Donkey Mobile Trending Night" 
                   className="w-full h-auto"
                   referrerPolicy="no-referrer"
@@ -363,7 +363,7 @@ export default function DonkeyDonkeyCaseStudy() {
                     className="w-full max-w-sm aspect-[4/3] bg-blue/10 border border-blue/30 overflow-hidden cursor-pointer group relative"
                   >
                     <img 
-                      src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Donkey-Donkey-AI-thumbnail.webp" 
+                      src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-Donkey-AI-thumbnail.webp?raw=true" 
                       alt="Shipping an MVP at AI Speed Thumbnail" 
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       referrerPolicy="no-referrer"

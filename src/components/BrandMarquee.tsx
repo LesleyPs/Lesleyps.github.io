@@ -8,17 +8,17 @@ interface Brand {
 }
 
 const ALL_BRANDS: Brand[] = [
-  { name: "Clicktripz", logo: "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Clicktripz.svg", type: "employer" },
-  { name: "Tiki", logo: "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Tiki.svg", type: "employer" },
-  { name: "Expedia", logo: "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Expedia.svg" },
-  { name: "Tripadvisor", logo: "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/tripadvisor.svg" },
-  { name: "Vrbo", logo: "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Vrbo.svg" },
-  { name: "Priceline", logo: "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/priceline.svg" },
-  { name: "Spirit Airlines", logo: "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/spirit.svg" },
-  { name: "Wetter.com", logo: "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/wetter.svg" },
-  { name: "MapQuest", logo: "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/mapquest.svg" },
-  { name: "HotelPlanner", logo: "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/HotelPlanner.svg" },
-  { name: "StudentUniverse", logo: "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/student_Universe.svg" }
+  { name: "Clicktripz", logo: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Clicktripz.svg?raw=true", type: "employer" },
+  { name: "Tiki", logo: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki.svg?raw=true", type: "employer" },
+  { name: "Expedia", logo: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Expedia.svg?raw=true" },
+  { name: "Tripadvisor", logo: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/tripadvisor.svg?raw=true" },
+  { name: "Vrbo", logo: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Vrbo.svg?raw=true" },
+  { name: "Priceline", logo: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/priceline.svg?raw=true" },
+  { name: "Spirit Airlines", logo: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/spirit.svg?raw=true" },
+  { name: "Wetter.com", logo: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/wetter.svg?raw=true" },
+  { name: "MapQuest", logo: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/mapquest.svg?raw=true" },
+  { name: "HotelPlanner", logo: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/HotelPlanner.svg?raw=true" },
+  { name: "StudentUniverse", logo: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/student_Universe.svg?raw=true" }
 ];
 
 function BrandLogoImage({ brand }: { brand: Brand }) {
