@@ -51,7 +51,7 @@ export default function CrackleCaseStudy() {
         <Reveal delay={0.2}>
           <div className="aspect-video w-full relative bg-black">
             <img 
-              src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Crackle-welcome-screen.png?raw=true" 
+              src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Crackle-welcome-screen.png" 
               alt="Sony Crackle Welcome Screen" 
               className="w-full h-full object-contain bg-black transition-all duration-1000 ease-out"
               referrerPolicy="no-referrer"
@@ -115,7 +115,7 @@ export default function CrackleCaseStudy() {
           <Reveal>
             <div className="w-full overflow-hidden border border-cream/20 bg-black">
               <img 
-                src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Crackle-Xbox-TV-Screen.png?raw=true" 
+                src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Crackle-Xbox-TV-Screen.png" 
                 alt="TV Page Show Listings" 
                 className="w-full h-auto object-contain bg-black"
                 referrerPolicy="no-referrer"
@@ -143,7 +143,7 @@ export default function CrackleCaseStudy() {
           <Reveal>
             <div className="w-full overflow-hidden border border-blue/10 bg-white">
               <img 
-                src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Carckle-show-page-touchpoint.webp?raw=true" 
+                src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Carckle-show-page-touchpoint.webp" 
                 alt="Show Page with Sign-up Prompt" 
                 className="w-full h-auto"
                 referrerPolicy="no-referrer"
@@ -171,7 +171,7 @@ export default function CrackleCaseStudy() {
           <Reveal>
             <div className="w-full overflow-hidden border border-blue/10 bg-white">
               <img 
-                src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Crackle-pluse-signup-screen@2x.webp?raw=true" 
+                src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Crackle-pluse-signup-screen@2x.webp" 
                 alt="Pause Position Account Connection Feature" 
                 className="w-full h-auto"
                 referrerPolicy="no-referrer"
@@ -199,7 +199,7 @@ export default function CrackleCaseStudy() {
           <Reveal>
             <div className="w-full overflow-hidden border border-blue/10 bg-white">
               <img 
-                src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Crackle-roku-sign-up-flow.png?raw=true" 
+                src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Crackle-roku-sign-up-flow.png" 
                 alt="Roku D-pad Mapping and Navigation Flow" 
                 className="w-full h-auto"
                 referrerPolicy="no-referrer"

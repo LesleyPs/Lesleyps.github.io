@@ -10,7 +10,7 @@ import markMamberAvatar from '../assets/images/mark_mamber_avatar_1779762406713.
 
 const HOME_SLIDES = [
   {
-    url: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-Donkey-AI-Hero@2x.webp?raw=true",
+    url: "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Donkey-Donkey-AI-Hero@2x.webp",
     title: "Donkey AI Conversational Assistant",
     agency: "Donkey Donkey AI",
     zoom: true,
@@ -21,7 +21,7 @@ const HOME_SLIDES = [
     caseStudyName: "Donkey AI"
   },
   {
-    url: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/TIKI-control-tower-metrics-thumb@2x.webp?raw=true",
+    url: "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/TIKI-control-tower-metrics-thumb@2x.webp",
     title: "Control Tower Yield Analytics",
     agency: "Clicktripz Enterprise",
     zoom: true,
@@ -32,7 +32,7 @@ const HOME_SLIDES = [
     caseStudyName: "Control Tower"
   },
   {
-    url: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki-Tab-Unit-Gallery@2x.webp?raw=true",
+    url: "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Tiki-Tab-Unit-Gallery@2x.webp",
     title: "Tiki Interactive Ad Unit UI",
     agency: "Clicktripz Ad Tech",
     zoom: true,
@@ -43,7 +43,7 @@ const HOME_SLIDES = [
     caseStudyName: "Tiki Ad Tech"
   },
   {
-    url: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/tiki-envoy-product-image@2x.webp?raw=true",
+    url: "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/tiki-envoy-product-image@2x.webp",
     title: "Tiki Envoy Conversational UI",
     agency: "Tiki Ad Tech",
     zoom: true,
@@ -54,7 +54,7 @@ const HOME_SLIDES = [
     caseStudyName: "Tiki Envoy"
   },
   {
-    url: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Crackle-pluse-signup-screen@2x.webp?raw=true",
+    url: "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Crackle-pluse-signup-screen@2x.webp",
     title: "Sony Crackle TV Platform",
     agency: "Crackle Connected TV",
     zoom: false,
@@ -649,7 +649,7 @@ export default function Home() {
               year: "In Progress",
               category: "Product Design / AI",
               description: "Conversational trip planner that finds curated hotel stays, local spots, and personalized itineraries.",
-              img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Donkey-Donkey-AI-Gallery-Image.png?raw=true",
+              img: "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Donkey-Donkey-AI-Gallery-Image.png",
               link: "/projects/donkey"
             },
             { 
@@ -660,7 +660,7 @@ export default function Home() {
               year: "2023 — 2024",
               category: "Enterprise Platform",
               description: "Enterprise platform for automated publisher onboarding, ad rules, and real-time yield analytics.",
-              img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/TIKI-control-tower-metrics-thumb@2x.webp?raw=true",
+              img: "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/TIKI-control-tower-metrics-thumb@2x.webp",
               link: "/projects/control-tower"
             },
             { 
@@ -671,7 +671,7 @@ export default function Home() {
               year: "2017 — 2024",
               category: "Interactive Ad Unit UI",
               description: "High-yield interactive ad units and conversational AI assistants for global travel publishers.",
-              img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki-Tab-Unit-Gallery@2x.webp?raw=true",
+              img: "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Tiki-Tab-Unit-Gallery@2x.webp",
               link: "/projects/tiki"
             },
             { 
@@ -682,7 +682,7 @@ export default function Home() {
               year: "2018",
               category: "OTT / Entertainment",
               description: "10-foot TV interfaces, remote navigation architecture, and frictionless viewer sign-up flows.",
-              img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Crackle-Sign-in-Screen@2x.webp?raw=true",
+              img: "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Crackle-Sign-in-Screen@2x.webp",
               link: "/projects/crackle"
             },
             { 
@@ -693,7 +693,7 @@ export default function Home() {
               year: "2015",
               category: "Product Design / Data",
               description: "Transforming complex public record archives into clean, reassuring personal identity reports.",
-              img: "https://github.com/LesleyPs/old-protflio/blob/main/assets/images/ML-mobile-menu@2x.jpg?raw=true",
+              img: "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/ML-mobile-menu@2x.jpg",
               link: "/projects/mylife"
             }
           ].map((project, i) => (

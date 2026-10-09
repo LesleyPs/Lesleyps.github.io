@@ -52,7 +52,7 @@ export default function TikiCaseStudy() {
         <Reveal delay={0.2}>
           <div className="aspect-video w-full relative">
             <img 
-              src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki-Tab-Unit-Gallery@2x.webp?raw=true" 
+              src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Tiki-Tab-Unit-Gallery@2x.webp" 
               alt="Tiki Envoy Interactive Ad Unit Hero" 
               className="w-full h-full object-cover transition-all duration-1000 ease-out"
               referrerPolicy="no-referrer"
@@ -142,7 +142,7 @@ export default function TikiCaseStudy() {
                 </div>
                 <div className="w-full overflow-hidden">
                   <img 
-                    src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/version%20A-1_2x.png?raw=true" 
+                    src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/version%20A-1_2x.png" 
                     alt="Envoy Version A" 
                     className="w-full h-auto"
                     referrerPolicy="no-referrer"
@@ -163,7 +163,7 @@ export default function TikiCaseStudy() {
                 </div>
                 <div className="w-full overflow-hidden">
                   <img 
-                    src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/version%20B-1_2x.png?raw=true" 
+                    src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/version%20B-1_2x.png" 
                     alt="Envoy Version B" 
                     className="w-full h-auto"
                     referrerPolicy="no-referrer"
@@ -182,7 +182,7 @@ export default function TikiCaseStudy() {
                 </p>
                 <div className="w-full overflow-hidden">
                   <img 
-                    src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/tiki-envoy-heatmap@2x.webp?raw=true" 
+                    src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/tiki-envoy-heatmap@2x.webp" 
                     alt="Envoy Heatmap Analysis" 
                     className="w-full h-auto"
                     referrerPolicy="no-referrer"
@@ -198,7 +198,7 @@ export default function TikiCaseStudy() {
                 </p>
                 <div className="w-full overflow-hidden">
                   <img 
-                    src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/V3-%20C-1_2x.png?raw=true" 
+                    src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/V3-%20C-1_2x.png" 
                     alt="Envoy Version C Layout" 
                     className="w-full h-auto"
                     referrerPolicy="no-referrer"
@@ -254,7 +254,7 @@ export default function TikiCaseStudy() {
                 </div>
                 <div className="w-full overflow-hidden">
                   <img 
-                    src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/old-tab-unit@2x.png?raw=true" 
+                    src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/old-tab-unit@2x.png" 
                     alt="Old Interactive Ad Unit UI" 
                     className="w-full h-auto"
                     referrerPolicy="no-referrer"
@@ -275,7 +275,7 @@ export default function TikiCaseStudy() {
                 </div>
                 <div className="w-full overflow-hidden">
                   <img 
-                    src="https://github.com/LesleyPs/old-protflio/blob/main/assets/Tiki_tab-unit-max@2x.webp?raw=true" 
+                    src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/Tiki_tab-unit-max@2x.webp" 
                     alt="Maximized Tab Unit" 
                     className="w-full h-auto"
                     referrerPolicy="no-referrer"
@@ -310,7 +310,7 @@ export default function TikiCaseStudy() {
                 </p>
                 <div className="w-full overflow-hidden">
                   <img 
-                    src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/expedia-media-unit.webp?raw=true" 
+                    src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/expedia-media-unit.webp" 
                     alt="Expedia integration view" 
                     className="w-full h-auto mx-auto"
                     referrerPolicy="no-referrer"
@@ -326,7 +326,7 @@ export default function TikiCaseStudy() {
                 </p>
                 <div className="w-full overflow-hidden">
                   <img 
-                    src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/wetter-travel@2x.webp?raw=true" 
+                    src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/wetter-travel@2x.webp" 
                     alt="Wetter Multi-Destination integration view" 
                     className="w-full h-auto mx-auto"
                     referrerPolicy="no-referrer"
@@ -342,7 +342,7 @@ export default function TikiCaseStudy() {
                 </p>
                 <div className="w-full overflow-hidden">
                   <img 
-                    src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/accuweather_2x.jpg?raw=true" 
+                    src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/accuweather_2x.jpg" 
                     alt="AccuWeather iOS native mobile unit view" 
                     className="w-full h-auto mx-auto scale-[1.02] origin-left"
                     referrerPolicy="no-referrer"

@@ -1,9 +1,18 @@
 import { useState } from 'react';
 import { Reveal } from '../components/Reveal';
 import { motion } from 'motion/react';
+import localProfilePhoto from '../assets/images/lesley_profile_1782630497258.jpg';
 
 export default function About() {
-  const [imageError, setImageError] = useState(false);
+  const [photoSrc, setPhotoSrc] = useState("https://raw.githubusercontent.com/LesleyPs/old-protflio/main/intro.hyperesources/Lesley%20Piercefield-1_2x.png");
+  const [useLocalFallback, setUseLocalFallback] = useState(false);
+
+  const handleImageError = () => {
+    if (!useLocalFallback) {
+      setUseLocalFallback(true);
+      setPhotoSrc(localProfilePhoto);
+    }
+  };
 
   return (
     <div className="pt-[72px]">
@@ -47,22 +56,13 @@ export default function About() {
           <div className="xl:col-span-5 flex items-start justify-center">
             <Reveal delay={0.15}>
               <div className="max-w-sm xl:max-w-full w-full">
-                {!imageError ? (
-                  <img 
-                    src="https://github.com/LesleyPs/old-protflio/blob/main/intro.hyperesources/Lesley%20Piercefield-1_2x.png?raw=true" 
-                    alt="Lesley Piercefield"
-                    className="w-full h-auto object-contain transition-all duration-500 hover:scale-[1.01]"
-                    onError={() => setImageError(true)}
-                    referrerPolicy="no-referrer"
-                  />
-                ) : (
-                  <div className="aspect-[4/5] bg-cream/30 border border-dashed border-blue/30 flex flex-col items-center justify-center p-8 text-center min-h-[320px]">
-                    <p className="font-mono text-[11px] uppercase tracking-[2.5px] text-blue/40 mb-3">Profile Photo Placeholder</p>
-                    <p className="font-mono text-[12px] leading-[1.7em] text-blue/70">
-                      Drag & drop your photo as <strong className="text-blue">profile.jpg</strong> inside the <strong className="text-blue">public</strong> folder, or attach it in this chat so I can set it up for you!
-                    </p>
-                  </div>
-                )}
+                <img 
+                  src={photoSrc} 
+                  alt="Lesley Piercefield"
+                  className="w-full h-auto object-contain transition-all duration-500 hover:scale-[1.01]"
+                  onError={handleImageError}
+                  referrerPolicy="no-referrer"
+                />
               </div>
             </Reveal>
           </div>

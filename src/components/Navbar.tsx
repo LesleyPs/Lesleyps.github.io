@@ -5,8 +5,8 @@ import { ArrowLeft } from 'lucide-react';
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [logoSrc, setLogoSrc] = useState("https://github.com/LesleyPs/old-protflio/blob/main/assets/favicons/apple-touch-icon.png?raw=true");
-  const [logoErrorCount, setLogoErrorCount] = useState(0);
+  const [logoSrc, setLogoSrc] = useState("https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/favicons/apple-touch-icon.png");
+  const [logoFailed, setLogoFailed] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -18,15 +18,7 @@ export function Navbar() {
   }, []);
 
   const handleLogoError = () => {
-    if (logoErrorCount === 0) {
-      setLogoSrc("https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/favicons/apple-touch-icon.png");
-      setLogoErrorCount(1);
-    } else if (logoErrorCount === 1) {
-      setLogoSrc("https://lesleyps.github.io/assets/favicons/apple-touch-icon.png");
-      setLogoErrorCount(2);
-    } else {
-      setLogoErrorCount(3);
-    }
+    setLogoFailed(true);
   };
 
   return (
@@ -41,7 +33,7 @@ export function Navbar() {
         )}
         <Link to="/" className="flex items-center gap-2.5 text-blue hover:opacity-65 transition-opacity">
           <div className="w-11 h-11 flex items-center justify-center shrink-0 rounded-lg overflow-hidden select-none">
-            {logoErrorCount < 3 ? (
+            {!logoFailed ? (
               <img 
                 src={logoSrc} 
                 alt="Lesley Piercefield Avatar" 

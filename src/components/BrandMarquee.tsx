@@ -9,7 +9,7 @@ interface Brand {
 
 const ALL_BRANDS: Brand[] = [
   { name: "Clicktripz", logo: "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Clicktripz.svg", type: "employer" },
-  { name: "Tiki", logo: "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/tiki.svg", type: "employer" },
+  { name: "Tiki", logo: "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Tiki.svg", type: "employer" },
   { name: "Expedia", logo: "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Expedia.svg" },
   { name: "Tripadvisor", logo: "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/tripadvisor.svg" },
   { name: "Vrbo", logo: "https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Vrbo.svg" },

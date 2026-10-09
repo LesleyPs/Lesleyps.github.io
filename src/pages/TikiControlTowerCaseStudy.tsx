@@ -51,7 +51,7 @@ export default function TikiControlTowerCaseStudy() {
         <Reveal delay={0.2}>
           <div className="aspect-video w-full relative">
             <img 
-              src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki_Control_Tower_Metrics@2x.webp?raw=true" 
+              src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Tiki_Control_Tower_Metrics@2x.webp" 
               alt="Tiki Control Tower Metrics" 
               className="w-full h-full object-cover transition-all duration-1000 ease-out"
               referrerPolicy="no-referrer"
@@ -125,7 +125,7 @@ export default function TikiControlTowerCaseStudy() {
                 </div>
                 <div className="w-full overflow-hidden border border-blue/10 bg-white">
                   <img 
-                    src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki-Products@2x.webp?raw=true" 
+                    src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Tiki-Products@2x.webp" 
                     alt="V1: Legacy List View" 
                     className="w-full h-auto"
                     referrerPolicy="no-referrer"
@@ -146,7 +146,7 @@ export default function TikiControlTowerCaseStudy() {
                 </div>
                 <div className="w-full overflow-hidden border border-blue/10 bg-white">
                   <img 
-                    src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki_Control_Tower_Products_v2@2x.webp?raw=true" 
+                    src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Tiki_Control_Tower_Products_v2@2x.webp" 
                     alt="V2: Redesigned Card View" 
                     className="w-full h-auto"
                     referrerPolicy="no-referrer"
@@ -176,7 +176,7 @@ export default function TikiControlTowerCaseStudy() {
           <Reveal>
             <div className="w-full overflow-hidden border border-blue/10 bg-white">
               <img 
-                src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki_Control_Tower_Metrics@2x.webp?raw=true" 
+                src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Tiki_Control_Tower_Metrics@2x.webp" 
                 alt="Tiki Control Tower Real-Time Yield Metrics" 
                 className="w-full h-auto"
                 referrerPolicy="no-referrer"
@@ -209,7 +209,7 @@ export default function TikiControlTowerCaseStudy() {
                 </p>
                 <div className="w-full overflow-hidden border border-blue/10 bg-white">
                   <img 
-                    src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki_Control_Tower_Learning_Hub@2x.webp?raw=true" 
+                    src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Tiki_Control_Tower_Learning_Hub@2x.webp" 
                     alt="Tiki Control Tower Learning Hub" 
                     className="w-full h-auto"
                     referrerPolicy="no-referrer"
@@ -225,7 +225,7 @@ export default function TikiControlTowerCaseStudy() {
                 </p>
                 <div className="w-full overflow-hidden border border-blue/10 bg-white">
                   <img 
-                    src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki_Control_Tower_Site_Integration@2x.webp?raw=true" 
+                    src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Tiki_Control_Tower_Site_Integration@2x.webp" 
                     alt="Tiki Control Tower Site Registry" 
                     className="w-full h-auto"
                     referrerPolicy="no-referrer"
@@ -255,7 +255,7 @@ export default function TikiControlTowerCaseStudy() {
           <Reveal>
             <div className="w-full overflow-hidden border border-blue/10 bg-white">
               <img 
-                src="https://github.com/LesleyPs/old-protflio/blob/main/assets/images/Tiki_Control_Tower_Account@2x.webp?raw=true" 
+                src="https://raw.githubusercontent.com/LesleyPs/old-protflio/main/assets/images/Tiki_Control_Tower_Account@2x.webp" 
                 alt="Tiki Control Tower Account View" 
                 className="w-full h-auto"
                 referrerPolicy="no-referrer"
